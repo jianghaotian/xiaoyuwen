@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
-import '../css/Buchongshiju.css'
+import '../../css/Shici/Buchongshiju.css';
+
 export default class Buchongshiju extends Component {
     render() {
         return (
