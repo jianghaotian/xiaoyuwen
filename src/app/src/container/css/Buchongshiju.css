@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin: 0;
+}
+.bcsj_back{
+    background-image: url(../../images/playBackground.jpeg);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    opacity: 0.6;
+}
+.bcsj_box{
+    width: 100%;
+    /* background: rgb(121, 113, 113); */
+    text-align: center;
+}
+.bcsj_box p{
+    padding: 5% 0 0 0;
+}
+.bcsj_text1{
+    color: red;
+    font-size: 12px;
+}
+.bcsj_poetry{
+    background: #fff;
+    max-width:85%;
+    height: 7rem;
+    margin: 0 auto;
+    margin-top:5%;
+    font-size: 30px;
+}
+.bcsj_poetry_text{
+    max-width:85%;
+    margin: 0 auto;
+    margin-top:7%;
+    border-bottom: #bbb 1px solid;
+}
+.bcsj_option{
+    height: 30%;
+    max-width:85%;
+    margin: 0 auto;
+    margin-top:10%;
+    background: #fff;
+    border:3px solid #bbb;
+    border-radius: 5px;
+}
