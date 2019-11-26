@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LearnIdioms from './LearnIdioms'
 import {BrowserRouter as Router,Route,Link} from "react-router-dom"
-import Buchongshiju from './container/js/Shici/Buchongshiju'
+import Buchongshiju from './container/Shici/Buchongshiju'
 
 export default class App extends Component {
   render() {
