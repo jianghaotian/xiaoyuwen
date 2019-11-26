@@ -8,7 +8,7 @@ export default class Pinyin extends Component {
                 <NavBar
                 style={{backgroundColor:"#6189B8",color:"#fff"}}
                 >拼音</NavBar>
-
+                    gdeyuw
             </div>
         )
     }
