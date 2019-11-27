@@ -10,7 +10,7 @@ export default class Chengyu extends Component {
             <div className="p1">
                 <NavBar
                 style={{backgroundColor:"#6189B8",color:"#fff"}}
-                >成语</NavBar>
+                >成 语</NavBar>
                 <div className="p2 c1">
                     <div className="p3 p5">
                         <Link to="/"><button className="p4">学成语</button></Link>

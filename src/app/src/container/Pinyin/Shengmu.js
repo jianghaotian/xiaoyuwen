@@ -1,19 +1,55 @@
 import React, { Component } from 'react'
-import '../../css/Pinyin/pinyin.css';
+import '../../css/Pinyin/shengmu.css';
+import Shengmucontent from "./Shengmucontent.js"
 import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,SearchBar,TextareaItem,Icon} from 'antd-mobile';
 export default class Shengmu extends Component {
-    
+    constructor(){
+        super();
+        this.content={
+            yin:'k',
+            diao:'kē',
+            zi:'蝌',
+            ci:['蝌蚪','蝌蚪'],
+            img:'shengmu.jpg'
+        }
+        this.state={
+            num:1,
+            favor:false
+        }
+    }
+    left=(e)=>{
+        this.setState((state)=>{
+            if(state.num==1){
+                return{
+                    num:1
+                }
+            }
+            return{
+                num:--state.num
+            }
+        })
+    }
+    right=()=>{
+        
+        this.setState((state)=>{
+            return{
+                num:++state.num
+            }
+        })
+    }
     render() {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left" style={{fontSize:22}}/>}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
-                    >声母</NavBar>
-                <div className="learnidiombody"> 
-                    <div className="learnidiomcon">
+                    >声 母</NavBar>
+                
+                <div className="s1"> 
+                    
+                    <div className="s2">
                         <SearchBar
                             placeholder="查找"
                             onSubmit={value => console.log(value, 'onSubmit')}
@@ -22,20 +58,17 @@ export default class Shengmu extends Component {
                             onBlur={() => console.log('onBlur')}
                             onCancel={() => console.log('onCancel')}
                             onChange={this.onChange}
-                            style={{height:"3%"}}
+                            style={{height:"2rem"}}
                         />
-                        <div className="orange">第<span> 1</span><span> / </span><span>100 </span>个</div>
-                        <div className="iconfont icon-xingxing" style={{fontSize:22,marginLeft:"90%"}}></div>
-                        <div className="idiomcon">
-                            <div><span>成语: </span><span>杯水车薪</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6"}}></span></div>
-                            <div><span>释义: </span>阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
-                            <div><span>比喻: </span>啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
-                            <div><span>例句: </span>呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃呃</div>
-                            
-                        </div>
-                    </div>
-                   
+                    <Shengmucontent content={this.content} num={this.state.num}/>
                 </div>
+               
+               <Router>
+                   <div className="left" ><Link onClick={this.left} className="iconfont icon-ico_leftarrow"></Link></div>
+                   <div className="right" onClick={this.right}><Link  className="iconfont icon-youjiantou"></Link></div>
+               </Router>
+               
+            </div>
             </div>
         )
     }
