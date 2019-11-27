@@ -32,7 +32,7 @@ export default class Open extends Component {
                         <img
                             src={require("../../images/open"+val+".jpg")}
                             alt=""
-                            style={{ width: '100%', verticalAlign: 'top' ,touchAction: 'none' }}
+                            style={{ width: '100%',height:'100%', verticalAlign: 'top' ,touchAction: 'none' }}
                             onLoad={() => {
                             // fire window resize event to change height
           
