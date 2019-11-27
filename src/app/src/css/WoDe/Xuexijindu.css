@@ -1,0 +1,71 @@
+.xxjd_back{
+    background-image: url(../../images/bg1.jpeg);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    opacity: 0.6;
+}
+.xxjd_box{
+    margin: 0 auto;
+    width: 90%;
+    height: 2.5rem;
+    background: #fff;
+    margin-top:5%;
+    border-radius: 10px;
+}
+.xxjd_tubiao{
+    float:left;
+    line-height:2.5rem;
+    margin-left:1rem;
+}
+.xxjd_text{
+    float:left;
+    margin-left:1rem;
+    font-size:15px;
+    font-weight: bolder;
+    line-height:2.5rem;
+}
+.xxjd_text_l{
+    float: right;
+    margin-right: 2rem;
+    line-height: 2.5rem;
+}
+.xxjd_big{
+    margin: 0 auto;
+    width: 90%;
+    height: 9rem;
+    background: #fff;
+    margin-top:5%;
+    border-radius: 5px;
+}
+.left_block{
+    line-height: 2rem;
+    border-left: 4px solid #617ca6;
+    margin-left: 1rem;
+    padding-right: 0.5rem;
+    font-size: 12px;
+}
+.container{
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 2%;
+    border:1px solid #cdcdce;
+}
+.container_text{
+    margin:3% 0 0 3%;
+    font-size: 14px;
+}
+.container_text1{
+    margin-left: 5%;
+}

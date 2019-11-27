@@ -1,0 +1,15 @@
+.yijian_upload{
+    background: #fff;
+    width: 100%;
+    padding:1% 0;
+    float: left;
+}
+.yijian_image{
+    float: left;
+    padding-left: 0.9rem;
+    font-size: 17px;
+    width: 100%;
+    height: 2.6rem;
+    line-height: 2.5rem;
+    background: #fff;
+}
