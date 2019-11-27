@@ -30,7 +30,7 @@ export default class Open extends Component {
                         <button onClick={this.enter} style={{position:'absolute',top:10,right:10,width:60,height:25,border:'1px solid #BBB6B6',backgroundColor:"#BBB6B6",color:'#fff',borderRadius:10}}>跳过</button>
                         {this.Btn} 
                         <img
-                            src={require("../../../images/open"+val+".jpg")}
+                            src={require("../../images/open"+val+".jpg")}
                             alt=""
                             style={{ width: '100%', verticalAlign: 'top' ,touchAction: 'none' }}
                             onLoad={() => {
