@@ -11,7 +11,7 @@ export default class Pinyin extends Component {
                 >拼音</NavBar>
                 <div className="p2 p7">
                     <div className="p3 p5">
-                        <Link to="/"><button className="p4">声母</button></Link>
+                        <Link to="/shengmu"><button className="p4">声母</button></Link>
                     </div>
                 </div>
                 <div className="p2">

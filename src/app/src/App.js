@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import Open from './container/OpenScren/Open.js'
 import Shouye from './container/Shouye.js'
-import LearnIdioms from './LearnIdioms'
-import Buchongshiju from './container/Shici/Buchongshiju'
+import Shengmu from './container/Pinyin/Shengmu.js'
 
 export default class App extends Component {
   render() {
@@ -15,6 +14,7 @@ export default class App extends Component {
             <Switch>
               <Route path="/" exact component={Open}/>
               <Route path="/shouye" exact component={Shouye}/>
+              <Route path="/shengmu" exact component={Shengmu}/>
             </Switch>
             
             {/* <Route path="/shengmu" component={Shengmu}/>
