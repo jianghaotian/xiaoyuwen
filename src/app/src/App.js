@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
-import Open from './container/js/OpenScren/Open.js'
-import Shouye from './container/js/Shouye.js'
+import Open from './container/OpenScren/Open.js'
+import Shouye from './container/Shouye.js'
 
 export default class App extends Component {
     render() {
