@@ -10,7 +10,7 @@ export default class Shici extends Component {
             <div className="p1">
                 <NavBar
                 style={{backgroundColor:"#6189B8",color:"#fff"}}
-                >诗词</NavBar>
+                >诗 词</NavBar>
                 <div className="p2 s1">
                     <div className="p3 p5">
                         <Link to="/"><button className="p4">学诗词</button></Link>

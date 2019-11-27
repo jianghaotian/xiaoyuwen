@@ -8,7 +8,7 @@ export default class Pinyin extends Component {
             <div className="p1">
                 <NavBar
                 style={{backgroundColor:"#6189B8",color:"#fff"}}
-                >拼音</NavBar>
+                >拼 音</NavBar>
                 <div className="p2 p7">
                     <div className="p3 p5">
                         <Link to="/shengmu"><button className="p4">声母</button></Link>

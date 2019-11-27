@@ -1,0 +1,88 @@
+
+.s1{
+    width:100%;
+    height:100%;
+    padding-top: 5%;
+    padding-bottom: 40%;
+  }
+  .s2{
+    width:85%;
+    height:100%;
+    margin:0 auto;
+  }
+  .orange{
+    margin-left: 40%;
+    margin-top:5%;
+  }
+  .orange span{
+    color:red;
+    font-size: 12px;
+  }
+  .idiomcon{
+    width:100%;
+    height:80%;
+    /* background-color: lightskyblue; */
+    display:"inline-block";
+    white-space:"pre-wrap";
+  }
+  .idiomcon div{
+    display:"inline-block";
+    white-space:"pre-wrap";
+    margin-top:5%;
+    width:100%;
+    font-size:17px;
+  }
+  .idiomcon textarea{
+    width:98%;
+    height:7rem;
+    font-size: 17px;
+    background-color: rgba(211, 211, 211, 0);
+    margin-top:2rem;
+    
+  }
+  .learnimg{
+    opacity: 0.6;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+  }
+  .left{
+    left:0;
+    top:50%;
+    position: fixed;
+  }
+  .left a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .right{
+    position: fixed;
+    right:0;
+    top:50%;
+    transform: rotate(180deg);
+  }
+  .right a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .black{
+    font-size:22px;
+    margin-left:90%
+  }
+  .yello{
+    font-size:22px;
+    margin-left:90%;
+    color:yellow
+  }
