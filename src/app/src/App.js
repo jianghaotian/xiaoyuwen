@@ -3,7 +3,6 @@ import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import Open from './container/OpenScren/Open.js'
 import Shouye from './container/Shouye.js'
 import LearnIdioms from './LearnIdioms'
-import {BrowserRouter as Router,Route,Link} from "react-router-dom"
 import Buchongshiju from './container/Shici/Buchongshiju'
 
 export default class App extends Component {
