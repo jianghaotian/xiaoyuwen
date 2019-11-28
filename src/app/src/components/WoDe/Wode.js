@@ -4,7 +4,7 @@ import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 
 export default class Wode extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
 

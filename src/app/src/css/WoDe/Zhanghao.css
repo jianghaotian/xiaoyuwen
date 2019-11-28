@@ -1,0 +1,32 @@
+.zh_box{
+    margin: 0 auto;
+    width: 90%;
+    height: 3.5rem;
+    background: #fff;
+    margin-top:5%;
+    border-radius: 5px;
+}
+.zh_i{
+    float:left;
+    line-height:3.5rem;
+    margin-left:1rem;
+}
+.zh_text{
+    float: left;
+    margin-left:1rem;
+    line-height: 3.5rem;
+    font-size: 15px;
+}
+.zh_header{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding:0.5rem 1rem;
+    border-radius: 50%;
+    line-height: 3.5rem;
+}
+.zh_you{
+    float:right;
+    margin-right:1.3rem;
+    font-size:15px;
+    line-height:3.5rem
+}
