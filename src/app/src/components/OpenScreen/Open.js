@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Carousel, Button} from 'antd-mobile';
+import { Carousel } from 'antd-mobile';
 
 export default class Open extends Component {
     constructor() {
@@ -12,11 +12,11 @@ export default class Open extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.enter} style={{position:'fixed',top:15,right:15,width:40,height:40,border:'1px solid #BBB6B6',backgroundColor:"#BBB6B6",color:'#fff',borderRadius:40,zIndex:999}}>跳过</button>
+                <button onClick={this.enter} className='a_click' style={{position:'fixed',top:15,right:15,width:40,height:40,border:'1px solid #BBB6B6',backgroundColor:"#BBB6B6",color:'#fff',borderRadius:40,zIndex:999}}>跳过</button>
                 <Carousel autoplay={false} infinite={false}>
                     {[1,2,3].map(val => {
                         if (val === 3){
-                            this.Btn = <button onClick={this.enter} style={{fontSize:16,position:'absolute',left:'35%',bottom:'10%',width:110,height:40,backgroundColor:'#6189B8',color:'#fff',border:'1px solid #6189B8'}}>进入小语文</button>
+                            this.Btn = <button onClick={this.enter} className='a_click' style={{fontSize:16,position:'absolute',left:'35%',bottom:'10%',width:110,height:40,backgroundColor:'#6189B8',color:'#fff',border:'1px solid #6189B8'}}>进入小语文</button>
                         } else {
                             this.Btn = '';
                         }
