@@ -36,7 +36,7 @@ class Shoujihao extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>手 机 号</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>手 机 号</NavBar>
                 <div className="wode_back"></div>
                 <InputItem
                     {...getFieldProps('money3')}

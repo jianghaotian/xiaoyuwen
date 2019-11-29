@@ -11,7 +11,7 @@ export default class Guanyu extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>关 于 小 语 文</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>关 于 小 语 文</NavBar>
                 <div className="about_box">
                     <div className='about_logo_box'>
                         <div style={{textAlign:'center'}}>

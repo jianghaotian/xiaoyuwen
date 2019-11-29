@@ -11,3 +11,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.a_click {
+    transition: background-color .1s ease;
+}
+.a_click:active {
+    background-color: #D3D3D3;
+    transition: background-color .1s ease;
+}

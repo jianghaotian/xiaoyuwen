@@ -31,7 +31,7 @@ export default class Nianji extends Component {
         ];
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>年 级</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
                 <List renderHeader={() => '请选择年级'}>
                     {data.map(i => (
                         <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>

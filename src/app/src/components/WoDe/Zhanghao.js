@@ -13,14 +13,14 @@ export default class Zhanghao extends Component {
             <div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>账 号 与 安 全</NavBar>
                 <div className="wode_back"></div>
-                <div className="zh_box wode_click" onClick={()=>{this.toPath('/wode/info/mima')}}>
+                <div className="zh_box a_click" onClick={()=>{this.toPath('/wode/info/mima')}}>
                     <i className={'iconfont icon-mima zh_i'}></i>
                     <span className="zh_text">修改密码</span>
                     <div style={{float:'right'}}>
                         <i className={'iconfont icon-youjiantou zh_you'}></i>
                     </div>
                 </div>
-                <div className="zh_box wode_click" onClick={()=>{this.toPath('/wode/info/shouji')}}>
+                <div className="zh_box a_click" onClick={()=>{this.toPath('/wode/info/shouji')}}>
                     <i className={'iconfont icon-shouji zh_i'}></i>
                     <span className="zh_text">手机号</span>
                     <div style={{float:'right'}}>
@@ -28,7 +28,7 @@ export default class Zhanghao extends Component {
                         <i className={'iconfont icon-youjiantou zh_you'}></i>
                     </div>
                 </div>
-                <div className="zh_box wode_click">
+                <div className="zh_box a_click">
                     <i className={'iconfont icon-qq zh_i'}></i>
                     <span className="zh_text">QQ</span>
                     <div style={{float:'right'}}>
@@ -36,7 +36,7 @@ export default class Zhanghao extends Component {
                         <i className={'iconfont icon-youjiantou zh_you'}></i>
                     </div>
                 </div>
-                <div className="zh_box wode_click">
+                <div className="zh_box a_click">
                     <i className={'iconfont icon-weixin zh_i'}></i>
                     <span className="zh_text">微信</span>
                     <div style={{float:'right'}}>
