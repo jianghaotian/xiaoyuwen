@@ -59,11 +59,3 @@
     background: red;
     border-radius: 50%;
 }
-
-.wode_click {
-    transition: background-color .1s ease;
-}
-.wode_click:active {
-    background-color: #D3D3D3;
-    transition: background-color .1s ease;
-}

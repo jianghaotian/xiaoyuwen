@@ -19,6 +19,7 @@ import Shengmu from './components/PinYin/Shengmu';
 import Yunmu from './components/PinYin/Yunmu';
 import Zhengtiyin from './components/PinYin/Zhengtiyin';
 import Tingyinxuanzi from './components/PinYin/Tingyinxuanzi';
+import Kanzishiyin from './components/PinYin/Kanzishiyin';
 
 export default class App extends Component {
     render() {
@@ -35,7 +36,7 @@ export default class App extends Component {
                     <Route exact path="/pinyin/shengmu" component={Shengmu} />
                     <Route exact path="/pinyin/yunmu" component={Yunmu} />
                     <Route exact path="/pinyin/zhengtiyin" component={Zhengtiyin} />
-                    {/* kanzishiyin */}
+                    <Route exact path="/pinyin/kanzi" component={Kanzishiyin} />
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 
                     

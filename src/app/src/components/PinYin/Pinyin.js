@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import '../../css/PinYin/pinyin.css';
 import '../../css/PinYin/shengmu.css';
 import '../../css/PinYin/tingyinxuanzi.css';
+import '../../css/PinYin/kanzishiyin.css';
 
 export default class Pinyin extends Component {
     render() {

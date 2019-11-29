@@ -20,7 +20,7 @@ export default class Shoucangjia extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>收 藏 夹</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>收 藏 夹</NavBar>
                 <div className="scj_back"></div>
                 <div className="scj_tab">
                     <i className={'iconfont icon-pinyin scc_i'}></i>

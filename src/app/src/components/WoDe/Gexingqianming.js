@@ -36,7 +36,7 @@ class Gexingqianming extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>个 性 签 名</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>个 性 签 名</NavBar>
                 <div className="wode_back"></div>
                 <div style={{position:'relative'}}>
                     <div style={{position:'absolute',right:'0.3rem',bottom:'0.3rem',zIndex:'999',color:'#888'}}>25</div>

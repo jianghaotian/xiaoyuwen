@@ -11,7 +11,7 @@ export default class Xuexijindu extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>学 习 进 度</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>学 习 进 度</NavBar>
                 <div className="xxjd_back"></div>
                 <div className="xxjd_box">
                     <i className={'iconfont icon-xuexijindu xxjd_tubiao'}></i>

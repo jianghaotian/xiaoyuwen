@@ -31,7 +31,7 @@ export default class Shengri extends Component {
         console.log(this.state.date)
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>生 日</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>生 日</NavBar>
                 <div className="wode_back"></div>
                 <DatePicker
                     mode="date"

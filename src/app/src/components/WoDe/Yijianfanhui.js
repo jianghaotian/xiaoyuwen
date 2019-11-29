@@ -37,7 +37,7 @@ class Yijianfanhui extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>意 见 反 馈</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>意 见 反 馈</NavBar>
                 <List>
                     <TextareaItem
                         {...getFieldProps('note1')}
