@@ -51,7 +51,7 @@ export default class Gerenxinxi extends Component {
                         <i className={'iconfont icon-youjiantou grxx_you'}></i>
                     </div>
                 </div>
-                <Button 
+                <Button
                     style={{width:'60%',height:'20%',background:'#617ca6',color:'#fff',margin:'0 auto',marginTop:'7%'}}
                     activeStyle={{background:'grey'}}
                 >退出登录</Button>

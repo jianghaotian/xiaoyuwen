@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-// import { createBrowserHistory } from 'history';
 import Bar from './components/Bar';
 import Open from './components/OpenScreen/Open';
 import Gerenxinxi from './components/WoDe/Gerenxinxi';
@@ -22,8 +21,6 @@ import Tingyinxuanzi from './components/PinYin/Tingyinxuanzi';
 import Kanzishiyin from './components/PinYin/Kanzishiyin';
 
 
-
-// let history = createBrowserHistory();
 export default class App extends Component {
     render() {
         return (
@@ -70,13 +67,6 @@ export default class App extends Component {
                     <Route exact path="/wode/info/mima" component={Xiugaimima} />
                     <Route exact path="/wode/info/shouji" component={Shoujihao} />
 
-
-
-                    {/* for history */}
-                    {/* <Route exact path="/for/history/pinyin" component={Pinyin} />
-                    <Route exact path="/for/history/chengyu" component={Chengyu} />
-                    <Route exact path="/for/history/shici" component={Shici} />
-                    <Route exact path="/for/history/wode" component={Wode} /> */}
 
 
 
