@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { List, Radio, NavBar, Icon, Button } from 'antd-mobile';
 const RadioItem = Radio.RadioItem;
 
@@ -9,10 +8,6 @@ export default class Nianji extends Component {
         this.state = {
             value: 3
         };
-    }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
     }
     onChange = (value) => {
         this.setState({
@@ -31,7 +26,7 @@ export default class Nianji extends Component {
         ];
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
                 <List renderHeader={() => '请选择年级'}>
                     {data.map(i => (
                         <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>

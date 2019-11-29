@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { List, InputItem, Button,NavBar,Icon } from 'antd-mobile';
 import { createForm } from 'rc-form';
 
@@ -8,10 +7,6 @@ const Item = List.Item;
 class Xiugaimima extends Component {
     state = {
         value: 1,
-    }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
     }
     onSubmit = () => {
         this.props.form.validateFields({ force: true }, (error) => {
@@ -36,7 +31,7 @@ class Xiugaimima extends Component {
         const { getFieldProps, getFieldError } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>账 号 与 安 全</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>账 号 与 安 全</NavBar>
                 <div className="wode_back"></div>
                 <InputItem {...getFieldProps('password')} placeholder="请输入旧密码" type="password">
                     旧密码

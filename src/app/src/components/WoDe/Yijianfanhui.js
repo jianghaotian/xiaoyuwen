@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { NavBar, Icon,List, TextareaItem, ImagePicker, InputItem, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import '../../css/WoDe/Yijianfanhui.css';
@@ -22,10 +21,6 @@ class Yijianfanhui extends Component {
             type: 'tel'
         };
     }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     onChange = (files, type, index) => {
         // console.log(files, type, index);
         this.setState({
@@ -37,7 +32,7 @@ class Yijianfanhui extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>意 见 反 馈</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>意 见 反 馈</NavBar>
                 <List>
                     <TextareaItem
                         {...getFieldProps('note1')}

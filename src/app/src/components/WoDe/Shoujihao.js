@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
-import { NavBar,Icon, InputItem, Button, WhiteSpace } from 'antd-mobile';
+import { NavBar,Icon, InputItem, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
 
 const data = [];
@@ -21,10 +20,6 @@ class Shoujihao extends Component {
             type: 'tel',
         }
     }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     onChange = (files, type, index) => {
         console.log(files, type, index);
         this.setState({
@@ -36,7 +31,7 @@ class Shoujihao extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>手 机 号</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>手 机 号</NavBar>
                 <div className="wode_back"></div>
                 <InputItem
                     {...getFieldProps('money3')}

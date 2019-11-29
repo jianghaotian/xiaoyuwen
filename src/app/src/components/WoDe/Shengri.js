@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { List, NavBar, Icon, DatePicker } from 'antd-mobile';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
@@ -23,15 +22,11 @@ export default class Shengri extends Component {
             visible: false,
         }
     }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     render() {
         console.log(this.state.date)
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>生 日</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>生 日</NavBar>
                 <div className="wode_back"></div>
                 <DatePicker
                     mode="date"

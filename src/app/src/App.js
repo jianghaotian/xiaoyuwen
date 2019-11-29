@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-import history from './config/history'
+// import { createBrowserHistory } from 'history';
 import Bar from './components/Bar';
 import Open from './components/OpenScreen/Open';
 import Gerenxinxi from './components/WoDe/Gerenxinxi';
@@ -21,10 +21,13 @@ import Zhengtiyin from './components/PinYin/Zhengtiyin';
 import Tingyinxuanzi from './components/PinYin/Tingyinxuanzi';
 import Kanzishiyin from './components/PinYin/Kanzishiyin';
 
+
+
+// let history = createBrowserHistory();
 export default class App extends Component {
     render() {
         return (
-            <Router history={history}>
+            <Router>
                 <Switch>
                     {/* 主页面 */}
                     <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} />
@@ -69,6 +72,11 @@ export default class App extends Component {
 
 
 
+                    {/* for history */}
+                    {/* <Route exact path="/for/history/pinyin" component={Pinyin} />
+                    <Route exact path="/for/history/chengyu" component={Chengyu} />
+                    <Route exact path="/for/history/shici" component={Shici} />
+                    <Route exact path="/for/history/wode" component={Wode} /> */}
 
 
 

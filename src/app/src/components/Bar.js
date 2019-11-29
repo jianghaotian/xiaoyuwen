@@ -29,7 +29,7 @@ export default class Bar extends Component {
                             });
                         }}
                     >
-                        <Pinyin/>
+                        <Pinyin history={this.props.history}/>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={<i style={{fontSize:22,lineHeight:"22px"}} className="iconfont icon-book"></i>}
@@ -43,7 +43,7 @@ export default class Bar extends Component {
                             });
                         }}
                     >
-                        <Chengyu/>
+                        <Chengyu history={this.props.history}/>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={<i style={{fontSize:22,lineHeight:"22px"}} className="iconfont icon-book"></i>}
@@ -57,7 +57,7 @@ export default class Bar extends Component {
                             });
                         }}
                     >
-                        <Shici/>
+                        <Shici history={this.props.history}/>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={<i style={{fontSize:22,lineHeight:"22px"}} className="iconfont icon-book"></i>}
@@ -71,7 +71,7 @@ export default class Bar extends Component {
                             });
                         }}
                     >
-                        <Wode/>
+                        <Wode history={this.props.history}/>
                     </TabBar.Item>
                 </TabBar>
             </div>
