@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { List, NavBar, Icon, Button, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 
 class Nicheng extends Component {
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     componentDidMount() {
         // this.autoFocusInst.focus();
     }
@@ -18,7 +13,7 @@ class Nicheng extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>昵 称</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>昵 称</NavBar>
                 <div className="wode_back"></div>
                 <List renderHeader={() => '取一个好听的名字吧！'}>
                     <InputItem

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { Link } from "react-router-dom";
 import { NavBar, SearchBar, Icon } from 'antd-mobile';
 
@@ -17,10 +16,6 @@ export default class Yunmu extends Component {
                 img:'yunmu.jpg'
             }
         }
-    }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
     }
     left=()=>{
         this.setState((state)=>{
@@ -52,7 +47,7 @@ export default class Yunmu extends Component {
     render() {
         return (
             <div className="s1">
-                <NavBar icon={<Icon type="left" onClick={()=>{this.toPath('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>韵 母</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>韵 母</NavBar>
                 <div className="s2">
                     <SearchBar
                         placeholder="查找"

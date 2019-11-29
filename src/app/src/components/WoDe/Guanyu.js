@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { NavBar, Icon } from 'antd-mobile';
 import '../../css/WoDe/Guanyu.css'
 
 export default class Guanyu extends Component {
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>关 于 小 语 文</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>关 于 小 语 文</NavBar>
                 <div className="about_box">
                     <div className='about_logo_box'>
                         <div style={{textAlign:'center'}}>

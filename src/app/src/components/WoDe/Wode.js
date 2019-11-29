@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 
@@ -10,16 +9,12 @@ export default class Wode extends Component {
 
         };
     }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     render() {
         return (
             <div>
                 <NavBar mode="dark" style={{background:'#617ca6',color:'#fff'}}>我 的</NavBar>
                 <div className="wode_back"></div>
-                <div className="wode_info a_click" onClick={()=>{this.toPath('/wode/info')}}>
+                <div className="wode_info a_click" onClick={()=>{this.props.history.push('/wode/info')}}>
                     <div style={{height:'90%',padding:'1rem'}}>
                         <img className="wode_header" src={require('../../images/headImage.jpg')} />
                         <div style={{float:"right",width:'70%'}}>
@@ -28,7 +23,7 @@ export default class Wode extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.toPath('/wode/nianji')}}>
+                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/nianji')}}>
                     <i className={'iconfont icon-nianji wode_i'}></i>
                     <span className="wode_tab_text">年级</span>
                     <span className="wode_you" style={{fontSize:'13px'}}>
@@ -36,22 +31,22 @@ export default class Wode extends Component {
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.toPath('/wode/jindu')}}>
+                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/jindu')}}>
                     <i className={'iconfont icon-xuexijindu wode_i'}></i>
                     <span className="wode_tab_text">学习进度</span>
                     <i className={'iconfont icon-youjiantou wode_you'}></i>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.toPath('/wode/shoucang')}}>
+                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/shoucang')}}>
                     <i className={'iconfont icon-shoucangjia wode_i'}></i>
                     <span className="wode_tab_text">收藏夹</span>
                     <i className={'iconfont icon-youjiantou wode_you'}></i>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.toPath('/wode/fankui')}}>
+                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/fankui')}}>
                     <i className={'iconfont icon-yijianfankui wode_i'}></i>
                     <span className="wode_tab_text">意见反馈</span>
                     <i className={'iconfont icon-youjiantou wode_you'}></i>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.toPath('/wode/guanyu')}}>
+                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/guanyu')}}>
                     <i className={'iconfont icon-banbenhao wode_i'}></i>
                     <span className="wode_tab_text">关于小语文</span>
                     <span className="wode_you" style={{fontSize:'13px'}}>

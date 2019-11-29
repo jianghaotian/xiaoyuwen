@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
-import history from '../../config/history';
 import { NavBar, Icon } from 'antd-mobile';
 import '../../css/WoDe/Xuexijindu.css';
 
 export default class Xuexijindu extends Component {
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.toPath('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>学 习 进 度</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>学 习 进 度</NavBar>
                 <div className="xxjd_back"></div>
                 <div className="xxjd_box">
                     <i className={'iconfont icon-xuexijindu xxjd_tubiao'}></i>

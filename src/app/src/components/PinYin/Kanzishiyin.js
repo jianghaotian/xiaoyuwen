@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { NavBar, Icon } from 'antd-mobile';
 
 export default class Kanzishiyin extends Component {
@@ -23,14 +22,10 @@ export default class Kanzishiyin extends Component {
         }
         this.Btn=<button onClick={this.enter} className="t11">进入下一关</button>;
     }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
-    }
     render() {
         return (
             <div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.toPath('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>看 字 识 音</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>看 字 识 音</NavBar>
                 <div className='k1'></div>
                 <div className="s2">
                     <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>

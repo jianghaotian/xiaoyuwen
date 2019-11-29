@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import history from '../../config/history';
 import { NavBar, SearchBar, Icon } from 'antd-mobile';
 
 export default class Tingyinxuanzi extends Component {
@@ -16,10 +15,6 @@ export default class Tingyinxuanzi extends Component {
             }
         };
         this.Btn=<button onClick={this.enter} className="t11">进入下一关</button>;
-    }
-    toPath = (path) => {
-        history.push(path);
-        history.go();
     }
     // enter=()=>{
     //     var obj ={
@@ -66,7 +61,7 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.toPath('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
                 <div className='t1'></div>
                 <div className="s2">
                     <SearchBar
