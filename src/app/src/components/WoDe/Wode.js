@@ -17,7 +17,7 @@ export default class Wode extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" style={{background:'#617ca6',color:'#fff',height:'55px'}}>我 的</NavBar>
+                <NavBar mode="dark" style={{background:'#617ca6',color:'#fff'}}>我 的</NavBar>
                 <div className="wode_back"></div>
                 <div className="wode_info wode_click" onClick={()=>{this.toPath('/wode/info')}}>
                     <div style={{height:'90%',padding:'1rem'}}>
