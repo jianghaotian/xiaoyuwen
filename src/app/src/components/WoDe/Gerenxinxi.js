@@ -8,8 +8,8 @@ export default class Gerenxinxi extends Component {
     render() {
         return (
             <div>
+                <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>个 人 信 息</NavBar>
-                <div className="grxx_back"></div>
                 <div className="grxx_box a_click">
                     <span className="grxx_text">我的头像</span>
                     <div style={{float:'right'}}>

@@ -13,7 +13,6 @@ export default class Wode extends Component {
         return (
             <div>
                 <NavBar mode="dark" style={{background:'#617ca6',color:'#fff'}}>我 的</NavBar>
-                <div className="wode_back"></div>
                 <div className="wode_info a_click" onClick={()=>{this.props.history.push('/wode/info')}}>
                     <div style={{height:'90%',padding:'1rem'}}>
                         <img className="wode_header" src={require('../../images/headImage.jpg')} />

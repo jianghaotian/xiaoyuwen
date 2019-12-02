@@ -6,8 +6,8 @@ export default class Zhanghao extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>账 号 与 安 全</NavBar>
                 <div className="wode_back"></div>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>账 号 与 安 全</NavBar>
                 <div className="zh_box a_click" onClick={()=>{this.props.history.push('/wode/info/mima')}}>
                     <i className={'iconfont icon-mima zh_i'}></i>
                     <span className="zh_text">修改密码</span>

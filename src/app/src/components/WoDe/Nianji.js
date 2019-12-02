@@ -26,6 +26,9 @@ export default class Nianji extends Component {
         ];
         return (
             <div>
+                <div className="wode_back"></div>
+                {/* TODO: 要改 */}
+
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
                 <List renderHeader={() => '请选择年级'}>
                     {data.map(i => (
@@ -37,7 +40,7 @@ export default class Nianji extends Component {
                 <Button 
                     style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                     activeStyle={{background:'grey'}}
-                >完成</Button>  
+                >完成</Button>
             </div>
         )
     }

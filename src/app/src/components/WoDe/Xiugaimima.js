@@ -31,8 +31,8 @@ class Xiugaimima extends Component {
         const { getFieldProps, getFieldError } = this.props.form;
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>账 号 与 安 全</NavBar>
                 <div className="wode_back"></div>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>账 号 与 安 全</NavBar>
                 <InputItem {...getFieldProps('password')} placeholder="请输入旧密码" type="password">
                     旧密码
                 </InputItem>

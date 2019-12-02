@@ -1,4 +1,4 @@
-.scj_back{
+/* .scj_back{
     background-image: url(../../images/bg1.jpeg);
     position:fixed;
     top: 0;
@@ -14,7 +14,7 @@
     -o-background-size: cover;
     background-position: center 0;
     opacity: 0.6;
-}
+} */
 .scj_tab{
     margin: 0 auto;
     width: 90%;

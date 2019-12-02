@@ -31,10 +31,25 @@ function checkToken(token, callback) {
     })
 }
 
- module.exports = { getToken, checkToken };
+module.exports = { getToken, checkToken };
 
 
- aatoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmljYXRpb24iOiI5NDYzMjEiLCJpYXQiOjE1NzUwODQwNzEsImV4cCI6MTU3NTA4NDI1MX0.fiJb9DSQWOwarKr7UOGr1-8_-VpmiEOO4nqORZgqHB0'
- checkToken(aatoken, (r) => {
+
+// let tokenContent = {
+//     uid: 2
+// };
+// let params = {
+//     expiresIn: 60 * 60 * 24 * 31  // 31天过期
+// }
+
+// let token = getToken(tokenContent, params);
+
+// console.log(token);
+
+
+
+var aatoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTU3NTI0NjE1OSwiZXhwIjoxNTc3OTI0NTU5fQ.P0mZqfScG4CiODM_X_LCrmv-oUKMQcxvAzGyznQ6r_E'
+checkToken(aatoken, (r) => {
     console.log(r);
- })
+})
+
