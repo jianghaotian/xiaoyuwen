@@ -34,7 +34,7 @@ export default class Shengri extends Component {
                     extra="Optional"
                     value={this.state.date}
                     onChange={date => this.setState({ date })}
-                    >
+                >
                     <List.Item arrow="horizontal">请选择生日</List.Item>
                 </DatePicker>
             </div>
