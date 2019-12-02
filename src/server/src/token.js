@@ -48,8 +48,8 @@ module.exports = { getToken, checkToken };
 
 
 
-var aatoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTU3NTI0NjE1OSwiZXhwIjoxNTc3OTI0NTU5fQ.P0mZqfScG4CiODM_X_LCrmv-oUKMQcxvAzGyznQ6r_E'
-checkToken(aatoken, (r) => {
-    console.log(r);
-})
+// var aatoken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTU3NTI0NjE1OSwiZXhwIjoxNTc3OTI0NTU5fQ.P0mZqfScG4CiODM_X_LCrmv-oUKMQcxvAzGyznQ6r_E'
+// checkToken(aatoken, (r) => {
+//     console.log(r);
+// })
 
