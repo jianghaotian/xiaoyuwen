@@ -72,7 +72,7 @@ router.post('/verification', function (req, res, next) {
  */
 router.post('/register', function (req, res, next) {
     let { phone, password, name } = req.body;
-    runSql('insert into user(uphone, upassword, uname) values (?,?,?)', [phone, password, name], (result) => {
+    runSql('insert into user(uphone, upassword, uname, uday) values (?,?,?,?)', [phone, password, name, getTimestamp_13()], (result) => {
         res.json(result);
     });
 });
@@ -123,12 +123,10 @@ router.post('/login', function (req, res, next) {
             res.json(result);
         }
     });
-
-
-
-
-
 });
+
+
+
 
 
 

@@ -6,8 +6,8 @@ export default class Xuexijindu extends Component {
     render() {
         return (
             <div>
+                <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>学 习 进 度</NavBar>
-                <div className="xxjd_back"></div>
                 <div className="xxjd_box">
                     <i className={'iconfont icon-xuexijindu xxjd_tubiao'}></i>
                     <span className="xxjd_text">学习进度</span>
