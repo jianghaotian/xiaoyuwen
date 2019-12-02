@@ -19,6 +19,9 @@ import Yunmu from './components/PinYin/Yunmu';
 import Zhengtiyin from './components/PinYin/Zhengtiyin';
 import Tingyinxuanzi from './components/PinYin/Tingyinxuanzi';
 import Kanzishiyin from './components/PinYin/Kanzishiyin';
+import Xingbie from './components/WoDe/Xingbie';
+import Touxiang from './components/WoDe/Touxiang';
+import Cropimg from './components/WoDe/Cropimg';
 
 
 export default class App extends Component {
@@ -56,17 +59,16 @@ export default class App extends Component {
                     <Route exact path="/wode/shoucang" component={Shoucangjia} />
                     <Route exact path="/wode/fankui" component={Yijianfanhui} />
                     <Route exact path="/wode/guanyu" component={Guanyu} />
-
-                    {/* touxiang */}
+                    <Route exact path="/wode/info/touxiang" component={Touxiang} />
                     <Route exact path="/wode/info/nicheng" component={Nicheng} />
                     <Route exact path="/wode/info/geqian" component={Gexingqianming} />
-                    {/* xingbie */}
+                    <Route exact path="/wode/info/xingbie" component={Xingbie} />
                     <Route exact path="/wode/info/shengri" component={Shengri} />
                     <Route exact path="/wode/info/zhanghao" component={Zhanghao} />
-
                     <Route exact path="/wode/info/mima" component={Xiugaimima} />
                     <Route exact path="/wode/info/shouji" component={Shoujihao} />
 
+                    <Route exact path="/wode/info/touxiang/crop" component={Cropimg} />
 
 
 

@@ -10,7 +10,7 @@ export default class Gerenxinxi extends Component {
             <div>
                 <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>个 人 信 息</NavBar>
-                <div className="grxx_box a_click">
+                <div className="grxx_box a_click" onClick={()=>{this.props.history.push('/wode/info/touxiang')}}>
                     <span className="grxx_text">我的头像</span>
                     <div style={{float:'right'}}>
                         <img className="grxx_header" src={require('../../images/headImage.jpg')}/>
@@ -31,7 +31,7 @@ export default class Gerenxinxi extends Component {
                         <i className={'iconfont icon-youjiantou grxx_you'}></i>
                     </div>
                 </div>
-                <div className="grxx_box a_click">
+                <div className="grxx_box a_click" onClick={()=>{this.props.history.push('/wode/info/xingbie')}}>
                     <span className="grxx_text">性别</span>
                     <div style={{float:'right'}}>
                         <span className="grxx_header">女</span>

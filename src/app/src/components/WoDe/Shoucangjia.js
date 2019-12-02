@@ -21,7 +21,6 @@ export default class Shoucangjia extends Component {
                     <i className={'iconfont icon-pinyin scc_i'}></i>
                     <span className="scj_tab_text">拼音</span>
                     <span className="scj_you" style={{fontSize:'13px'}}>
-                        3
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>
@@ -29,7 +28,6 @@ export default class Shoucangjia extends Component {
                     <i className={'iconfont icon-cy scc_i'}></i>
                     <span className="scj_tab_text">成语</span>
                     <span className="scj_you" style={{fontSize:'13px'}}>
-                        3
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>
@@ -37,7 +35,6 @@ export default class Shoucangjia extends Component {
                     <i className={'iconfont icon-shicidaquan scc_i'}></i>
                     <span className="scj_tab_text">诗词</span>
                     <span className="scj_you" style={{fontSize:'13px'}}>
-                        3
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>
