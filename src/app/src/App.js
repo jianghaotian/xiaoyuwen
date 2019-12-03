@@ -25,6 +25,9 @@ import Cropimg from './components/WoDe/Cropimg';
 import Login from './components/Login/Login';
 import Phonelogin from './components/Login/Phonelogin';
 import Register from './components/Login/Register';
+import Shoupinyin from './components/WoDe/Shoupinyin';
+import Shouchengyu from './components/WoDe/Shouchengyu';
+import Shoushici from './components/WoDe/Shoushici';
 
 
 export default class App extends Component {
@@ -69,7 +72,9 @@ export default class App extends Component {
                     <Route exact path="/wode/info/shengri" component={Shengri} />
                     <Route exact path="/wode/info/zhanghao" component={Zhanghao} />
                     <Route exact path="/wode/info/mima" component={Xiugaimima} />
-                    <Route exact path="/wode/info/shouji" component={Shoujihao} />
+                    <Route exact path="/wode/shoucang/pinyin" component={Shoupinyin} />
+                    <Route exact path="/wode/shoucang/chengyu" component={Shouchengyu} />
+                    <Route exact path="/wode/shoucang/shici" component={Shoushici} />
 
                     <Route exact path="/wode/info/touxiang/crop" component={Cropimg} />
 
