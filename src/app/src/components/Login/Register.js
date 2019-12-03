@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { NavBar, Button, Icon } from 'antd-mobile';
+import { NavBar, Button, Icon, Toast } from 'antd-mobile';
+import api from '../../request'
+import store from '../../redux/store'
+import { setToken } from '../../redux/actions'
 
 export default class Register extends Component {
     constructor() {
@@ -17,9 +20,13 @@ export default class Register extends Component {
         }
     }
     changePhone = (e) => {
-        this.setState({
-            phone: e.target.value
-        })
+        var reg = /^[0-9]*$/;
+
+        if (reg.test(e.target.value) && e.target.value.length <= 11) {
+            this.setState({
+                phone: e.target.value
+            })
+        }
     }
     changeVerity = (e) => {
         this.setState({
@@ -27,14 +34,18 @@ export default class Register extends Component {
         })
     }
     changePassword = (e) => {
-        this.setState({
-            password: e.target.value
-        })
+        if (e.target.value.length <= 16) {
+            this.setState({
+                password: e.target.value
+            })
+        }
     }
     changePassword1 = (e) => {
-        this.setState({
-            password1: e.target.value
-        })
+        if (e.target.value.length <= 16) {
+            this.setState({
+                password1: e.target.value
+            })
+        }
     }
     changeName = (e) => {
         this.setState({
@@ -62,6 +73,42 @@ export default class Register extends Component {
             verityText:verityNum+'s后重新获取'
         })
     }
+    login = () => {
+        if (this.state.phone.length !== 11) {
+            Toast.info('请输入正确的手机号', 1, null, false);
+        } else if(this.state.verity === ''){
+            Toast.info('验证码不能为空', 1, null, false);
+        } else if(this.state.password === '') {
+            Toast.info('请输入密码', 1, null, false);
+        } else if(this.state.password1 === '') {
+            Toast.info('请再次输入密码', 1, null, false);
+        } else if(this.state.password1 !== this.state.password){
+            Toast.info('两次输入的密码不一致', 1, null, false);
+        }else {
+            Toast.loading('正在登录...', 10, () => {
+                Toast.offline('网络异常', 1, null, false);
+            });
+
+            let formData = {
+                phone: this.state.phone,
+                password: this.state.password
+            }
+            api.login(formData).then(res => {
+                console.log(res);
+                Toast.hide();
+                if (res.data.status === 0) {
+                    Toast.success('登录成功', 1);
+                    store.dispatch(setToken(res.data.data.token));
+                    Toast.hide();
+                    this.props.history.push('/home/pinyin');
+                } else if (res.data.status === 10004) {
+                    Toast.fail('用户名或密码错误', 1, null, false);
+                } else {
+                    Toast.fail('服务器错误', 1, null, false);
+                }
+            })
+        }
+    }
     render() {
         return (
             <div className="logincontainer">
@@ -83,6 +130,7 @@ export default class Register extends Component {
                         style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
                                 margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                         activeStyle={{background:'grey'}}
+                        onClick={this.login}
                     >注 册</Button> 
                 </div>
             </div>
