@@ -3,6 +3,23 @@ import { Link } from 'react-router-dom'
 import { NavBar, Button, Icon } from 'antd-mobile';
 
 export default class Phonelogin extends Component {
+    constructor() {
+        super();
+        this.state = {
+            phone: '',
+            verity: ''
+        }
+    }
+    changePhone = (e) => {
+        this.setState({
+            phone: e.target.value
+        })
+    }
+    changeVerity = (e) => {
+        this.setState({
+            verity: e.target.value
+        })
+    }
     render() {
         return (
             <div className="logincontainer">
@@ -10,9 +27,9 @@ export default class Phonelogin extends Component {
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>登 录</NavBar>
 
                 <div className="logininput">
-                    <input type="text" required placeholder="请输入手机号" />
+                    <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
                     <div className="verity">
-                        <input type="text" required placeholder="请输入验证码" />
+                        <input type="text" placeholder="请输入验证码" value={this.state.verity} onChange={this.changeVerity}/>
                         <a>获取验证码</a>
                     </div>
                     <div className="methods">
