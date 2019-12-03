@@ -24,7 +24,7 @@ export default class Phonelogin extends Component {
         })
     }
     verity =()=>{
-        let verityNum = 2;
+        let verityNum = 60;
         let time = setInterval(() => {
             verityNum --;
             this.setState({
