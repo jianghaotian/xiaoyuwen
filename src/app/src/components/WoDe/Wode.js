@@ -10,6 +10,8 @@ export default class Wode extends Component {
 
         };
     }
+
+    // TODO
     componentDidMount() {
         api.getinfo().then(res => {
             console.log(res);

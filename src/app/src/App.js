@@ -23,7 +23,6 @@ import Xingbie from './components/WoDe/Xingbie';
 import Touxiang from './components/WoDe/Touxiang';
 import Cropimg from './components/WoDe/Cropimg';
 import Login from './components/Login/Login';
-import Loginipt from './components/Login/Loginipt';
 import Phonelogin from './components/Login/Phonelogin';
 import Register from './components/Login/Register';
 
