@@ -1,12 +1,28 @@
 import makeActionCreator from './makeActionCreator';
 
-export const ADD_TODO = 'ADD_TODO'
-export const EDIT_TODO = 'EDIT_TODO'
-export const REMOVE_TODO = 'REMOVE_TODO'
-  
-export const addTodo = makeActionCreator(ADD_TODO, 'todo')
-export const editTodo = makeActionCreator(EDIT_TODO, 'id', 'todo')
-export const removeTodo = makeActionCreator(REMOVE_TODO, 'id')
+
+
+
+
+// token
+export const SET_TOKEN = 'SET_TOKEN';
+
+export const setToken = makeActionCreator(SET_TOKEN, 'token')
+
+
+
+// users
+
+export const SET_USERS = 'SET_USERS';
+
+
+export const setUsers = makeActionCreator(SET_USERS, 'users');
+
+
+
+
+
+
 
 
 

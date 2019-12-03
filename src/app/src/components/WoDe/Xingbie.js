@@ -13,7 +13,7 @@ export default class Xingbie extends Component {
         return (
             <div>
                 <div className="wode_back"></div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} style={{background:'#617ca6',color:'#fff'}}>性 别</NavBar>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">男</span>

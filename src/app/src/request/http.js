@@ -1,19 +1,19 @@
-import store from '../store'
+import store from '../redux/store'
 import axios from 'axios';
 import qs from 'qs';
 
 // axios.defaults.withCredentials = true;
 axios.defaults.timeout = 10000;  // 响应时间
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';  // 配置请求头
-axios.defaults.headers.common['token'] = store.state.token;
+axios.defaults.headers.common['token'] = store.getState().token;
 // axios.defaults.baseURL = 'http://api.demo.haotian.pub';  //配置接口地址
-axios.defaults.baseURL = 'http://localhost:5000/v1';  //配置接口地址
+axios.defaults.baseURL = 'http://localhost:8000/v1';  //配置接口地址
 
 // POST传参序列化(添加请求拦截器)
 // 在发送请求之前做某件事
 axios.interceptors.request.use((config) => {
-    if (store.state.token) {
-        config.headers.common['token'] = store.state.token;
+    if (store.getState().token) {
+        config.headers.common['token'] = store.getState().token;
     }
     if(config.method  === 'post'){
         config.data = qs.stringify(config.data);
