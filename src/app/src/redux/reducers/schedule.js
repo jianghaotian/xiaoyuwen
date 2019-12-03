@@ -16,7 +16,7 @@ let defaultSchedule = {
 export default (state = defaultSchedule, action) => {
     let ownState = {...state};
     switch (action.type) {
-        case 'SET_TOKEN':
+        case '111':
 
             return action.filter
         default:
