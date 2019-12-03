@@ -4,6 +4,23 @@ import { NavBar, Button, Icon } from 'antd-mobile';
 import '../../css/Login/login.css'
 
 export default class Login extends Component {
+    constructor() {
+        super();
+        this.state = {
+            phone: '',
+            password: ''
+        }
+    }
+    changePhone = (e) => {
+        this.setState({
+            phone: e.target.value
+        })
+    }
+    changePassword = (e) => {
+        this.setState({
+            password: e.target.value
+        })
+    }
     render() {
         return (
             <div className="logincontainer">
@@ -12,8 +29,8 @@ export default class Login extends Component {
 
 
                 <div className="logininput">
-                    <input type="text" required placeholder="请输入手机号" />
-                    <input type="password" required placeholder="请输入密码" />
+                    <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
+                    <input type="password" placeholder="请输入密码" value={this.state.password} onChange={this.changePassword}/>
                     <div className="methods">
                         <Link to="/login/phone" style={{color:'#000'}}>验证码登录</Link>
                     </div>
