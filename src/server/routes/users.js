@@ -17,7 +17,8 @@ var v_minute = 3; // 验证码有效时间
  *     phone : 手机号
  * 返回参数:
  *     status: 0,
- *     message: "OK"
+ *     message: "OK",
+ *     data: {veriToken}
  */
 router.post('/verification', function (req, res, next) {
     let { phone } = req.body;
@@ -27,7 +28,8 @@ router.post('/verification', function (req, res, next) {
                 let verification = getRandom(6);
 
                 let tokenContent = {
-                    verification: verification
+                    verification: verification,
+                    phone: phone
                 };
                 let params = {
                     expiresIn: 60 * v_minute
@@ -56,7 +58,6 @@ router.post('/verification', function (req, res, next) {
         }
     })
 });
-
 
 /**
  * 用户注册
@@ -96,7 +97,7 @@ router.post('/login', function (req, res, next) {
         if (result.status === 0) {
             if (result.data.length === 0) {
                 let jsonData = {
-                    status: 10004,
+                    status: -1,
                     message: 'login error'
                 }
                 res.json(jsonData);
@@ -123,6 +124,124 @@ router.post('/login', function (req, res, next) {
             res.json(result);
         }
     });
+});
+
+/**
+ * 验证码登录
+ * POST
+ * 接收参数:
+ *     phone : 手机号
+ *     verification : 验证码
+ *     token : 验证码token
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK"
+ */
+router.post('/verilogin', function (req, res, next) {
+    let { phone, verification, token } = req.body;
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            if (result.data.verification == verification && result.data.phone == phone) {
+                runSql('select Uid from user where uphone = ?', [phone], (result) => {
+                    if (result.status === 0) {
+                        if (result.data.length === 0) {
+                            runSql('insert into user(uphone, uday) values (?,?)', [phone, getTimestamp_13()], (result1) => {
+                                // console.log(result1);
+                                runSql('select Uid from user where uphone = ?', [phone], (result2) => {
+                                    if (result.status === 0) {
+                                        let tokenContent = {
+                                            uid: result2.data[0].uid
+                                        };
+                                        let params = {
+                                            expiresIn: 60 * 60 * 24 * 31  // 31天过期
+                                        };
+                        
+                                        let token = getToken(tokenContent, params);
+                        
+                                        let jsonData = {
+                                            status: 0,
+                                            message: 'OK',
+                                            data: {
+                                                token: token
+                                            }
+                                        }
+                                        res.json(jsonData);
+                                    } else {
+                                        res.json(result2);
+                                    }
+                                });
+                            });
+                        } else {
+                            let tokenContent = {
+                                uid: result.data[0].uid
+                            };
+                            let params = {
+                                expiresIn: 60 * 60 * 24 * 31  // 31天过期
+                            };
+            
+                            let token = getToken(tokenContent, params);
+            
+                            let jsonData = {
+                                status: 0,
+                                message: 'OK',
+                                data: {
+                                    token: token
+                                }
+                            }
+                            res.json(jsonData);
+                        }
+                    } else {
+                        res.json(result);
+                    }
+                });
+            } else {
+                let jsonData = {
+                    status: -2,
+                    message: 'login error'
+                }
+                res.json(jsonData);
+            }
+        } else {
+            res.json(result);
+        }
+    });
+
+
+    runSql('select uid from user where uphone = ?', [phone], (result1) => {
+        if (result1.status === 0) {
+            if (result1.data.length === 0) {
+                let verification = getRandom(6);
+
+                let tokenContent = {
+                    verification: verification
+                };
+                let params = {
+                    expiresIn: 60 * v_minute
+                }
+                let veriToken = getToken(tokenContent, params);
+
+                sendMsg(phone, verification, '' + v_minute, (result2) => {
+                    let jsonData = {
+                        status: result2.status,
+                        message: result2.message,
+                        data: {
+                            veriToken: veriToken
+                        }
+                    }
+                    res.json(jsonData);
+                });
+            } else {
+                let jsonData = {
+                    status: 10005,
+                    message: 'user exist'
+                }
+                res.json(jsonData);
+            }
+        } else {
+            res.json(result1);
+        }
+    })
 });
 
 

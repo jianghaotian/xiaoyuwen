@@ -66,20 +66,20 @@
 .bottomicon {
     position: fixed;
     left: 50%;
-    bottom: 35%;
+    bottom: 30vh;
     transform: translate(-50%, 0);
     width: 80%;
     text-align: center;
 }
 
-.bottomicon a {
+.bottomicon i {
     font-size: 30px;
 }
-.bottomicon a:last-child {
+.bottomicon i:last-child {
     font-size: 40px;
 }
 
-.bottomicon a:first-child {
+.bottomicon i:first-child {
     margin-right: 16%;
 }
 
