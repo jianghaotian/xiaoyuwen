@@ -5,7 +5,6 @@ import api from '../../request'
 import store from '../../redux/store'
 import { setToken } from '../../redux/actions'
 
-
 export default class Phonelogin extends Component {
     constructor() {
         super();
@@ -37,7 +36,7 @@ export default class Phonelogin extends Component {
                 verityDiv: 'verity-div1',
                 verityText: '正在获取...'
             })
-            api.verilogin({'phone': this.state.phone}).then(res => {
+            api.login_veri({'phone': this.state.phone}).then(res => {
                 console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
@@ -67,7 +66,6 @@ export default class Phonelogin extends Component {
                         verityText: '重新获取'
                     })
                 }
-
             }, () => {
                 this.setState({
                     verityDiv: 'verity-div',
@@ -89,13 +87,12 @@ export default class Phonelogin extends Component {
             Toast.loading('正在登录...', 10, () => {
                 Toast.offline('网络异常', 1, null, false);
             });
-    
             let formData = {
                 phone: this.state.phone,
                 verification: this.state.verity,
                 token: this.state.veriToken
             }
-            api.verilogin(formData).then(res => {
+            api.veri_login(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
@@ -103,7 +100,7 @@ export default class Phonelogin extends Component {
                     store.dispatch(setToken(res.data.data.token));
                     Toast.hide();
                     this.props.history.push('/home/wode');
-                } else if (res.data.status === -1) {
+                } else if (res.data.status === -2) {
                     Toast.fail('登录失败', 1, null, false);
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
@@ -111,7 +108,6 @@ export default class Phonelogin extends Component {
             })
         }
     }
-
     componentWillUnmount() {
         clearInterval(this.state.time);
     }
@@ -133,6 +129,7 @@ export default class Phonelogin extends Component {
                         style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
                                 margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                         activeStyle={{background:'grey'}}
+                        onClick={this.login}
                     >登 录</Button> 
                 </div>
                 <div className="bottomicon">

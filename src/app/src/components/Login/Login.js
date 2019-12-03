@@ -16,7 +16,6 @@ export default class Login extends Component {
     }
     changePhone = (e) => {
         var reg = /^[0-9]*$/;
-
         if (reg.test(e.target.value) && e.target.value.length <= 11) {
             this.setState({
                 phone: e.target.value
@@ -24,7 +23,7 @@ export default class Login extends Component {
         }
     }
     changePassword = (e) => {
-        if (e.target.value.length <= 16) {
+        if (e.target.value.length <= 20) {
             this.setState({
                 password: e.target.value
             })
@@ -39,7 +38,6 @@ export default class Login extends Component {
             Toast.loading('正在登录...', 10, () => {
                 Toast.offline('网络异常', 1, null, false);
             });
-    
             let formData = {
                 phone: this.state.phone,
                 password: this.state.password
@@ -65,12 +63,11 @@ export default class Login extends Component {
             <div className="logincontainer">
                 <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}} rightContent={<Link to="/register" style={{color:'#fff'}}>立即注册</Link>}>登 录</NavBar>
-
                 <div className="logininput">
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
                     <input type="password" placeholder="请输入密码" value={this.state.password} onChange={this.changePassword}/>
                     <div className="methods">
-                        <Link to="/login/phone" style={{}}>验证码登录</Link>
+                        <Link to="/login/phone">验证码登录</Link>
                     </div>
                     <Button 
                         style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',

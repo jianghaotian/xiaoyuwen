@@ -2,11 +2,14 @@ import { get, post } from './http';
 
 const api = {
     login: p => post('users/login', p),
-    verity: p => post('users/verification', p),
-    verilogin: p => post('user/verilogin', p),
+    login_veri: p => post('users/login/verification', p),
+    veri_login: p => post('users/verilogin', p),
 
-    getinfo: () => get('info/get')
+    register_veri: p => post('users/register/verification', p),
+    register: p => post('users/register', p),
 
+    get_token: p => get('users/gettoken'),
+    get_info: () => get('info/get')
 
 
 } 
