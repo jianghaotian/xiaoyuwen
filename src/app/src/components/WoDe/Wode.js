@@ -7,7 +7,7 @@ export default class Wode extends Component {
     constructor() {
         super();
         this.state = {
-            login: true,
+            login: false,
             head: require('../../images/headImage.jpg'),
             name: '未登录',
             signature: '点击此处登录',
