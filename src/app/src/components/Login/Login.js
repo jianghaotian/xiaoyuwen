@@ -31,9 +31,11 @@ export default class Login extends Component {
         }
     }
     login = () => {
-        if (this.state.phone === '' || this.state.password === '') {
-            Toast.info('用户名或密码不能为空', 1, null, false);
-        } else {
+        if (this.state.phone.length !== 11) {
+            Toast.info('请输入正确的手机号', 1, null, false);
+        } else if(this.state.password === '') {
+            Toast.info('请输入密码', 1, null, false);
+        }else{
             Toast.loading('正在登录...', 10, () => {
                 Toast.offline('网络异常', 1, null, false);
             });
@@ -48,12 +50,10 @@ export default class Login extends Component {
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1);
                     store.dispatch(setToken(res.data.data.token));
-    
                     Toast.hide();
                     this.props.history.push('/home/pinyin');
-                } else if (res.data.status === 10004) {
-                    Toast.fail('用户名或密码错误', 1, null, false);
-                    
+                } else if (res.data.status === -1) {
+                    Toast.fail('手机号或密码错误', 1, null, false);
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }
