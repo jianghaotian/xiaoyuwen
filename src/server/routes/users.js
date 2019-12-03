@@ -92,7 +92,7 @@ router.post('/register', function (req, res, next) {
 router.post('/login', function (req, res, next) {
     let { phone, password } = req.body;
     runSql('select uid from user where uphone = ? and upassword = ?', [phone, password], (result) => {
-        console.log(result);
+        // console.log(result);
         if (result.status === 0) {
             if (result.data.length === 0) {
                 let jsonData = {

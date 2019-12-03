@@ -1,7 +1,7 @@
 import { get, post } from './http';
 
 const api = {
-    login : p => post('student/login', p),
+    login : p => post('users/login', p),
 
     getinfo: () => get('info/get')
 

@@ -1,6 +1,7 @@
 import store from '../redux/store'
 import axios from 'axios';
 import qs from 'qs';
+import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 
 // axios.defaults.withCredentials = true;
 axios.defaults.timeout = 10000;  // 响应时间
@@ -20,7 +21,7 @@ axios.interceptors.request.use((config) => {
     }
     return config;
 }, (error) =>{
-    console.log('错误的传参')
+    console.log('错误的传参');
     return Promise.reject(error);
 });
 
@@ -32,7 +33,11 @@ axios.interceptors.response.use((res) =>{
     }
     return res;
 }, (error) => {
-    console.log('网络异常')
+    console.log('网络异常');
+
+    Toast.hide();
+    Toast.offline('网络异常', 1, null, false);
+
     return Promise.reject(error);
 });
 
