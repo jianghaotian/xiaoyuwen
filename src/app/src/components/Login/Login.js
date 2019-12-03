@@ -1,37 +1,36 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { NavBar, Button, Icon } from 'antd-mobile';
 import '../../css/Login/login.css'
-import Loginipt from './Loginipt'
 
 export default class Login extends Component {
-  render() {
-    return (
-      <div className="logincontainer">
-        <div className="logintop">
-          <span className="iconfont icon-zuojiantou"></span>
-        </div>
-        <div className="choosemethod">
-          {/* <Link to="/pwdlogin">密码登录</Link><span>|</span><Link to="/register">立即注册</Link> */}
-          <a>密码登录</a><span>&ensp;|&ensp;</span><a>立即注册</a>
-        </div>
-        <div className="logininput">
-          <form action="">
-            <input type="text" required placeholder="请输入手机号/邮箱" />
-            <input type="password" required placeholder="请输入密码" />
-            <div className="methods">
-              {/* <Link to="/phonelogin">短信登陆</Link>
-              <Link to="/forgetpwd">忘记密码</Link> */}
-              <a>短信登陆</a>
-              <a>忘记密码?</a>
+    render() {
+        return (
+            <div className="logincontainer">
+                <div className="wode_back"></div>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}} rightContent={<Link to="/register" style={{color:'#fff'}}>立即注册</Link>}>登 录</NavBar>
+
+
+                <div className="logininput">
+                    <form action="">
+                        <input type="text" required placeholder="请输入手机号" />
+                        <input type="password" required placeholder="请输入密码" />
+                        <div className="methods">
+                            <Link to="/login/phone" style={{color:'#000'}}>验证码登录</Link>
+                            <a>忘记密码?</a>
+                        </div>
+                        <Button 
+                            style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
+                                    margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
+                            activeStyle={{background:'grey'}}
+                        >登 录</Button> 
+                    </form>
+                </div>
+                <div className="bottomicon">
+                    <a className="iconfont icon-qq"></a>
+                    <a className="iconfont icon-weixin"></a>
+                </div>
             </div>
-            <input type="submit" value="登录" />
-          </form>
-        </div>
-        <div className="bottomicon">
-          <a className="iconfont icon-qq"></a>
-          <a className="iconfont icon-weixin"></a>
-        </div>
-      </div>
-    )
-  }
+        )
+    }
 }

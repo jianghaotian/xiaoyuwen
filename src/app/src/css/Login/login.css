@@ -10,35 +10,12 @@
     position: relative;
 }
 
-.logintop {
-    width: 100%;
-    height: 7%;
-    padding-top: 3%;
-    padding-left: 3%;
-    box-sizing: border-box;
-    margin-bottom: 5%;
-}
-
-.logintop span {
-    font-size: 9vw;
-    font-weight: bold;
-}
-
-.choosemethod {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 5vw;
-    margin-bottom: 15%;
-}
-
-.choosemethod a:last-child {
-    color: #aaa;
-}
 
 .logininput,
 .logininput2 {
     width: 80%;
     margin: 0 auto;
+    margin-top: 15%;
 }
 
 .logininput form input {
@@ -84,9 +61,9 @@
 }
 
 .bottomicon {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    bottom: 5%;
+    bottom: 10%;
     transform: translate(-50%, 0);
     width: 80%;
     margin: 0 auto;
@@ -141,5 +118,7 @@
 }
 
 .choosemethod2 a:first-child {
-    color: #aaa;
+    color: #fff;
 }
+
+
