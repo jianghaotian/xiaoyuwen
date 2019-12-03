@@ -1,7 +1,7 @@
 import store from '../redux/store'
 import axios from 'axios';
 import qs from 'qs';
-import { NavBar, Button, Icon, Toast } from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 
 // axios.defaults.withCredentials = true;
 axios.defaults.timeout = 10000;  // 响应时间

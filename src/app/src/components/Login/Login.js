@@ -48,7 +48,6 @@ export default class Login extends Component {
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1);
                     store.dispatch(setToken(res.data.data.token));
-    
                     Toast.hide();
                     this.props.history.push('/home/pinyin');
                 } else if (res.data.status === 10004) {
@@ -80,8 +79,8 @@ export default class Login extends Component {
                     >登 录</Button>
                 </div>
                 <div className="bottomicon">
-                    <a className="iconfont icon-qq"></a>
-                    <a className="iconfont icon-weixin1"></a>
+                    <i className="iconfont icon-qq"></i>
+                    <i className="iconfont icon-weixin1"></i>
                 </div>
             </div>
         )
