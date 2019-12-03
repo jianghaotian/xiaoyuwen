@@ -12,19 +12,16 @@ export default class Login extends Component {
 
 
                 <div className="logininput">
-                    <form action="">
-                        <input type="text" required placeholder="请输入手机号" />
-                        <input type="password" required placeholder="请输入密码" />
-                        <div className="methods">
-                            <Link to="/login/phone" style={{color:'#000'}}>验证码登录</Link>
-                            <a>忘记密码?</a>
-                        </div>
-                        <Button 
-                            style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
-                                    margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
-                            activeStyle={{background:'grey'}}
-                        >登 录</Button> 
-                    </form>
+                    <input type="text" required placeholder="请输入手机号" />
+                    <input type="password" required placeholder="请输入密码" />
+                    <div className="methods">
+                        <Link to="/login/phone" style={{color:'#000'}}>验证码登录</Link>
+                    </div>
+                    <Button 
+                        style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
+                                margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
+                        activeStyle={{background:'grey'}}
+                    >登 录</Button>
                 </div>
                 <div className="bottomicon">
                     <a className="iconfont icon-qq"></a>
