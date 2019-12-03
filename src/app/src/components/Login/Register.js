@@ -10,7 +10,10 @@ export default class Register extends Component {
             verity: '',
             password: '',
             password1: '',
-            name: ''
+            name: '',
+            verityDiv:'verity-div',
+            time:'',
+            verityText:'获取验证码'
         }
     }
     changePhone = (e) => {
@@ -38,6 +41,27 @@ export default class Register extends Component {
             name: e.target.value
         })
     }
+    verity =()=>{
+        let verityNum = 60;
+        let time = setInterval(() => {
+            verityNum --;
+            this.setState({
+                verityText:verityNum+'s后重新获取'
+            })
+            if(verityNum == 0){
+                clearInterval(this.state.time);
+                this.setState({
+                    verityText:'重新获取',
+                    verityDiv:'verity-div',
+                })
+            }
+        }, 1000);
+        this.setState({
+            verityDiv:'verity-div1',
+            time:time,
+            verityText:verityNum+'s后重新获取'
+        })
+    }
     render() {
         return (
             <div className="logincontainer">
@@ -49,7 +73,7 @@ export default class Register extends Component {
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
                     <div className="verity">
                         <input type="text" placeholder="请输入验证码" value={this.state.verity} onChange={this.changeVerity}/>
-                        <a>获取验证码</a>
+                        <button className={this.state.verityDiv} onClick={this.verity}>{this.state.verityText}</button>
                     </div>
 
                     <input type="password" required placeholder="请输入密码(6-20位英文和数字)" value={this.state.password} onChange={this.changePassword}/>
