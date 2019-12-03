@@ -83,8 +83,6 @@ export default class App extends Component {
                     <Route exact path="/login/phone" component={Phonelogin} />
                     <Route exact path="/register" component={Register} />
 
-
-
                 </Switch>
             </Router>
         )
