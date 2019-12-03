@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { NavBar, Icon, Button } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 
-export default class Wode extends Component {
+export default class Nianji extends Component {
     constructor() {
         super();
         this.state = {
-
+            grade: 1
         };
     }
     render() {
@@ -17,32 +17,32 @@ export default class Wode extends Component {
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">一年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 1 ? {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'} : {display: 'none'}}/>
                 </div>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">二年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 2 ? {} : {display: 'none'} , {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
                 </div>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">三年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 3 ? {} : {display: 'none'} , {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
                 </div>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">四年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 4 ? {} : {display: 'none'}, {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
                 </div>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">五年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 5 ? {} : {display: 'none'} , {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
                 </div>
 
                 <div className="wode_tab a_click">
                     <span className="wode_tab_text">六年级</span>
-                    <Icon type='check' style={{color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
+                    <Icon type='check' style={this.state.grade === 6 ? {} : {display: 'none'} , {color: '#617ca6',float:'right',marginRight:'1rem',marginTop:'0.8rem'}}/>
                 </div>
 
                 <Button 
