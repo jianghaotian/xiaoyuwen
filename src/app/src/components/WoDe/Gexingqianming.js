@@ -39,6 +39,7 @@ class Gexingqianming extends Component {
                         <TextareaItem
                             {...getFieldProps('note1')}
                             rows={3}
+                            count={25}
                             placeholder="个性签名"
                         />
                     </List>
