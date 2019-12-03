@@ -14,7 +14,7 @@ var v_minute = 3; // 验证码有效时间
  * 获取验证码
  * POST
  * 接收参数:
- *     phone : 手机号/邮箱
+ *     phone : 手机号
  * 返回参数:
  *     status: 0,
  *     message: "OK"
@@ -71,8 +71,8 @@ router.post('/verification', function (req, res, next) {
  *     message: "OK"
  */
 router.post('/register', function (req, res, next) {
-    let { phone, password, name } = req.body;
-    runSql('insert into user(uphone, upassword, uname, uday) values (?,?,?,?)', [phone, password, name, getTimestamp_13()], (result) => {
+    let { phone, password, name, sex } = req.body;
+    runSql('insert into user(uphone, upassword, uname, usex, uday) values (?,?,?,?,?)', [phone, password, name, sex, getTimestamp_13()], (result) => {
         res.json(result);
     });
 });
@@ -116,6 +116,57 @@ router.post('/login', function (req, res, next) {
                     data: {
                         token: token
                     }
+                }
+                res.json(jsonData);
+            }
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+
+
+
+/**
+ * 更新token
+ * GET
+ * 接收参数:
+ *     uid : 用户id
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {token}
+ */
+router.get('/gettoken', function (req, res, next) {
+    let { uid } = req.query;
+    let token = req.header('token');
+
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            if ( uid == result.data.uid) {
+                let tokenContent = {
+                    uid: uid
+                };
+                let params = {
+                    expiresIn: 60 * 60 * 24 * 31  // 31天过期
+                }
+
+                let token = getToken(tokenContent, params);
+
+                let jsonData = {
+                    status: 0,
+                    message: 'OK',
+                    data: {
+                        token: token
+                    }
+                }
+                res.json(jsonData);
+            } else {
+                let jsonData = {
+                    status: -2,
+                    message: 'uid or token error'
                 }
                 res.json(jsonData);
             }

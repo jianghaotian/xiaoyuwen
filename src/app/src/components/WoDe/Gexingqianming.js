@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavBar, Icon, List, TextareaItem } from 'antd-mobile';
+import { NavBar, Icon, List, TextareaItem, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
 
 const data = [];
@@ -43,6 +43,11 @@ class Gexingqianming extends Component {
                         />
                     </List>
                 </div>
+                <Button 
+                    style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
+                            margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
+                    activeStyle={{background:'grey'}}
+                >保 存</Button> 
             </div>
         )   
     }

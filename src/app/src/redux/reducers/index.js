@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux';
+import token from './token';
 import users from './users';
+import schedule from './schedule';
+
 
 const xywApp = combineReducers({
-    users
+    token,
+    users,
+    schedule
     
 });
 

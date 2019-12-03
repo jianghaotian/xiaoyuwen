@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
+import api from '../../request/';
 
 export default class Wode extends Component {
     constructor() {
@@ -8,6 +9,14 @@ export default class Wode extends Component {
         this.state = {
 
         };
+    }
+    componentDidMount() {
+        api.getinfo().then(res => {
+            console.log(res);
+
+        });
+
+
     }
     render() {
         return (

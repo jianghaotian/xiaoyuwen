@@ -22,6 +22,10 @@ import Kanzishiyin from './components/PinYin/Kanzishiyin';
 import Xingbie from './components/WoDe/Xingbie';
 import Touxiang from './components/WoDe/Touxiang';
 import Cropimg from './components/WoDe/Cropimg';
+import Login from './components/Login/Login';
+import Loginipt from './components/Login/Loginipt';
+import Phonelogin from './components/Login/Phonelogin';
+import Register from './components/Login/Register';
 
 
 export default class App extends Component {
@@ -70,6 +74,10 @@ export default class App extends Component {
 
                     <Route exact path="/wode/info/touxiang/crop" component={Cropimg} />
 
+                    {/* 登录注册 */}
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/login/phone" component={Phonelogin} />
+                    <Route exact path="/register" component={Register} />
 
 
 

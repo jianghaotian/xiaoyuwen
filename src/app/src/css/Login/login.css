@@ -1,0 +1,145 @@
+#root,
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+#root .logincontainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.logintop {
+    width: 100%;
+    height: 7%;
+    padding-top: 3%;
+    padding-left: 3%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.logintop span {
+    font-size: 9vw;
+    font-weight: bold;
+}
+
+.choosemethod {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 5vw;
+    margin-bottom: 15%;
+}
+
+.choosemethod a:last-child {
+    color: #aaa;
+}
+
+.logininput,
+.logininput2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logininput form input {
+    display: block;
+    border: none;
+    text-indent: 1em;
+}
+
+.logininput form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.logininput form input[type="password"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.logininput .methods {
+    height: 30px;
+}
+
+.logininput .methods a:first-child {
+    float: left;
+}
+
+.logininput .methods a:last-child {
+    float: right;
+}
+
+.logininput form input[type="submit"],
+.logininput2 form input[type="submit"] {
+    text-indent: 0;
+    color: #fff;
+    background-color: #91aad1;
+    font-size: 5vw;
+    line-height: 30px;
+    width: 30%;
+    border-radius: 15px;
+    margin: 5% auto;
+}
+
+.bottomicon {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bottomicon a {
+    font-size: 6vw;
+}
+
+.bottomicon a:first-child {
+    margin-right: 10%;
+}
+
+.logininput2 form input {
+    display: block;
+    border: none;
+    text-indent: 1em;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10%;
+}
+
+.logininput2 form input[type="submit"] {
+    border-radius: 25px;
+}
+
+.verity {
+    position: relative;
+    width: 100%;
+}
+
+.verity a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30%;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #91aad1;
+    vertical-align: middle;
+}
+
+.choosemethod2 {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 5vw;
+    margin-bottom: 15%;
+}
+
+.choosemethod2 a:first-child {
+    color: #aaa;
+}
