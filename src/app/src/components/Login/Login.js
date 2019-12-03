@@ -70,7 +70,7 @@ export default class Login extends Component {
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
                     <input type="password" placeholder="请输入密码" value={this.state.password} onChange={this.changePassword}/>
                     <div className="methods">
-                        <Link to="/login/phone" style={{color:'#000'}}>验证码登录</Link>
+                        <Link to="/login/phone" style={{}}>验证码登录</Link>
                     </div>
                     <Button 
                         style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
@@ -81,7 +81,7 @@ export default class Login extends Component {
                 </div>
                 <div className="bottomicon">
                     <a className="iconfont icon-qq"></a>
-                    <a className="iconfont icon-weixin"></a>
+                    <a className="iconfont icon-weixin1"></a>
                 </div>
             </div>
         )
