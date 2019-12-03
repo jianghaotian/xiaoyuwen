@@ -72,6 +72,7 @@ export default class App extends Component {
                     <Route exact path="/wode/info/shengri" component={Shengri} />
                     <Route exact path="/wode/info/zhanghao" component={Zhanghao} />
                     <Route exact path="/wode/info/mima" component={Xiugaimima} />
+                    <Route exact path="/wode/info/shouji" component={Shoujihao} />
                     <Route exact path="/wode/shoucang/pinyin" component={Shoupinyin} />
                     <Route exact path="/wode/shoucang/chengyu" component={Shouchengyu} />
                     <Route exact path="/wode/shoucang/shici" component={Shoushici} />
