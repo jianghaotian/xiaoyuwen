@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { NavBar, Button, Icon } from 'antd-mobile';
 
 export default class Phonelogin extends Component {
     constructor() {
         super();
         this.state = {
+            verityText: '获取验证码',
+            verityDiv: 'verity-div',
+            time: '',
             phone: '',
-            verity: '',
-            verityDiv:'verity-div',
-            time:'',
-            verityText:'获取验证码'
+            verity: ''
         }
     }
     changePhone = (e) => {
@@ -28,20 +28,20 @@ export default class Phonelogin extends Component {
         let time = setInterval(() => {
             verityNum --;
             this.setState({
-                verityText:verityNum+'s后重新获取'
+                verityText: verityNum + 's后重新获取'
             })
             if(verityNum == 0){
                 clearInterval(this.state.time);
                 this.setState({
-                    verityText:'重新获取',
-                    verityDiv:'verity-div',
+                    verityText: '重新获取',
+                    verityDiv: 'verity-div',
                 })
             }
         }, 1000);
         this.setState({
-            verityDiv:'verity-div1',
-            time:time,
-            verityText:verityNum+'s后重新获取'
+            verityDiv: 'verity-div1',
+            time: time,
+            verityText: verityNum + 's后重新获取'
         })
     }
     render() {
