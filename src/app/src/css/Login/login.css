@@ -18,19 +18,19 @@
     margin-top: 15%;
 }
 
-.logininput form input {
+.logininput input {
     display: block;
     border: none;
     text-indent: 1em;
 }
 
-.logininput form input[type="text"] {
+.logininput input[type="text"] {
     width: 100%;
     height: 50px;
     margin-bottom: 30px;
 }
 
-.logininput form input[type="password"] {
+.logininput input[type="password"] {
     width: 100%;
     height: 50px;
     margin-bottom: 30px;
@@ -44,12 +44,12 @@
     float: left;
 }
 
-.logininput .methods a:last-child {
+/* .logininput .methods a:last-child {
     float: right;
-}
+} */
 
-.logininput form input[type="submit"],
-.logininput2 form input[type="submit"] {
+.logininput input[type="submit"],
+.logininput2 input[type="submit"] {
     text-indent: 0;
     color: #fff;
     background-color: #91aad1;
@@ -78,7 +78,7 @@
     margin-right: 10%;
 }
 
-.logininput2 form input {
+.logininput2 input {
     display: block;
     border: none;
     text-indent: 1em;
@@ -87,7 +87,7 @@
     margin-bottom: 10%;
 }
 
-.logininput2 form input[type="submit"] {
+.logininput2 input[type="submit"] {
     border-radius: 25px;
 }
 
