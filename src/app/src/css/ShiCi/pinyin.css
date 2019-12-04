@@ -1,0 +1,47 @@
+.p1{
+    background: url(../../images/bg1.jpeg);
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;    
+}
+.p2{
+    width:100%;
+    height: 16%;
+}
+.p3{
+    width:40%;
+    height: 100%;
+}
+.p4{
+    width: 100%;
+    height:100%;
+    background-image: url(../../images/cloud.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 7vw;
+    background-color: rgb(255, 255, 255,0);
+    border: 1px solid rgb(255, 255, 255,0);
+}
+.p5{
+    float: left;
+    margin-left: 8%;
+}
+.p6{
+    float: right;
+    margin-right: 8%;
+}
+.p7{
+    margin-top: 10%;
+}
+.p8{
+    margin-top: 30%;
+}
+.p9{
+    margin-top: 25%;
+}

@@ -1,0 +1,151 @@
+.idiomjlbody{
+    width:100%;
+    height:100%;
+    padding-top: 5%;
+    box-sizing: border-box;
+  }
+  .learnidiomcon{
+    width:85%;
+    height:100%;
+
+    margin:0 auto;
+  }
+  .orange{
+    margin-left: 40%;
+    margin-top:5%;
+  }
+  .orange span{
+    color:red;
+    font-size: 12px;
+  }
+  .jielongcon{
+    width:100%;
+    height:80%;
+    /* background-color: lightskyblue; */
+  }
+  .learnimg{
+    opacity: 0.5;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+  }
+  .idiomsleft{
+    left:0;
+    top:50%;
+    position: fixed;
+  }
+  .idiomsleft a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .idiomsright{
+    position: fixed;
+    right:0;
+    top:50%;
+    transform: rotate(180deg);
+  }
+  .idiomsright a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .black{
+    font-size:22px;
+    margin-left:90%
+  }
+  .yello{
+    font-size:22px;
+    margin-left:90%;
+    color:yellow
+  }
+  .jlcode{
+    width:62vw;
+    height:62vw;
+    /* background-color: bisque; */
+    margin:0 auto;
+    margin-top: 20%;
+    text-align: center;
+  }
+  .wordcode{
+    width:9.5vw;
+    height:9.5vw;
+    float:left;
+    background-color:#fff;
+    border:1px solid gray;
+    font-size:6vw;
+    line-height: 9.5vw;
+    text-align: center;
+  }
+  .whitecode{
+    width:9.5vw;
+    height:9.5vw;
+    float:left;
+    background-color: #fff;
+    border:1px solid gray;
+    color:rgba(0, 0, 255, 0)
+  }
+  .nocode{
+    width:9.5vw;
+    height:9.5vw;
+    float:left;
+    background-color: rgba(255, 255, 240, 0);
+    border:1px solid rgba(128, 128, 128, 0);
+    color:rgba(255, 0, 0, 0);
+  }
+  .answercode{
+    width:60vw;
+    height:30vw;
+    margin:0 auto;
+    margin-top: 8%;
+  }
+  .choosecode{
+    width:9.5vw;
+    height:9.5vw;
+    float:left;
+    background-color: #fff;
+    border:2px solid #617ca6;
+    font-size:6vw;
+    line-height: 9.5vw;
+    text-align: center;
+    margin:2vw 2vw;
+    border-radius: 5px;
+  }
+  .jloutsubmit{
+    margin:0 auto;
+    width:50%;
+    height: 40%;
+    text-align: center;
+    line-height: 40%;
+    margin-top: 7%;
+ }
+ .submit{
+   padding: 5%;
+   font-size: 18px;
+   width:70%;
+   height: 40%;
+   line-height: 40%;
+   text-align: center;
+   background-color:#6189B8;
+   color:#fff;
+   border:1px solid #6189B8;
+ }
+ .colorred{
+  color:red;
+}
+.colorgreen{
+  color:green;
+}
+.active{
+  background-color: rgb(144, 223, 247);
+}
