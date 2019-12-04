@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon,Toast,Button } from 'antd-mobile';
-import api from '../../request'
+// import api from '../../request'
 
 export default class Yzmxiugai extends Component {
     constructor() {
@@ -55,7 +55,7 @@ export default class Yzmxiugai extends Component {
                 verityDiv: 'verity-div1',
                 verityText: '正在获取...'
             })
-            api.register_veri({'phone': this.state.phone}).then(res => {
+            this.$api.register_veri({'phone': this.state.phone}).then(res => {
                 console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
@@ -117,7 +117,7 @@ export default class Yzmxiugai extends Component {
                 verification: this.state.verity,
                 token: this.state.veriToken
             }
-            api.register(formData).then(res => {
+            this.$api.register(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
