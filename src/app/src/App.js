@@ -55,8 +55,6 @@ export default class App extends Component {
                     <Route exact path="/pinyin/kanzi" component={Kanzishiyin} />
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 
-
-
                     {/* 成语 */}
                     <Route exact path="/chengyu/xuechengyu" component={LearnIdioms} />
                     <Route exact path="/chengyu/yicuozi" component={Erridioms} />

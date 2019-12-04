@@ -68,7 +68,7 @@
     padding: 4%;
     border: 1px solid #617ca6;
     border-radius: 10%;
-    font-size: 25px;
+    font-size: 7vw;
     text-align: center;
     background: #ffffff;
     float: left;
@@ -97,4 +97,5 @@
     background-color:#6189B8;
     color:#fff;
     border:1px solid #6189B8;
+    margin-top: 30%;
 }

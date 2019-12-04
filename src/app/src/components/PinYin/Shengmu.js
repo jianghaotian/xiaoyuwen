@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { NavBar, SearchBar, Icon } from 'antd-mobile';
-
+import React, { Component } from 'react'
+import '../../css/PinYin/pinyin.css'
+import {Link} from "react-router-dom"
+import {NavBar,SearchBar,Icon} from 'antd-mobile';
 export default class Shengmu extends Component {
-    constructor() {
+    constructor(){
         super();
-        this.state = {
+        this.state={
             num:1,
             favor:false,
             content:{
@@ -17,37 +17,40 @@ export default class Shengmu extends Component {
             }
         }
     }
-    left = () => {
-        this.setState((state) => {
-            if (state.num==1) {
-                return {
-                    num: 1
+    left=()=>{
+        this.setState((state)=>{
+            if(state.num==1){
+                return{
+                    num:1
                 }
             }
-            return {
-                num: --state.num
-            }
-        })
-    }
-    right = () => {
-        this.setState((state) => {
-            return {
-                num: ++state.num
-            }
-        })
-    }
-    change = (e) => {
-        e.target.className = (e.target.className === "iconfont icon-xingxing black") ? "iconfont icon-xingxing1 yello" : "iconfont icon-xingxing black";
-        this.setState((state) => {
             return{
-                favor: state.favor ? false : true
+                num:--state.num
+            }
+        })
+    }
+    right=()=>{
+        this.setState((state)=>{
+            return{
+                num:++state.num
+            }
+        })
+    }
+    change=(e)=>{
+        e.target.className=(e.target.className=="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black";
+        this.setState((state)=>{
+            return{
+                favor:state.favor?false:true
             }
         })
     }
     render() {
         return (
             <div className="s1">
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>声 母</NavBar>
+                <NavBar
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>}
+                    style={{backgroundColor:"#617ca6"}}
+                    >声 母</NavBar>
                 <div className="s2">
                     <SearchBar
                         placeholder="查找"
@@ -74,7 +77,7 @@ export default class Shengmu extends Component {
                         <div className="s11">{this.state.content.ci[1]}</div>
                     </div>
                     <div className="s10">
-                        {/* <img src={require("../../images/"+this.state.content.img)}/> */}
+                        <img src={require("../../images/"+this.state.content.img)}/>
                     </div>
                 </div>
                 <Link className="iconfont icon-ico_leftarrow left" to={'/shengmu/'+this.state.num==1?1:this.state.num-1}></Link>
