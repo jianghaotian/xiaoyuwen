@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 import '../../css/Login/login.css'
-import api from '../../request'
+// import api from '../../request'
 import store from '../../redux/store'
 import { setTokenAll, setUid } from '../../redux/actions'
 
@@ -42,7 +42,7 @@ export default class Login extends Component {
                 phone: this.state.phone,
                 password: this.state.password
             }
-            api.login(formData).then(res => {
+            this.$api.login(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {

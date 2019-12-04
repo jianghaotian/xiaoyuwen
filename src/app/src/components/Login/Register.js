@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
-import api from '../../request'
+// import api from '../../request'
 import store from '../../redux/store'
 import { setToken } from '../../redux/actions'
 
@@ -58,7 +58,7 @@ export default class Register extends Component {
                 verityDiv: 'verity-div1',
                 verityText: '正在获取...'
             })
-            api.register_veri({'phone': this.state.phone}).then(res => {
+            this.$api.register_veri({'phone': this.state.phone}).then(res => {
                 console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
@@ -122,7 +122,7 @@ export default class Register extends Component {
                 verification: this.state.verity,
                 token: this.state.veriToken
             }
-            api.register(formData).then(res => {
+            this.$api.register(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {

@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'antd-mobile/dist/antd-mobile.css';
 import App from './App';
+import api from './request/api';
 // import * as serviceWorker from './serviceWorker';
+
+React.Component.prototype.$api = api;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
