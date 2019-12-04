@@ -5,7 +5,6 @@ import Chengyu from './ChengYu/Chengyu';
 import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
-import store from '../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../redux/actions';
 
 
@@ -17,10 +16,8 @@ export default class Bar extends Component {
         };
     }
     componentDidMount() {
-        console.log(this.$api);
-        console.log(Component.prototype);
-        if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
-            this.$api.get_info({uid: store.getState().token.uid}).then(res => {
+        if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
+            this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
                 console.log(res);
 
                 // 同下
@@ -34,25 +31,25 @@ export default class Bar extends Component {
                         grade: res.data.data[0].Ugrade || 1,
                         image: res.data.data[0].Uimage || '',
                     }
-                    store.dispatch(setUsers(ownUsers));
+                    this.$store.dispatch(setUsers(ownUsers));
                 } else if (res.data.status === -1 || res.data.status === -2) {
-                    store.dispatch(clearTokenAll());
-                    store.dispatch(clearUsers());
+                    this.$store.dispatch(clearTokenAll());
+                    this.$store.dispatch(clearUsers());
                 }
                 // 同下结束
     
-                // console.log(store.getState());
+                // console.log(this.$store.getState());
             }, () => {
                 Toast.hide();
                 // Toast.info('当前未连接网络', 1, null, false);
             });
         }
         //  else {
-        //     let unsubscribe = store.subscribe(() => {
-        //         if (store.getState().token.uid !== '' && store.getState().token.token != '') {
+        //     let unsubscribe = this.$store.subscribe(() => {
+        //         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token != '') {
         //             unsubscribe();
         //             console.log(11);
-        //             api.get_info({uid: store.getState().token.uid}).then(res => {
+        //             api.get_info({uid: this.$store.getState().token.uid}).then(res => {
         //                 console.log(res);
             
         //                 // 同上
@@ -65,14 +62,14 @@ export default class Bar extends Component {
         //                         phone: res.data.data[0].Uphone || '',
         //                         grade: res.data.data[0].Ugrade || ''
         //                     }
-        //                     store.dispatch(setUsers(ownUsers));
+        //                     this.$store.dispatch(setUsers(ownUsers));
         //                 } else if (res.data.status === -1 || res.data.status === -2) {
-        //                     store.dispatch(clearTokenAll());
-        //                     store.dispatch(clearUsers());
+        //                     this.$store.dispatch(clearTokenAll());
+        //                     this.$store.dispatch(clearUsers());
         //                 }
         //                 // 同上结束
             
-        //                 // console.log(store.getState());
+        //                 // console.log(this.$store.getState());
                         
         //             }, () => {
         //                 Toast.hide();

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon, InputItem, Button,Toast } from 'antd-mobile';
 import { createForm } from 'rc-form';
-import store from '../../redux/store'
 import { setToken } from '../../redux/actions'
 
 const data = [];
@@ -114,7 +113,7 @@ class Shoujihao extends Component {
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1);
-                    store.dispatch(setToken(res.data.data.token));
+                    this.$store.dispatch(setToken(res.data.data.token));
                     Toast.hide();
                     this.props.history.push('/home/wode');
                 } else if (res.data.status === -2) {

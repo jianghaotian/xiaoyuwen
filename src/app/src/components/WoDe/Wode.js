@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 import { Button, Icon, Toast } from 'antd-mobile';
-import store from '../../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
 
 
@@ -18,16 +17,16 @@ export default class Wode extends Component {
         };
     }
     // componentDidMount() {
-    //     if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone !== '') {
+    //     if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
     //         this.setState({
     //             login: true,
-    //             head: store.getState().users.image || require('../../images/headImage.jpg'),
-    //             name: store.getState().users.name,
-    //             signature: store.getState().users.signature,
-    //             grade: store.getState().users.grade
+    //             head: this.$store.getState().users.image || require('../../images/headImage.jpg'),
+    //             name: this.$store.getState().users.name,
+    //             signature: this.$store.getState().users.signature,
+    //             grade: this.$store.getState().users.grade
     //         })
-    //     } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
-    //         this.$api.get_info({uid: store.getState().token.uid}).then(res => {
+    //     } else if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
+    //         this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
     //             console.log(res);
 
     //             if (res.data.status === 0) {
@@ -40,10 +39,10 @@ export default class Wode extends Component {
     //                     grade: res.data.data[0].Ugrade || 1,
     //                     image: res.data.data[0].Uimage || '',
     //                 }
-    //                 store.dispatch(setUsers(ownUsers));
+    //                 this.$store.dispatch(setUsers(ownUsers));
     //             } else if (res.data.status === -1 || res.data.status === -2) {
-    //                 store.dispatch(clearTokenAll());
-    //                 store.dispatch(clearUsers());
+    //                 this.$store.dispatch(clearTokenAll());
+    //                 this.$store.dispatch(clearUsers());
     //             }
     //         }, () => {
     //             Toast.hide();
@@ -53,20 +52,20 @@ export default class Wode extends Component {
     // }
     UNSAFE_componentWillMount() {
         // console.log('will mount 111');
-        // console.log(store.getState().token.uid);
-        // console.log(store.getState().token.token);
-        if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone !== '') {
+        // console.log(this.$store.getState().token.uid);
+        // console.log(this.$store.getState().token.token);
+        if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
             // console.log('phone != ""');
             this.setState({
                 login: true,
-                head: store.getState().users.image || require('../../images/headImage.jpg'),
-                name: store.getState().users.name,
-                signature: store.getState().users.signature || '编辑个性签名',
-                grade: store.getState().users.grade
+                head: this.$store.getState().users.image || require('../../images/headImage.jpg'),
+                name: this.$store.getState().users.name,
+                signature: this.$store.getState().users.signature || '编辑个性签名',
+                grade: this.$store.getState().users.grade
             })
-        } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
+        } else if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
             // console.log('phone == ""');
-            this.$api.get_info({uid: store.getState().token.uid}).then(res => {
+            this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
                 console.log(res);
 
                 if (res.data.status === 0) {
@@ -86,10 +85,10 @@ export default class Wode extends Component {
                         signature: ownUsers.signature || '编辑个性签名',
                         grade: ownUsers.grade
                     })
-                    store.dispatch(setUsers(ownUsers));
+                    this.$store.dispatch(setUsers(ownUsers));
                 } else if (res.data.status === -1 || res.data.status === -2) {
-                    store.dispatch(clearTokenAll());
-                    store.dispatch(clearUsers());
+                    this.$store.dispatch(clearTokenAll());
+                    this.$store.dispatch(clearUsers());
                 }
             }, () => {
                 Toast.hide();
