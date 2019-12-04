@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon, InputItem, Button,Toast } from 'antd-mobile';
 import { createForm } from 'rc-form';
-// import api from '../../request'
 import store from '../../redux/store'
 import { setToken } from '../../redux/actions'
 

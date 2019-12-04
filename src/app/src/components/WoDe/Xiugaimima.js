@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { List, InputItem, Button,NavBar,Icon,Toast } from 'antd-mobile';
 import { Link } from 'react-router-dom';
-// import api from '../../request'
+
 
 import { createForm } from 'rc-form';
 

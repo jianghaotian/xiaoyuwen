@@ -4,7 +4,6 @@ import Pinyin from './PinYin/Pinyin';
 import Chengyu from './ChengYu/Chengyu';
 import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
-// import api from '../request/';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 import store from '../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../redux/actions';

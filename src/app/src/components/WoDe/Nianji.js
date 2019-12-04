@@ -3,7 +3,7 @@ import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 import store from '../../redux/store';
 import { setGrade, clearUsers, setUsers } from '../../redux/actions';
-// import api from '../../request/api';
+
 
 export default class Nianji extends Component {
     constructor() {
