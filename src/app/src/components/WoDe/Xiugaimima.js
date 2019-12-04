@@ -6,9 +6,13 @@ import { Link } from 'react-router-dom';
 import { createForm } from 'rc-form';
 
 class Xiugaimima extends Component {
-    state = {
-        value: 1,
-        oldPassword: ''
+    constructor() {
+        super();
+        this.state = {
+            oldPassword: '',
+            newPassword: '',
+            newPassword1: ''
+        }
     }
     changeOld = (e) => {
         if (e.target.value.length <= 20) {
@@ -34,8 +38,6 @@ class Xiugaimima extends Component {
     register = () => {
         if (this.state.oldPassword === '') {
             Toast.info('请输入旧密码', 1, null, false);
-        } else if (this.state.oldPassword.length < 6) {
-            Toast.info('密码长度不能低于6位', 1, null, false);
         } else if (this.state.newPassword === '') {
             Toast.info('请输入新密码', 1, null, false);
         } else if (this.state.newPassword.length < 6) {
@@ -44,54 +46,33 @@ class Xiugaimima extends Component {
             Toast.info('请再次输入密码', 1, null, false);
         } else if (this.state.newPassword1 !== this.state.newPassword) {
             Toast.info('两次输入的密码不一致', 1, null, false);
+        } else if (this.state.oldPassword === this.state.newPassword) {
+            Toast.info('输入的旧密码和新密码相同', 1, null, false);
         } else {
-            Toast.loading('正在注册...', 10, () => {
+            Toast.loading('正在修改...', 10, () => {
                 Toast.offline('网络异常', 1, null, false);
             });
             let formData = {
-                /**姜皓天改这里！！！！！！！！！！！！！ */
-                phone: this.state.phone,
-                password: this.state.password,
-                name: this.state.name,
-                verification: this.state.verity,
-                token: this.state.veriToken
+                oldp: this.state.oldPassword,
+                newp: this.state.newPassword
             }
-            this.$api.register(formData).then(res => {
+
+            this.$api.change_pwd(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
-                    Toast.success('注册成功', 1);
-                    Toast.hide();
-                    this.props.history.push('/login');
-                } else if (res.data.status === -2) {
-                    Toast.fail('验证码错误', 1, null, false);
+                    Toast.success('修改密码成功', 1, null, false);
+                    this.props.history.push('/wode/info/zhanghao');
+                } else if (res.data.status === -3) {
+                    Toast.fail('旧密码错误', 1, null, false);
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }
             })
         }
     }
-    onSubmit = () => {
-        this.props.form.validateFields({ force: true }, (error) => {
-            if (!error) {
-                console.log(this.props.form.getFieldsValue());
-            } else {
-                alert('Validation failed');
-            }
-        });
-    }
-    onReset = () => {
-        this.props.form.resetFields();
-    }
-    validateAccount = (rule, value, callback) => {
-        if (value && value.length > 4) {
-            callback();
-        } else {
-            callback(new Error('At least four characters for account'));
-        }
-    }
+
     render() {
-        const { getFieldProps, getFieldError } = this.props.form;
         return (
             <div>
                 <div className="wode_back"></div>
@@ -112,7 +93,7 @@ class Xiugaimima extends Component {
                             margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                     activeStyle={{background:'grey'}}
                     onClick={this.register}
-                >确 定</Button> 
+                >确 定</Button>
             </div>
         )
     }

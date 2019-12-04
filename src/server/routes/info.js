@@ -39,7 +39,16 @@ router.get('/get', function (req, res, next) {
     });
 });
 
-
+/**
+ * 获取用户信息
+ * POST
+ * 接收参数:
+ *     grade : 用户年级
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
 router.post('/setgrade', function (req, res, next) {
     let { grade } = req.body;
     let token = req.header('token');

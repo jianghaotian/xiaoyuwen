@@ -9,6 +9,11 @@ const api = {
     get_token: p => get('users/gettoken', p),
     get_info: p => get('info/get',p),
 
+
+    change_pwd: p => post('users/changepwd', p),
+    change_pwd_veri: p => post('users/cpwdveri', p),
+    veri_change_pwd: p => post('users/vericpwd', p),
+
     set_grade: p => post('info/setgrade', p)
 
 

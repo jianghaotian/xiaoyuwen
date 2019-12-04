@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon,Toast,Button } from 'antd-mobile';
+import { Link } from 'react-router-dom';
 
 
 export default class Yzmxiugai extends Component {
@@ -151,6 +152,9 @@ export default class Yzmxiugai extends Component {
                     <input type="password" placeholder="请输入新密码" value={this.state.newPassword} onChange={this.changeNew}/>
                     <span className='xiutext'>请再次输入密码：</span>
                     <input type="password" placeholder="请再次输入密码" value={this.state.newPassword1} onChange={this.changeNew1}/>
+                <div className="methods">
+                    <Link to="/wode/info/mima">通过密码修改</Link>
+                </div>
                 </div>
                 <Button 
                     style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
