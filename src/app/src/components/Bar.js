@@ -4,6 +4,8 @@ import Pinyin from './PinYin/Pinyin';
 import Chengyu from './ChengYu/Chengyu';
 import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
+import api from '../request/';
+import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 
 
 export default class Bar extends Component {
@@ -12,6 +14,17 @@ export default class Bar extends Component {
         this.state = {
             selectedTab: this.props.match.params.tab || 'pinyin'
         };
+    }
+    componentDidMount() {
+        api.get_info().then(res => {
+            console.log(res);
+
+        }, () => {
+            Toast.hide();
+            Toast.info('当前未连接网络', 1, null, false);
+
+        });
+
     }
     render() {
         return (
