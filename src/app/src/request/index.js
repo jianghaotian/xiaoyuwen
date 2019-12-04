@@ -12,7 +12,8 @@ const api = {
     get_info: () => get('info/get')
 
 
-} 
+
+}
 
 export default api;
 

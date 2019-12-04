@@ -114,6 +114,10 @@ router.post('/login/verification', function (req, res, next) {
 router.post('/register', function (req, res, next) {
     let { phone, password, name, verification, token } = req.body;
 
+    if (name == '' || name == null) {
+        name = '小语文_' + getRandom(6);
+    }
+
     checkToken(token, (result) => {
         if (result.status === 0) {
             if (result.data.verification == verification && result.data.phone == phone) {
@@ -170,7 +174,8 @@ router.post('/login', function (req, res, next) {
                     status: 0,
                     message: 'OK',
                     data: {
-                        token: token
+                        token: token,
+                        uid: result.data[0].uid
                     }
                 }
                 res.json(jsonData);
@@ -204,7 +209,7 @@ router.post('/verilogin', function (req, res, next) {
                             runSql('insert into user(uphone, uday) values (?,?)', [phone, getTimestamp_13()], (result1) => {
                                 // console.log(result1);
                                 runSql('select Uid from user where uphone = ?', [phone], (result2) => {
-                                    if (result.status === 0) {
+                                    if (result2.status === 0) {
                                         let tokenContent = {
                                             uid: result2.data[0].uid
                                         };
@@ -218,7 +223,8 @@ router.post('/verilogin', function (req, res, next) {
                                             status: 0,
                                             message: 'OK',
                                             data: {
-                                                token: token
+                                                token: token,
+                                                uid: result2.data[0].uid
                                             }
                                         }
                                         res.json(jsonData);
@@ -241,7 +247,8 @@ router.post('/verilogin', function (req, res, next) {
                                 status: 0,
                                 message: 'OK',
                                 data: {
-                                    token: token
+                                    token: token,
+                                    uid: result.data[0].uid
                                 }
                             }
                             res.json(jsonData);
