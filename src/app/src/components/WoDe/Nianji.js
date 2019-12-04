@@ -3,7 +3,7 @@ import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 import store from '../../redux/store';
 import { setGrade, clearUsers, setUsers } from '../../redux/actions';
-import api from '../../request';
+
 
 export default class Nianji extends Component {
     constructor() {
@@ -17,7 +17,7 @@ export default class Nianji extends Component {
             Toast.offline('网络异常', 1, null, false);
         });
 
-        api.set_grade({grade: this.state.grade}).then(res => {
+        this.$api.set_grade({grade: this.state.grade}).then(res => {
             Toast.hide();
 
             if (res.data.status === 0) {

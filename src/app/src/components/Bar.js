@@ -4,7 +4,6 @@ import Pinyin from './PinYin/Pinyin';
 import Chengyu from './ChengYu/Chengyu';
 import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
-import api from '../request/';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 import store from '../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../redux/actions';
@@ -18,8 +17,10 @@ export default class Bar extends Component {
         };
     }
     componentDidMount() {
+        console.log(this.$api);
+        console.log(Component.prototype);
         if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
-            api.get_info({uid: store.getState().token.uid}).then(res => {
+            this.$api.get_info({uid: store.getState().token.uid}).then(res => {
                 console.log(res);
 
                 // 同下

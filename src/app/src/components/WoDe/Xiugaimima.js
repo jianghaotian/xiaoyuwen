@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { List, InputItem, Button,NavBar,Icon,Toast } from 'antd-mobile';
 import { Link } from 'react-router-dom';
-import api from '../../request'
+
 
 import { createForm } from 'rc-form';
 
@@ -56,7 +56,7 @@ class Xiugaimima extends Component {
                 verification: this.state.verity,
                 token: this.state.veriToken
             }
-            api.register(formData).then(res => {
+            this.$api.register(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
