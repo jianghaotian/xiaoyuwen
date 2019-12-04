@@ -32,6 +32,7 @@ class Yijianfanhui extends Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
+                <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>意 见 反 馈</NavBar>
                 <List>
                     <TextareaItem
