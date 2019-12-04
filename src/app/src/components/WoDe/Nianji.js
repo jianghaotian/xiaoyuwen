@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
-import store from '../../redux/store';
 import { setGrade, clearUsers, setUsers } from '../../redux/actions';
 
 
@@ -9,7 +8,7 @@ export default class Nianji extends Component {
     constructor() {
         super();
         this.state = {
-            grade: store.getState().users.grade || 1
+            grade: this.$store.getState().users.grade || 1
         };
     }
     save = () => {
@@ -22,7 +21,7 @@ export default class Nianji extends Component {
 
             if (res.data.status === 0) {
                 Toast.success('保存成功', 1, null, false);
-                store.dispatch(setGrade(this.state.grade));
+                this.$store.dispatch(setGrade(this.state.grade));
                 this.props.history.push('/home/wode');
             } else {
                 Toast.fail('保存失败', 1, null, false);
