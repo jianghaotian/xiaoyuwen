@@ -86,9 +86,9 @@ export default class Tingyinxuanzi extends Component {
                     </div>
                     <div className='t5'>
                         {
-                            this.state.content.choice.map((item)=>{
+                            this.state.content.choice.map((item,index)=>{
                                 return(
-                                    <div className='t6' onClick={this.add} id={item}>{item}</div>
+                                    <div className='t6' onClick={this.add} id={item} key={index}>{item}</div>
                                 )
                             })
                         }
