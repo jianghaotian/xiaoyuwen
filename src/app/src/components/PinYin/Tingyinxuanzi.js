@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import { NavBar, SearchBar, Icon } from 'antd-mobile';
+import React, { Component } from 'react'
+import '../../css/PinYin/shengmu.css';
+import '../../css/PinYin/tingyinxuanzi.css'
 
+import {NavBar,Icon,Toast} from 'antd-mobile';
 export default class Tingyinxuanzi extends Component {
-    constructor() {
+    constructor(){
         super();
-        this.state = {
+        this.state={
             num:1,
             correct:0,
             value:'',
@@ -14,8 +16,33 @@ export default class Tingyinxuanzi extends Component {
                 choice:['旱','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
             }
         };
-        this.Btn=<button onClick={this.enter} className="t11">进入下一关</button>;
+        this.Btn='';
+        this.count=1;
     }
+
+    dui=()=>{
+        this.setState({
+            correct:this.state.correct+1,
+            num:this.state.num+1
+        })
+        Toast.info('恭喜你，答对啦！撒花🎉！！', 1);
+        this.count=this.count+1;
+        if(this.count === 3){
+            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        }
+        console.log(this.count);
+    }
+    cuo=()=>{
+        this.setState({
+            num:this.state.num+1
+        })
+        Toast.info('太遗憾了，你答错啦！😭！', 1);
+        this.count=this.count+1;
+        if(this.count===4){
+            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        }
+    }
+
     // enter=()=>{
     //     var obj ={
     //         nth:
@@ -25,55 +52,31 @@ export default class Tingyinxuanzi extends Component {
     //     this.props.changeProps(obj);
     // }
 
-    add=(e)=>{
-        console.log(e.target.id);
 
+    add=(e)=>{
         if(e.target.id===this.state.content.zi){
-            // if(this.state.num===3){
-            //     this.Btn=<button onClick={this.enter} className="t11">进入下一关</button>
-            // }
-            // else{
-            //     this.Btn='';
-            // }
+            this.Btn=<button onClick={this.dui} className="t11">提交</button>
             this.setState({
-                value:e.target.id,
-                num:this.state.num+1
+                value:e.target.id
             })
-            e.target.className="t6 t8";
-            
         }
         else{
-            // if(this.state.num===3){
-            //     this.Btn=<button onClick={this.enter} className="t11">进入下一关</button>
-            // }
-            // else{
-            //     this.Btn='';
-            // }
+            this.Btn=<button onClick={this.cuo} className="t11">提交</button>;
             this.setState({
-                value:'',
-                num:this.state.num+1
-
+                value:e.target.id,
             })
-            e.target.className="t6 t9";
-            
         }
     }
+
     render() {
         return (
             <div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
+                <NavBar
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
+                    style={{backgroundColor:"#617ca6"}}
+                    >听 音 选 字</NavBar>
                 <div className='t1'></div>
                 <div className="s2">
-                    <SearchBar
-                        placeholder="查找"
-                        onSubmit={value => console.log(value, 'onSubmit')}
-                        onClear={value => console.log(value, 'onClear')}
-                        onFocus={() => console.log('onFocus')}
-                        onBlur={() => console.log('onBlur')}
-                        onCancel={() => console.log('onCancel')}
-                        onChange={this.onChange}
-                        style={{height:"2rem",marginTop:'5%'}}
-                    />
                     <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                     <div className="iconfont icon-laba1 t4"></div>
                     <div className='t2'>{this.state.content.yin}</div>
