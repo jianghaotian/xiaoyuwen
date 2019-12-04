@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon,Toast,Button } from 'antd-mobile';
-// import api from '../../request'
+
 
 export default class Yzmxiugai extends Component {
     constructor() {

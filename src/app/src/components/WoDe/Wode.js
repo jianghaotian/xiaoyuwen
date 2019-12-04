@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
-// import api from '../../request/api';
 import { Button, Icon, Toast } from 'antd-mobile';
 import store from '../../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
