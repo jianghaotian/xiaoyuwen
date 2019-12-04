@@ -9,22 +9,22 @@ export default class Chengyu extends Component {
                 <NavBar style={{backgroundColor:"#617ca6",color:"#fff"}}>成 语</NavBar>
                 <div className="p2 p9">
                     <div className="p3 p5">
-                        <Link to="/"><button className="p4">学成语</button></Link>
+                        <Link to="/chengyu/xuechengyu"><button className="p4">学成语</button></Link>
                     </div>
                 </div>
                 <div className="p2">
                     <div className="p3 p6">
-                        <Link to="/"><button className="p4">成语接龙</button></Link>
+                        <Link to="/chengyu/chengjielong"><button className="p4">成语接龙</button></Link>
                     </div>
                 </div>
                 <div className="p2">
                     <div className="p3 p5">
-                        <Link to="/"><button className="p4">易错字</button></Link>
+                        <Link to="/chengyu/yicuozi"><button className="p4">易错字</button></Link>
                     </div>
                 </div>
                 <div className="p2">
                     <div className="p3 p6">
-                        <Link to="/"><button className="p4">猜成语</button></Link>
+                        <Link to="/chengyu/caichengyu"><button className="p4">猜成语</button></Link>
                     </div>
                 </div>
             </div>

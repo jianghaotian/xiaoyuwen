@@ -1,0 +1,166 @@
+.learnidiombody{
+    width:100%;
+    height:100%;
+    padding-top: 5%;
+  }
+  .learnidiomcon{
+    width:85%;
+    height:100%;
+
+    margin:0 auto;
+  }
+  .orange{
+    margin-left: 40%;
+    margin-top:5%;
+  }
+  .orange span{
+    color:red;
+    font-size: 12px;
+  }
+  .guesscon{
+    width:100%;
+    height:80%;
+    /* background-color: lightskyblue; */
+    display:"inline-block";
+    white-space:"pre-wrap";
+  }
+  .learnimg{
+    opacity: 0.5;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+  }
+  .idiomsleft{
+    left:0;
+    top:50%;
+    position: fixed;
+  }
+  .idiomsleft a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .idiomsright{
+    position: fixed;
+    right:0;
+    top:50%;
+    transform: rotate(180deg);
+  }
+  .idiomsright a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .black{
+    font-size:22px;
+    margin-left:90%
+  }
+  .yello{
+    font-size:22px;
+    margin-left:90%;
+    color:yellow
+  }
+  .descrip{
+      background-color:#fff;
+      width:60vw;
+      height:35vw;
+      margin:0 auto;
+      margin-top:10%;
+      font-size:5vw;
+      padding:0.5%;
+      border:1px solid gray;
+  }
+  .descrip p{
+      text-indent: 2em;
+  }
+  .answer{
+      width:65%;
+      height:40%;
+      margin:0 auto;
+      margin-top: 20%;
+      text-align: center;
+  }
+  .guessone{
+      width:9vw;
+      height:9vw;
+      line-height:9vw;
+      background-color:#fff;
+      float:left;
+      margin: 0 2vw;
+      border:1px solid #617ca6;
+      text-align: center;
+      font-size:6vw ;
+  }
+  .chooseguess{
+    width:90%;
+    height:50%;
+    background: #fff;
+    margin:0 auto;
+    margin-top:20%;
+    text-align: center;
+  }
+  .chooseone{
+    width:10vw;
+    height:10vw;
+    background-color:#fff;
+    float:left;
+    margin:2vw;
+    border:1px solid gray;
+    font-size:6vw;
+    text-align: center;
+    line-height: 10vw;
+    border-radius: 5px;
+  }
+  .guessonetrue{
+    width:9vw;
+    height:9vw;
+    line-height:9vw;
+    background-color:#fff;
+    float:left;
+    margin: 0 2vw;
+    border:1px solid #617ca6;
+    text-align: center;
+    font-size:6vw ;
+    color:green
+}
+.guessonefalse{
+    width:9vw;
+    height:9vw;
+    line-height:9vw;
+    background-color:#fff;
+    float:left;
+    margin: 0 2vw;
+    border:1px solid #617ca6;
+    text-align: center;
+    font-size:6vw ;
+    color:red
+}
+.outsubmit{
+   margin:0 auto;
+   width:50%;
+   height: 40%;
+   text-align: center;
+   line-height: 40%;
+   margin-top: 55%;
+}
+.submit{
+  padding: 5%;
+  font-size: 18px;
+  width:70%;
+  height: 40%;
+  line-height: 40%;
+  text-align: center;
+  background-color:#6189B8;
+  color:#fff;
+  border:1px solid #6189B8;
+}

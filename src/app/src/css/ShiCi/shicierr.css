@@ -1,0 +1,112 @@
+.learnidiombody{
+    width:100%;
+    height:100%;
+    padding-top: 5%;
+    padding-bottom: 40%;
+  }
+  .learnidiomcon{
+    width:85%;
+    height:100%;
+
+    margin:0 auto;
+  }
+.orange{
+    margin-left: 40%;
+    margin-top:5%;
+  }
+  .orange span{
+    color:red;
+    font-size: 12px;
+  }
+  .learnimg{
+    opacity: 0.6;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+  }
+  .idiomsleft{
+    left:0;
+    top:50%;
+    position: fixed;
+  }
+  .idiomsleft a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .idiomsright{
+    position: fixed;
+    right:0;
+    top:50%;
+    transform: rotate(180deg);
+  }
+  .idiomsright a{
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .black{
+    font-size:22px;
+    margin-left:90%
+  }
+  .yello{
+    font-size:22px;
+    margin-left:90%;
+    color:yellow
+  }
+  .errcon{
+    width:100%;
+    height:80%;
+    text-align: center;
+    position: relative;
+  }
+  .erridiom{
+    margin:0 auto;
+    font-size: 37px;
+    margin-top: 30%;
+  }
+  .scerrword{
+    width:18vw;
+    height:18vw;
+    background-image: url(../../images/true.jpg);
+    background-size:100% 100%;
+    font-size:3rem ;
+    /* margin:0 auto; */
+    text-align: center;
+    line-height: 18vw;
+    margin-top: 15%;
+  }
+  .erridiomred{
+    margin:0 auto;
+    font-size: 37px;
+    margin-top: 30%;
+    color:red;
+  }
+  .shiciname{
+      margin-top: 10%;
+      position: absolute;
+      right:0;
+  }
+  .scerrcode{
+      float:left;
+      margin-top: 10%;
+      width:20vw;
+      height:33vw;
+  }
+  .scallcode{
+    margin-left:20%;
+    height:50%;
+    width:50%;
+    margin:0 auto;
+    margin-top: 20%;
+  }

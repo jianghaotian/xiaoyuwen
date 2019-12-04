@@ -29,7 +29,13 @@ import Shoupinyin from './components/WoDe/Shoupinyin';
 import Shouchengyu from './components/WoDe/Shouchengyu';
 import Shoushici from './components/WoDe/Shoushici';
 import Yzmxiugai from './components/WoDe/Yzmxiugai';
-
+import LearnIdioms from './components/ChengYu/LearnIdioms';
+import Erridioms from './components/ChengYu/Erridioms';
+import Guessidioms from './components/ChengYu/Guessidioms';
+import Idiomjielong from './components/ChengYu/Idiomjielong';
+import Buchongshiju from './components/ShiCi/Buchongshiju';
+import Learnpoem from './components/ShiCi/Learnpoem';
+import Shicierr from './components/ShiCi/Shicierr';
 
 export default class App extends Component {
     render() {
@@ -49,14 +55,18 @@ export default class App extends Component {
                     <Route exact path="/pinyin/kanzi" component={Kanzishiyin} />
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 
-                    
+
 
                     {/* 成语 */}
-
-
+                    <Route exact path="/chengyu/xuechengyu" component={LearnIdioms} />
+                    <Route exact path="/chengyu/yicuozi" component={Erridioms} />
+                    <Route exact path="/chengyu/caichengyu" component={Guessidioms} />
+                    <Route exact path="/chengyu/chengjielong" component={Idiomjielong} />
 
                     {/* 诗词 */}
-
+                    <Route exact path="/shici/buchong" component={Buchongshiju} />
+                    <Route exact path="/shici/xueshici" component={Learnpoem} />
+                    <Route exact path="/shici/yicuozi" component={Shicierr} />
 
 
                     {/* 我的 */}
