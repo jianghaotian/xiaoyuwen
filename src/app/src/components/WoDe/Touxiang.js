@@ -48,8 +48,11 @@ export default class Touxiang extends Component {
             <div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info')}}/>} rightContent={<label for="addFile"><i style={{fontSize:'20px'}} className={'iconfont icon-sangedian1'}></i></label>} style={{background:'#617ca6',color:'#fff'}}>头 像</NavBar>
                 
-                <img src={this.state.src} style={{width:'100%',height:'100vw'}}/>
-
+                <div style={{width:'100%',height:'100vh',background:'#000',position:'fixed'}}>
+                    <img src={this.state.src} style={{width:'100%',height:'100vw',position:'fixed',
+                            top: '50%',transform: 'translate(0, -50%)'
+                    }}/>
+                </div>
 
                 <input type="file" accept="image/*" id="addFile" style={{display:'none'}} onChange={this.changeImg}/>
 
