@@ -32,7 +32,7 @@ export default class Zhanghao extends Component {
                     </div>
                 </div>
                 <div className="zh_box a_click">
-                    <i className={'iconfont icon-weixin zh_i'}></i>
+                    <i className={'iconfont icon-weixin1 zh_i'} style={{fontSize:'20px'}}></i>
                     <span className="zh_text">微信</span>
                     <div style={{float:'right'}}>
                         <span className="grxx_header">未绑定</span>

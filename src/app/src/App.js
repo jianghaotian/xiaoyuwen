@@ -28,6 +28,7 @@ import Register from './components/Login/Register';
 import Shoupinyin from './components/WoDe/Shoupinyin';
 import Shouchengyu from './components/WoDe/Shouchengyu';
 import Shoushici from './components/WoDe/Shoushici';
+import Yzmxiugai from './components/WoDe/Yzmxiugai';
 
 
 export default class App extends Component {
@@ -83,6 +84,7 @@ export default class App extends Component {
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/login/phone" component={Phonelogin} />
                     <Route exact path="/register" component={Register} />
+                    <Route exact path="/verification" component={Yzmxiugai} />
 
                 </Switch>
             </Router>
