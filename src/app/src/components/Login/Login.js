@@ -4,7 +4,7 @@ import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 import '../../css/Login/login.css'
 import api from '../../request'
 import store from '../../redux/store'
-import { setToken } from '../../redux/actions'
+import { setTokenAll, setUid } from '../../redux/actions'
 
 export default class Login extends Component {
     constructor() {
@@ -46,9 +46,9 @@ export default class Login extends Component {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
-                    Toast.success('登录成功', 1);
-                    store.dispatch(setToken(res.data.data.token));
-                    Toast.hide();
+                    Toast.success('登录成功', 1, null, false);
+                    store.dispatch(setTokenAll(res.data.data.token, res.data.data.uid));
+                    // Toast.hide();
                     this.props.history.push('/home/pinyin');
                 } else if (res.data.status === -1) {
                     Toast.fail('手机号或密码错误', 1, null, false);
