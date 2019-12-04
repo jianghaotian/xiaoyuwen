@@ -100,6 +100,7 @@
 .verity {
     position: relative;
     width: 100%;
+    clear: both;
 }
 
 .verity-div {
@@ -130,7 +131,6 @@
     vertical-align: middle;
     border: none;
     pointer-events: none;
-
 }
 
 .choosemethod2 {
