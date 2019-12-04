@@ -19,7 +19,7 @@ export default class Shengmu extends Component {
     }
     left=()=>{
         this.setState((state)=>{
-            if(state.num==1){
+            if(state.num===1){
                 return{
                     num:1
                 }
@@ -37,7 +37,7 @@ export default class Shengmu extends Component {
         })
     }
     change=(e)=>{
-        e.target.className=(e.target.className=="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black";
+        e.target.className=(e.target.className==="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black";
         this.setState((state)=>{
             return{
                 favor:state.favor?false:true
