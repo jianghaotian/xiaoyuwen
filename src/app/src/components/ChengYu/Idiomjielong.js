@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,Icon, Toast} from 'antd-mobile';
-import "../../css/ChengYu/jielong.css"
-
+import "../../css/jielong.css"
 
 export default class idiomjielong extends Component {
     constructor(){
@@ -58,15 +57,16 @@ export default class idiomjielong extends Component {
             })
         })
         this.statu=false;
+        this.pro="";
     }
     show=(e)=>{
-        console.log(this.className)
         var name=e.target.className;
         if(e.target.id.indexOf("f")!==-1){
             var value=e.target.innerHTML;
             this.takeArr[1]=value;
            
         }
+        this.pro=this.takeArr[0];
         if(e.target.id.indexOf("f")===-1){
             this.takeArr[0]=e.target.id;
         }
@@ -80,11 +80,6 @@ export default class idiomjielong extends Component {
         }
         this.setState((state)=>{
             state.content.question[x][y]=this.takeArr[1]; 
-            if(this.takeArr[1]!=="" && this.takeArr[1]!==undefined){
-                this.count-=1;
-            }
-            this.takeArr[1]='';
-            
             if(this.count===0){
                 for(var a=0;a<this.content.answer.length;a++){
                     for(var b=0;b<state.content.question.length;b++){
@@ -94,14 +89,19 @@ export default class idiomjielong extends Component {
                     }
                 }
             }
-            
-            if(this.statu){
+            if(this.statu && this.count===0){
                 Toast.info("太遗憾了，你答错啦！😭") 
             }
             if(!this.statu && this.count===0)
             {
                 Toast.info("恭喜你，答对啦！撒花🎉！！")
             }
+            if(this.takeArr[1]===""){
+                if(this.pro!==this.takeArr[0]){
+                    this.count-=1;
+                }
+            }
+            this.takeArr[1]='';
             return{
                 content:state.content
             }
@@ -110,8 +110,27 @@ export default class idiomjielong extends Component {
         // console.log(this.statu)
     }
     try=(e)=>{
+        var content={
+            question:[
+                ["#","#","#","#","百","#"],
+                ["#","走","*","观","*","#"],
+                ["#","#","*","#","*","#"],
+                ["#","#","*","#","*","#"],
+                ["#","#","功","#","#","#"],
+                ["#","#","#","#","#","#"]
+            ],
+            choose:["放","马","齐","乘","花","到","景","成"],
+            answer:[
+                ["#","#","#","#","百","#"],
+                ["#","走","马","观","花","#"],
+                ["#","#","到","#","齐","#"],
+                ["#","#","成","#","放","#"],
+                ["#","#","功","#","#","#"],
+                ["#","#","#","#","#","#"]
+            ],
+        };
         this.setState({
-            content:this.content
+            content:content
         })
         this.takeArr=["",""];
         this.count=0;
@@ -123,6 +142,7 @@ export default class idiomjielong extends Component {
             })
         })
         this.statu=false;
+        this.pro="";
     }
     minus=(e)=>{
         this.setState((state)=>{
@@ -159,7 +179,7 @@ export default class idiomjielong extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}} />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >成 语 接 龙</NavBar>
@@ -170,7 +190,7 @@ export default class idiomjielong extends Component {
                         <div>
                             <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
                             {/* <div onClick={this.change} className="iconfont icon-xingxing black"></div> */}
-                            <div><img className="learnimg" src={require("../../images/bg3.jpg") }/></div>
+                            <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div>
                             <div className="jielongcon">
                                 <div className="jlcode">
                                     <div className="jlquestion">
@@ -207,7 +227,7 @@ export default class idiomjielong extends Component {
                         </div>
                     </div>
                     <div className="jloutsubmit">
-                        <button onClick={this.try}  class="submit" style={{marginBottom:"5%",width:"100%"}}>重做(只有一次机会)</button>
+                        <button onClick={this.try}  class="submit" style={{marginBottom:"5%"}}>重做</button>
                         <button onClick={this.adds} class="submit">下一题</button>
                     </div>
                 </div>
