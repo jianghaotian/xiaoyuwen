@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {NavBar,Icon,Toast} from 'antd-mobile';
-import "../../css/guess.css"
+import "../../css/ChengYu/guess.css"
 
 export default class Guessidioms extends Component {
     constructor(){
@@ -141,7 +141,7 @@ export default class Guessidioms extends Component {
                         <div>
                             <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
                             {/* <div onClick={this.change} className="iconfont icon-xingxing black"></div> */}
-                            <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div>
+                            <div><img className="learnimg" src={require("../../images/bg2.jpeg") }/></div>
                             <div className="guesscon">
                                 <div className="descrip">
                                     <p>{this.content.description}</p>
