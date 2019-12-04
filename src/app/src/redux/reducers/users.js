@@ -1,7 +1,6 @@
-import { SET_USERS } from '../actions';
+import { SET_UID, SET_USERS } from '../actions';
 
 let noneUsers = {
-    id: '',
     name: '',
     signature: '',
     sex: '',
@@ -10,10 +9,11 @@ let noneUsers = {
     grade: ''
 }
 
-let defaultUsers = localStorage.getItem("users") || noneUsers;
+let defaultUsers = JSON.parse(localStorage.getItem("users")) || noneUsers;
 
 export default (state = defaultUsers, action) => {
     let ownState = {...state};
+
     switch (action.type) {
         case SET_USERS:
             localStorage.setItem("users", JSON.stringify(action.users));
@@ -22,3 +22,4 @@ export default (state = defaultUsers, action) => {
             return state;
     }
 }
+
