@@ -1,4 +1,5 @@
-.s1{
+
+ .s1{
     position:fixed;
     top: 0;
     left: 0;
@@ -13,111 +14,111 @@
     -o-background-size: cover;
     background-position: center 0; 
     /* opacity: 0.6; */
-}
-.s2{
+  }
+  .s2{
     width:85%;
     height:100%;
     margin:0 auto;
-}
-.orange{
+  }
+  .orange{
     width: 55%;
     /* text-align: center; */
     margin: 0 auto;
     padding-top: 5%;
     font-size: 20px;
-}
-.orange span{
+  }
+  .orange span{
     color:red;
     font-size: 22px;
-}
-.s3{
+  }
+ .s3{
     width: 48%;
     height: 23%;
     margin: 0 auto;
-}
-.s4{
-    width: 50%;
-    height: 100%;
-    font-size: 120px;
-    font-weight: bolder;
-    float: left;
-}
-.s5{
-    width: 50%;
-    height: 100%;
-    /* padding-top: 25%; */
-    float: right;
-}
-.s6{
-    width: 100%;
-    height: 20%;
-    margin-top: 25%;
+ }
+ .s4{
+     width: 50%;
+     height: 100%;
+     font-size: 120px;
+     font-weight: bolder;
+     float: left;
+ }
+ .s5{
+     width: 50%;
+     height: 100%;
+     /* padding-top: 25%; */
+     float: right;
+ }
+ .s6{
+     width: 100%;
+     height: 20%;
+     margin-top: 25%;
     font-size:22px;
     text-align: center;
     color:#617ca6;
-}
-.s7{
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    font-size: 20px;
-}
-.s8{
+ }
+ .s7{
+     width: 100%;
+     height: 20%;
+     text-align: center;
+     font-size: 20px;
+ }
+ .s8{
     width: 100%;
     height: 20%;
     text-align: center;
     font-size: 26px;
-}
-.s9{
-    width:30%;
-    height: 8%;
-    margin-top: 10%;
-    margin: 0 auto;
-    clear: both;
-}
+ }
+ .s9{
+     width:30%;
+     height: 8%;
+     margin-top: 10%;
+     margin: 0 auto;
+     clear: both;
+ }
+ 
+ .s11{
+     width: 50%;
+     height: 100%;
+     float: left;
+     font-size: 20px;
+ }
 
-.s11{
-    width: 50%;
-    height: 100%;
-    float: left;
-    font-size: 20px;
-}
-
-.s10{
+ .s10{
     width: 58%;
     height: 20%;
     margin: 0 auto;
-}
-.s10>img{
-    width:100%;
-    height: 100%;
-    
-}
-
-.left{
+ }
+ .s10>img{
+     width:100%;
+     height: 100%;
+     
+ }
+ 
+  .left{
     left:0;
     top:50%;
     position: fixed;
     color:black;
     font-size: 20px;
     font-weight: bolder;
-}
-
-.right{
+  }
+  
+  .right{
     position: fixed;
     right:0;
     top:50%;
     color:black;
     font-size: 20px;
     font-weight: bolder;
-}
-
-.black{
+  }
+  
+  .black{
     font-size:22px;
     margin-left:90%
-}
-.yello{
+  }
+  .yello{
     font-size:22px;
     margin-left:90%;
     color:yellow
-}
+  }

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { NavBar, SearchBar, Icon } from 'antd-mobile';
-
+import React, { Component } from 'react'
+import '../../css/PinYin/pinyin.css'
+import {Link} from "react-router-dom"
+import {NavBar,SearchBar,Icon} from 'antd-mobile';
 export default class Yunmu extends Component {
-    constructor() {
+    constructor(){
         super();
-        this.state = {
+        this.state={
             num:1,
             favor:false,
             content:{
@@ -47,7 +47,10 @@ export default class Yunmu extends Component {
     render() {
         return (
             <div className="s1">
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>韵 母</NavBar>
+                <NavBar
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
+                    style={{backgroundColor:"#617ca6"}}
+                    >韵 母</NavBar>
                 <div className="s2">
                     <SearchBar
                         placeholder="查找"
@@ -59,7 +62,7 @@ export default class Yunmu extends Component {
                         onChange={this.onChange}
                         style={{height:"2rem",marginTop:'5%'}}
                     />
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span> 100 </span>个</div>
+                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                     <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                     <div className="s3">
                         <div className="s4">{this.state.content.yin}</div>
@@ -74,7 +77,7 @@ export default class Yunmu extends Component {
                         <div className="s11">{this.state.content.ci[1]}</div>
                     </div>
                     <div className="s10">
-                        {/* <img src={require("../../images/"+this.state.content.img)}/> */}
+                        <img src={require("../../images/"+this.state.content.img)}/>
                     </div>
                 </div>
                 <Link className="iconfont icon-ico_leftarrow left" to={'/yunmu/'+this.state.num==1?1:this.state.num-1}></Link>
