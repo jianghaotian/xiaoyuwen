@@ -3,7 +3,6 @@ import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,Icon,Toast} from 'antd-mobile';
 import "../../css/ChengYu/guess.css"
 
-
 export default class Guessidioms extends Component {
     constructor(){
         super();

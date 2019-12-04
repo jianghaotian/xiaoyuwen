@@ -35,7 +35,6 @@ export default class Learnpoem extends Component {
         })
     }
     adds=()=>{
-        
         this.setState((state)=>{
             return{
                 num:++state.num

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavBar} from 'antd-mobile';
 import {Link} from 'react-router-dom'
-import '../../css/ShiCi/pinyin.css';
+import '../../css/ShiCi/shici.css';
 
 export default class Shici extends Component {
     render() {
