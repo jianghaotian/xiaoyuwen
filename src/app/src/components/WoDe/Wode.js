@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
-import api from '../../request/';
 import { Button, Icon, Toast } from 'antd-mobile';
 import store from '../../redux/store';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
@@ -28,7 +27,7 @@ export default class Wode extends Component {
     //             grade: store.getState().users.grade
     //         })
     //     } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
-    //         api.get_info({uid: store.getState().token.uid}).then(res => {
+    //         this.$api.get_info({uid: store.getState().token.uid}).then(res => {
     //             console.log(res);
 
     //             if (res.data.status === 0) {
@@ -67,7 +66,7 @@ export default class Wode extends Component {
             })
         } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
             // console.log('phone == ""');
-            api.get_info({uid: store.getState().token.uid}).then(res => {
+            this.$api.get_info({uid: store.getState().token.uid}).then(res => {
                 console.log(res);
 
                 if (res.data.status === 0) {

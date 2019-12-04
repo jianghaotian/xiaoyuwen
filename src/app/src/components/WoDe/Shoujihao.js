@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar,Icon, InputItem, Button,Toast } from 'antd-mobile';
 import { createForm } from 'rc-form';
-import api from '../../request'
 import store from '../../redux/store'
 import { setToken } from '../../redux/actions'
 
@@ -54,7 +53,7 @@ class Shoujihao extends Component {
                 verityDiv: 'verity-div1',
                 verityText: '正在获取...'
             })
-            api.login_veri({'phone': this.state.phone}).then(res => {
+            this.$api.login_veri({'phone': this.state.phone}).then(res => {
                 console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
@@ -110,7 +109,7 @@ class Shoujihao extends Component {
                 verification: this.state.verity,
                 token: this.state.veriToken
             }
-            api.veri_login(formData).then(res => {
+            this.$api.veri_login(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
