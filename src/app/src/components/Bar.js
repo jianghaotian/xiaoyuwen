@@ -6,25 +6,80 @@ import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
 import api from '../request/';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
+import store from '../redux/store';
+import { clearTokenAll, clearUsers, setUsers } from '../redux/actions';
 
 
 export default class Bar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: this.props.match.params.tab || 'pinyin'
+            selectedTab: this.props.match.params.tab || 'pinyin',
         };
     }
     componentDidMount() {
-        api.get_info().then(res => {
-            console.log(res);
+        if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
+            api.get_info({uid: store.getState().token.uid}).then(res => {
+                console.log(res);
 
-        }, () => {
-            Toast.hide();
-            Toast.info('当前未连接网络', 1, null, false);
-
-        });
-
+                // 同下
+                if (res.data.status === 0) {
+                    let ownUsers = {
+                        name: res.data.data[0].Uname || '',
+                        signature: res.data.data[0].Usignature || '',
+                        sex: res.data.data[0].Usex || '',
+                        birthday: res.data.data[0].Ubirthday || '',
+                        phone: res.data.data[0].Uphone || '',
+                        grade: res.data.data[0].Ugrade || 1,
+                        image: res.data.data[0].Uimage || '',
+                    }
+                    store.dispatch(setUsers(ownUsers));
+                } else if (res.data.status === -1 || res.data.status === -2) {
+                    store.dispatch(clearTokenAll());
+                    store.dispatch(clearUsers());
+                }
+                // 同下结束
+    
+                // console.log(store.getState());
+            }, () => {
+                Toast.hide();
+                // Toast.info('当前未连接网络', 1, null, false);
+            });
+        }
+        //  else {
+        //     let unsubscribe = store.subscribe(() => {
+        //         if (store.getState().token.uid !== '' && store.getState().token.token != '') {
+        //             unsubscribe();
+        //             console.log(11);
+        //             api.get_info({uid: store.getState().token.uid}).then(res => {
+        //                 console.log(res);
+            
+        //                 // 同上
+        //                 if (res.data.status === 0) {
+        //                     let ownUsers = {
+        //                         name: res.data.data[0].Uname || '',
+        //                         signature: res.data.data[0].Usignature || '',
+        //                         sex: res.data.data[0].Usex || '',
+        //                         birthday: res.data.data[0].Ubirthday || '',
+        //                         phone: res.data.data[0].Uphone || '',
+        //                         grade: res.data.data[0].Ugrade || ''
+        //                     }
+        //                     store.dispatch(setUsers(ownUsers));
+        //                 } else if (res.data.status === -1 || res.data.status === -2) {
+        //                     store.dispatch(clearTokenAll());
+        //                     store.dispatch(clearUsers());
+        //                 }
+        //                 // 同上结束
+            
+        //                 // console.log(store.getState());
+                        
+        //             }, () => {
+        //                 Toast.hide();
+        //                 // Toast.info('当前未连接网络', 1, null, false);
+        //             });
+        //         }
+        //     })
+        // }
     }
     render() {
         return (

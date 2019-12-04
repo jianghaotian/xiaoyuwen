@@ -2,28 +2,107 @@ import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 import api from '../../request/';
+import { Button, Icon, Toast } from 'antd-mobile';
+import store from '../../redux/store';
+import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
+
 
 export default class Wode extends Component {
     constructor() {
         super();
         this.state = {
-            login: true,
+            login: false,
             head: require('../../images/headImage.jpg'),
             name: '未登录',
             signature: '点击此处登录',
-            grade: '一年级'
+            grade: 1
         };
     }
-
-    // TODO
     // componentDidMount() {
-    //     api.getinfo().then(res => {
-    //         console.log(res);
+    //     if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone !== '') {
+    //         this.setState({
+    //             login: true,
+    //             head: store.getState().users.image || require('../../images/headImage.jpg'),
+    //             name: store.getState().users.name,
+    //             signature: store.getState().users.signature,
+    //             grade: store.getState().users.grade
+    //         })
+    //     } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
+    //         api.get_info({uid: store.getState().token.uid}).then(res => {
+    //             console.log(res);
 
-    //     });
-
+    //             if (res.data.status === 0) {
+    //                 let ownUsers = {
+    //                     name: res.data.data[0].Uname || '',
+    //                     signature: res.data.data[0].Usignature || '',
+    //                     sex: res.data.data[0].Usex || '',
+    //                     birthday: res.data.data[0].Ubirthday || '',
+    //                     phone: res.data.data[0].Uphone || '',
+    //                     grade: res.data.data[0].Ugrade || 1,
+    //                     image: res.data.data[0].Uimage || '',
+    //                 }
+    //                 store.dispatch(setUsers(ownUsers));
+    //             } else if (res.data.status === -1 || res.data.status === -2) {
+    //                 store.dispatch(clearTokenAll());
+    //                 store.dispatch(clearUsers());
+    //             }
+    //         }, () => {
+    //             Toast.hide();
+    //             Toast.info('网络无响应，未请求到用户信息', 1, null, false);
+    //         });   
+    //     }
     // }
+    UNSAFE_componentWillMount() {
+        // console.log('will mount 111');
+        // console.log(store.getState().token.uid);
+        // console.log(store.getState().token.token);
+        if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone !== '') {
+            // console.log('phone != ""');
+            this.setState({
+                login: true,
+                head: store.getState().users.image || require('../../images/headImage.jpg'),
+                name: store.getState().users.name,
+                signature: store.getState().users.signature || '编辑个性签名',
+                grade: store.getState().users.grade
+            })
+        } else if (store.getState().token.uid !== '' && store.getState().token.token !== '' && store.getState().users.phone === '') {
+            // console.log('phone == ""');
+            api.get_info({uid: store.getState().token.uid}).then(res => {
+                console.log(res);
 
+                if (res.data.status === 0) {
+                    let ownUsers = {
+                        name: res.data.data[0].Uname || '',
+                        signature: res.data.data[0].Usignature || '',
+                        sex: res.data.data[0].Usex || '',
+                        birthday: res.data.data[0].Ubirthday || '',
+                        phone: res.data.data[0].Uphone || '',
+                        grade: res.data.data[0].Ugrade || 1,
+                        image: res.data.data[0].Uimage || '',
+                    }
+                    this.setState({
+                        login: true,
+                        head: ownUsers.image || require('../../images/headImage.jpg'),
+                        name: ownUsers.name,
+                        signature: ownUsers.signature || '编辑个性签名',
+                        grade: ownUsers.grade
+                    })
+                    store.dispatch(setUsers(ownUsers));
+                } else if (res.data.status === -1 || res.data.status === -2) {
+                    store.dispatch(clearTokenAll());
+                    store.dispatch(clearUsers());
+                }
+            }, () => {
+                Toast.hide();
+                Toast.info('网络无响应，未请求到用户信息', 1, null, false);
+            });   
+        }
+    }
+
+    
+    UNSAFE_componentWillUnmount() {
+        // clearInterval(this.state.time);
+    }
     render() {
         return (
             <div>
@@ -41,7 +120,12 @@ export default class Wode extends Component {
                     <i className={'iconfont icon-nianji wode_i'}></i>
                     <span className="wode_tab_text">年级</span>
                     <span className="wode_you" style={{fontSize:'13px'}}>
-                        {this.state.grade}
+                        {this.state.grade === 1 ? '一年级' : ''}
+                        {this.state.grade === 2 ? '二年级' : ''}
+                        {this.state.grade === 3 ? '三年级' : ''}
+                        {this.state.grade === 4 ? '四年级' : ''}
+                        {this.state.grade === 5 ? '五年级' : ''}
+                        {this.state.grade === 6 ? '六年级' : ''}
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>

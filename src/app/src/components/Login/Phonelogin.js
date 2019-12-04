@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
 import api from '../../request'
 import store from '../../redux/store'
-import { setToken } from '../../redux/actions'
+import { setTokenAll, setUid } from '../../redux/actions'
 
 export default class Phonelogin extends Component {
     constructor() {
@@ -96,9 +96,9 @@ export default class Phonelogin extends Component {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
-                    Toast.success('登录成功', 1);
-                    store.dispatch(setToken(res.data.data.token));
-                    Toast.hide();
+                    Toast.success('登录成功', 1, null, false);
+                    store.dispatch(setTokenAll(res.data.data.token, res.data.data.uid));
+                    // Toast.hide();
                     this.props.history.push('/home/wode');
                 } else if (res.data.status === -2) {
                     Toast.fail('登录失败', 1, null, false);
@@ -108,7 +108,7 @@ export default class Phonelogin extends Component {
             })
         }
     }
-    componentWillUnmount() {
+    UNSAFE_componentWillUnmount() {
         clearInterval(this.state.time);
     }
     render() {

@@ -23,7 +23,7 @@ router.get('/get', function (req, res, next) {
     checkToken(token, (result) => {
         if (result.status === 0) {
             if ( uid == result.data.uid) {
-                runSql('select Uname, Usignature, Usex, Ubirthday, Uphone, Ugrade from user where uid = ?', [uid], (result) => {
+                runSql('select Uname, Usignature, Usex, Ubirthday, Uphone, Ugrade, Uimage from user where uid = ?', [uid], (result) => {
                     res.json(result);
                 });
             } else {
@@ -39,6 +39,23 @@ router.get('/get', function (req, res, next) {
     });
 });
 
+
+router.post('/setgrade', function (req, res, next) {
+    let { grade } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+
+            runSql('update user set Ugrade = ? where Uid = ?', [grade, result.data.uid], (result) => {
+                res.json(result);
+            });
+
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 
 
