@@ -130,7 +130,7 @@ export default class Guessidioms extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left"/>}
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}} />}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >猜 成 语</NavBar>
