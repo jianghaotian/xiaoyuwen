@@ -143,5 +143,12 @@
 .choosemethod2 a:first-child {
     color: #fff;
 }
+.xiutext{
+    float: left;
+    color:#000;
+    font-size:15px;
+    font-weight:bolder;
+    height: 30px;
+}
 
 
