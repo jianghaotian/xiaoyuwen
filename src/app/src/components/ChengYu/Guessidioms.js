@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,Icon,Toast} from 'antd-mobile';
-import "../../css/ChengYu/guess.css"
+import "../../css/guess.css"
 
 export default class Guessidioms extends Component {
     constructor(){
@@ -20,7 +19,7 @@ export default class Guessidioms extends Component {
     }
     minus=(e)=>{
         this.setState((state)=>{
-            if(state.num==1){
+            if(state.num===1){
                 return{
                     num:1
                 }
@@ -33,7 +32,7 @@ export default class Guessidioms extends Component {
     adds=(e)=>{
         
         this.setState((state)=>{
-            if(state.num==3){
+            if(state.num===3){
                 return{
                     num:3
                 }
@@ -42,12 +41,12 @@ export default class Guessidioms extends Component {
                 num:++state.num
             }
         })
-        if(this.state.num==2){
+        if(this.state.num===2){
             e.target.innerHTML="下一关"
         }
     }
     change=(e)=>{
-        e.target.className=(e.target.className=="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black"
+        e.target.className=(e.target.className==="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black"
     }
     getGid=(e)=>{
         this.answer="";
@@ -63,8 +62,10 @@ export default class Guessidioms extends Component {
         }
         this.arr.map((item,index)=>{
             this.objArr.map((item1,index1)=>{
+                item.id="";
                 if(index === index1){
                     item.innerHTML = item1.value;
+                    item.id="active"
                 }
             })
         })
@@ -72,8 +73,8 @@ export default class Guessidioms extends Component {
             this.answer+=this.objArr[i].value
         }
         
-        var aa=(this.answer==this.content.answer);
-        if(aa && this.no==4){
+        var aa=(this.answer===this.content.answer);
+        if(aa && this.no===4){
             this.arr.map((item,index)=>{
                
                 item.className="guessonetrue"
@@ -81,9 +82,8 @@ export default class Guessidioms extends Component {
             Toast.info("恭喜你，答对啦！撒花🎉！！")
             this.answer="";
         }
-        else if(!aa && this.no==4){
+        else if(!aa && this.no===4){
             this.arr.map((item,index)=>{
-                 
                 item.className="guessonefalse";
             })
             Toast.info("太遗憾了，你答错啦！😭")
@@ -91,10 +91,38 @@ export default class Guessidioms extends Component {
             this.answer="";
             this.no=0;
             this.objArr=[];
+            setTimeout(()=>{
+                this.arr.map((item,index)=>{
+                    item.innerHTML=""
+                    item.id="";
+                    item.className="guessone"
+                })
+            },500)
+            
         }
-        else if(!aa && this.no==1){
+        else if(!aa && this.no===1){
+            this.no=0;
+            this.objArr=[];
+            this.arr=[];
+            this.answer="";
+            var value=e.target.innerHTML;
+            if(this.objArr.length<4){
+                ++this.no;
+                var obj={key:this.no,value:value}
+                this.objArr.push(obj);
+                var elem1=this.refs.a.children[this.no-1]
+                this.arr.push(elem1);
+            }
             this.arr.map((item,index)=>{
-                item.className="guessone";
+                
+                this.objArr.map((item1,index1)=>{
+                    item.id="";
+                    if(index === index1){
+                        item.innerHTML = item1.value;
+                        item.id="active";
+                        
+                    }
+                })
             })
         }
     }
@@ -102,7 +130,7 @@ export default class Guessidioms extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}} />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >猜 成 语</NavBar>
@@ -113,7 +141,7 @@ export default class Guessidioms extends Component {
                         <div>
                             <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
                             {/* <div onClick={this.change} className="iconfont icon-xingxing black"></div> */}
-                            <div><img className="learnimg" src={require("../../images/bg3.jpg") }/></div>
+                            <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div>
                             <div className="guesscon">
                                 <div className="descrip">
                                     <p>{this.content.description}</p>
