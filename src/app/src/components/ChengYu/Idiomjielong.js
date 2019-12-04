@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,Icon, Toast} from 'antd-mobile';
-import "../../css/jielong.css"
+import "../../css/ChengYu/jielong.css"
 
 export default class idiomjielong extends Component {
     constructor(){
@@ -190,7 +190,7 @@ export default class idiomjielong extends Component {
                         <div>
                             <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
                             {/* <div onClick={this.change} className="iconfont icon-xingxing black"></div> */}
-                            <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div>
+                            <div><img className="learnimg" src={require("../../images/bg2.jpeg") }/></div>
                             <div className="jielongcon">
                                 <div className="jlcode">
                                     <div className="jlquestion">
