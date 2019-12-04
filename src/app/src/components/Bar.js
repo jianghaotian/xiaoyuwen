@@ -12,7 +12,7 @@ export default class Bar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: this.props.match.params.tab || 'pinyin',
+            selectedTab: this.props.match.params.tab || 'pinyin'
         };
     }
     componentDidMount() {

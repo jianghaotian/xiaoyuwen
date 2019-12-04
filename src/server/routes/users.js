@@ -270,6 +270,45 @@ router.post('/verilogin', function (req, res, next) {
     });
 });
 
+/**
+ * 修改密码
+ * POST
+ * 接收参数:
+ *    oldp : 旧密码
+ *    newp : 新密码
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK"
+ */
+router.post('/changepwd', function (req, res, next) {
+    let { oldp, newp } = req.body;
+
+    let token = req.header('token');
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            runSql('select Upassword from user where Uid = ?', [result.data.uid], (result1) => {
+                if (result1.status === 0) {
+                    if (result1.data[0].Upassword === oldp) {
+                        runSql('update user set Upassword = ? where Uid = ?', [newp, result.data.uid], (result2) => {
+                            res.json(result2);
+                        });
+                    } else {
+                        let jsonData = {
+                            status: -3,
+                            message: 'old password wrong'
+                        }
+                        res.json(jsonData);
+                    }
+                } else {
+                    res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
 
 
 
