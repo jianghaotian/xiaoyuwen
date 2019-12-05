@@ -22,6 +22,7 @@ var v_minute = 3; // 验证码有效时间
  */
 router.post('/register/verification', function (req, res, next) {
     let { phone } = req.body;
+
     runSql('select uid from user where uphone = ?', [phone], (result1) => {
         if (result1.status === 0) {
             if (result1.data.length === 0) {
@@ -94,8 +95,6 @@ router.post('/login/verification', function (req, res, next) {
         res.json(jsonData);
     });
 });
-
-
 
 /**
  * 用户注册
@@ -206,36 +205,41 @@ router.post('/verilogin', function (req, res, next) {
                 runSql('select Uid from user where uphone = ?', [phone], (result) => {
                     if (result.status === 0) {
                         if (result.data.length === 0) {
-                            runSql('insert into user(uphone, uday) values (?,?)', [phone, getTimestamp_13()], (result1) => {
+                            runSql('insert into user(uphone, uname, uday) values (?,?)', [phone, '小语文_' + getRandom(6), getTimestamp_13()], (result1) => {
                                 // console.log(result1);
-                                runSql('select Uid from user where uphone = ?', [phone], (result2) => {
-                                    if (result2.status === 0) {
-                                        let tokenContent = {
-                                            uid: result2.data[0].uid
-                                        };
-                                        let params = {
-                                            expiresIn: 60 * 60 * 24 * 31  // 31天过期
-                                        };
-                        
-                                        let token = getToken(tokenContent, params);
-                        
-                                        let jsonData = {
-                                            status: 0,
-                                            message: 'OK',
-                                            data: {
-                                                token: token,
-                                                uid: result2.data[0].uid
+                                if (result1.status === 0) {
+                                    runSql('select Uid from user where uphone = ?', [phone], (result2) => {
+                                        if (result2.status === 0) {
+                                            let tokenContent = {
+                                                uid: result2.data[0].Uid
+                                            };
+                                            let params = {
+                                                expiresIn: 60 * 60 * 24 * 31  // 31天过期
+                                            };
+                            
+                                            let token = getToken(tokenContent, params);
+                            
+                                            let jsonData = {
+                                                status: 0,
+                                                message: 'OK',
+                                                data: {
+                                                    token: token,
+                                                    uid: result2.data[0].Uid
+                                                }
                                             }
+    
+                                            res.json(jsonData);
+                                        } else {
+                                            res.json(result2);
                                         }
-                                        res.json(jsonData);
-                                    } else {
-                                        res.json(result2);
-                                    }
-                                });
+                                    });
+                                } else {
+                                    res.json(result1)
+                                }
                             });
                         } else {
                             let tokenContent = {
-                                uid: result.data[0].uid
+                                uid: result.data[0].Uid
                             };
                             let params = {
                                 expiresIn: 60 * 60 * 24 * 31  // 31天过期
@@ -248,9 +252,10 @@ router.post('/verilogin', function (req, res, next) {
                                 message: 'OK',
                                 data: {
                                     token: token,
-                                    uid: result.data[0].uid
+                                    uid: result.data[0].Uid
                                 }
                             }
+                            console.log(jsonData);
                             res.json(jsonData);
                         }
                     } else {
@@ -301,6 +306,109 @@ router.post('/changepwd', function (req, res, next) {
                     }
                 } else {
                     res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 修改密码获取验证码
+ * POST
+ * 接收参数:
+ *     phone : 手机号
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {veriToken}
+ */
+router.post('/cpwdveri', function (req, res, next) {
+    let { phone } = req.body;
+    let token = req.header('token');
+    let verification = getRandom(6);
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            runSql('select Uphone from user where Uid = ?', [result.data.uid], (result1) => {
+                if (result1.status === 0) {
+                    if (result1.data.length === 0) {
+                        let jsonData = {
+                            status: -1,
+                            message: 'no phone'
+                        }
+                        res.json(jsonData);
+                    } else {
+                        if (result1.data[0].Uphone === phone) {
+                            let tokenContent = {
+                                verification: verification
+                            };
+                            let params = {
+                                expiresIn: 60 * v_minute
+                            }
+                            let veriToken = getToken(tokenContent, params);
+                        
+                            sendMsg(phone, verification, '' + v_minute, (result2) => {
+                                let jsonData = {
+                                    status: result2.status,
+                                    message: result2.message,
+                                    data: {
+                                        veriToken: veriToken
+                                    }
+                                }
+                                res.json(jsonData);
+                            });
+                        } else {
+                            let jsonData = {
+                                status: -1,
+                                message: 'phone error'
+                            }
+                            res.json(jsonData);
+                        }
+                    }
+                } else {
+                    res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 验证码修改密码
+ * POST
+ * 接收参数:
+ *     password : 密码
+ *     verification : 验证码
+ *     token : 验证码token
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK"
+ */
+router.post('/vericpwd', function (req, res, next) {
+    let { password, verification, veriToken } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            checkToken(veriToken, (result1) => {
+                if (result1.status === 0) {
+                    if (result1.data.verification === verification) {
+                        runSql('update user set Upassword = ? where Uid = ?', [password, result.data.uid], (result2) => {
+                            res.json(result2);
+                        });
+                    } else {
+                        let jsonData = {
+                            status: -2,
+                            message: 'veritoken error'
+                        }
+                        res.json(jsonData);
+                    }
+                } else {
+                    res.json(result1)
                 }
             });
         } else {
