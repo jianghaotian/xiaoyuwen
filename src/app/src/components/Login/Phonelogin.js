@@ -60,7 +60,11 @@ export default class Phonelogin extends Component {
                         verityText: verityNum + 's后重新获取'
                     })
                 } else {
-                    Toast.fail('验证码获取失败', 1, null, false);
+                    if (res.data.status === 1024 || res.data.status === 1023) {
+                        Toast.fail('验证码获取次数过多，请稍后再试', 1, null, false);
+                    } else {
+                        Toast.fail('验证码获取失败', 1, null, false);
+                    }
                     this.setState({
                         verityDiv: 'verity-div',
                         verityText: '重新获取'
@@ -101,7 +105,7 @@ export default class Phonelogin extends Component {
                     // Toast.hide();
                     this.props.history.push('/home/wode');
                 } else if (res.data.status === -2) {
-                    Toast.fail('登录失败', 1, null, false);
+                    Toast.fail('验证码错误', 1, null, false);
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }

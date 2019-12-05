@@ -53,3 +53,8 @@ module.exports = { getToken, checkToken };
 //     console.log(r);
 // })
 
+// var ttoken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJpZmljYXRpb24iOiI3NzE2MTEiLCJpYXQiOjE1NzU0NTc2ODMsImV4cCI6MTU3NTQ1Nzg2M30.x4W0Soys6spF53IXtbU8MOiJKBTFbAEDhkHCQe1fRVA";
+// checkToken(ttoken, (r) => {
+//     console.log(r);
+// })
+
