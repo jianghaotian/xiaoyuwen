@@ -17,7 +17,7 @@ export default class Nianji extends Component {
         
         if (this.$store.getState().users.phone !== '') {
             this.$api.set_grade({grade: this.state.grade}).then(res => {
-                Toast.hide();
+                // Toast.hide();
             }, () => {
                 Toast.hide();
             });

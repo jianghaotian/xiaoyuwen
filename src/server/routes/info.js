@@ -40,7 +40,7 @@ router.get('/get', function (req, res, next) {
 });
 
 /**
- * 获取用户信息
+ * 修改用户年级
  * POST
  * 接收参数:
  *     grade : 用户年级
@@ -66,9 +66,86 @@ router.post('/setgrade', function (req, res, next) {
     });
 });
 
+/**
+ * 修改用户姓名
+ * POST
+ * 接收参数:
+ *     name : 用户姓名
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/setname', function (req, res, next) {
+    let { name } = req.body;
+    let token = req.header('token');
 
+    checkToken(token, (result) => {
+        if (result.status === 0) {
 
+            runSql('update user set Uname = ? where Uid = ?', [name, result.data.uid], (result) => {
+                res.json(result);
+            });
 
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 修改用户个性签名
+ * POST
+ * 接收参数:
+ *     signature : 用户个性签名
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/setsignature', function (req, res, next) {
+    let { signature } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+
+            runSql('update user set Usignature = ? where Uid = ?', [signature, result.data.uid], (result) => {
+                res.json(result);
+            });
+
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 修改用户性别
+ * POST
+ * 接收参数:
+ *     sex : 用户性别
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/setsex', function (req, res, next) {
+    let { sex } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+
+            runSql('update user set Usex = ? where Uid = ?', [sex, result.data.uid], (result) => {
+                res.json(result);
+            });
+
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 
 

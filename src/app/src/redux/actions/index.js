@@ -25,6 +25,14 @@ export const clearUsers = makeActionCreator(CLEAR_USERS);
 export const SET_GRADE = 'SET_GRADE';
 export const setGrade = makeActionCreator(SET_GRADE, 'grade');
 
+export const SET_NAME = 'SET_NAME';
+export const setName = makeActionCreator(SET_NAME, 'name');
+
+export const SET_SIGNATURE = 'SET_SIGNATURE';
+export const setSignature = makeActionCreator(SET_SIGNATURE, 'signature');
+
+export const SET_SEX = 'SET_SEX';
+export const setSex = makeActionCreator(SET_SEX, 'sex');
 
 
 
