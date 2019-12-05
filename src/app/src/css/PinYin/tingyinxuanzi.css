@@ -41,10 +41,10 @@
     position: absolute;
     left: 0;
     top: 0;
-    padding-top: 6%;
+    /* padding-top: 6%; */
     font-size: 20vw;
     text-align: center;
-    line-height: 100%;
+    line-height: 120%;
 
 }
 .t4{

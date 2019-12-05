@@ -21,26 +21,33 @@ export default class Tingyinxuanzi extends Component {
     }
 
     dui=()=>{
-        this.setState({
-            correct:this.state.correct+1,
-            num:this.state.num+1
-        })
-        Toast.info('恭喜你，答对啦！撒花🎉！！', 1);
-        this.count=this.count+1;
-        if(this.count === 3){
-            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-        }
-        console.log(this.count);
+        
+        Toast.info('恭喜你，答对啦！撒花🎉！！', 1,()=>{
+            this.setState({
+                correct:this.state.correct+1,
+                num:this.state.num+1
+            })
+            this.count=this.count+1;
+            if(this.count === 3){
+                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+            }
+            console.log(this.count);
+        });
+            
+        
     }
     cuo=()=>{
-        this.setState({
-            num:this.state.num+1
-        })
-        Toast.info('太遗憾了，你答错啦！😭！', 1);
-        this.count=this.count+1;
-        if(this.count===4){
-            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-        }
+        
+        Toast.info('太遗憾了，你答错啦！😭！', 1,()=>{
+            this.setState({
+                num:this.state.num+1
+            })
+            this.count=this.count+1;
+            if(this.count===4){
+                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+            }
+        });
+            
     }
 
     // enter=()=>{
@@ -86,9 +93,9 @@ export default class Tingyinxuanzi extends Component {
                     </div>
                     <div className='t5'>
                         {
-                            this.state.content.choice.map((item)=>{
+                            this.state.content.choice.map((item,index)=>{
                                 return(
-                                    <div className='t6' onClick={this.add} id={item}>{item}</div>
+                                    <div className='t6' onClick={this.add} id={item} key={index}>{item}</div>
                                 )
                             })
                         }
