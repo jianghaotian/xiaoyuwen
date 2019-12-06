@@ -109,3 +109,6 @@
     margin:0 auto;
     margin-top: 20%;
   }
+  .scallcode .clear{
+    clear:both;
+  }
