@@ -64,7 +64,7 @@ export default class Buchongshiju extends Component {
             <div>
                 <NavBar
                     mode="dark"
-                    icon={<Icon type="left" />}
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>}
                     style={{background:'#617ca6',color:'#fff',height:'55px'}}
                     >补 充 诗 句
                 </NavBar>
