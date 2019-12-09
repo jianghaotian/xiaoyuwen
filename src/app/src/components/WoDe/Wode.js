@@ -95,12 +95,10 @@ export default class Wode extends Component {
                 Toast.hide();
                 Toast.info('网络无响应，未请求到用户信息', 1, null, false);
             });   
-        } else {
-            this.setState({
-                grade: this.$store.getState().users.grade || 1
-            })
         }
     }
+
+    
     UNSAFE_componentWillUnmount() {
         // clearInterval(this.state.time);
     }

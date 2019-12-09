@@ -21,16 +21,33 @@
     margin:0 auto;
   }
   .orange{
-    width: 55%;
+    /* width: 55%; */
     /* text-align: center; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-top: 5%;
-    font-size: 20px;
+    font-size: 20px; 
+    /* line-height: 40px; */
   }
-  .orange span{
+  .sm-box{
+    text-align:center;
+    height:2rem;
+    margin-top:1rem;
+  }
+.sm-textBox{
+    font-size:18px;
+    width:50%;
+    margin:0 auto;
+    margin-top: 1rem;
+  }
+.sm-textBox span{
+    color: red;
+    font-size:15px;
+}
+  /* .orange span{
+    background: #617ca6;
     color:red;
     font-size: 22px;
-  }
+  } */
  .s3{
     width: 48%;
     height: 23%;
