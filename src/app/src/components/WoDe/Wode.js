@@ -4,6 +4,7 @@ import '../../css/WoDe/Wode.css';
 import { Button, Icon, Toast } from 'antd-mobile';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
 
+let headUrl = 'http://localhost:8000/users/headImages/';
 
 export default class Wode extends Component {
     constructor() {
@@ -20,7 +21,7 @@ export default class Wode extends Component {
     //     if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
     //         this.setState({
     //             login: true,
-    //             head: this.$store.getState().users.image || require('../../images/headImage.jpg'),
+    //             head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
     //             name: this.$store.getState().users.name,
     //             signature: this.$store.getState().users.signature,
     //             grade: this.$store.getState().users.grade
@@ -58,7 +59,7 @@ export default class Wode extends Component {
             // console.log('phone != ""');
             this.setState({
                 login: true,
-                head: this.$store.getState().users.image || require('../../images/headImage.jpg'),
+                head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
                 name: this.$store.getState().users.name,
                 signature: this.$store.getState().users.signature || '编辑个性签名',
                 grade: this.$store.getState().users.grade
@@ -76,11 +77,11 @@ export default class Wode extends Component {
                         birthday: res.data.data[0].Ubirthday || '',
                         phone: res.data.data[0].Uphone || '',
                         grade: res.data.data[0].Ugrade || 1,
-                        image: res.data.data[0].Uimage || '',
+                        head: headUrl + res.data.data[0].Uimage || '',
                     }
                     this.setState({
                         login: true,
-                        head: ownUsers.image || require('../../images/headImage.jpg'),
+                        head: ownUsers.head || require('../../images/headImage.jpg'),
                         name: ownUsers.name,
                         signature: ownUsers.signature || '编辑个性签名',
                         grade: ownUsers.grade

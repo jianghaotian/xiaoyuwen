@@ -9,6 +9,7 @@ var cors = require('cors');
 var usersRouter = require('./routes/users');
 var infoRouter = require('./routes/info');
 var imagesRouter = require('./routes/images');
+var questionRouter = require('./routes/question');
 
 var app = express();
 
@@ -23,5 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/v1/users', usersRouter);
 app.use('/v1/info', infoRouter);
 app.use('/v1/images', imagesRouter);
+app.use('/v1/question', questionRouter);
 
 module.exports = app;

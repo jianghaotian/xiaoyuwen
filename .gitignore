@@ -74,8 +74,8 @@ typings/
 .env.*.local
 
 # build file
-/build
-/dist
+build
+dist
 
 # config
 config.js

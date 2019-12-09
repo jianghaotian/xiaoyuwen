@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Cropper from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
-import { NavBar, Icon, Button } from 'antd-mobile';
+import { NavBar, Icon, Button, Toast } from 'antd-mobile';
+import axios from 'axios';
+import { baseUrl } from '../../request/http';
+import store from '../../redux/store';
+
+
+const service = axios.create({
+    baseURL: baseUrl,
+    timeout: 10000,
+    headers: {'Content-Type': 'multipart/form-data'}
+});
+service.defaults.headers.common['token'] = store.getState().token.token;
 
 
 
-export default class Cropimg extends React.Component {
+export default class Cropimg extends Component {
     constructor() {
         super();
         this.cropImage = this.cropImage.bind(this);
@@ -13,9 +24,25 @@ export default class Cropimg extends React.Component {
 
     cropImage() {
         if (this.cropper.getCroppedCanvas() === 'null') {
-            return false
+            Toast.fail('修改失败', 1, null, false);
+            return false;
         }
-        this.props.history.push({pathname:'/wode/info/touxiang',state:{src:this.cropper.getCroppedCanvas().toDataURL()}})
+        // TODO: 这里可以尝试修改上传图片的尺寸
+        this.cropper.getCroppedCanvas().toBlob(blob => {
+            const formData = new FormData()
+            formData.append('file', blob, this.props.location.state.name);
+            Toast.loading('正在修改', 10, () => {
+                Toast.fail('修改失败', 1, null, false);
+            });
+            service.post('/images/head',formData).then(res=>{
+                if (res.data.status === 0) {
+                    Toast.success('修改成功', 1 ,null, false);
+                    this.props.history.push({pathname:'/wode/info/touxiang', state:{src:this.cropper.getCroppedCanvas().toDataURL()}})   
+                } else {
+                    Toast.fail('修改失败', 1, null, false);
+                }
+            })
+        })
     }
 
     render() {

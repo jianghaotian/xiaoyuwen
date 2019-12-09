@@ -7,7 +7,7 @@ const noneUsers = {
     birthday: '',
     phone: '',
     grade: '',
-    image: ''
+    head: ''
 }
 
 let defaultUsers = JSON.parse(localStorage.getItem("users")) || noneUsers;
