@@ -77,7 +77,12 @@ export default class Tingyinxuanzi extends Component {
                     >听 音 选 字</NavBar>
                 <div className='t1'></div>
                 <div className="s2">
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
+                    <div className='sm-box'>
+                        <div className='sm-textBox'>
+                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                        </div>
+                    </div>
+                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
                     <div className="iconfont icon-laba1 t4"></div>
                     <div className='t2'>{this.state.content.yin}</div>
                     <div className='t3'>
