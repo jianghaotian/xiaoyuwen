@@ -14,8 +14,11 @@ const api = {
     change_pwd_veri: p => post('users/cpwdveri', p),
     veri_change_pwd: p => post('users/vericpwd', p),
 
-    set_grade: p => post('info/setgrade', p)
-
+    set_grade: p => post('info/setgrade', p),
+    set_name: p => post('info/setname', p),
+    set_signature: p => post('info/setsignature', p),
+    set_sex: p => post('info/setsex', p),
+    
 
 }
 
