@@ -171,7 +171,7 @@ export default class idiomjielong extends Component {
 					<div className="learnidiomcon">
 						<div>
 							<div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
-							<div><img className="learnimg" src={require("../../../images/playbackground.jpeg")} /></div>
+							{/* <div><img className="learnimg" src={require("../../images/playbackground.jpeg")} /></div> */}
 							<div className="jielongcon">
 								<div className="jlcode">
 									<div className="jlquestion" ref="question">
