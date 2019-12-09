@@ -62,12 +62,7 @@ export default class Yunmu extends Component {
                         onChange={this.onChange}
                         style={{height:"2rem",marginTop:'5%'}}
                     />
-                    <div className='sm-box'>
-                        <div className='sm-textBox'>
-                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
-                        </div>
-                    </div>
-                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
+                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                     <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                     <div className="s3">
                         <div className="s4">{this.state.content.yin}</div>

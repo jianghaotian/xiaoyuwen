@@ -2,7 +2,6 @@
     width:100%;
     height:100%;
     padding-top: 5%;
-    padding-bottom: 40%;
   }
   .learnidiomcon{
     width:85%;
@@ -109,4 +108,7 @@
     width:50%;
     margin:0 auto;
     margin-top: 20%;
+  }
+  .scallcode .clear{
+    clear:both;
   }

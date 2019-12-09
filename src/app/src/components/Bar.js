@@ -82,7 +82,7 @@ export default class Bar extends Component {
     render() {
         return (
             <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
-                {/* <div className="wode_back"></div> */}
+                <div className="wode_back"></div>
 
                 <TabBar unselectedTintColor="#949494" tintColor="#6189B8" barTintColor="white">
                     <TabBar.Item

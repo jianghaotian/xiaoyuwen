@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar,Icon,Toast,Button } from 'antd-mobile';
 import { Link } from 'react-router-dom';
+import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
 
 
 export default class Yzmxiugai extends Component {
@@ -11,21 +12,13 @@ export default class Yzmxiugai extends Component {
             verityText:'获取验证码',
             veriToken: '',
             time:'',
-            phone: '',
+            phone: this.$store.getState().users.phone,
             verity: '',
             newPassword: '',
-            newPassword1: '',
-            name: '',
+            newPassword1: ''
         }
     }
-    changePhone = (e) => {
-        var reg = /^[0-9]*$/;
-        if (reg.test(e.target.value) && e.target.value.length <= 11) {
-            this.setState({
-                phone: e.target.value
-            })
-        }
-    }
+
     changeVerity = (e) => {
         this.setState({
             verity: e.target.value
@@ -45,18 +38,13 @@ export default class Yzmxiugai extends Component {
             })
         }
     }
-    changeName = (e) => {
-        this.setState({
-            name: e.target.value
-        })
-    }
     verity =()=>{
         if (this.state.phone.length === 11) {
             this.setState({
                 verityDiv: 'verity-div1',
                 verityText: '正在获取...'
             })
-            this.$api.register_veri({'phone': this.state.phone}).then(res => {
+            this.$api.change_pwd_veri({'phone': this.state.phone}).then(res => {
                 console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
@@ -79,8 +67,17 @@ export default class Yzmxiugai extends Component {
                         time: time,
                         verityText: verityNum + 's后重新获取'
                     })
+                } else if (res.data.status === -1) {
+                    Toast.fail('登录信息有误，请重新登录', 1, null, false);
+                    this.$store.dispatch(clearTokenAll());
+                    this.$store.dispatch(clearUsers());
+                    this.props.history.push('/login');
                 } else {
-                    Toast.fail('验证码获取失败', 1, null, false);
+                    if (res.data.status === 1024 || res.data.status === 1023) {
+                        Toast.fail('验证码获取次数过多，请稍后再试', 1, null, false);
+                    } else {
+                        Toast.fail('验证码获取失败', 1, null, false);
+                    }
                     this.setState({
                         verityDiv: 'verity-div',
                         verityText: '重新获取'
@@ -96,7 +93,7 @@ export default class Yzmxiugai extends Component {
             Toast.info('请输入正确的手机号', 1, null, false);
         }
     }
-    register = () => {
+    changePwd = () => {
         if (this.state.verity === '') {
             Toast.info('验证码不能为空', 1, null, false);
         } else if (this.state.newPassword === '') {
@@ -112,36 +109,42 @@ export default class Yzmxiugai extends Component {
                 Toast.offline('网络异常', 1, null, false);
             });
             let formData = {
-                phone: this.state.phone,
-                password: this.state.password,
-                name: this.state.name,
+                password: this.state.newPassword,
                 verification: this.state.verity,
-                token: this.state.veriToken
+                veriToken: this.state.veriToken
             }
-            this.$api.register(formData).then(res => {
+            // TODO
+            this.$api.veri_change_pwd(formData).then(res => {
                 console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
-                    Toast.success('注册成功', 1);
-                    Toast.hide();
-                    this.props.history.push('/login');
+                    Toast.success('修改密码成功', 1, null, false);
+                    this.props.history.push('/wode/info/zhanghao');
                 } else if (res.data.status === -2) {
                     Toast.fail('验证码错误', 1, null, false);
+                } else if (res.data.status === -1) {
+                    Toast.fail('登录信息有误，请重新登录', 1, null, false);
+                    this.$store.dispatch(clearTokenAll());
+                    this.$store.dispatch(clearUsers());
+                    this.props.history.push('/login');
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }
             })
         }
     }
+    UNSAFE_componentWillUnmount() {
+        clearInterval(this.state.time);
+    }
     render() {
         return (
             <div>
-                {/* <div className="wode_back"></div> */}
+                <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>修 改 密 码</NavBar>
                 <div className="logininput">
                     <div style={{width:'100%',float:'left',height:'2.5rem'}}> 
                         <span className='xiutext'>当前手机号：</span>
-                        <span className='xiutext'>后端获取</span>
+                        <span className='xiutext'>{this.state.phone}</span>
                     </div>
                     <span className='xiutext'>请输入验证码：</span>
                     <div className="verity">
@@ -160,7 +163,7 @@ export default class Yzmxiugai extends Component {
                     style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
                             margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                     activeStyle={{background:'grey'}}
-                    onClick={this.register}
+                    onClick={this.changePwd}
                 >确 定</Button> 
             </div>
         )
