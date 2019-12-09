@@ -82,11 +82,7 @@ export default class Register extends Component {
                         verityText: verityNum + 's后重新获取'
                     })
                 } else {
-                    if (res.data.status === 1024 || res.data.status === 1023) {
-                        Toast.fail('验证码获取次数过多，请稍后再试', 1, null, false);
-                    } else {
-                        Toast.fail('验证码获取失败', 1, null, false);
-                    }
+                    Toast.fail('验证码获取失败', 1, null, false);
                     this.setState({
                         verityDiv: 'verity-div',
                         verityText: '重新获取'

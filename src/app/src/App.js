@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-// import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-import {HashRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-
-
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Bar from './components/Bar';
 import Open from './components/OpenScreen/Open';
 import Gerenxinxi from './components/WoDe/Gerenxinxi';
@@ -39,7 +36,7 @@ import Idiomjielong from './components/ChengYu/Idiomjielong';
 import Buchongshiju from './components/ShiCi/Buchongshiju';
 import Learnpoem from './components/ShiCi/Learnpoem';
 import Shicierr from './components/ShiCi/Shicierr';
-import Guanqia from './components/Guanqia'
+
 export default class App extends Component {
     render() {
         return (
@@ -49,7 +46,6 @@ export default class App extends Component {
                     <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} />
                     <Route exact path="/home" component={()=><Redirect from='/home' to='/home/pinyin' />} />
                     <Route exact path="/home/:tab" component={Bar} />
-                    <Route exact path ="/guanqia"  component={Guanqia}/>
                     {/* 开屏 */}
                     <Route exact path="/open" component={Open} />
                     {/* 拼音 */}

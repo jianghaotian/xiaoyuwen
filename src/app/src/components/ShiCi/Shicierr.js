@@ -83,7 +83,6 @@ export default class Shicierr extends Component {
                                 )
                                 
                                 })}
-                                <div className="clear"></div>
                             </div>
                         </div>
                     </div>
