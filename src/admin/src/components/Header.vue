@@ -1,7 +1,9 @@
 <template>
     <div class="header">
         <!-- left -->
-        <div class="title">小语文后台管理系统</div>
+        <div class="left">
+            <div class="title">小语文后台管理系统</div>
+        </div>
         <!-- right -->
         <div class="right">
             <!-- date -->
@@ -47,11 +49,14 @@ i {
     background-color: #fff;
 
 }
-.title {
+.left {
     float: left;
+
+}
+.title {
     height: 70px;
     line-height: 70px;
-    color: #3599D6;
+    color: #617ca6;
     font-size: 20px;
     font-weight: bold;
 

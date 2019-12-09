@@ -34,7 +34,7 @@ export default class Touxiang extends Component {
                         result: true,
                         faceCheck: true
                     })
-                    this.props.history.push({pathname:'/wode/info/touxiang/crop',state:{src:reader.result}})
+                    this.props.history.push({pathname:'/wode/info/touxiang/crop',state:{src: reader.result, name: file.name}})
                  }; 
             } else {
                 console.log("文件过大");
