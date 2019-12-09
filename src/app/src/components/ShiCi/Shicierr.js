@@ -51,12 +51,7 @@ export default class Shicierr extends Component {
                     
                     <div className="learnidiomcon">
                     <div>
-                    <div className='sm-box'>
-                        <div className='sm-textBox'>
-                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
-                        </div>
-                    </div>
-                        {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
+                        <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                         <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                         <div className="errcon">
                             <div><img className="learnimg" src={require("../../images/bg3.jpg") }/></div>
@@ -88,6 +83,7 @@ export default class Shicierr extends Component {
                                 )
                                 
                                 })}
+                                <div className="clear"></div>
                             </div>
                         </div>
                     </div>
