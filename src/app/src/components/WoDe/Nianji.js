@@ -12,21 +12,17 @@ export default class Nianji extends Component {
         };
     }
     save = () => {
-        Toast.loading('正在保存...', 10, () => {
-            Toast.offline('网络异常', 1, null, false);
-        });
-
-        this.$api.set_grade({grade: this.state.grade}).then(res => {
-            Toast.hide();
-
-            if (res.data.status === 0) {
-                Toast.success('保存成功', 1, null, false);
-                this.$store.dispatch(setGrade(this.state.grade));
-                this.props.history.push('/home/wode');
-            } else {
-                Toast.fail('保存失败', 1, null, false);
-            }
-        });
+        Toast.success('保存成功', 1, null, false);
+        this.$store.dispatch(setGrade(this.state.grade));
+        
+        if (this.$store.getState().users.phone !== '') {
+            this.$api.set_grade({grade: this.state.grade}).then(res => {
+                // Toast.hide();
+            }, () => {
+                Toast.hide();
+            });
+        }
+        this.props.history.push('/home/wode');
     }
     render() {
         return (
