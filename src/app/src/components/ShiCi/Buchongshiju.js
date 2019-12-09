@@ -50,7 +50,11 @@ export default class Buchongshiju extends Component {
                 </NavBar>
                 <div className="bcsj_back"></div>
                 <div className="bcsj_box">
-                <p><span>第 </span><span className="bcsj_text1"><span>{this.state.num}</span>/3</span><span> 个</span></p>
+                <div className='sm-box'>
+                        <div className='sm-textBox'>
+                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                        </div>
+                    </div>
                     <div className="bcsj_poetry">
                         <div style={{margin:'0 auto'}}>床前明月光，</div>
                         <div id="answer" className="bcsj_poetry_text">

@@ -177,7 +177,12 @@ export default class Kanzishiyin extends Component {
                     >看 字 识 音</NavBar>
                 <div className='k1'></div>
                 <div className="s2">
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
+                <div className='sm-box'>
+                    <div className='sm-textBox'>
+                        第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                    </div>
+                </div>
+                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div> */}
                     <div className='k2'>
                         <div className="k3">
                             <div className="k4" ref="first">
