@@ -75,7 +75,7 @@ class Xiugaimima extends Component {
     render() {
         return (
             <div>
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>修 改 密 码</NavBar>
                 <div className="logininput">
                     <span className='xiutext'>旧密码：</span>

@@ -61,7 +61,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className="logincontainer">
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}} rightContent={<Link to="/register" style={{color:'#fff'}}>立即注册</Link>}>登 录</NavBar>
                 <div className="logininput">
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>

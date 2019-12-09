@@ -31,7 +31,7 @@ export default class Nianji extends Component {
     render() {
         return (
             <div>
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>年 级</NavBar>
 
                 <div className="wode_tab a_click" onClick={() => {this.setState({grade: 1})}}>

@@ -143,7 +143,7 @@ export default class Register extends Component {
     render() {
         return (
             <div className="logincontainer">
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}} rightContent={<Link to="/login" style={{color:'#fff'}}>返回登录</Link>}>注 册</NavBar>
 
 
