@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { List, InputItem, Button,NavBar,Icon,Toast } from 'antd-mobile';
 import { Link } from 'react-router-dom';
-import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
 
 
 import { createForm } from 'rc-form';
@@ -36,7 +35,7 @@ class Xiugaimima extends Component {
             })
         }
     }
-    changePwd = () => {
+    register = () => {
         if (this.state.oldPassword === '') {
             Toast.info('请输入旧密码', 1, null, false);
         } else if (this.state.newPassword === '') {
@@ -66,11 +65,6 @@ class Xiugaimima extends Component {
                     this.props.history.push('/wode/info/zhanghao');
                 } else if (res.data.status === -3) {
                     Toast.fail('旧密码错误', 1, null, false);
-                } else if (res.data.status === -1) {
-                    Toast.fail('登录信息有误，请重新登录', 1, null, false);
-                    this.$store.dispatch(clearTokenAll());
-                    this.$store.dispatch(clearUsers());
-                    this.props.history.push('/login');
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }
@@ -81,7 +75,7 @@ class Xiugaimima extends Component {
     render() {
         return (
             <div>
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/wode/info/zhanghao')}}/>} style={{background:'#617ca6',color:'#fff'}}>修 改 密 码</NavBar>
                 <div className="logininput">
                     <span className='xiutext'>旧密码：</span>
@@ -98,7 +92,7 @@ class Xiugaimima extends Component {
                     style={{width:'60%',height:'3rem',fontSize:'16px',background:'#617ca6',color:'#fff',
                             margin:'0 auto',lineHeight:'3rem',marginTop:'5%'}}
                     activeStyle={{background:'grey'}}
-                    onClick={this.changePwd}
+                    onClick={this.register}
                 >确 定</Button>
             </div>
         )

@@ -60,11 +60,7 @@ export default class Phonelogin extends Component {
                         verityText: verityNum + 's后重新获取'
                     })
                 } else {
-                    if (res.data.status === 1024 || res.data.status === 1023) {
-                        Toast.fail('验证码获取次数过多，请稍后再试', 1, null, false);
-                    } else {
-                        Toast.fail('验证码获取失败', 1, null, false);
-                    }
+                    Toast.fail('验证码获取失败', 1, null, false);
                     this.setState({
                         verityDiv: 'verity-div',
                         verityText: '重新获取'
@@ -105,7 +101,7 @@ export default class Phonelogin extends Component {
                     // Toast.hide();
                     this.props.history.push('/home/wode');
                 } else if (res.data.status === -2) {
-                    Toast.fail('验证码错误', 1, null, false);
+                    Toast.fail('登录失败', 1, null, false);
                 } else {
                     Toast.fail('服务器错误', 1, null, false);
                 }
@@ -118,7 +114,7 @@ export default class Phonelogin extends Component {
     render() {
         return (
             <div className="logincontainer">
-                <div className="wode_back"></div>
+                {/* <div className="wode_back"></div> */}
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>登 录</NavBar>
                 <div className="logininput">
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
