@@ -50,7 +50,7 @@ export default class Guessidioms extends Component {
     }
     getGid=(e)=>{
         this.answer="";
-        // var flag=false;
+        var flag=false;
         var value=e.target.innerHTML;
         if(this.objArr.length<4){
             ++this.no;
@@ -87,7 +87,7 @@ export default class Guessidioms extends Component {
                 item.className="guessonefalse";
             })
             Toast.info("太遗憾了，你答错啦！😭")
-            // flag=true;
+            flag=true;
             this.answer="";
             this.no=0;
             this.objArr=[];
