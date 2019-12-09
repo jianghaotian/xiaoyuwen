@@ -30,64 +30,19 @@ export default class Guessidioms extends Component {
         })
     }
     adds=(e)=>{
-        var aa=(this.answer===this.content.answer);
-        if(aa && this.no===4){
-            this.arr.map((item,index)=>{
-               
-                item.className="guessonetrue"
-            }) 
-            Toast.info("恭喜你，答对啦！撒花🎉！！",1,()=>{
-                this.setState((state)=>{
-                    if(state.num==3){
-                        return{
-                            num:3
-                        }
-                    }
-                    return{
-                        num:++state.num
-                    }
-                })
-                if(this.state.num==3){
-                    this.setState({
-                        next:"下一关"
-                    })
+        
+        this.setState((state)=>{
+            if(state.num===3){
+                return{
+                    num:3
                 }
-            })
-            this.answer="";
-        }
-        else if(!aa && this.no===4){
-            this.arr.map((item,index)=>{
-                item.className="guessonefalse";
-            })
-            Toast.info("太遗憾了，你答错了！😭",1,()=>{
-                this.setState((state)=>{
-                    if(state.num==3){
-                        return{
-                            num:3
-                        }
-                    }
-                    return{
-                        num:++state.num
-                    }
-                })
-                if(this.state.num==3){
-                    this.setState({
-                        next:"下一关"
-                    })
-                }
-            }) 
-            // flag=true;
-            this.answer="";
-            this.no=0;
-            this.objArr=[];
-            setTimeout(()=>{
-                this.arr.map((item,index)=>{
-                    item.innerHTML=""
-                    item.id="";
-                    item.className="guessone"
-                })
-            },500)
-            
+            }
+            return{
+                num:++state.num
+            }
+        })
+        if(this.state.num===2){
+            e.target.innerHTML="下一关"
         }
     }
     change=(e)=>{
@@ -95,15 +50,13 @@ export default class Guessidioms extends Component {
     }
     getGid=(e)=>{
         this.answer="";
-<<<<<<< HEAD
         var flag=false;
-=======
->>>>>>> b06cfa428a004ac67a923908692d70dfbd09b587
         var value=e.target.innerHTML;
         if(this.objArr.length<4){
             ++this.no;
             var obj={key:this.no,value:value}
             this.objArr.push(obj);
+            // var elem = document.querySelector(`#a${this.no}`);
             var elem1=this.refs.a.children[this.no-1]
             this.arr.push(elem1);
         }
@@ -121,7 +74,6 @@ export default class Guessidioms extends Component {
         }
         
         var aa=(this.answer===this.content.answer);
-<<<<<<< HEAD
         if(aa && this.no===4){
             this.arr.map((item,index)=>{
                
@@ -149,9 +101,6 @@ export default class Guessidioms extends Component {
             
         }
         else if(!aa && this.no===1){
-=======
-        if(!aa && this.no===1){
->>>>>>> b06cfa428a004ac67a923908692d70dfbd09b587
             this.no=0;
             this.objArr=[];
             this.arr=[];
