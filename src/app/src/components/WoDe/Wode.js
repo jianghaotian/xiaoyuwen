@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
-import { Button, Icon, Toast } from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
-
-let headUrl = 'http://localhost:8000/users/headImages/';
+import { headUrl } from '../../redux/reducers/users';
 
 export default class Wode extends Component {
     constructor() {
@@ -17,46 +16,8 @@ export default class Wode extends Component {
             grade: 1
         };
     }
-    // componentDidMount() {
-    //     if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
-    //         this.setState({
-    //             login: true,
-    //             head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
-    //             name: this.$store.getState().users.name,
-    //             signature: this.$store.getState().users.signature,
-    //             grade: this.$store.getState().users.grade
-    //         })
-    //     } else if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
-    //         this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
-    //             console.log(res);
-
-    //             if (res.data.status === 0) {
-    //                 let ownUsers = {
-    //                     name: res.data.data[0].Uname || '',
-    //                     signature: res.data.data[0].Usignature || '',
-    //                     sex: res.data.data[0].Usex || '',
-    //                     birthday: res.data.data[0].Ubirthday || '',
-    //                     phone: res.data.data[0].Uphone || '',
-    //                     grade: res.data.data[0].Ugrade || 1,
-    //                     image: res.data.data[0].Uimage || '',
-    //                 }
-    //                 this.$store.dispatch(setUsers(ownUsers));
-    //             } else if (res.data.status === -1 || res.data.status === -2) {
-    //                 this.$store.dispatch(clearTokenAll());
-    //                 this.$store.dispatch(clearUsers());
-    //             }
-    //         }, () => {
-    //             Toast.hide();
-    //             Toast.info('网络无响应，未请求到用户信息', 1, null, false);
-    //         });   
-    //     }
-    // }
-    UNSAFE_componentWillMount() {
-        // console.log('will mount 111');
-        // console.log(this.$store.getState().token.uid);
-        // console.log(this.$store.getState().token.token);
+    componentDidMount() {
         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
-            // console.log('phone != ""');
             this.setState({
                 login: true,
                 head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
@@ -65,7 +26,6 @@ export default class Wode extends Component {
                 grade: this.$store.getState().users.grade
             })
         } else if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
-            // console.log('phone == ""');
             this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
                 console.log(res);
 
@@ -77,14 +37,14 @@ export default class Wode extends Component {
                         birthday: res.data.data[0].Ubirthday || '',
                         phone: res.data.data[0].Uphone || '',
                         grade: res.data.data[0].Ugrade || 1,
-                        head: headUrl + res.data.data[0].Uimage || '',
+                        head: res.data.data[0].Uimage || '',
                     }
                     this.setState({
                         login: true,
                         head: ownUsers.head || require('../../images/headImage.jpg'),
                         name: ownUsers.name,
                         signature: ownUsers.signature || '编辑个性签名',
-                        grade: ownUsers.grade
+                        grade: headUrl + ownUsers.grade
                     })
                     this.$store.dispatch(setUsers(ownUsers));
                 } else if (res.data.status === -1 || res.data.status === -2) {
@@ -95,10 +55,6 @@ export default class Wode extends Component {
                 Toast.hide();
                 Toast.info('网络无响应，未请求到用户信息', 1, null, false);
             });   
-        } else {
-            this.setState({
-                grade: this.$store.getState().users.grade || 1
-            })
         }
     }
     UNSAFE_componentWillUnmount() {
