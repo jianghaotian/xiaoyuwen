@@ -9,7 +9,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 axios.defaults.headers.common['token'] = store.getState().token.token;
 
 // export let baseUrl = 'http://localhost:8001/v1';  //配置接口地址
-baseUrl = 'https://xyw.haotian.pub/v1';  //配置接口地址
+baseUrl = 'https://xyw.htapi.pub/v1';  //配置接口地址
 
 axios.defaults.baseURL = baseUrl;
 
