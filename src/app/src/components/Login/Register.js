@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
-// import api from '../../request'
-import store from '../../redux/store'
-import { setToken } from '../../redux/actions'
 
 export default class Register extends Component {
     constructor() {
@@ -17,7 +14,7 @@ export default class Register extends Component {
             verity: '',
             password: '',
             password1: '',
-            name: '',
+            name: ''
         }
     }
     changePhone = (e) => {
@@ -52,7 +49,7 @@ export default class Register extends Component {
             name: e.target.value
         })
     }
-    verity =()=>{
+    verity = () => {
         if (this.state.phone.length === 11) {
             this.setState({
                 verityDiv: 'verity-div1',
@@ -131,8 +128,8 @@ export default class Register extends Component {
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('注册成功', 1);
-                    Toast.hide();
                     this.props.history.push('/login');
+                    // Toast.hide();
                 } else if (res.data.status === -2) {
                     Toast.fail('验证码错误', 1, null, false);
                 } else {
@@ -149,7 +146,6 @@ export default class Register extends Component {
             <div className="logincontainer">
                 <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}} rightContent={<Link to="/login" style={{color:'#fff'}}>返回登录</Link>}>注 册</NavBar>
-
 
                 <div className="logininput2">
                     <input type="text" placeholder="请输入手机号" value={this.state.phone} onChange={this.changePhone}/>
