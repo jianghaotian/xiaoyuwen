@@ -21,7 +21,7 @@ export default class Wode extends Component {
             this.setState({
                 login: true,
                 head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
-                name: this.$store.getState().users.name,
+                name: this.$store.getState().users.name || '修改昵称',
                 signature: this.$store.getState().users.signature || '编辑个性签名',
                 grade: this.$store.getState().users.grade
             })
@@ -42,7 +42,7 @@ export default class Wode extends Component {
                     this.setState({
                         login: true,
                         head: ownUsers.head || require('../../images/headImage.jpg'),
-                        name: ownUsers.name,
+                        name: ownUsers.name || '修改昵称',
                         signature: ownUsers.signature || '编辑个性签名',
                         grade: headUrl + ownUsers.grade
                     })
