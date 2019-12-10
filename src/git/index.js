@@ -21,10 +21,10 @@ handler.on('error', function (err) {
 
 // 监听到push事件的时候执行我们的自动化脚本
 handler.on('push', function (event) {
-    console.log(event);
-    console.log('Received a push event for %s to %s',
-        event.payload.repository.name,
-        event.payload.ref);
+
+    // console.log('Received a push event for %s to %s',
+    //     event.payload.repository.name,
+    //     event.payload.ref);
 
     // rumCommand('sh', ['./deployed.sh'], function (txt) {
     //     console.log(txt)
