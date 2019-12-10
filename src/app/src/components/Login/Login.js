@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import '../../css/Login/login.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { NavBar, Button, Icon, Toast } from 'antd-mobile';
-import '../../css/Login/login.css'
-// import api from '../../request'
-import store from '../../redux/store'
-import { setTokenAll, setUid } from '../../redux/actions'
+import { setTokenAll } from '../../redux/actions';
 
 export default class Login extends Component {
     constructor() {
@@ -47,7 +45,7 @@ export default class Login extends Component {
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1, null, false);
-                    store.dispatch(setTokenAll(res.data.data.token, res.data.data.uid));
+                    this.$store.dispatch(setTokenAll(res.data.data.token, res.data.data.uid));
                     // Toast.hide();
                     this.props.history.push('/home/pinyin');
                 } else if (res.data.status === -1) {
@@ -76,10 +74,10 @@ export default class Login extends Component {
                         onClick={this.login}
                     >登 录</Button>
                 </div>
-                <div className="bottomicon">
+                {/* <div className="bottomicon">
                     <i className="iconfont icon-qq"></i>
                     <i className="iconfont icon-weixin1"></i>
-                </div>
+                </div> */}
             </div>
         )
     }
