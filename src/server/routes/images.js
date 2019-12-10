@@ -12,7 +12,7 @@ const getRandom = require('../src/users/verification');
 const storage = multer.diskStorage({
     // 配置文件上传的位置
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/users/headImages'));
+        cb(null, path.join(__dirname, '../public/users/headimages'));
     },
     // 配置上传文件的名称（包含后缀）
     filename: (req, file, cb) => {
