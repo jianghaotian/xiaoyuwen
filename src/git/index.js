@@ -4,7 +4,7 @@ var createHandler = require('github-webhook-handler');
 
 var handler = createHandler({
     path: '/xyw',
-    secret: 'jht952727'
+    secret: 'xiaoyuwen'
 });
 
 http.createServer(function (req, res) {
@@ -13,35 +13,21 @@ http.createServer(function (req, res) {
         res.end('no such location');
     })
 }).listen(8081);
-console.log('github-webhook-handler run');
+// console.log('github-webhook-handler run');
 
 handler.on('error', function (err) {
-    console.error('Error:', err.message)
+    // console.error('Error:', err.message)
 });
 
-// 监听到push事件的时候执行我们的自动化脚本
 handler.on('push', function (event) {
-
-    // console.log('Received a push event for %s to %s',
-    //     event.payload.repository.name,
-    //     event.payload.ref);
-
-    // rumCommand('sh', ['./deployed.sh'], function (txt) {
-    //     console.log(txt)
-    // })
-
-    // runCommand('sh', ['./auto_build.sh'], function( txt ){
-    //     console.log(txt);
-    // });
+    if (event.payload.head_commit.message === "jht run") {
+        runCommand('bash', ['./deployed.sh'], function( txt ){
+            // console.log(txt);
+        });
+    }
 });
 
-function runCommand( cmd, args, callback ){
-    var child = spawn( cmd, args );
-    var response = '';
-    child.stdout.on('data', function( buffer ){ resp += buffer.toString(); });
-    child.stdout.on('end', function(){ callback( resp ) });
-}
-function rumCommand1(cmd, args, callback) {
+function rumCommand(cmd, args, callback) {
     var child = spawn(cmd, args);
     var response = '';
     child.stdout.on('data', function (buffer) {
