@@ -25,6 +25,9 @@ export const clearUsers = makeActionCreator(CLEAR_USERS);
 export const SET_GRADE = 'SET_GRADE';
 export const setGrade = makeActionCreator(SET_GRADE, 'grade');
 
+export const SET_HEAD = 'SET_HEAD';
+export const setHead = makeActionCreator(SET_HEAD, 'head');
+
 export const SET_NAME = 'SET_NAME';
 export const setName = makeActionCreator(SET_NAME, 'name');
 

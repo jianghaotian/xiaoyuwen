@@ -4,9 +4,8 @@ import Pinyin from './PinYin/Pinyin';
 import Chengyu from './ChengYu/Chengyu';
 import Shici from './ShiCi/Shici';
 import Wode from './WoDe/Wode';
-import { NavBar, Button, Icon, Toast } from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 import { clearTokenAll, clearUsers, setUsers } from '../redux/actions';
-
 
 export default class Bar extends Component {
     constructor(props) {
@@ -19,8 +18,6 @@ export default class Bar extends Component {
         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
             this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
                 console.log(res);
-
-                // 同下
                 if (res.data.status === 0) {
                     let ownUsers = {
                         name: res.data.data[0].Uname || '',
@@ -29,55 +26,18 @@ export default class Bar extends Component {
                         birthday: res.data.data[0].Ubirthday || '',
                         phone: res.data.data[0].Uphone || '',
                         grade: res.data.data[0].Ugrade || 1,
-                        image: res.data.data[0].Uimage || '',
+                        head: res.data.data[0].Uimage || ''
                     }
                     this.$store.dispatch(setUsers(ownUsers));
                 } else if (res.data.status === -1 || res.data.status === -2) {
                     this.$store.dispatch(clearTokenAll());
                     this.$store.dispatch(clearUsers());
                 }
-                // 同下结束
-    
-                // console.log(this.$store.getState());
             }, () => {
                 Toast.hide();
                 // Toast.info('当前未连接网络', 1, null, false);
             });
         }
-        //  else {
-        //     let unsubscribe = this.$store.subscribe(() => {
-        //         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token != '') {
-        //             unsubscribe();
-        //             console.log(11);
-        //             api.get_info({uid: this.$store.getState().token.uid}).then(res => {
-        //                 console.log(res);
-            
-        //                 // 同上
-        //                 if (res.data.status === 0) {
-        //                     let ownUsers = {
-        //                         name: res.data.data[0].Uname || '',
-        //                         signature: res.data.data[0].Usignature || '',
-        //                         sex: res.data.data[0].Usex || '',
-        //                         birthday: res.data.data[0].Ubirthday || '',
-        //                         phone: res.data.data[0].Uphone || '',
-        //                         grade: res.data.data[0].Ugrade || ''
-        //                     }
-        //                     this.$store.dispatch(setUsers(ownUsers));
-        //                 } else if (res.data.status === -1 || res.data.status === -2) {
-        //                     this.$store.dispatch(clearTokenAll());
-        //                     this.$store.dispatch(clearUsers());
-        //                 }
-        //                 // 同上结束
-            
-        //                 // console.log(this.$store.getState());
-                        
-        //             }, () => {
-        //                 Toast.hide();
-        //                 // Toast.info('当前未连接网络', 1, null, false);
-        //             });
-        //         }
-        //     })
-        // }
     }
     render() {
         return (
