@@ -7,14 +7,14 @@ export default class Touxiang extends Component {
     constructor() {
         super();
         this.state = {
-            src: this.$store.getState().users.head
+            src: this.$store.getState().users.head || require('../../images/headImage.jpg')
         };
     }
     componentDidMount() {
         if (this.props.location.state) {
             this.setState({
                 // src: this.props.location.state.src
-                src: this.$store.getState().users.head
+                src: this.$store.getState().users.head || require('../../images/headImage.jpg')
             });
         }
     }
