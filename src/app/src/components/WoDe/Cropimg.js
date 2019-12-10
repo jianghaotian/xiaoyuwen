@@ -27,7 +27,7 @@ export default class Cropimg extends Component {
             Toast.loading('正在修改', 10, () => {
                 Toast.fail('修改失败', 1, null, false);
             });
-            service.post('/images/head',formData).then(res=>{
+            service.post('/images/head',formData).then(res => {
                 if (res.data.status === 0) {
                     Toast.success('修改成功', 1 ,null, false);
                     this.$store.dispatch(setHead(res.data.data.filename));
