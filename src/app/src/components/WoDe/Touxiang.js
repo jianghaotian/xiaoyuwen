@@ -1,31 +1,29 @@
 import React, { Component } from 'react'
-import { NavBar, Icon, Button } from 'antd-mobile';
+import { NavBar, Icon, Button, Toast } from 'antd-mobile';
+
 
 
 export default class Touxiang extends Component {
     constructor() {
         super();
         this.state = {
-            src: 'https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg',
+            src: this.$store.getState().users.head
         };
     }
     componentDidMount() {
-
         if (this.props.location.state) {
-
             this.setState({
-                src: this.props.location.state.src
+                // src: this.props.location.state.src
+                src: this.$store.getState().users.head
             });
         }
-
     }
 
     changeImg = (e) => {
-        let file = e.target.files[0]
+        let file = e.target.files[0];
 
         if (file) {
-            console.log(file.size);
-            if (file.size <= 99999999999999999999) {
+            if (file.size <= 10485760) {
                 let reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.onloadend = () => {
@@ -37,7 +35,8 @@ export default class Touxiang extends Component {
                     this.props.history.push({pathname:'/wode/info/touxiang/crop',state:{src: reader.result, name: file.name}})
                  }; 
             } else {
-                console.log("文件过大");
+                // console.log("文件过大");
+                Toast.fail('文件过大', 1, null, false);
             }
         }
         e.target.value = '';

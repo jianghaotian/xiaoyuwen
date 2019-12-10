@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-
 import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import '../../css/WoDe/Gerenxinxi.css';
-import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
+import { clearTokenAll, clearUsers } from '../../redux/actions';
 
 
 export default class Gerenxinxi extends Component {
     constructor() {
         super();
         this.state = {
-            head: require('../../images/headImage.jpg'),
+            head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
             name: this.$store.getState().users.name || '',
             signature: this.$store.getState().users.signature ||  '',
             sex: this.$store.getState().users.sex || 'man',
