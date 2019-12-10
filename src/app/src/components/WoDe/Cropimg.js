@@ -5,7 +5,7 @@ import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import axios from 'axios';
 import { baseUrl } from '../../request/http';
 import store from '../../redux/store';
-
+import { setHead } from '../../redux/actions/index';
 
 const service = axios.create({
     baseURL: baseUrl,
@@ -14,15 +14,8 @@ const service = axios.create({
 });
 service.defaults.headers.common['token'] = store.getState().token.token;
 
-
-
 export default class Cropimg extends Component {
-    constructor() {
-        super();
-        this.cropImage = this.cropImage.bind(this);
-    }
-
-    cropImage() {
+    cropImage = () => {
         if (this.cropper.getCroppedCanvas() === 'null') {
             Toast.fail('修改失败', 1, null, false);
             return false;
@@ -37,6 +30,7 @@ export default class Cropimg extends Component {
             service.post('/images/head',formData).then(res=>{
                 if (res.data.status === 0) {
                     Toast.success('修改成功', 1 ,null, false);
+                    this.$store.dispatch(setHead(res.data.data.filename));
                     this.props.history.push({pathname:'/wode/info/touxiang', state:{src:this.cropper.getCroppedCanvas().toDataURL()}})   
                 } else {
                     Toast.fail('修改失败', 1, null, false);

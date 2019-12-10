@@ -31,7 +31,9 @@ router.post('/head', upload.any(), function (req, res, next) {
         if (result.status === 0) {
             var filename = req.files[0].filename;
             runSql('update user set Uimage = ? where Uid = ?', [filename, result.data.uid], (result1) => {
-                res.json(result1);
+                let jsonData = {...result1};
+                jsonData.data.filename = filename;
+                res.json(jsonData);
             });
         } else {
             res.json(result);
