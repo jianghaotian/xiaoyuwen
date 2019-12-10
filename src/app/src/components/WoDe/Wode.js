@@ -63,6 +63,7 @@ export default class Wode extends Component {
     render() {
         return (
             <div>
+                <div className="wode_back"></div>
                 <NavBar mode="dark" style={{background:'#617ca6',color:'#fff'}}>我 的</NavBar>
                 <div className="wode_info a_click" onClick={()=>{this.state.login ? this.props.history.push('/wode/info') : this.props.history.push('/login')}}>
                     <div style={{height:'90%',padding:'1rem'}}>

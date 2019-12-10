@@ -22,7 +22,7 @@ export default class Kanzishiyin extends Component {
                     zi:'阳',
                     mu:"yɑng"
                 }
-            ],
+            ], 
             str1:"   ",
             str2:"    "
         }
@@ -35,32 +35,26 @@ export default class Kanzishiyin extends Component {
     submit=()=>{
         console.log(this.state.str1,this.state.str2,this.state.content[0].mu+this.state.content[1].mu)
         if(this.state.str1+this.state.str2===this.state.content[0].mu+this.state.content[1].mu){
-            
-            Toast.info('恭喜你，答对啦！撒花🎉！！', 1,()=>{
-                this.setState({
-                    correct:this.state.correct+1,
-                    num:this.state.num+1
-                    
-                })
-                this.count=this.count+1;
-                if(this.count===4){
-                    this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-                }
-            });
-            
+            this.setState({
+                correct:this.state.correct+1,
+                num:this.state.num+1 === 4?3:this.state.num+1
+                
+            })
+            Toast.info('恭喜你，答对啦！撒花🎉！！', 1);
+            this.count=this.count+1;
+            if(this.count===4){
+                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+            }
         }
         else{
-            
-            Toast.info('太遗憾了，你答错啦！😭！', 1,()=>{
-                this.setState({
-                    num:this.state.num+1
-                })
-                this.count=this.count+1;
-                if(this.count===4){
-                    this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-                }
-            });
-                
+            this.setState({
+                num:this.state.num+1
+            })
+            Toast.info('太遗憾了，你答错啦！😭！', 1);
+            this.count=this.count+1;
+            if(this.count===4){
+                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+            }
         }
     }
     one=(e,index)=>{
@@ -176,14 +170,19 @@ export default class Kanzishiyin extends Component {
 
     render() {
         return (
-            <div>
+            <div className="k1">
                 <NavBar
                     icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
                     style={{backgroundColor:"#617ca6"}}
                     >看 字 识 音</NavBar>
-                <div className='k1'></div>
+                {/* <div className='k1'></div> */}
                 <div className="s2">
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div>
+                <div className='sm-box'>
+                    <div className='sm-textBox'>
+                        第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                    </div>
+                </div>
+                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>3 </span>个</div> */}
                     <div className='k2'>
                         <div className="k3">
                             <div className="k4" ref="first">

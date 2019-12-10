@@ -21,33 +21,26 @@ export default class Tingyinxuanzi extends Component {
     }
 
     dui=()=>{
-        
-        Toast.info('恭喜你，答对啦！撒花🎉！！', 1,()=>{
-            this.setState({
-                correct:this.state.correct+1,
-                num:this.state.num+1
-            })
-            this.count=this.count+1;
-            if(this.count === 3){
-                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-            }
-            console.log(this.count);
-        });
-            
-        
+        this.setState({
+            correct:this.state.correct+1,
+            num:this.state.num+1
+        })
+        Toast.info('恭喜你，答对啦！撒花🎉！！', 1);
+        this.count=this.count+1;
+        if(this.count === 3){
+            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        }
+        console.log(this.count);
     }
     cuo=()=>{
-        
-        Toast.info('太遗憾了，你答错啦！😭！', 1,()=>{
-            this.setState({
-                num:this.state.num+1
-            })
-            this.count=this.count+1;
-            if(this.count===4){
-                this.Btn=<button onClick={this.enter} className="t11">下一关</button>
-            }
-        });
-            
+        this.setState({
+            num:this.state.num+1
+        })
+        Toast.info('太遗憾了，你答错啦！😭！', 1);
+        this.count=this.count+1;
+        if(this.count===4){
+            this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        }
     }
 
     // enter=()=>{
@@ -77,14 +70,19 @@ export default class Tingyinxuanzi extends Component {
 
     render() {
         return (
-            <div>
+            <div className="t1">
                 <NavBar
                     icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
                     style={{backgroundColor:"#617ca6"}}
                     >听 音 选 字</NavBar>
-                <div className='t1'></div>
+                {/* <div className='t1'></div> */}
                 <div className="s2">
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
+                    <div className='sm-box'>
+                        <div className='sm-textBox'>
+                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                        </div>
+                    </div>
+                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
                     <div className="iconfont icon-laba1 t4"></div>
                     <div className='t2'>{this.state.content.yin}</div>
                     <div className='t3'>
