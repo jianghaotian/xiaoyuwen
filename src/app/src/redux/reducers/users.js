@@ -12,13 +12,19 @@ const noneUsers = {
 
 let defaultUsers = JSON.parse(localStorage.getItem("users")) || noneUsers;
 
+export let headUrl = 'http://localhost:8000/users/headimages/';
+
 export default (state = defaultUsers, action) => {
     let ownState = {...state};
 
     switch (action.type) {
         case SET_USERS:
-            localStorage.setItem("users", JSON.stringify(action.users));
-            return action.users;
+            let users = action.users;
+            if (users.head !== '') {
+                users.head = headUrl + users.head;
+            }
+            localStorage.setItem("users", JSON.stringify(users));
+            return users;
         case CLEAR_USERS:
             localStorage.setItem("users", JSON.stringify(noneUsers));
             return noneUsers
@@ -27,7 +33,7 @@ export default (state = defaultUsers, action) => {
             localStorage.setItem("users", JSON.stringify(ownState));
             return ownState;
         case SET_HEAD:
-            ownState.head = action.head;
+            ownState.head = headUrl + action.head;
             localStorage.setItem("users", JSON.stringify(ownState));
             return ownState;
         case SET_NAME:
