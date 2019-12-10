@@ -12,8 +12,8 @@ const noneUsers = {
 
 let defaultUsers = JSON.parse(localStorage.getItem("users")) || noneUsers;
 
-export let headUrl = 'http://localhost:8001/users/headimages/';
-// export let headUrl = 'https://xyw.htapi.pub/users/headimages/';
+// export let headUrl = 'http://localhost:8001/users/headimages/';
+export let headUrl = 'https://xyw.htapi.pub/users/headimages/';
 
 export default (state = defaultUsers, action) => {
     let ownState = {...state};
