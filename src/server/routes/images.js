@@ -26,8 +26,11 @@ const upload = multer({storage: storage});
 
 router.post('/head', upload.any(), function (req, res, next) {
     let token = req.header('token');
-
+    
     checkToken(token, (result) => {
+        console.log(token);
+        console.log(result);
+
         if (result.status === 0) {
             var filename = req.files[0].filename;
             runSql('update user set Uimage = ? where Uid = ?', [filename, result.data.uid], (result1) => {
