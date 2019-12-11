@@ -9,12 +9,17 @@ import { setHead } from '../../redux/actions/index';
 
 const service = axios.create({
     baseURL: baseUrl,
-    timeout: 10000,
+    timeout: 20000,
     headers: {'Content-Type': 'multipart/form-data'}
 });
 service.defaults.headers.common['token'] = store.getState().token.token;
 
 export default class Cropimg extends Component {
+    // componentDidMount() {
+    //     if (this.props.location.state) {
+    //         this.props.history.push('/wode/info/touxiang')
+    //     } 
+    // }
     cropImage = () => {
         if (this.cropper.getCroppedCanvas() === 'null') {
             Toast.fail('修改失败', 1, null, false);
@@ -24,8 +29,8 @@ export default class Cropimg extends Component {
         this.cropper.getCroppedCanvas().toBlob(blob => {
             const formData = new FormData()
             formData.append('file', blob, this.props.location.state.name);
-            Toast.loading('正在修改', 10, () => {
-                Toast.fail('修改失败', 1, null, false);
+            Toast.loading('正在修改', 20, () => {
+                Toast.fail('上传超时', 1, null, false);
             });
             service.post('/images/head',formData).then(res => {
                 console.log(res);

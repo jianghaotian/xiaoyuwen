@@ -1,0 +1,514 @@
+{
+    "version": "2019-11-29.1",
+    "shengmu": [
+        {
+            "name": "b",
+            "word": "播",
+            "spell": "bō",
+            "example": ["播音","播出"],
+            "audio": "word_b.wav",
+            "image": "sm_b.jpg"
+        },
+        {
+            "name": "p",
+            "word": "泼",
+            "spell": "pō",
+            "example": ["泼水","活泼"],
+            "audio": "word_p.wav",
+            "image": "sm_p.jpg"
+        },
+        {
+            "name": "m",
+            "word": "摸",
+            "spell": "mō",
+            "example": ["摸头","摸索"],
+            "audio": "word_m.wav",
+            "image": "sm_m.jpg"
+        },
+        {
+            "name": "f",
+            "word": "佛",
+            "spell": "fō",
+            "example": ["佛像","拜佛"],
+            "audio": "word_f.wav",
+            "image": "sm_f.jpg"
+        },
+        {
+            "name": "d",
+            "word": "得",
+            "spell": "dē",
+            "example": ["得到","得力"],
+            "audio": "word_d.wav",
+            "image": "sm_d.jpg"
+        },
+        {
+            "name": "t",
+            "word": "特",
+            "spell": "tē",
+            "example": ["特别","特点"],
+            "audio": "word_t.wav",
+            "image": "sm_t.jpg"
+        },
+        {
+            "name": "n",
+            "word": "呐",
+            "spell": "nà",
+            "example": ["呐喊","唢呐"],
+            "audio": "word_n.wav",
+            "image": "sm_n.jpg"
+        },
+        {
+            "name": "l",
+            "word": "勒",
+            "spell": "lè",
+            "example": ["勒索","勒令"],
+            "audio": "word_l.wav",
+            "image": "sm_l.jpg"
+        },
+        {
+            "name": "g",
+            "word": "歌",
+            "spell": "gē",
+            "example": ["歌曲","唱歌"],
+            "audio": "word_g.wav",
+            "image": "sm_g.jpg"
+        },
+        {
+            "name": "k",
+            "word": "可",
+            "spell": "kě",
+            "example": ["可怜","可是"],
+            "audio": "word_k.wav",
+            "image": "sm_k.jpg"
+        },
+        {
+            "name": "h",
+            "word": "喝",
+            "spell": "hē",
+            "example": ["喝水","喝茶"],
+            "audio": "word_h.wav",
+            "image": "sm_h.jpg"
+        },
+        {
+            "name": "j",
+            "word": "鸡",
+            "spell": "jī",
+            "example": ["鸡蛋","公鸡"],
+            "audio": "word_j.wav",
+            "image": "sm_j.jpg"
+        },
+        {
+            "name": "q",
+            "word": "气",
+            "spell": "qī",
+            "example": ["气球","空气"],
+            "audio": "word_q.wav",
+            "image": "sm_q.jpg"
+        },
+        {
+            "name": "x",
+            "word": "西",
+            "spell": "xī",
+            "example": ["东西","西天"],
+            "audio": "word_x.wav",
+            "image": "sm_x.jpg"
+        },
+        {
+            "name": "zh",
+            "word": "知",
+            "spell": "zhī",
+            "example": ["知道","知识"],
+            "audio": "word_zh.wav",
+            "image": "sm_zh.jpg"
+        },
+        {
+            "name": "ch",
+            "word": "吃",
+            "spell": "chī",
+            "example": ["口吃","吃苦"],
+            "audio": "word_ch.wav",
+            "image": "sm_ch.jpg"
+        },
+        {
+            "name": "sh",
+            "word": "诗",
+            "spell": "shī",
+            "example": ["诗词","诗人"],
+            "audio": "word_sh.wav",
+            "image": "sm_sh.jpg"
+        },
+        {
+            "name": "r",
+            "word": "日",
+            "spell": "rī",
+            "example": ["日子","明日"],
+            "audio": "word_r.wav",
+            "image": "sm_r.jpg"
+        },
+        {
+            "name": "z",
+            "word": "资",
+            "spell": "zī",
+            "example": ["资料","资源"],
+            "audio": "word_z.wav",
+            "image": "sm_z.jpg"
+        },
+        {
+            "name": "c",
+            "word": "刺",
+            "spell": "cī",
+            "example": ["刺刀","刺杀"],
+            "audio": "word_c.wav",
+            "image": "sm_c.jpg"
+        },
+        {
+            "name": "s",
+            "word": "丝",
+            "spell": "sī",
+            "example": ["蛛丝","丝毫"],
+            "audio": "word_s.wav",
+            "image": "sm_s.jpg"
+        },
+        {
+            "name": "y",
+            "word": "衣",
+            "spell": "yī",
+            "example": ["毛衣","睡衣"],
+            "audio": "word_y.wav",
+            "image": "sm_y.jpg"
+        },
+        {
+            "name": "w",
+            "word": "屋",
+            "spell": "wū",
+            "example": ["房屋","屋顶"],
+            "audio": "word_w.wav",
+            "image": "sm_w.jpg"
+        }
+    ],
+    "yunmu": [
+        {
+            "name": "a",
+            "word": "啊",
+            "spell": "ā",
+            "example": ["嗯啊","啊哈"],
+            "audio": "word_a.wav",
+            "image": "ym_a.jpg"
+        },
+        {
+            "name": "o",
+            "word": "喔",
+            "spell": "ō",
+            "example": ["喔喔","喔唷"],
+            "audio": "word_o.wav",
+            "image": "ym_o.jpg"
+        },
+        {
+            "name": "e",
+            "word": "鹅",
+            "spell": "é ",
+            "example": ["企鹅","鹅掌"],
+            "audio": "word_e.wav",
+            "image": "ym_e.jpg"
+        },
+        {
+            "name": "i",
+            "word": "衣",
+            "spell": "yī",
+            "example": ["睡衣","毛衣"],
+            "audio": "word_i.wav",
+            "image": "ym_i.jpg"
+        },
+        {
+            "name": "u",
+            "word": "屋",
+            "spell": "wū",
+            "example": ["屋顶","房屋"],
+            "audio": "word_u.wav",
+            "image": "ym_u.jpg"
+        },
+        {
+            "name": "ü",
+            "word": "鱼",
+            "spell": "yǖ",
+            "example": ["鱼虾","甲鱼"],
+            "audio": "word_v.wav",
+            "image": "ym_v.jpg"
+        },
+        {
+            "name": "ai",
+            "word": "哀",
+            "spell": "āi",
+            "example": ["哀求","悲哀"],
+            "audio": "word_ai.wav",
+            "image": "ym_ai.jpg"
+        },
+        {
+            "name": "ei",
+            "word": "诶",
+            "spell": "ēi",
+            "example": ["诶笑","天诶"],
+            "audio": "word_ei.wav",
+            "image": "ym_ei.jpg"
+        },
+        {
+            "name": "ui",
+            "word": "危",
+            "spell": "wēi",
+            "example": ["危险","危机"],
+            "audio": "word_ui.wav",
+            "image": "ym_ui.jpg"
+        },
+        {
+            "name": "ao",
+            "word": "袄",
+            "spell": "aō",
+            "example": ["棉袄","短袄"],
+            "audio": "word_ao.wav",
+            "image": "ym_ao.jpg"
+        },
+        {
+            "name": "ou",
+            "word": "鸥",
+            "spell": "ōu",
+            "example": ["海鸥","鸥鹭"],
+            "audio": "word_ou.wav",
+            "image": "ym_ou.jpg"
+        },
+        {
+            "name": "iu",
+            "word": "优",
+            "spell": "yōu",
+            "example": ["优异","优秀"],
+            "audio": "word_iu.wav",
+            "image": "ym_iu.jpg"
+        },
+        {
+            "name": "ie",
+            "word": "谢",
+            "spell": "xiè",
+            "example": ["谢谢","答谢"],
+            "audio": "word_ie.wav",
+            "image": "ym_ie.jpg"
+        },
+        {
+            "name": "üe",
+            "word": "月",
+            "spell": "yǜe",
+            "example": ["月亮","月牙"],
+            "audio": "word_ve.wav",
+            "image": "ym_üe.jpg"
+        },
+        {
+            "name": "er",
+            "word": "耳",
+            "spell": "ěr",
+            "example": ["耳朵","木耳"],
+            "audio": "word_er.wav",
+            "image": "ym_er.jpg"
+        },
+        {
+            "name": "an",
+            "word": "安",
+            "spell": "ān",
+            "example": ["安全","安定"],
+            "audio": "word_an.wav",
+            "image": "ym_an.jpg"
+        },
+        {
+            "name": "en",
+            "word": "恩",
+            "spell": "ēn",
+            "example": ["恩人","感恩"],
+            "audio": "word_en.wav",
+            "image": "ym_en.jpg"
+        },
+        {
+            "name": "in",
+            "word": "音",
+            "spell": "yīn",
+            "example": ["音乐","声音"],
+            "audio": "word_in.wav",
+            "image": "ym_in.jpg"
+        },
+        {
+            "name": "un",
+            "word": "温",
+            "spell": "wēn",
+            "example": ["温和","温暖"],
+            "audio": "word_un.wav",
+            "image": "ym_un.jpg"
+        },
+        {
+            "name": "ün",
+            "word": "晕",
+            "spell": "yǖn",
+            "example": ["头晕","晕眩"],
+            "audio": "word_vn.wav",
+            "image": "ym_vn.jpg"
+        },
+        {
+            "name": "ang",
+            "word": "昂",
+            "spell": "āng",
+            "example": ["激昂","昂扬"],
+            "audio": "word_ang.wav",
+            "image": "ym_ang.jpg"
+        },
+        {
+            "name": "eng",
+            "word": "灯",
+            "spell": "dēng",
+            "example": ["台灯","路灯"],
+            "audio": "word_eng.wav",
+            "image": "ym_eng.jpg"
+        },
+        {
+            "name": "ing",
+            "word": "英",
+            "spell": "yīng",
+            "example": ["英俊","英语"],
+            "audio": "word_ing.wav",
+            "image": "ym_ing.jpg"
+        },
+        {
+            "name": "ong",
+            "word": "翁",
+            "spell": "wēng",
+            "example": ["富翁","渔翁"],
+            "audio": "word_ong.wav",
+            "image": "ym_ong.jpg"
+        }
+
+    ],
+    "zhengtiyin": [
+        {
+            "name": "zhi",
+            "word": "知",
+            "spell": "zhī",
+            "example": ["知识","知道"],
+            "audio": "word_audio.wav",
+            "image": "zty_zhi.jpg"
+        },
+        {
+            "name": "chi",
+            "word": "吃",
+            "spell": "chī",
+            "example": ["吃苦","口吃"],
+            "audio": "word_chi.wav",
+            "image": "zty_chi.jpg"
+        },
+        {
+            "name": "shi",
+            "word": "狮",
+            "spell": "shī",
+            "example": ["狮子","睡狮"],
+            "audio": "word_shi.wav",
+            "image": "zty_shi.jpg"
+        },
+        {
+            "name": "ri",
+            "word": "日",
+            "spell": "rī",
+            "example": ["明日","日子"],
+            "audio": "word_ri.wav",
+            "image": "zty_ri.jpg"
+        },
+        {
+            "name": "zi",
+            "word": "资",
+            "spell": "zī",
+            "example": ["资源","资料"],
+            "audio": "word_zi.wav",
+            "image": "zty_zi.jpg"
+        },
+        {
+            "name": "ci",
+            "word": "刺",
+            "spell": "cī",
+            "example": ["刺杀","刺刀"],
+            "audio": "word_ci.wav",
+            "image": "zty_ci.jpg"
+        },
+        {
+            "name": "si",
+            "word": "丝",
+            "spell": "sī",
+            "example": ["丝毫","蛛丝"],
+            "audio": "word_si.wav",
+            "image": "zty_si.jpg"
+        },
+        {
+            "name": "yi",
+            "word": "衣",
+            "spell": "yī",
+            "example": ["毛衣","睡衣"],
+            "audio": "word_yi.wav",
+            "image": "zty_yi.jpg"
+        },
+        {
+            "name": "wu",
+            "word": "屋",
+            "spell": "wū",
+            "example": ["房屋","屋顶"],
+            "audio": "word_wu.wav",
+            "image": "zty_wu.jpg"
+        },
+        {
+            "name": "yu",
+            "word": "鱼",
+            "spell": "yǘ",
+            "example": ["甲鱼","鱼虾"],
+            "audio": "word_yu.wav",
+            "image": "zty_yu.jpg"
+        },
+        {
+            "name": "ye",
+            "word": "椰",
+            "spell": "yē",
+            "example": ["椰子","椰树"],
+            "audio": "word_ye.wav",
+            "image": "zty_ye.jpg"
+        },
+        {
+            "name": "yue",
+            "word": "月",
+            "spell": "yùe",
+            "example": ["月牙","月亮"],
+            "audio": "word_yue.wav",
+            "image": "zty_yue.jpg"
+        },
+        {
+            "name": "yuan",
+            "word": "元",
+            "spell": "yúan",
+            "example": ["元旦","元宵"],
+            "audio": "word_yuan.wav",
+            "image": "zty_yuan.jpg"
+        },
+        {
+            "name": "yin",
+            "word": "音",
+            "spell": "yīn",
+            "example": ["声音","音乐"],
+            "audio": "word_yin.wav",
+            "image": "zty_yin.jpg"
+        },
+        {
+            "name": "yun",
+            "word": "云",
+            "spell": "yūn",
+            "example": ["云朵","风云"],
+            "audio": "word_yun.wav",
+            "image": "zty_yun.jpg"
+        },
+        {
+            "name": "ying",
+            "word": "鹰",
+            "spell": "yīng",
+            "example": ["苍鹰","鹰爪"],
+            "audio": "word_ying.wav",
+            "image": "zty_ying.jpg"
+        }
+    ]
+}
