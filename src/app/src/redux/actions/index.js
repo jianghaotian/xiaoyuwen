@@ -37,6 +37,9 @@ export const setSignature = makeActionCreator(SET_SIGNATURE, 'signature');
 export const SET_SEX = 'SET_SEX';
 export const setSex = makeActionCreator(SET_SEX, 'sex');
 
+export const SET_BIRTHDAY = 'SET_BIRTHDAY';
+export const setBirthday = makeActionCreator(SET_BIRTHDAY, 'birthday');
+
 
 
 //   调用

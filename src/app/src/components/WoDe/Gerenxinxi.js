@@ -7,12 +7,14 @@ import { clearTokenAll, clearUsers } from '../../redux/actions';
 export default class Gerenxinxi extends Component {
     constructor() {
         super();
+        let date = new Date(this.$store.getState().users.birthday);
+        var dt = date.getFullYear() + "-" + (date.getMonth() < 9 ? '0' + (date.getMonth()+1) : (date.getMonth()+1)) + "-" + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) ;
         this.state = {
             head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
             name: this.$store.getState().users.name || '',
             signature: this.$store.getState().users.signature ||  '',
             sex: this.$store.getState().users.sex || 'man',
-            birthday: this.$store.getState().users.birthday || ''
+            birthday: dt || '请选择生日'
         };
     }
     outLogin = () => {
@@ -57,7 +59,7 @@ export default class Gerenxinxi extends Component {
                 <div className="grxx_box a_click" onClick={()=>{this.props.history.push('/wode/info/shengri')}}>
                     <span className="grxx_text">生日</span>
                     <div style={{float:'right'}}>
-                        <span className="grxx_header">1999-03-15</span>
+                        <span className="grxx_header">{this.state.birthday}</span>
                         <i className={'iconfont icon-youjiantou grxx_you'}></i>
                     </div>
                 </div>
