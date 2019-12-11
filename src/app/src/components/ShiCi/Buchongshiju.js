@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavBar, Icon, Toast } from 'antd-mobile';
+import { NavBar, Icon,Toast } from 'antd-mobile';
 import '../../css/ShiCi/Buchongshiju.css';
 
 export default class Buchongshiju extends Component {
@@ -64,7 +64,7 @@ export default class Buchongshiju extends Component {
             <div>
                 <NavBar
                     mode="dark"
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>}
+                    icon={<Icon type="left" />}
                     style={{background:'#617ca6',color:'#fff',height:'55px'}}
                     >补 充 诗 句
                 </NavBar>
@@ -72,7 +72,8 @@ export default class Buchongshiju extends Component {
                 <div className="bcsj_box">
                 <p><span>第 </span><span className="bcsj_text1"><span>{this.state.num}</span>/3</span><span> 个</span></p>
                     <div className="bcsj_poetry">
-                        <div style={{margin:'0 auto'}}>床前明月光，</div>
+                        <div className="iconfont icon-tuding tuding"></div>
+                        <div style={{margin:'0 auto',textShadow:"1px 1px gray,-1px -1px rgb(241, 241, 241)"}}>床前明月光，</div>
                         <div ref="answer" id="answer" className="bcsj_poetry_text">
 
                             
