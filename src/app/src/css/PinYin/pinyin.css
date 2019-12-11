@@ -1,14 +1,18 @@
 .p1{
-    /* background: url(../../images/bg1.jpeg); */
+    background: url(../../images/bg11.jpeg);
     width:100%;
     height:100%;
-    /* z-index:-10; */
-    /* zoom: 1; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* -webkit-background-size: cover; */
-    /* -o-background-size: cover; */
-    /* background-position: center 0;     */
+    z-index:-10;
+    zoom: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;    
+    /* width: 100vw;
+    height: 100vh;
+    background-color: rgb(214, 235, 255);
+    position: fixed; */
 }
 .p2{
     width:100%;
@@ -40,7 +44,7 @@
     margin-top: 10%;
 }
 .p8{
-    margin-top: 30%;
+    margin-top: 35%;
 }
 .p9{
     margin-top: 25%;
