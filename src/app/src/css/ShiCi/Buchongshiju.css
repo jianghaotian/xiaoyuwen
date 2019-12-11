@@ -49,8 +49,7 @@
     min-height:40px;
     max-width:85%;
     margin: 0 auto;
-    margin-top:10%;
-    border-bottom: rgb(0, 0, 0) 1px solid;
+    margin-top:8%;
     text-shadow:1px 1px gray,-1px -1px rgb(241, 241, 241)
 }
 .bcsj_option{
@@ -84,24 +83,52 @@
     margin-top:10%;
     border-bottom: #bbb 1px solid;
 }
-.scoutsubmit{
+/* .scoutsubmit{
     margin:0 auto;
     width:50%;
     height: 40%;
     text-align: center;
     line-height: 40%;
     margin-top: 15%;
- }
- .scsubmit{
-   padding: 5%;
-   font-size: 18px;
-   width:70%;
-   height: 60%;
-   line-height: 60%;
-   text-align: center;
-   background-color:#6189B8;
-   color:#fff;
-   border:1px solid #6189B8;
+ } */
+ .scsubmit-front{
+    margin-top: 15%;
+    float: left;
+    padding: 5%;
+    font-size: 18px;
+    width:40%;
+    height: 20%;
+    line-height: 20%;
+    text-align: center;
+    background-color:grey;
+    color:#fff;
+    border:1px solid grey;
+  }
+  .scsubmit-front1{
+    margin-top: 15%;
+    float: left;
+    padding: 5%;
+    font-size: 18px;
+    width:40%;
+    height: 20%;
+    line-height: 20%;
+    text-align: center;
+    background-color:#6189B8;
+    color:#fff;
+    border:1px solid #6189B8;
+  }
+ .scsubmit-next{
+    margin-top: 15%;
+    float: right;
+    padding: 5%;
+    font-size: 18px;
+    width:40%;
+    height: 20%;
+    line-height: 20%;
+    text-align: center;
+    background-color:#6189B8;
+    color:#fff;
+    border:1px solid #6189B8;
  }
  .tuding{
      position: absolute;
