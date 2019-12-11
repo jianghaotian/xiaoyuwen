@@ -62,7 +62,12 @@ export default class Zhengtiyin extends Component {
                         onChange={this.onChange}
                         style={{height:"2rem",marginTop:'5%'}}
                     />
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
+                    <div className='sm-box'>
+                        <div className='sm-textBox'>
+                            第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                        </div>
+                    </div>
+                    {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
                     <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                     <div className="s3">
                         <div className="s4">{this.state.content.yin}</div>
@@ -71,11 +76,12 @@ export default class Zhengtiyin extends Component {
                             <div className="s7">{this.state.content.diao}</div>
                             <div className="s8">{this.state.content.zi}</div>
                         </div>
+                        <div className="s9">
+                            <div className="s11">{this.state.content.ci[0]}</div>
+                            <div className="s11">{this.state.content.ci[1]}</div>
+                        </div>
                     </div>
-                    <div className="s9">
-                        <div className="s11">{this.state.content.ci[0]}</div>
-                        <div className="s11">{this.state.content.ci[1]}</div>
-                    </div>
+                    
                     <div className="s10">
                         <img src={require("../../images/"+this.state.content.img)}/>
                     </div>
