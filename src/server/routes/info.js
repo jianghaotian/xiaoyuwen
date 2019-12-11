@@ -147,7 +147,32 @@ router.post('/setsex', function (req, res, next) {
     });
 });
 
+/**
+ * 修改用户生日
+ * POST
+ * 接收参数:
+ *     sex : 用户性别
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/setbir', function (req, res, next) {
+    let { date } = req.body;
+    let token = req.header('token');
 
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+
+            runSql('update user set Ubirthday = ? where Uid = ?', [date, result.data.uid], (result) => {
+                res.json(result);
+            });
+
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 
 module.exports = router;

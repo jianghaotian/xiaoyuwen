@@ -18,7 +18,7 @@ const api = {
     set_name: p => post('info/setname', p),
     set_signature: p => post('info/setsignature', p),
     set_sex: p => post('info/setsex', p),
-    
+    set_birthday: p => post('info/setbir', p)
 
 }
 

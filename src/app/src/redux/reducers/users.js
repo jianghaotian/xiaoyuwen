@@ -1,4 +1,4 @@
-import { SET_USERS, CLEAR_USERS, SET_GRADE, SET_NAME, SET_SIGNATURE, SET_SEX, SET_HEAD } from '../actions';
+import { SET_USERS, CLEAR_USERS, SET_GRADE, SET_NAME, SET_SIGNATURE, SET_SEX, SET_HEAD, SET_BIRTHDAY } from '../actions';
 
 const noneUsers = {
     name: '',
@@ -47,6 +47,10 @@ export default (state = defaultUsers, action) => {
             return ownState;
         case SET_SEX:
             ownState.sex = action.sex;
+            localStorage.setItem("users", JSON.stringify(ownState));
+            return ownState;
+        case SET_BIRTHDAY:
+            ownState.birthday = action.birthday;
             localStorage.setItem("users", JSON.stringify(ownState));
             return ownState;
         
