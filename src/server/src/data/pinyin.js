@@ -1,10 +1,10 @@
-let getRandom = require('./random');
+let { getRandom } = require('./random');
 
-let ciyu = require('../../data/ciyu.json');
+let ciyu = require('../../data/sys/ciyu.json');
 
 function getCiyu(grade) {
 
-    let ciyui = getRandom(ciyu[grade].length);
+    let ciyui = getRandom(ciyu[grade].length, 10);
     
     if (ciyui.length === 10) {
         let ciyuArr = [];
