@@ -174,10 +174,7 @@ export default class Guessidioms extends Component {
     render() {
         return (
             <div>
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>}
-                    style={{backgroundColor:"#617ca6"}}
-                    >猜 成 语</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{backgroundColor:"#617ca6"}}>猜 成 语</NavBar>
                 
                 <div className="guessidiombody"> 
                     

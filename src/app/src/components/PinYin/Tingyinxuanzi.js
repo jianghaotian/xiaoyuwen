@@ -184,10 +184,7 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div className="t1">
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
-                    style={{backgroundColor:"#617ca6"}}
-                    >听 音 选 字</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
                 {/* <div className='t1'></div> */}
                 <div className="s2">
                     <div className='sm-box'>

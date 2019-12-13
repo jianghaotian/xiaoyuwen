@@ -42,11 +42,7 @@ export default class Shicierr extends Component {
 	render() {
 		return (
 			<div>
-				<NavBar
-					icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>}
-					onLeftClick={() => console.log('onLeftClick')}
-					style={{ backgroundColor: "#617ca6"}}
-				>成 语 易 错 字</NavBar>
+				<NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>} style={{ backgroundColor: "#617ca6"}}>成 语 易 错 字</NavBar>
 				<div className="learnidiombody">
 
 					<div className="learnidiomcon">
