@@ -1,4 +1,5 @@
 import { SET_USERS, CLEAR_USERS, SET_GRADE, SET_NAME, SET_SIGNATURE, SET_SEX, SET_HEAD, SET_BIRTHDAY } from '../actions';
+import { headUrl } from '../../request/url';
 
 const noneUsers = {
     name: '',
@@ -11,9 +12,6 @@ const noneUsers = {
 }
 
 let defaultUsers = JSON.parse(localStorage.getItem("users")) || noneUsers;
-
-// export let headUrl = 'http://localhost:8001/users/headimages/';
-export let headUrl = 'https://xyw.htapi.pub/users/headimages/';
 
 export default (state = defaultUsers, action) => {
     let ownState = {...state};
