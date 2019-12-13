@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Link} from "react-router-dom"
-import {NavBar,SearchBar,TextareaItem,Icon} from 'antd-mobile';
+import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
 import "../../css/ShiCi/xsc.css"
 // import Peomcon from "./Poemcon"
 
@@ -22,7 +22,11 @@ export default class Learnpoem extends Component {
         this.getTi();
     }
     getTi = () => {
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
         this.$api.get_xueshici({grade: this.$store.getState().users.grade || 1, index: this.state.num - 1}).then(res => {
+            Toast.hide();
             let line = '';
             res.data.data.main.content.forEach(v => {
                 line += v;
