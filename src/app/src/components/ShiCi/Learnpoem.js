@@ -80,7 +80,7 @@ export default class Learnpoem extends Component {
                             <div className="iconfont icon-laba1 poemlaba"></div>
                         </div>
                         <div className="poemothers">
-                            <img src={require("../../../images/shici.jpeg") }></img>
+                            <img src={require("../../images/shici.jpeg") }></img>
                             <textarea value={"白话翻译:"+this.content.translation+"\n"+"创作背景:"+this.content.makeground}>
                             </textarea>
                         </div>

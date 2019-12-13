@@ -43,7 +43,7 @@ export default class Shicierr extends Component {
 		return (
 			<div>
 				<NavBar
-					icon={<Icon type="left" />}
+					icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>}
 					onLeftClick={() => console.log('onLeftClick')}
 					style={{ backgroundColor: "#617ca6"}}
 				>成 语 易 错 字</NavBar>
@@ -82,7 +82,7 @@ export default class Shicierr extends Component {
 									<div className="clear"></div>
 								</div>
 								<div className="outfeiji">
-									<img className="feiji" src={require("../../../images/feiji1.png")}></img>
+									<img className="feiji" src={require("../../images/feiji1.png")}></img>
 								</div>
 								
 							</div>

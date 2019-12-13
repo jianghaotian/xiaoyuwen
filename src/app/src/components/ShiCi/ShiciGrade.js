@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Grade from '../Grade';
 import '../../css/ShiCi/ShiciGrade.css'
 
-
 export default class ShiciGrade extends Component {
     render() {
         return (
