@@ -110,11 +110,11 @@ export default class Wode extends Component {
                         <i style={{marginLeft:'1rem'}} className={'iconfont icon-youjiantou'}></i>
                     </span>
                 </div>
-                <div className="wode_tab a_click">
+                {/* <div className="wode_tab a_click">
                     <i className={'iconfont icon-gengxin wode_i'}></i>
                     <span className="wode_tab_text">更新题库</span>
                     <div className="wode_red"></div>
-                </div>
+                </div> */}
             </div>
         )
     }
