@@ -6,70 +6,6 @@ export default class Buchongshiju extends Component {
     constructor(){
         super();
         this.state={
-<<<<<<< HEAD
-            num:1,
-            scsubmitFront:'scsubmit-front',
-            answerArr:{},
-            front:'上一题',
-            next:"下一题",
-            shang:'',
-            xia:'',
-            shangStyle:{borderBottom:'#fff 1px solid'},
-            xiaStyle:{borderBottom:'#fff 1px solid'},
-            /**0为填下句，1为填上句*/
-            data:{
-                1:{
-                    flag:0,
-                    show:'床前明月光哈哈。',
-                    choose:["低头思故乡哈哈。","疑是地上霜。","举头望明月。","粒粒皆辛苦。"],
-                },
-                2:{
-                    flag:1,
-                    show:'疑是地上霜。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","床前明月光。"],
-                },
-                3:{
-                    flag:0,
-                    show:'床前明月光。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","粒粒皆辛苦。"],
-                },
-                4:{
-                    flag:1,
-                    show:'疑是地上霜。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","床前明月光。"],
-                },
-                5:{
-                    flag:0,
-                    show:'床前明月光。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","粒粒皆辛苦。"],
-                },
-                6:{
-                    flag:1,
-                    show:'疑是地上霜。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","床前明月光。"],
-                },
-                7:{
-                    flag:0,
-                    show:'床前明月光。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","粒粒皆辛苦。"],
-                },
-                8:{
-                    flag:1,
-                    show:'疑是地上霜。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","床前明月光。"],
-                },
-                9:{
-                    flag:0,
-                    show:'床前明月光。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","粒粒皆辛苦。"],
-                },
-                10:{
-                    flag:1,
-                    show:'疑是地上霜。',
-                    choose:["低头思故乡。","疑是地上霜。","举头望明月。","床前明月光。"],
-                }
-            }
-=======
             num: 1,
             scsubmitFront: 'scsubmit-front',
             answerArr: {},
@@ -83,7 +19,6 @@ export default class Buchongshiju extends Component {
             data: {}
             // 0为填下句
         }
->>>>>>> 6faca83c9a8ff75e329fbf5690fd8161940b193a
     }
     componentDidMount() {
         Toast.loading('正在加载...', 10, () => {
@@ -139,20 +74,10 @@ export default class Buchongshiju extends Component {
             }, () => {this.createQuestion()})
         }
     }
-<<<<<<< HEAD
-    adds=()=>{
-        this.setState({
-            scsubmitFront:'scsubmit-front1'
-        })
-        if(this.state.num == 9){
-            this.setState({
-                next:'交 卷'
-=======
     less = () => {
         if(this.state.num == 2){
             this.setState({
                 scsubmitFront:'scsubmit-front'
->>>>>>> 6faca83c9a8ff75e329fbf5690fd8161940b193a
             })
         }
         if (this.state.num <= 10){
@@ -166,13 +91,8 @@ export default class Buchongshiju extends Component {
             }, () => {this.createQuestion()})
         }
     }
-<<<<<<< HEAD
-    less=()=>{
-        if(this.state.num <= 10){
-=======
     createQuestion = () => {
         if(this.state.data[this.state.num].flag==0){
->>>>>>> 6faca83c9a8ff75e329fbf5690fd8161940b193a
             this.setState({
                 shang:this.state.data[this.state.num].show,
                 xia:this.state.answerArr[this.state.num] || '',
