@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import {BrowserRouter as Router,Link} from "react-router-dom"
+import React, { Component } from 'react';
+import {BrowserRouter as Router,Link} from "react-router-dom";
 import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
-import "../../css/ShiCi/xsc.css"
+import "../../css/ShiCi/xsc.css";
 // import Peomcon from "./Poemcon"
 
 export default class Learnpoem extends Component {
