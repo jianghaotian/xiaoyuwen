@@ -87,7 +87,7 @@ export default class Guessidioms extends Component {
         this.objArr=[];
         this.no=0;
         this.setState((state)=>{
-            if(++state.num>10){
+            if(++state.num>9){
                 return{
                     num:10,
                     next:"提交"
