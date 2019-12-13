@@ -5,9 +5,10 @@ const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
+let { getBuchongshiju } = require('../src/data/shici.js')
 
 /**
- * 获取词语（看字识音）
+ * （补充诗句）
  * GET
  * 接收参数:
  *     grade : 用户年级
@@ -16,11 +17,15 @@ const { getToken, checkToken } = require('../src/token');
  *     message: "OK",
  *     data: {}
  */
-router.get('/ciyu', function (req, res, next) {
-    let { uid } = req.query;
-    let token = req.header('token');
+router.get('/bcsj', function (req, res, next) {
+    let { grade } = req.query;
+    // let token = req.header('token');
 
-
+    let jsonData = {
+        status: 0,
+        data: getBuchongshiju(grade)
+    }
+    res.json(jsonData);
 
 });
 
