@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router,Link} from "react-router-dom";
+import React, { Component } from 'react'
+import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
-import "../../css/ShiCi/xsc.css";
+import "../../css/ShiCi/xsc.css"
 // import Peomcon from "./Poemcon"
 
 export default class Learnpoem extends Component {
     constructor() {
         super();
         this.state = {
+            littleClass:'',
             shoucangClass: 'icon-xingxing black',
             poemname: "",
             author: "",
@@ -31,6 +32,15 @@ export default class Learnpoem extends Component {
             res.data.data.main.content.forEach(v => {
                 line += v;
             });
+            if(res.data.data.main.content[0].length===6){
+                this.setState({
+                    littleClass:"littleline"
+                })
+            }else{
+                this.setState({
+                    littleClass:""
+                })
+            }
             this.setState({
                 poemname: res.data.data.main.name,
                 author: res.data.data.main.author,
@@ -90,14 +100,17 @@ export default class Learnpoem extends Component {
                     {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
                     <div className="poemcon">
                         <div className="poems">
-                            <p style={{marginBottom:10}}>《{this.state.poemname}》</p>
-                            <p>
-                                {/* <span>{this.state.time}</span>
-                                <span>·</span> */}
-                                <span>{this.state.author}</span>
-                            </p>
-                            <p style={{marginTop:7}}>{this.state.line}</p>
-                            <div className="iconfont icon-laba1 poemlaba"></div>
+                            <div className={this.state.littleClass}>
+                                <p style={{marginBottom:10}}>《{this.state.poemname}》</p>
+                                <p>
+                                    {/* <span>{this.state.time}</span>
+                                    <span>·</span> */}
+                                    <span>{this.state.author}</span>
+                                </p>
+                                <p style={{marginTop:7}}>{this.state.line}</p>
+                                <div className="iconfont icon-laba1 poemlaba"></div>
+                            </div>
+                            
                         </div>
                         <div className="poemothers">
                             <img src={require("../../images/shici.jpeg") }></img>
