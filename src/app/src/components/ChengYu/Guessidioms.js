@@ -183,7 +183,11 @@ export default class Guessidioms extends Component {
                     
                     <div className="guessidiomcon">
                         <div>
-                            <div className="orange">第<span> {this.state.num}</span><span> / </span><span>10 </span>个</div>
+                            <div className='sm-box'>
+                            <div className='sm-textBox'>
+                                第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                            </div>
+                        </div>
                             {/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div> */}
                             <div className="guesscon">
                                 <div className="descrip">
