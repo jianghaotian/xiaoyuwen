@@ -45,7 +45,7 @@ export default class LearnIdioms extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}} />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >学 成 语</NavBar>
@@ -67,13 +67,14 @@ export default class LearnIdioms extends Component {
                         <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                         <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                         <div className="idiomcon">
-                            <div><img className="learnimg" src={require("../../images/bg3.jpg") }/></div>
-                            <div><span>成语: </span><span>{this.content.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
-                            <div><span>释义: </span>{this.content.shiyi}</div>
-                            <div><span>比喻: </span>{this.content.biyu}</div>
-                            <div><span>例句: </span>{this.content.liju}</div>
+                            {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
+                            <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.content.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
+                            <div className="whiteline"><span className="special">释义: </span>{this.content.shiyi}</div>
+                            <div className="whiteline"><span className="special">比喻: </span>{this.content.biyu}</div>
+                            <div className="whiteline"><span className="special">例句: </span>{this.content.liju}</div>
                             <img src={this.content.image}/>
-                            <textarea value={this.content.story}></textarea>
+                            <textarea className="idiomstory" value={this.content.story}>
+                            </textarea>
                         </div>
                     </div>   
                 </div>
