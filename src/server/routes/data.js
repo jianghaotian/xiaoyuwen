@@ -5,7 +5,7 @@ const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
-let { getBuchongshiju } = require('../src/data/shici.js')
+let { getBuchongshiju, getShici } = require('../src/data/shici.js')
 
 /**
  * （补充诗句）
@@ -24,6 +24,17 @@ router.get('/bcsj', function (req, res, next) {
     let jsonData = {
         status: 0,
         data: getBuchongshiju(grade)
+    }
+    res.json(jsonData);
+});
+
+router.get('/xsc', function (req, res, next) {
+    let { grade, index } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getShici(grade, index)
     }
     res.json(jsonData);
 

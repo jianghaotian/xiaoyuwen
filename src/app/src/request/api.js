@@ -22,6 +22,8 @@ const api = {
 
 
     get_buchongshiju: p => get('data/bcsj', p),
+    get_xueshici: p => get('data/xsc', p),
+    
 
 }
 

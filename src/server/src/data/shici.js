@@ -123,8 +123,16 @@ function getBuchongshiju(grade) {
     }
 }
 
+function getShici(grade, index) {
+    let dict = {
+        main: shici[grade][index],
+        num: shici[grade].length
+    }
+    return dict;
+
+}
 
 // console.log(getBuchongshiju(6));
 
-module.exports = { getBuchongshiju }
+module.exports = { getBuchongshiju, getShici }
 
