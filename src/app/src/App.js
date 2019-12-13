@@ -41,6 +41,8 @@ import Learnpoem from './components/ShiCi/Learnpoem';
 import Shicierr from './components/ShiCi/Shicierr';
 import Guanqia from './components/Guanqia';
 import ShiciGrade from './components/ShiCi/ShiciGrade'
+import Kzgrade from './components/PinYin/Kzgrade';
+import Tygrade from './components/PinYin/Tygrade';
 
 export default class App extends Component {
     render() {
@@ -61,6 +63,9 @@ export default class App extends Component {
                     <Route exact path="/pinyin/kanzi" component={Kanzishiyin} />
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 
+                    <Route exact path="/pinyin/kanzi/grade" component={Kzgrade} />
+                    <Route exact path="/pinyin/tingyin/grade" component={Tygrade} />
+
                     {/* 成语 */}
                     <Route exact path="/chengyu/xuechengyu" component={LearnIdioms} />
                     <Route exact path="/chengyu/yicuozi" component={Erridioms} />
@@ -71,6 +76,8 @@ export default class App extends Component {
                     <Route exact path="/shici/buchong" component={Buchongshiju} />
                     <Route exact path="/shici/xueshici" component={Learnpoem} />
                     <Route exact path="/shici/yicuozi" component={Shicierr} />
+
+                    <Route exact path="/shici/buchong/grade" component={ShiciGrade} />
 
 
                     {/* 我的 */}
@@ -100,8 +107,8 @@ export default class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/verification" component={Yzmxiugai} />
 
-                    {/* 成绩单 */}
-                    <Route exact path="/shicigrade" component={ShiciGrade} />
+
+                    
                 </Switch>
             </Router>
         )
