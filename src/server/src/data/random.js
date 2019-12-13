@@ -4,10 +4,10 @@ function randomNum(n){
 }
 
 
-function getRandom(len) {
+function getRandom(num, len=10) {
     let arr = [];
-    while (arr.length < 10) {
-        let random = randomNum(len);
+    while (arr.length < len) {
+        let random = randomNum(num);
         for (var i = 0; i < arr.length; i++) {
             if (random == arr[i]) {
                 random = -1;
@@ -21,7 +21,17 @@ function getRandom(len) {
     return arr;
 }
 
-module.exports = getRandom;
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+module.exports = { getRandom, randomNum, shuffleArray };
 
 
 
