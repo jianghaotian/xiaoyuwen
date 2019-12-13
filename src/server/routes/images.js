@@ -30,7 +30,6 @@ router.post('/head', upload.any(), function (req, res, next) {
     checkToken(token, (result) => {
         console.log(token);
         console.log(result);
-
         
         if (result.status === 0) {
             var filename = req.files[0].filename;
