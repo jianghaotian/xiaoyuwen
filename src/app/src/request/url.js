@@ -1,6 +1,6 @@
 
-export let baseUrl = 'http://localhost:8001/v1';  // 后端接口地址
-// export let baseUrl = 'https://xyw.htapi.pub/v1';  // 后端接口地址
+// export let baseUrl = 'http://localhost:8001/v1';  // 后端接口地址
+export let baseUrl = 'https://xyw.htapi.pub/v1';  // 后端接口地址
 
 export let headUrl = 'https://xyw.htapi.pub/users/headimages/';  // 头像获取地址
 
