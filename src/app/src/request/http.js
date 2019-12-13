@@ -8,8 +8,8 @@ axios.defaults.timeout = 10000;  // 响应时间
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';  // 配置请求头
 axios.defaults.headers.common['token'] = store.getState().token.token;
 
-// export let baseUrl = 'http://localhost:8001/v1';  //配置接口地址
-export let baseUrl = 'https://xyw.htapi.pub/v1';  //配置接口地址
+export let baseUrl = 'http://localhost:8001/v1';  //配置接口地址
+// export let baseUrl = 'https://xyw.htapi.pub/v1';  //配置接口地址
 
 axios.defaults.baseURL = baseUrl;
 

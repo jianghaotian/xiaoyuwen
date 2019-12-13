@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavBar, Icon,List, TextareaItem, ImagePicker, InputItem, Button } from 'antd-mobile';
+import { NavBar, Icon,List, TextareaItem, ImagePicker, InputItem, Button, Toast } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import '../../css/WoDe/Yijianfanhui.css';
 
@@ -26,6 +26,18 @@ class Yijianfanhui extends Component {
         this.setState({
           files: files
         });
+    }
+    send = () => {
+        // TODO: 意见反馈
+        Toast.loading('正在提交...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
+
+        setTimeout(() => {
+            Toast.hide();
+            Toast.success('提交成功', 1, null, false);
+            this.props.history.push('/home/wode');
+        }, 500);
     }
     render() {
         const { files,type } = this.state;
@@ -65,6 +77,7 @@ class Yijianfanhui extends Component {
                 <Button 
                     style={{width:'60%',height:'20%',background:'#617ca6',color:'#fff',margin:'0 auto',marginTop:'7%'}}
                     activeStyle={{background:'grey'}}
+                    onClick={this.send}
                 >发送</Button>
             </div>
         )   
