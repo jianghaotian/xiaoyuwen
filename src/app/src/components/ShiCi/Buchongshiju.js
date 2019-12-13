@@ -15,7 +15,7 @@ export default class Buchongshiju extends Component {
             xia:'',
             shangStyle:{borderBottom:'#fff 1px solid'},
             xiaStyle:{borderBottom:'#fff 1px solid'},
-            /**0为填下句 */
+            /**0为填下句，1为填上句*/
             data:{
                 1:{
                     flag:0,
@@ -108,13 +108,13 @@ export default class Buchongshiju extends Component {
             })
         }
     }
-    adds=(e)=>{
+    adds=()=>{
         this.setState({
             scsubmitFront:'scsubmit-front1'
         })
         if(this.state.num == 9){
             this.setState({
-                next:'提 交'
+                next:'交 卷'
             })
         }
         else if(this.state.num < 10){
@@ -133,12 +133,11 @@ export default class Buchongshiju extends Component {
             }
         },()=>this.createQuestion())
     }
-    less=(e)=>{
+    less=()=>{
         if(this.state.num <= 10){
             this.setState({
                 next:'下一题'
             })
-            // this.createQuestion();
         }
         if(this.state.num == 2){
             this.setState({
