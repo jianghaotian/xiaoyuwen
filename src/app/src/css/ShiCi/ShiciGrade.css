@@ -28,11 +28,19 @@
     font-size: 16px;
     line-height: 2.5rem;
 }
-.sc-panduan{
+.sc-panduandui{
     float: right;
     margin-right: 1.3rem;
     font-size: 15px;
-    line-height: 2.5rem
+    line-height: 2.5rem;
+    color: green;
+}
+.sc-panduancuo{
+    float: right;
+    margin-right: 1.3rem;
+    font-size: 15px;
+    line-height: 2.5rem;
+    color: red;
 }
 .sc-backtrue{
     color: red;
