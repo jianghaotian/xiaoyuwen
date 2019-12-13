@@ -5,7 +5,8 @@ const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
-let { getPinyin, getBuchongshiju, getShici } = require('../src/data/pinyin.js')
+let { getBuchongshiju, getShici } = require('../src/data/shici.js')
+let { getPinyin } = require('../src/data/pinyin.js')
 
 
 
