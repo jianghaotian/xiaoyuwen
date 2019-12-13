@@ -46,7 +46,7 @@ export default class Learnpoem extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left"/>}
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >学 诗 词</NavBar>
