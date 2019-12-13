@@ -141,16 +141,19 @@
 }
 .jloutsubmit{
   margin:0 auto;
-  width:50%;
+  text-align: center;
+  width:100%;
   height: 40%;
   text-align: center;
   line-height: 40%;
   margin-top: 7%;
 }
 .submit{
+  float: left;
  padding: 5%;
  font-size: 18px;
- width:70%;
+ margin:0 1rem;
+ width:35vw;
  height: 40%;
  line-height: 40%;
  text-align: center;
@@ -166,4 +169,56 @@ color:green;
 }
 .active{
 background-color: rgb(174, 232, 250);
+}
+.jielongoutsubmit{
+    margin: 0 auto;
+}
+.jlsubmit-front{
+  margin-top: 15%;
+  float: left;
+  padding: 5%;
+  font-size: 18px;
+  width:35%;
+  height: 15%;
+  line-height: 20%;
+  text-align: center;
+  background-color:grey;
+  color:#fff;
+  border:1px solid grey;
+  margin-left: 2rem;
+}
+.jlsubmit-front1{
+  margin-top: 15%;
+  float: left;
+  padding: 5%;
+  font-size: 18px;
+  width:35%;
+  height: 15%;
+  line-height: 20%;
+  text-align: center;
+  background-color:#6189B8;
+  color:#fff;
+  border:1px solid #6189B8;
+  margin-left: 2rem;
+
+}
+.jlsubmit-next{
+  margin-right: 2rem;
+  margin-top: 15%;
+  float: right;
+  padding: 5%;
+  font-size: 18px;
+  width:35%;
+  height: 15%;
+  line-height: 20%;
+  text-align: center;
+  background-color:#6189B8;
+  color:#fff;
+  border:1px solid #6189B8;
+}
+.tuding{
+   position: absolute;
+   right:-5px;
+   top:-5px;
+   font-size: 32px;
 }

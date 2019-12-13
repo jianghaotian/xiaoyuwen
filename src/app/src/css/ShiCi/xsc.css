@@ -70,7 +70,7 @@
   color:orange
 }
 .poems{
-    width:60vw;
+    width:75vw;
     /* height:50vw; */
     padding:10px;
     background-image:url(../../images/shuimo.png);
@@ -78,7 +78,7 @@
     background-repeat: no-repeat;
     background-size: 100% 40%;
     background-position: bottom;
-    font-size: 5vw;
+    font-size: 4.5vw;
     text-align: center;
     margin: 0 auto;      
     position: relative;
@@ -120,4 +120,8 @@
   position: absolute;
   top:5vw;
   right:5vw;
+}
+.littleline{
+ width:55vw;
+ margin:0 auto
 }
