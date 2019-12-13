@@ -95,7 +95,11 @@ export default class Learnpoem extends Component {
                             style={{height:"2rem"}}
                         />
                     <div>
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>{this.state.max} </span>个</div>
+                    <div className='sm-box'>
+                        <div className='sm-textBox'>
+        第 <span>{this.state.num}</span><span> / </span><span>{this.state.max}</span> 个
+                        </div>
+                    </div>
                     <div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
                     {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
                     <div className="poemcon">

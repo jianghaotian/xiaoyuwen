@@ -64,7 +64,11 @@ export default class LearnIdioms extends Component {
                             style={{height:"2rem"}}
                         />
                     <div>
-                        <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
+                        <div className='sm-box'>
+                            <div className='sm-textBox'>
+                                第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                        </div>
+                    </div>
                         <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                         <div className="idiomcon">
                             {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
