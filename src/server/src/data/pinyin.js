@@ -1,8 +1,18 @@
 let { getRandom } = require('./random');
 
 let ciyu = require('../../data/sys/ciyu.json');
+let pinyin = require('../../data/sys/pinyin.json');
 
-function getCiyu(grade) {
+function getPinyin(flag, index) {
+    let dict = {
+        main: pinyin[flag][index],
+        num: pinyin[flag].length
+    }
+    return dict;
+}
+
+
+function getKanzishiyin(grade) {
 
     let ciyui = getRandom(ciyu[grade].length, 10);
     
@@ -18,5 +28,4 @@ function getCiyu(grade) {
 }
 
 
-console.log(getCiyu(2));
-
+module.exports = { getPinyin, getKanzishiyin }

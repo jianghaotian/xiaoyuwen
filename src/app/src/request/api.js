@@ -21,6 +21,8 @@ const api = {
     set_birthday: p => post('info/setbir', p),
 
 
+    get_xuepinyin: p => get('data/xpy', p),
+
     get_buchongshiju: p => get('data/bcsj', p),
     get_xueshici: p => get('data/xsc', p),
     
