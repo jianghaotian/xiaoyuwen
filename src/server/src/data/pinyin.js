@@ -29,20 +29,20 @@ function getKanzishiyin(grade) {
     }
 }
 
-function getTingyinxuanzi(grade) {
+// function getTingyinxuanzi(grade) {
 
-    let ciyui = getRandom(ciyu[grade].length, 10);
+//     let ciyui = getRandom(ciyu[grade].length, 10);
     
-    if (ciyui.length === 10) {
-        let ciyuArr = [];
-        ciyui.forEach((i) => {
-            ciyuArr.push(ciyu[grade][i]);
-        });
-        return ciyuArr;
-    } else {
-        return null;
-    }
-}
+//     if (ciyui.length === 10) {
+//         let ciyuArr = [];
+//         ciyui.forEach((i) => {
+//             ciyuArr.push(ciyu[grade][i]);
+//         });
+//         return ciyuArr;
+//     } else {
+//         return null;
+//     }
+// }
 
 
 
