@@ -12,6 +12,8 @@ function getPinyin(flag, index) {
 }
 
 
+
+// TODO: 有问题
 function getKanzishiyin(grade) {
 
     let ciyui = getRandom(ciyu[grade].length, 10);
@@ -26,6 +28,22 @@ function getKanzishiyin(grade) {
         return null;
     }
 }
+
+function getTingyinxuanzi(grade) {
+
+    let ciyui = getRandom(ciyu[grade].length, 10);
+    
+    if (ciyui.length === 10) {
+        let ciyuArr = [];
+        ciyui.forEach((i) => {
+            ciyuArr.push(ciyu[grade][i]);
+        });
+        return ciyuArr;
+    } else {
+        return null;
+    }
+}
+
 
 
 module.exports = { getPinyin, getKanzishiyin }
