@@ -39,7 +39,9 @@ import Idiomjielong from './components/ChengYu/Idiomjielong';
 import Buchongshiju from './components/ShiCi/Buchongshiju';
 import Learnpoem from './components/ShiCi/Learnpoem';
 import Shicierr from './components/ShiCi/Shicierr';
-import Guanqia from './components/Guanqia'
+import Guanqia from './components/Guanqia';
+import ShiciGrade from './components/ShiCi/ShiciGrade'
+
 export default class App extends Component {
     render() {
         return (
@@ -98,6 +100,8 @@ export default class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/verification" component={Yzmxiugai} />
 
+                    {/* 成绩单 */}
+                    <Route exact path="/shicigrade" component={ShiciGrade} />
                 </Switch>
             </Router>
         )
