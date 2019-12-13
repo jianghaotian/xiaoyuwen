@@ -41,18 +41,18 @@ export default class Guessidioms extends Component {
         return (
             <div>
                 <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}} />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => console.log('onLeftClick')}
                     style={{backgroundColor:"#617ca6"}}
                     >成 语 易 错 字</NavBar>
-                <div className="learnidiombody"> 
+                <div className="idiomerrbody"> 
                     
-                    <div className="learnidiomcon">
+                    <div className="idiomerrcon">
                         <div>
                             <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
                             <div onClick={this.change} className="iconfont icon-xingxing black"></div>
                             <div className="errcon">
-                                <div><img className="learnimg" src={require("../../images/bg3.jpg") }/></div>
+                                {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
                                 {/* <div className="erridiom">{this.props.content.chengyu}</div> */}
                                 <div className="erridiom">
                                     {
@@ -65,7 +65,6 @@ export default class Guessidioms extends Component {
                                                 }
                                                 
                                             });
-                                            console.log(2)
                                             return <span key={index} style={{color:str}}>{item}</span>
                                         })
                                     }
@@ -75,7 +74,9 @@ export default class Guessidioms extends Component {
                                 {(this.content.errwords).map((item,index)=>(
                                     <div key={index} className="errword">{item}</div>
                                 ))}
-                                
+                                <div className="outfeiji">
+									<img className="feiji" src={require("../../../images/feiji1.png")}></img>
+								</div>
                             </div>
                         </div>
                     </div>
