@@ -127,6 +127,9 @@ class Shoujihao extends Component {
     componentWillUnmount() {
         clearInterval(this.state.time);
     }
+
+    // TODO: 功能未完善
+
     render() {
         const { files,type } = this.state;
         const { getFieldProps } = this.props.form;

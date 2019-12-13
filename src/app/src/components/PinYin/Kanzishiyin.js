@@ -402,10 +402,7 @@ export default class Kanzishiyin extends Component {
     render() {
         return (
             <div className="k1">
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
-                    style={{backgroundColor:"#617ca6"}}
-                    >看 字 识 音</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6"}}>看 字 识 音</NavBar>
                 {/* <div className='k1'></div> */}
                 <div className="s2">
                 <div className='sm-box'>

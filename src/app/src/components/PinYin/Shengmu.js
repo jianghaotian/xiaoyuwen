@@ -47,10 +47,7 @@ export default class Shengmu extends Component {
     render() {
         return (
             <div className="s1">
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>}
-                    style={{backgroundColor:"#617ca6"}}
-                    >声 母</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>声 母</NavBar>
                 <div className="s2">
                     <SearchBar
                         placeholder="查找"

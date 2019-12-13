@@ -25,7 +25,7 @@ export default class Cropimg extends Component {
             Toast.fail('修改失败', 1, null, false);
             return false;
         }
-        // TODO: 这里可以尝试修改上传图片的尺寸
+
         this.cropper.getCroppedCanvas().toBlob(blob => {
             const formData = new FormData()
             formData.append('file', blob, this.props.location.state.name);
