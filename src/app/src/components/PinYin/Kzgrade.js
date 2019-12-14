@@ -67,10 +67,7 @@ export default class Kzgrade extends Component {
         return (
             <div>
                 <div className="ty-grade-back"></div>
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
-                    style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}
-                    >看 字 识 音</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>看 字 识 音</NavBar>
                 <div className="ty1">
                     <img className="ty2" src={require('../../images/word3.PNG')} />
                     <div className="ty3">

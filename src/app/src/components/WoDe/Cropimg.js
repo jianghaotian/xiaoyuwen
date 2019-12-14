@@ -3,9 +3,9 @@ import Cropper from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
 import { NavBar, Icon, Button, Toast } from 'antd-mobile';
 import axios from 'axios';
-import { baseUrl } from '../../request/http';
 import store from '../../redux/store';
 import { setHead } from '../../redux/actions/index';
+import { baseUrl } from '../../request/url';
 
 const service = axios.create({
     baseURL: baseUrl,
@@ -25,7 +25,7 @@ export default class Cropimg extends Component {
             Toast.fail('修改失败', 1, null, false);
             return false;
         }
-        // TODO: 这里可以尝试修改上传图片的尺寸
+
         this.cropper.getCroppedCanvas().toBlob(blob => {
             const formData = new FormData()
             formData.append('file', blob, this.props.location.state.name);

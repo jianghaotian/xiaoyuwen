@@ -132,7 +132,7 @@ function getShici(grade, index) {
 
 }
 
-// console.log(getBuchongshiju(6));
+
 
 module.exports = { getBuchongshiju, getShici }
 

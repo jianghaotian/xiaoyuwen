@@ -40,7 +40,8 @@ export const setSex = makeActionCreator(SET_SEX, 'sex');
 export const SET_BIRTHDAY = 'SET_BIRTHDAY';
 export const setBirthday = makeActionCreator(SET_BIRTHDAY, 'birthday');
 
-
+export const SET_PHONE = 'SET_PHONE'
+export const setPhone = makeActionCreator(SET_PHONE, 'phone');
 
 //   调用
 

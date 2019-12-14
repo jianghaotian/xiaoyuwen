@@ -3,7 +3,7 @@ import { NavBar } from 'antd-mobile';
 import '../../css/WoDe/Wode.css';
 import { Toast } from 'antd-mobile';
 import { clearTokenAll, clearUsers, setUsers } from '../../redux/actions';
-import { headUrl } from '../../redux/reducers/users';
+import { headUrl } from '../../request/url';
 
 export default class Wode extends Component {
     constructor() {

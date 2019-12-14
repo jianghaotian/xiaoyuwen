@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Link} from "react-router-dom"
-import {NavBar,Icon, Toast} from 'antd-mobile';
+import {NavBar,Icon, Toast,Button} from 'antd-mobile';
 import "../../css/ChengYu/jielong.css"
 
 export default class idiomjielong extends Component {
@@ -66,6 +66,8 @@ export default class idiomjielong extends Component {
 		]
 		this.state = {
 			num: 1,
+			scsubmitFront: 'jlsubmit-front',
+			front: '上一题',
 			next:"下一题",
 			content: [
 				{
@@ -189,7 +191,8 @@ export default class idiomjielong extends Component {
 				};
 				return{
 						num:state.num,
-						next:"下一题"
+						next:"下一题",
+						scsubmitFront:'jlsubmit-front'
 				}
 		})
 }
@@ -203,7 +206,8 @@ export default class idiomjielong extends Component {
 				};
 				return{
 						num:state.num,
-						next:"下一题"
+						next:"下一题",
+						scsubmitFront:'jlsubmit-front1'
 				}
 		})    
 }
@@ -213,17 +217,17 @@ export default class idiomjielong extends Component {
 	render() {
 		return (
 			<div>
-				<NavBar
-					icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>}
-					onLeftClick={() => console.log('onLeftClick')}
-					style={{ backgroundColor: "#617ca6" }}
-				>成 语 接 龙</NavBar>
+				<NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{ backgroundColor: "#617ca6" }}>成 语 接 龙</NavBar>
 
 				<div className="idiomjlbody">
 
 					<div className="idiomjlcon">
 						<div>
-							<div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
+							<div className='sm-box'>
+							<div className='sm-textBox'>
+								第 <span>{this.state.num}</span><span> / </span><span>3</span> 个
+							</div>
+                    	</div>
 							{/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg")} /></div> */}
 							<div className="jielongcon">
 								<div className="jlcode">
@@ -256,10 +260,10 @@ export default class idiomjielong extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="jloutsubmit">
-								<button onClick={this.minus} class="submit">上一题</button>
-								<button onClick={this.adds} class="submit">{this.state.next}</button>
-					</div>
+					<div className="jielongoutsubmit">
+                        <Button onClick={this.minus} className={this.state.scsubmitFront}>{this.state.front}</Button>
+                        <Button onClick={this.adds} className="jlsubmit-next">{this.state.next}</Button>
+                    </div>
 				</div>
 			</div>
 		)
