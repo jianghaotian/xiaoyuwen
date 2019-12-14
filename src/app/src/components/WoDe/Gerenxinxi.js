@@ -8,7 +8,7 @@ export default class Gerenxinxi extends Component {
     constructor() {
         super();
         let date = new Date(this.$store.getState().users.birthday);
-        var dt = date.getFullYear() + "-" + (date.getMonth() < 9 ? '0' + (date.getMonth()+1) : (date.getMonth()+1)) + "-" + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) ;
+        var dt = date.getFullYear() + "-" + (date.getMonth() < 9 ? '0' + (date.getMonth()+1) : (date.getMonth()+1)) + "-" + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
         this.state = {
             head: this.$store.getState().users.head || require('../../images/headImage.jpg'),
             name: this.$store.getState().users.name || '',
