@@ -22,6 +22,8 @@ const api = {
 
 
     get_xuepinyin: p => get('data/xpy', p),
+    get_xuechengyu: p => get('data/xcy', p),
+
 
     get_buchongshiju: p => get('data/bcsj', p),
     get_xueshici: p => get('data/xsc', p),
