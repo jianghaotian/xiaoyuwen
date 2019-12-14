@@ -7,6 +7,7 @@ const { getToken, checkToken } = require('../src/token');
 
 let { getBuchongshiju, getShici } = require('../src/data/shici.js')
 let { getPinyin } = require('../src/data/pinyin.js')
+let { getChengyu } = require('../src/data/chengyu');
 
 
 
@@ -38,6 +39,30 @@ router.get('/xpy', function (req, res, next) {
 
 
 // ---------- 成 语 ---------- //
+
+/**
+ * （成语）
+ * GET
+ * 接收参数:
+ *     grade : 年级
+ *     index : 索引
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/xcy', function (req, res, next) {
+    let { grade, index } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getChengyu(grade, index)
+    }
+    res.json(jsonData);
+});
+
+
 
 
 
