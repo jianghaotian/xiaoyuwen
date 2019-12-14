@@ -1,4 +1,4 @@
-import { SET_USERS, CLEAR_USERS, SET_GRADE, SET_NAME, SET_SIGNATURE, SET_SEX, SET_HEAD, SET_BIRTHDAY } from '../actions';
+import { SET_USERS, CLEAR_USERS, SET_GRADE, SET_NAME, SET_SIGNATURE, SET_SEX, SET_HEAD, SET_BIRTHDAY, SET_PHONE } from '../actions';
 import { headUrl } from '../../request/url';
 
 const noneUsers = {
@@ -51,7 +51,11 @@ export default (state = defaultUsers, action) => {
             ownState.birthday = action.birthday;
             localStorage.setItem("users", JSON.stringify(ownState));
             return ownState;
-        
+        case SET_PHONE:
+            ownState.phone = action.phone;
+            localStorage.setItem("users", JSON.stringify(ownState));
+            return ownState;
+            
 
 
         default:
