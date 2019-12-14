@@ -420,7 +420,7 @@ router.post('/vericpwd', function (req, res, next) {
 
 
 
-/**
+/**  TODO
  * 更新token
  * GET
  * 接收参数:
