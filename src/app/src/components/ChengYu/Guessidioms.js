@@ -174,16 +174,17 @@ export default class Guessidioms extends Component {
     render() {
         return (
             <div>
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>}
-                    style={{backgroundColor:"#617ca6"}}
-                    >猜 成 语</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{backgroundColor:"#617ca6"}}>猜 成 语</NavBar>
                 
                 <div className="guessidiombody"> 
                     
                     <div className="guessidiomcon">
                         <div>
-                            <div className="orange">第<span> {this.state.num}</span><span> / </span><span>10 </span>个</div>
+                            <div className='sm-box'>
+                            <div className='sm-textBox'>
+                                第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                            </div>
+                        </div>
                             {/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div> */}
                             <div className="guesscon">
                                 <div className="descrip">

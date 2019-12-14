@@ -3,6 +3,19 @@ import { NavBar, Icon } from 'antd-mobile';
 import '../../css/WoDe/Zhanghao.css';
 
 export default class Zhanghao extends Component {
+    constructor() {
+        super();
+        this.state = {
+            phone: ''
+        };
+    }
+    componentDidMount() {
+        let allPhone = this.$store.getState().users.phone;
+        let phone = allPhone[0] + allPhone[1] + allPhone[2] + '****' + allPhone[7] + allPhone[8] + allPhone[9] + allPhone[10];
+        this.setState({
+            phone: phone
+        });
+    }
     render() {
         return (
             <div>
@@ -19,7 +32,7 @@ export default class Zhanghao extends Component {
                     <i className={'iconfont icon-shouji zh_i'}></i>
                     <span className="zh_text">手机号</span>
                     <div style={{float:'right'}}>
-                        <span className="grxx_header">139****8956</span>
+                        <span className="grxx_header">{this.state.phone}</span>
                         <i className={'iconfont icon-youjiantou zh_you'}></i>
                     </div>
                 </div>

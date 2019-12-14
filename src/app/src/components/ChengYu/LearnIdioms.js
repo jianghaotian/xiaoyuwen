@@ -1,54 +1,71 @@
 import React, { Component } from 'react'
-// import Idiomscon from './Idiomscon';
-import {BrowserRouter as Router,Link} from "react-router-dom"
-import {NavBar,SearchBar,TextareaItem,Icon} from 'antd-mobile';
+import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
 import "../../css/ChengYu/xcy.css"
+
 export default class LearnIdioms extends Component {
     constructor(){
         super();
-        this.content={
-            chengyu:"杯水车薪",
-            shiyi:"啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
-            biyu:"啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
-            liju:"哒哒哒哒哒哒多多多多多多多多多多多多多多多多多多多多多多多多多多多多多",
-            image:"",
-            story:'从前，有个樵夫砍柴回家，天气炎热，他推了满满的一车柴草来到一家茶馆门前。在屋里刚坐下喝了一会茶，就听见外面有人高喊:"不好了，救火啊!柴车着火了!"樵夫立即起身，端起茶杯就冲了出去。他把茶杯里的水向燃烧的柴车泼去，然后再跑回去，盛了满满一杯水，想要灭火，但再跑出去时，柴草已化成灰烬'
-        }
         this.state={
-            num:1
+            shoucangClass: 'icon-xingxing black',
+            num: 1,
+            max: 1,
+            chengyu: "",
+            shiyi: "",
+            biyu: "",
+            liju: "",
+            image: "",
+            story: ""
         }
     }
-    minus=(e)=>{
-        this.setState((state)=>{
-            if(state.num==1){
-                return{
-                    num:1
-                }
-            }
-            return{
-                num:--state.num
-            }
-        })
+    componentDidMount() {
+        this.getTi();
     }
-    adds=()=>{
-        
-        this.setState((state)=>{
-            return{
-                num:++state.num
-            }
-        })
+    getTi = () => {
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
+        this.$api.get_xuechengyu({grade: this.$store.getState().users.grade || 1, index: this.state.num - 1}).then(res => {
+            Toast.hide();
+            this.setState({
+                chengyu: res.data.data.main.name,
+                shiyi: res.data.data.main.mean,
+                biyu: "",
+                liju: "",
+                image: "",
+                story: "",
+                max: res.data.data.num
+            });
+        });
     }
-    change=(e)=>{
-        e.target.className=(e.target.className=="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black"
+    shoucang = () => {
+        if (this.state.shoucangClass == "icon-xingxing black") {
+            this.setState({
+                shoucangClass: "icon-xingxing1 yello"
+            })
+        } else {
+            this.setState({
+                shoucangClass: "icon-xingxing black"
+            })
+        }
+    }
+    minus = () => {
+        if (this.state.num > 1) {
+            this.setState({
+                num: this.state.num - 1
+            }, () => {this.getTi()})
+        }
+    }
+    adds = () => {
+        if (this.state.num < this.state.max) {
+            this.setState({
+                num: this.state.num + 1
+            }, () => {this.getTi()})
+        }
     }
     render() {
         return (
             <div>
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>}
-                    onLeftClick={() => console.log('onLeftClick')}
-                    style={{backgroundColor:"#617ca6"}}
-                    >学 成 语</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{backgroundColor:"#617ca6"}}>学 成 语</NavBar>
                 
                 <div className="learnidiombody"> 
                     
@@ -63,28 +80,27 @@ export default class LearnIdioms extends Component {
                             onChange={this.onChange}
                             style={{height:"2rem"}}
                         />
-                    <div>
-                        <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div>
-                        <div onClick={this.change} className="iconfont icon-xingxing black"></div>
-                        <div className="idiomcon">
-                            {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
-                            <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.content.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
-                            <div className="whiteline"><span className="special">释义: </span>{this.content.shiyi}</div>
-                            <div className="whiteline"><span className="special">比喻: </span>{this.content.biyu}</div>
-                            <div className="whiteline"><span className="special">例句: </span>{this.content.liju}</div>
-                            <img src={this.content.image}/>
-                            <textarea className="idiomstory" value={this.content.story}>
-                            </textarea>
-                        </div>
-                    </div>   
+                        <div>
+                            <div className='sm-box'>
+                                <div className='sm-textBox'>
+                                    第 <span>{this.state.num}</span><span> / </span><span>{this.state.max}</span> 个
+                                </div>
+                            </div>
+                            <div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
+                            <div className="idiomcon">
+                                {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
+                                <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.state.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
+                                <div className="whiteline"><span className="special">释义: </span>{this.state.shiyi}</div>
+                                {/* <div className="whiteline"><span className="special">比喻: </span>{this.state.biyu}</div> */}
+                                {/* <div className="whiteline"><span className="special">例句: </span>{this.state.liju}</div> */}
+                                <img src={this.state.image}/>
+                                <textarea className="idiomstory" value={this.state.story}></textarea>
+                            </div>
+                        </div>   
+                    </div>
+                    <div className="idiomsleft" onClick={this.minus}><i className="iconfont icon-ico_leftarrow"></i></div>
+                    <div className="idiomsright" onClick={this.adds}><i className="iconfont icon-ico_leftarrow"></i></div>
                 </div>
-               
-               <Router>
-                   <div className="idiomsleft" ><Link onClick={this.minus} className="iconfont icon-ico_leftarrow"></Link></div>
-                   <div className="idiomsright" onClick={this.adds}><Link  className="iconfont icon-ico_leftarrow"></Link></div>
-               </Router>
-               
-            </div>
             </div>
         )
     }

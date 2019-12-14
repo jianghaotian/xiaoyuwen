@@ -116,7 +116,7 @@ export default class Buchongshiju extends Component {
     render() {
         return (
             <div>
-                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>} style={{background:'#617ca6',color:'#fff',height:'55px'}}>补 充 诗 句</NavBar>
+                <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>} style={{background:'#617ca6',color:'#fff'}}>补 充 诗 句</NavBar>
                 <div className="bcsj_back"></div>
                 <div className="bcsj_box">
                     <p><span>第 </span><span className="bcsj_text1"><span>{this.state.num}</span>/10</span><span> 个</span></p>

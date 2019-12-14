@@ -66,10 +66,7 @@ export default class Tygrade extends Component {
         return (
             <div>
                 <div className="ty-grade-back"></div>
-                <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
-                    style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}
-                    >听 音 选 字</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>听 音 选 字</NavBar>
                 <div className="ty1">
                     
                     <img className="ty2" src={require('../../images/word3.PNG')} />

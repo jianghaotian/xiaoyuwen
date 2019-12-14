@@ -57,9 +57,12 @@ export default class App extends Component {
                     {/* 开屏 */}
                     <Route exact path="/open" component={Open} />
                     {/* 拼音 */}
-                    <Route exact path="/pinyin/shengmu" component={Shengmu} />
+                    {/* <Route exact path="/pinyin/shengmu" component={Shengmu} />
                     <Route exact path="/pinyin/yunmu" component={Yunmu} />
-                    <Route exact path="/pinyin/zhengtiyin" component={Zhengtiyin} />
+                    <Route exact path="/pinyin/zhengtiyin" component={Zhengtiyin} /> */}
+
+                    <Route exact path="/pinyin/xue/:flag" component={Shengmu} />
+
                     <Route exact path="/pinyin/kanzi" component={Kanzishiyin} />
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 

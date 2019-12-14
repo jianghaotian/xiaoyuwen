@@ -19,6 +19,12 @@ const api = {
     set_signature: p => post('info/setsignature', p),
     set_sex: p => post('info/setsex', p),
     set_birthday: p => post('info/setbir', p),
+    set_phone_veri: p => post('info/sphoneveri', p),
+    set_phone: p => post('info/setphone', p),
+
+
+    get_xuepinyin: p => get('data/xpy', p),
+    get_xuechengyu: p => get('data/xcy', p),
 
 
     get_buchongshiju: p => get('data/bcsj', p),
