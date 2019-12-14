@@ -5,6 +5,11 @@ const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
+const getRandom = require('../src/users/verification');
+const sendMsg = require('../src/users/message');
+
+var v_minute = 3; // 验证码有效时间
+
 
 /**
  * 获取用户信息
@@ -168,6 +173,104 @@ router.post('/setbir', function (req, res, next) {
                 res.json(result);
             });
 
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 修改手机号获取验证码
+ * POST
+ * 接收参数:
+ *     phone : 手机号
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {veriToken}
+ */
+router.post('/sphoneveri', function (req, res, next) {
+    let { phone } = req.body;
+    let token = req.header('token');
+    let verification = getRandom(6);
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            let tokenContent = {
+                verification: verification
+            };
+            let params = {
+                expiresIn: 60 * v_minute
+            }
+            let veriToken = getToken(tokenContent, params);
+        
+            sendMsg(phone, verification, '' + v_minute, (result2) => {
+                let jsonData = {
+                    status: result2.status,
+                    message: result2.message,
+                    data: {
+                        veriToken: veriToken
+                    }
+                }
+                res.json(jsonData);
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * 修改用户手机号
+ * POST
+ * 接收参数:
+ *     phone : 用户手机号
+ *     verification : 验证码
+ *     token : 验证码token
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/setphone', function (req, res, next) {
+    let { phone, verification, veriToken } = req.body;
+    let token = req.header('token');
+
+    console.log(token);
+    console.log(veriToken);
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            checkToken(veriToken, (result1) => {
+                if (result1.status === 0) {
+                    if (result1.data.verification === verification) {
+                        runSql('select uid from user where Uphone = ?', [phone], (result2) => {
+                            if (result2.status === 0) {
+                                if (result2.data.length === 0) {
+                                    runSql('update user set Uphone = ? where Uid = ?', [phone, result.data.uid], (result3) => {
+                                        res.json(result3);
+                                    });
+                                } else {
+                                    let jsonData = {
+                                        status: -3,
+                                        message: 'phone exist'
+                                    }
+                                    res.json(jsonData);
+                                }
+                            } else {
+                                res.json(result2);
+                            }
+                        })
+                    } else {
+                        let jsonData = {
+                            status: -2,
+                            message: 'veritoken error'
+                        }
+                        res.json(jsonData);
+                    }
+                } else {
+                    res.json(result1)
+                }
+            });
         } else {
             res.json(result);
         }
