@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
 import "../../css/ShiCi/xsc.css"
 // import Peomcon from "./Poemcon"
@@ -32,12 +31,12 @@ export default class Learnpoem extends Component {
             res.data.data.main.content.forEach(v => {
                 line += v;
             });
-            if(res.data.data.main.content[0].length===6){
+            if (res.data.data.main.content[0].length === 6) {
                 this.setState({
                     littleClass:"littleline"
                 })
-            }else{
-            this.setState({
+            } else {
+                this.setState({
                     littleClass:""
                 })
             }
@@ -95,7 +94,11 @@ export default class Learnpoem extends Component {
                             style={{height:"2rem"}}
                         />
                     <div>
-                    <div className="orange">第<span> {this.state.num}</span><span> / </span><span>{this.state.max} </span>个</div>
+                    <div className='sm-box'>
+                        <div className='sm-textBox'>
+                            第 <span>{this.state.num}</span><span> / </span><span>{this.state.max}</span> 个
+                        </div>
+                    </div>
                     <div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
                     {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
                     <div className="poemcon">
@@ -120,8 +123,8 @@ export default class Learnpoem extends Component {
                 </div>
                 </div>
                
-                   <div className="idiomsleft" ><Link onClick={this.minus} className="iconfont icon-ico_leftarrow"></Link></div>
-                   <div className="idiomsright" onClick={this.adds}><Link  className="iconfont icon-ico_leftarrow"></Link></div>
+                   <div className="idiomsleft" onClick={this.minus}><i className="iconfont icon-ico_leftarrow"></i></div>
+                   <div className="idiomsright" onClick={this.adds}><i className="iconfont icon-ico_leftarrow"></i></div>
                
             </div>
             </div>
