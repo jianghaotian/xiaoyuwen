@@ -236,8 +236,6 @@ router.post('/setphone', function (req, res, next) {
     let { phone, verification, veriToken } = req.body;
     let token = req.header('token');
 
-    console.log(token);
-    console.log(veriToken);
     checkToken(token, (result) => {
         if (result.status === 0) {
             checkToken(veriToken, (result1) => {
@@ -276,6 +274,5 @@ router.post('/setphone', function (req, res, next) {
         }
     });
 });
-
 
 module.exports = router;
