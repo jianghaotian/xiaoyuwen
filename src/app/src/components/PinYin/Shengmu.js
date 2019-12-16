@@ -76,7 +76,7 @@ export default class Shengmu extends Component {
             <div className="s1">
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>{this.state.tittle}</NavBar>
                 <div className="s2">
-                    <SearchBar
+                    {/* <SearchBar
                         placeholder="查找"
                         onSubmit={value => console.log(value, 'onSubmit')}
                         onClear={value => console.log(value, 'onClear')}
@@ -85,7 +85,7 @@ export default class Shengmu extends Component {
                         onCancel={() => console.log('onCancel')}
                         onChange={this.onChange}
                         style={{height:"2rem",marginTop:'5%'}}
-                    />
+                    /> */}
                     <div className='sm-box'>
                         <div className='sm-textBox'>
                             第 <span>{this.state.num}</span><span> / </span><span>{this.state.max}</span> 个
