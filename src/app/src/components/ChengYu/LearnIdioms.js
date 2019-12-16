@@ -70,7 +70,7 @@ export default class LearnIdioms extends Component {
                 <div className="learnidiombody"> 
                     
                     <div className="learnidiomcon">
-                        <SearchBar
+                        {/* <SearchBar
                             placeholder="查找"
                             onSubmit={value => console.log(value, 'onSubmit')}
                             onClear={value => console.log(value, 'onClear')}
@@ -79,7 +79,7 @@ export default class LearnIdioms extends Component {
                             onCancel={() => console.log('onCancel')}
                             onChange={this.onChange}
                             style={{height:"2rem"}}
-                        />
+                        /> */}
                         <div>
                             <div className='sm-box'>
                                 <div className='sm-textBox'>
