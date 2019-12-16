@@ -112,16 +112,11 @@ export default class Buchongshiju extends Component {
                         Toast.offline('网络异常', 1, null, false);
                     }
                 })
-
-
             } else {
                 Toast.info('当前未登录，不会存储答题信息', 1, null, false);
-                
+             
+                // TODO
             }
-
-
-
-
         }
         if (this.state.num < 10) {
             this.setState({
