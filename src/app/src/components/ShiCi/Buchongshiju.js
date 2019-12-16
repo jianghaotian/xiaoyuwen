@@ -68,9 +68,6 @@ export default class Buchongshiju extends Component {
                 next:'下一题'
             })
         } else if (this.state.num == 10){
-            Toast.loading('正在判题...', 10, () => {
-                Toast.offline('网络异常', 1, null, false);
-            });
             let answer = [];
             for (var i = 1; i < 11; i++) {
                 if (this.state.data[i].answer === this.state.answerArr[i]) {
@@ -103,16 +100,28 @@ export default class Buchongshiju extends Component {
                     answer.push({flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns});
                 }
             }
-            // if () {
+            if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+                Toast.loading('正在判题...', 10, () => {
+                    Toast.offline('网络异常', 1, null, false);
+                });
+                this.$api.post_buchongshiju({answer: answer}).then(res => {
+                    Toast.hide();
+                    if (res.data.status === 0) {
+                        this.props.history.push('/shici/buchong/grade/' + res.data.data);
+                    } else {
+                        Toast.offline('网络异常', 1, null, false);
+                    }
+                })
 
 
-            // }
+            } else {
+                Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+                
+            }
 
-            this.$api.post_buchongshiju({answer: answer}).then(res => {
-              
-            
 
-            })
+
+
         }
         if (this.state.num < 10) {
             this.setState({
