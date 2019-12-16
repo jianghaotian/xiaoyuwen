@@ -111,6 +111,51 @@ router.get('/bcsj', function (req, res, next) {
     res.json(jsonData);
 });
 
+/**
+ * （补充诗句判题后存储）
+ * POST
+ * 接收参数:
+ *     answer : 用户答案信息
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/bcsj', function (req, res, next) {
+    let { answer } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            // result.data.uid
+
+            console.log(answer);
+            res.json(answer);
+
+        } else {
+            let jsonData = {
+                status: 0,
+                data: getBuchongshiju(grade)
+            }
+            res.json(jsonData);
+        }
+    });
+
+    
+});
+
+router.get('/bcsj/grade', function (req, res, next) {
+    let { grade } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getBuchongshiju(grade)
+    }
+    res.json(jsonData);
+});
+
+
 /**  TODO
  * （易错字）
  * GET
