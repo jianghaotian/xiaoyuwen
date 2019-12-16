@@ -4,1317 +4,1572 @@
         {
             "name": "欢声雷动",
             "mean": "欢笑的声音象雷一样响着。形容热烈欢呼的动人场面。",
-            "example": ""
+            "example": "",
+            "errword":["雷"]
         },
         {
             "name": "欣喜若狂",
             "mean": "欣喜：快乐；若：好象；狂：失去控制。形容高兴到了极点。示例：全班同学～，向取得第一名的同学庆祝。",
-            "example": ""
+            "example": "",
+            "errword":["喜"]
         },
         {
             "name": "载歌载舞",
             "mean": "边唱歌，边跳舞。形容尽情欢乐。示例：春节晚会上，穿着节日盛装的各族代表，在舞台上载歌载舞，欢庆节日。",
-            "example": ""
+            "example": "",
+            "errword":["舞"]
         },
         {
             "name": "灯火辉煌",
             "mean": "形容夜晚灯光明亮的繁华景象。",
-            "example": ""
+            "example": "",
+            "errword":["辉"]
         },
         {
             "name": "春暖花开",
             "mean": "春天气候温暖，百花盛开，景色优美。比喻游览、观赏的大好时机。示例：～，我带着孩子们在田园里做活。",
-            "example": ""
+            "example": "",
+            "errword":["暖"]
         },
         {
             "name": "春色满园",
             "mean": "园内到处都是春天美丽的景色。比喻欣欣向荣的景象。出处：宋·叶绍翁《游园不值》：“应怜屐齿印苍苔，小扣柴扉久不开。春色满园关不住，一枝红杏出墙来。”",
-            "example": ""
+            "example": "",
+            "errword":["满"]
         },
         {
             "name": "春光明媚",
             "mean": "明媚：美好，可爱。形容春天的景物鲜明可爱。",
-            "example": ""
+            "example": "",
+            "errword":["媚"]
         },
         {
             "name": "春意盎然",
             "mean": "意：意味；盎然：洋溢，深厚。春天的意味正浓。示例：北国依然春寒料峭，南国却已～了。",
-            "example": ""
+            "example": "",
+            "errword":["盎"]
         },
         {
             "name": "精卫填海",
             "mean": "古代神话中的鸟名。精卫衔来木石，决心填平大海。旧时比喻仇恨极深，立志报复。后比喻意志坚决，不畏艰难。",
-            "example": ""
+            "example": "",
+            "errword":["填"]
         },
         {
             "name": "愚公移山",
             "mean": "比喻坚持不懈地改造自然和坚定不移地进行斗争。示例：在现代化建设中，我们要发扬～的精神。",
-            "example": ""
+            "example": "",
+            "errword":["愚"]
         },
         {
             "name": "百折不回",
             "mean": "折：挫折。比喻意志坚强，无论受到多少次挫折，毫不动摇退缩。",
-            "example": ""
+            "example": "",
+            "errword":["折"]
         },
         {
             "name": "勇往直前",
             "mean": "勇敢地一直向前进。",
-            "example": ""
+            "example": "",
+            "errword":["勇"]
         },
         {
             "name": "痛痒相关",
             "mean": "形容彼此关系密切。",
-            "example": ""
+            "example": "",
+            "errword":["痛"]
         },
         {
             "name": "情深似海",
             "mean": "形容情爱深厚，像大海一样不可量。",
-            "example": ""
+            "example": "",
+            "errword":["深"]
         },
         {
             "name": "恩重如山",
             "mean": "恩情深厚，像山一样深重。示例：神僧～，寡人酬谢不尽。",
-            "example": ""
+            "example": "",
+            "errword":["重"]
         },
         {
             "name": "循序渐进",
             "mean": "指学习工作等按照一定的步骤逐渐深入或提高。示例：她通常是从一个角度写，而不是从几个角度写；还只是～地写，而不是错综交叉地写。",
-            "example": ""
+            "example": "",
+            "errword":["循"]
         },
         {
             "name": "由浅入深",
             "mean": "从浅到深。",
-            "example": ""
+            "example": "",
+            "errword":["浅"]
         },
         {
             "name": "日积月累",
             "mean": "一天一天地、一月一月地不断积累。指长时间不断地积累。",
-            "example": ""
+            "example": "",
+            "errword":["累"]
         },
         {
             "name": "温故知新",
             "mean": "温：温习；故：旧的。温习旧的知识，得到新的理解和体会。也指回忆过去，能更好地认识现在。示例：～是学习上的重要方法。",
-            "example": ""
+            "example": "",
+            "errword":["温"]
         },
         {
             "name": "漫山遍野",
             "mean": "漫：满；遍：到处。山上和田野里到处都是。形容很多。示例：春天来了，～都披上了绿装。",
-            "example": ""
+            "example": "",
+            "errword":["野"]
         },
         {
             "name": "绿叶成阴",
             "mean": "指女子出嫁生了子女。也比喻绿叶繁茂覆盖成荫。",
-            "example": ""
+            "example": "",
+            "errword":["阴"]
         },
         {
             "name": "天长地久",
             "mean": "跟天和地存在的时间那样长。形容时间悠久。也形容永远不变（多指爱情）。示例：让我们的友谊天长地久吧。",
-            "example": ""
+            "example": "",
+            "errword":["地"]
         },
         {
             "name": "树大根深",
             "mean": "比喻势力强大，根基牢固。",
             "example": ""
-        },
-        {
-            "name": "人无远虑，必有近忧",
-            "mean": "虑：考虑；忧：忧愁。人没有长远的考虑，一定会出现眼前的忧患。表示看事做事应该有远大的眼光，周密的考虑。",
-            "example": ""
+            ,"errword":["根"]
         },
         {
             "name": "有备无患",
             "mean": "患：祸患，灾难。事先有准备，就可以避免祸患。示例：只有认真复习，考试时才能有备无患、胸有成竹，考出好成绩。",
-            "example": ""
+            "example": "",
+            "errword":["患"]
         },
         {
             "name": "防患未然",
             "mean": "患：灾祸；未然：没有这样，指尚未形成。防止事故或祸害于尚未发生之前。",
-            "example": ""
+            "example": "",
+            "errword":["患"]
         },
         {
             "name": "临危不惧",
             "mean": "临：遇到；危：危险；惧：怕。遇到危难的时候，一点也不怕。示例：一位民警同志,在汽车上为了和坏人作斗争,临危不惧。",
-            "example": ""
+            "example": "",
+            "errword":["惧"]
         },
         {
             "name": "多谋善断",
             "mean": "很有智谋，又善于判断。示例：朱元璋虽然多谋善断,却未免心狠手辣,杀自己的功臣,比杀敌人还来劲儿。",
-            "example": ""
+            "example": "",
+            "errword":["谋"]
         },
         {
             "name": "从容不迫",
             "mean": "从容：不慌不忙，很镇静；不迫：不急促。不慌不忙，沉着镇定。示例：面对劲敌，他依然从容不迫地冷静面对。",
-            "example": ""
+            "example": "",
+            "errword":["迫"]
         },
         {
             "name": "方寸不乱",
             "mean": "方寸：指心。心绪不乱。形容人遇到特殊紧急的情况时能够从容镇定。",
-            "example": ""
+            "example": "",
+            "errword":["乱"]
         }
     ],
     "2":[
         {
             "name": "金凤送爽",
             "mean": "不是成语示例：在金凤送爽的九月，同学们纷纷回到了学校。",
-            "example": ""
+            "example": "",
+            "errword":["爽"]
         },
         {
             "name": "雁过留声",
             "mean": "比喻留名声于身后。示例：雁过留声，人过留名，给子孙后代留个好印象吧。",
-            "example": ""
+            "example": "",
+            "errword":["雁"]
         },
         {
             "name": "秋色宜人",
             "mean": "不是成语。示例：这样迷人的景色,我们可以用一个成语来概括,就是'秋色宜人“。",
-            "example": ""
+            "example": "",
+            "errword":["宜"]
         },
         {
             "name": "天朗气清",
             "mean": "朗：明朗。形容天空晴朗，空气清新。",
-            "example": ""
+            "example": "",
+            "errword":["朗"]
         },
         {
             "name": "日月如梭",
             "mean": "梭：织布时牵引纬线的工具。太阳和月亮象穿梭一样地来去。形容时间过得很快。",
-            "example": ""
+            "example": "",
+            "errword":["梭"]
         },
         {
             "name": "光阴似箭",
             "mean": "光阴：时间。时间如箭，迅速流逝。形容时间过得极快。",
-            "example": ""
+            "example": "",
+            "errword":["箭"]
         },
         {
             "name": "寒来暑往",
             "mean": "盛夏已过，寒冬将至。泛指时光流逝。",
-            "example": ""
+            "example": "",
+            "errword":["暑"]
         },
         {
             "name": "星移物换",
             "mean": "星移：星辰移位；物换：景物变幻。景物改变了，星辰的位置也移动了。比喻时间的变化。",
-            "example": ""
+            "example": "",
+            "errword":["移"]
         },
         {
             "name": "风吹草动",
             "mean": "风稍一吹，草就摇晃。比喻微小的变动。",
-            "example": ""
+            "example": "",
+            "errword":["动"]
         },
         {
             "name": "雨过天晴",
             "mean": "雨后转晴。也比喻政治上由黑暗到光明。示例：～的早晨，空气清新极了。",
-            "example": ""
+            "example": "",
+            "errword":["晴"]
         },
         {
             "name": "瓜熟蒂落",
             "mean": "蒂：花或瓜果跟枝茎相连的部分。瓜熟了，瓜蒂自然脱落。指时机一旦成熟，事情自然成功。",
-            "example": ""
+            "example": "",
+            "errword":["蒂"]
         },
         {
             "name": "水到渠成",
             "mean": "渠：水道。水流到的地方自然形成一条水道。比喻条件成熟，事情自然会成功。",
-            "example": ""
+            "example": "",
+            "errword":["渠"]
         },
         {
             "name": "学无止境",
             "mean": "指学业上是没有尽头的，应奋进不息。",
-            "example": ""
+            "example": "",
+            "errword":["境"]
         },
         {
             "name": "一往无前",
             "mean": "一直往前，无所阻挡。形容勇猛无畏地前进。",
-            "example": ""
+            "example": "",
+            "errword":["前"]
         },
         {
             "name": "滴水成冰",
             "mean": "水滴下去就结成冰。形容天气十分寒冷。",
-            "example": ""
+            "example": "",
+            "errword":["滴"]
         },
         {
             "name": "鹅毛大雪",
             "mean": "像鹅毛一样的雪花。形容雪下得大而猛。",
-            "example": ""
+            "example": "",
+            "errword":["鹅"]
         },
         {
             "name": "雪兆丰年",
             "mean": "指冬天大雪是来年丰收的预兆。",
-            "example": ""
+            "example": "",
+            "errword":["雪"]
         },
         {
             "name": "勤能补拙",
             "mean": "勤奋能够弥补不足。",
-            "example": ""
+            "example": "",
+            "errword":["拙"]
         },
         {
             "name": "笨鸟先飞",
             "mean": "行动笨拙的鸟要先飞。比喻能力差的人怕落后，做事比别人先动手。示例：女儿刻苦、自觉、用功，全靠～保持了各门功课全班第一。",
-            "example": ""
+            "example": "",
+            "errword":["笨"]
         },
         {
             "name": "人一己百",
             "mean": "别人一次就做好或学会的，自己做一百次，学一百次。比喻以百倍的努力赶上别人。",
-            "example": ""
+            "example": "",
+            "errword":["己"]
         },
         {
             "name": "奋起直追",
             "mean": "振作起来，紧紧赶上去。",
-            "example": ""
+            "example": "",
+            "errword":["奋"]
         },
         {
             "name": "宁折不弯",
             "mean": "本指白杨木受到外力作用，只会断折，不会弯曲变形。后用来比喻宁可死也绝不屈服妥协。",
-            "example": ""
+            "example": "",
+            "errword":["折"]
         },
         {
             "name": "义正词严",
             "mean": "义：道理。词：言辞。道理正当公允，严肃的措词。",
-            "example": ""
+            "example": "",
+            "errword":["严"]
         },
         {
             "name": "威武不屈",
             "mean": "威武：权势，武力；屈：屈服。强暴的压力不能使之屈服。表示坚贞顽强。",
-            "example": ""
+            "example": "",
+            "errword":["武"]
         },
         {
             "name": "大义凛然",
             "mean": "大义：正义；凛然：严肃、或敬畏的样子。由于胸怀正义而神态庄严，令人敬畏。",
-            "example": ""
+            "example": "",
+            "errword":["凛"]
         },
         {
             "name": "火树银花",
             "mean": "火树：火红的树，指树上挂满灯彩；银花：银白色的花，指灯光雪亮。形容张灯结彩或大放焰火的灿烂夜景。",
-            "example": ""
+            "example": "",
+            "errword":["树"]
         },
         {
             "name": "数不胜数",
             "mean": "数：计算。数都数不过来。形容数量极多，很难计算。",
-            "example": ""
+            "example": "",
+            "errword":["胜"]
         },
         {
             "name": "观者如堵",
             "mean": "堵：墙壁。观看的人象一堵墙一样。形容观看人数众多。",
-            "example": ""
+            "example": "",
+            "errword":["堵"]
         }
     ],
     "3": [
         {
             "name": "大雨滂沱",
             "mean": "滂沱：雨大而多的样子。形容雨下得很大。",
-            "example": ""
+            "example": "",
+            "errword":["滂"]
         },
         {
             "name": "夕阳西下",
             "mean": "指傍晚日落时的景象。也比喻迟暮之年或事物走向衰落。",
-            "example": ""
+            "example": "",
+            "errword":["阳"]
         },
         {
             "name": "草长莺飞",
             "mean": "莺：黄鹂。形容江南暮春的景色。示例：这样看来，花香鸟语，草长莺飞，都是大自然的语言。",
-            "example": ""
+            "example": "",
+            "errword":["莺"]
         },
         {
             "name": "连绵不断",
             "mean": "连绵：连续不断的样子。形容连续不止，从不中断。示例：～的高山阻挡我们的去路。",
-            "example": ""
+            "example": "",
+            "errword":["绵"]
         },
         {
             "name": "根深固本",
             "mean": "根基牢固，难以动摇。",
-            "example": ""
+            "example": "",
+            "errword":["固"]
         },
         {
             "name": "浇树浇根",
             "mean": "后半句是交人交心。指要善于抓住问题的关键。",
-            "example": ""
+            "example": "",
+            "errword":["浇"]
         },
         {
             "name": "根深叶茂",
             "mean": "茂：繁茂。根扎得深，叶子就茂盛。比喻基础牢固，就会兴旺发展。",
-            "example": ""
+            "example": "",
+            "errword":["茂"]
         },
         {
             "name": "高堂广厦",
             "mean": "指高大、宽阔的厅堂、房屋。",
-            "example": ""
+            "example": "",
+            "errword":["厦"]
         },
         {
             "name": "玉宇琼楼",
             "mean": "琼：美玉；宇：房屋。指月中宫殿，仙界楼台。也形容富丽堂皇的建筑物。",
-            "example": ""
+            "example": "",
+            "errword":["琼"]
         },
         {
             "name": "湖光山色",
             "mean": "湖的风光，山的景色。指有水有山，风景秀丽。",
-            "example": ""
+            "example": "",
+            "errword":["湖"]
         },
         {
             "name": "雏鹰展翅",
             "mean": "雏：幼鸟。幼鹰展开翅膀飞翔。比喻青年人开始独立生活、工作。示例：大学已经毕业了，这正是他～的时侯。",
-            "example": ""
+            "example": "",
+            "errword":["鹰"]
         },
         {
             "name": "意味深长",
             "mean": "意味：情调，趣味。意思含畜深远，耐人寻味。示例：书中所述的人生哲理，意味深长。",
-            "example": ""
+            "example": "",
+            "errword":["意"]
         },
         {
             "name": "错落有致",
             "mean": "错落：参差不齐。致：情趣。形容事物的布局虽然参差不齐，但却极有情趣，使人看了有好感。",
-            "example": ""
+            "example": "",
+            "errword":["致"]
         },
         {
             "name": "曲径通幽",
             "mean": "曲：弯曲；径：小路；幽：指深远僻静之处。弯曲的小路，通到幽深僻静的地方。",
-            "example": ""
+            "example": "",
+            "errword":["幽"]
         },
         {
             "name": "千岩竞秀",
             "mean": "岩：山崖；竞：竞赛。重山叠岭的风景好象互相比美。形容山景秀丽。",
-            "example": ""
+            "example": "",
+            "errword":["竞"]
         },
         {
             "name": "万壑争流",
             "mean": "壑：深沟，借指溪流。许多溪水竞相奔流。形容山中胜景。",
-            "example": ""
+            "example": "",
+            "errword":["壑"]
         },
         {
             "name": "鸡飞狗跳",
             "mean": "把鸡吓得飞起来，把狗吓得到处乱跳。形容惊慌得乱成一团。",
-            "example": ""
+            "example": "",
+            "errword":["跳"]
         },
         {
             "name": "山崩地裂",
             "mean": "山岳倒塌，大地裂开。形容响声巨大或变化剧烈。",
-            "example": ""
+            "example": "",
+            "errword":["裂"]
         },
         {
             "name": "惊涛拍岸",
             "mean": "汹涌的波涛不断地向岸边涌来。",
-            "example": ""
+            "example": "",
+            "errword":["拍"]
         },
         {
             "name": "骄阳似火",
             "mean": "强烈的太阳光像火那样热，把树叶都晒蔫了。形容天气非常炎热。例：夏天的中午骄阳似火，人们都不愿出门。",
-            "example": ""
+            "example": "",
+            "errword":["骄"]
         },
         {
             "name": "形态各异",
             "mean": "事物的形状或表现各不相同。例：元宵灯会上，形态各异的花灯吸引了成千上万的游人前去观赏。",
-            "example": ""
+            "example": "",
+            "errword":["形"]
         },
         {
             "name": "一碧如洗",
             "mean": "蓝天仿佛被水冲洗过一样，非常美丽。例：天空一碧如洗，让人心旷神怡。",
-            "example": ""
+            "example": "",
+            "errword":["碧"]
         },
         {
             "name": "五彩斑斓",
             "mean": "形容颜色灿烂多彩，艳丽夺目。",
-            "example": ""
+            "example": "",
+            "errword":["斓"]
         },
         {
             "name": "波光粼粼",
             "mean": "形容波光明净。波光：阳光或月光照在水波上反射过来的光。粼粼：形容水石明净。示例：波光粼粼的湖面上，渔帆点点。",
-            "example": ""
+            "example": "",
+            "errword":["粼"]
         },
         {
             "name": "茁壮成长",
             "mean": "健康地成长。示例：看到下一代健康活泼地茁壮成长，为人父母者无不感到十分欣慰。",
-            "example": ""
+            "example": "",
+            "errword":["茁"]
         },
         {
             "name": "竞相开放",
             "mean": "互相争着开放。例：春天里，各种花竞相开放。",
-            "example": ""
+            "example": "",
+            "errword":["竞"]
         },
         {
             "name": "称霸一方",
             "mean": "倚仗权势，欺压别人，成为一方的霸主。",
-            "example": ""
+            "example": "",
+            "errword":["霸"]
         },
         {
             "name": "连绵起伏",
             "mean": "或高或低，接连不断的样子。",
-            "example": ""
+            "example": "",
+            "errword":["绵"]
         },
         {
             "name": "滔天巨浪",
             "mean": "形容波浪极大。例：海面上掀起了滔天巨浪。",
-            "example": ""
+            "example": "",
+            "errword":["滔"]
         },
         {
             "name": "兴风作浪",
             "mean": "比喻挑起事端或进行破坏活动。例：孙悟空杀了那条兴风作浪的恶龙。",
-            "example": ""
+            "example": "",
+            "errword":["浪"]
         },
         {
             "name": "胡作非为",
             "mean": "不顾法纪或舆论，任意行为。例：我们怎么能容忍他胡作非为呢？",
-            "example": ""
+            "example": "",
+            "errword":["作"]
         },
         {
             "name": "唉声叹气",
             "mean": "因伤感、烦闷或痛苦而发出的叹息声。例：遇到困难只会唉声叹气，是不能解决问题的。",
-            "example": ""
+            "example": "",
+            "errword":["唉"]
         },
         {
             "name": "万般无奈",
             "mean": "形容一点儿办法都没有。",
-            "example": ""
+            "example": "",
+            "errword":["般"]
         },
         {
             "name": "忍辱负重",
             "mean": "忍受耻辱，承当重任。指为了一切而承受屈辱。",
-            "example": ""
+            "example": "",
+            "errword":["辱"]
         },
         {
             "name": "以曲求伸",
             "mean": "胸有大志，能在逆境中生存。",
-            "example": ""
+            "example": "",
+            "errword":["伸"]
         },
         {
             "name": "发奋图强",
             "mean": "下定决心，努力谋求富强。",
-            "example": ""
+            "example": "",
+            "errword":["图"]
         },
         {
             "name": "救亡图存",
             "mean": "拯救祖国的危亡。",
-            "example": ""
+            "example": "",
+            "errword":["救"]
         },
         {
             "name": "卧薪尝胆",
             "mean": "形容人刻苦自励，立志为国家报仇雪耻。",
-            "example": ""
+            "example": "",
+            "errword":["薪"]
         },
         {
             "name": "催人奋进",
             "mean": "激励人奋发进取。",
-            "example": ""
+            "example": "",
+            "errword":["催"]
         },
         {
             "name": "羽翼丰满",
             "mean": "羽翼，翅膀，比喻辅佐的人或力量。比喻已经成熟，力量已经壮大。",
-            "example": ""
+            "example": "",
+            "errword":["翼"]
         },
         {
             "name": "报仇雪恨",
             "mean": "通过报仇而彻底消除心头之恨。",
-            "example": ""
+            "example": "",
+            "errword":["雪"]
         },
         {
             "name": "叶落归根",
             "mean": "树叶总凋落在树根旁。比喻人或事物都要有一定的归宿。",
-            "example": ""
+            "example": "",
+            "errword":["归"]
         },
         {
             "name": "一帆风顺",
             "mean": "船挂着满帆顺风行驶。比喻很顺利，没有任何阻碍。",
-            "example": ""
+            "example": "",
+            "errword":["帆"]
         },
         {
             "name": "老马识途",
             "mean": "比喻有经验的人能提出解决问题的办法，起到引导作用。",
-            "example": ""
+            "example": "",
+            "errword":["途"]
         },
         {
             "name": "目不暇接",
             "mean": "指东西很多，眼睛都看不过来。",
-            "example": ""
+            "example": "",
+            "errword":["暇"]
         },
         {
             "name": "美不胜收",
             "mean": "形容好的东西很多，一时看不过来。",
-            "example": ""
+            "example": "",
+            "errword":["胜"]
         },
         {
             "name": "鱼贯而人",
             "mean": "如鱼头尾相接般连续进入。",
-            "example": ""
+            "example": "",
+            "errword":["贯"]
         },
         {
             "name": "倾巢而出",
             "mean": "比喻全部出动。",
-            "example": ""
+            "example": "",
+            "errword":["巢"]
         },
         {
             "name": "狼奔豕突",
             "mean": "豕：猪。像狼和猪那样奔跑乱窜。",
-            "example": ""
+            "example": "",
+            "errword":["豕"]
         },
         {
             "name": "群龙无首",
             "mean": "比喻人多而没有领头的人。",
-            "example": ""
+            "example": "",
+            "errword":["群"]
         },
         {
             "name": "狡兔三窟",
             "mean": "狡猾的兔子有三个洞穴。比喻藏身的地方多。",
-            "example": ""
+            "example": "",
+            "errword":["窟"]
         },
         {
             "name": "大街小巷",
             "mean": "形容到处都是，覆盖的地域广。",
-            "example": ""
+            "example": "",
+            "errword":["巷"]
         },
         {
             "name": "人头攒动",
             "mean": "形容人很多。",
-            "example": ""
+            "example": "",
+            "errword":["攒"]
         },
         {
             "name": "风驰电掣",
             "mean": "形容非常迅速，急闪而过。",
-            "example": ""
+            "example": "",
+            "errword":["掣"]
         },
         {
             "name": "车水马龙",
             "mean": "形容车马来往不绝的繁华热闹景象。",
-            "example": ""
+            "example": "",
+            "errword":["龙"]
         },
         {
             "name": "华灯初上",
             "mean": "夜晚来临，装饰精美、光辉灿烂的灯刚刚开放。",
-            "example": ""
+            "example": "",
+            "errword":["华"]
         },
         {
             "name": "流光溢彩",
             "mean": "指灯光绚烂多彩。",
-            "example": ""
+            "example": "",
+            "errword":["溢"]
         },
         {
             "name": "美轮美奂",
             "mean": "形容房屋高大华丽，多用来赞美新屋美景。",
-            "example": ""
+            "example": "",
+            "errword":["奂"]
         },
         {
             "name": "巧夺天工",
             "mean": "夺：超过。形容制作技艺高超。",
-            "example": ""
+            "example": "",
+            "errword":["巧"]
         },
         {
             "name": "和风细雨",
             "mean": "比喻做事态度温和，方式和缓，不粗暴。",
-            "example": ""
+            "example": "",
+            "errword":["细"]
         },
         {
             "name": "春风化雨",
             "mean": "适于草木生长的风雨，比喻良好的教育。",
-            "example": ""
+            "example": "",
+            "errword":["化"]
         },
         {
             "name": "呼风唤雨",
             "mean": "比喻能够支配自然。",
-            "example": ""
+            "example": "",
+            "errword":["唤"]
         },
         {
             "name": "栉风沐雨",
             "mean": "形容奔波劳碌，不避风雨。",
-            "example": ""
+            "example": "",
+            "errword":["栉"]
         },
         {
             "name": "见风是雨",
             "mean": "比喻只看到一点迹象，就轻率地信以为真。",
-            "example": ""
+            "example": "",
+            "errword":["雨"]
         },
         {
             "name": "凄风苦雨",
             "mean": "形容天气恶劣。比喻境遇悲惨凄凉。",
-            "example": ""
+            "example": "",
+            "errword":["凄"]
         },
         {
             "name": "暴风骤雨",
             "mean": "来势迅猛的风雨。比喻声势浩大、发展迅猛的群众运动。",
-            "example": ""
+            "example": "",
+            "errword":["骤"]
         },
         {
             "name": "戎马一生",
             "mean": "一辈子都从事军事活动。",
-            "example": ""
+            "example": "",
+            "errword":["戎"]
         },
         {
             "name": "身经百战",
             "mean": "亲身经历过许多次战斗。",
-            "example": ""
+            "example": "",
+            "errword":["经"]
         },
         {
             "name": "刮骨疗毒",
             "mean": "用刀在骨头上刮，来治疗骨头里的毒。",
-            "example": ""
+            "example": "",
+            "errword":["刮"]
         },
         {
             "name": "传为美谈",
             "mean": "被人们广泛称道或赞颂。",
-            "example": ""
+            "example": "",
+            "errword":["谈"]
         },
         {
             "name": "约法三章",
             "mean": "原指军队法纪严明，后泛指约好或提出几条规定，大家共同遵守。",
-            "example": ""
+            "example": "",
+            "errword":["章"]
         },
         {
             "name": "秋毫无犯",
             "mean": "形容军队纪律严明，对百姓没有丝毫侵犯。",
-            "example": ""
+            "example": "",
+            "errword":["毫"]
         },
         {
             "name": "运筹帷幄",
             "mean": "常指在后方决定作战方案。泛指主持大计，考虑决策。",
-            "example": ""
+            "example": "",
+            "errword":["幄"]
         },
         {
             "name": "好谋善断",
             "mean": "喜欢出谋划策，善于作出判断。",
-            "example": ""
+            "example": "",
+            "errword":["谋"]
         },
         {
             "name": "学海无涯",
             "mean": "学习像是在海上航行，没有边际，要学的知识无穷无尽。",
-            "example": ""
+            "example": "",
+            "errword":["涯"]
         },
         {
             "name": "书山有路",
             "mean": "读书就像是登山，有路可走的，路径是什么？就是勤奋。",
-            "example": ""
+            "example": "",
+            "errword":["路"]
         },
         {
             "name": "九牛一毛",
             "mean": "像是九头牛身上的一根毛，比喻极大数量中微不足道的数量。",
-            "example": ""
+            "example": "",
+            "errword":["毛"]
         },
         {
             "name": "沧海一粟",
             "mean": "大海里的一颗谷粒，形容非常渺小。",
-            "example": ""
+            "example": "",
+            "errword":["粟"]
         },
         {
             "name": "孜孜以求",
             "mean": "不断追求，不知劳累。",
-            "example": ""
+            "example": "",
+            "errword":["孜"]
         },
         {
             "name": "全力以赴",
             "mean": "付出所有的精力去做成一件事情。",
-            "example": ""
+            "example": "",
+            "errword":["赴"]
         },
         {
-            "name": "百尺竿头，更进一步",
-            "mean": "比喻在学问、技术等方面达到了很高的程度后，再继续努力，向前发展。",
-            "example": ""
+            "name": "百尺竿头",
+            "mean": "比喻在学问、技术等方面达到了很高的程度。",
+            "example": "",
+            "errword":["竿"]
         }
     ],
     "4":[
         {
             "name": "文思敏捷",
             "mean": "指写文章的灵感和思路非常顺畅。",
-            "example": ""
+            "example": "",
+            "errword":["捷"]
         },
         {
             "name": "聪明过人",
             "mean": "形容人资质颖慧，超过一般人。",
-            "example": ""
+            "example": "",
+            "errword":["聪"]
         },
         {
             "name": "青出于蓝",
             "mean": "比喻学生超过老师或后人胜过前人。",
-            "example": ""
+            "example": "",
+            "errword":["蓝"]
         },
         {
             "name": "一鸣惊人",
             "mean": "比喻平时没有突出的表现，一下子做出惊人的成绩。",
-            "example": ""
+            "example": "",
+            "errword":["鸣"]
         },
         {
             "name": "桃李争艳",
             "mean": "指春天桃花和李花争相开放。形容春光美丽。",
-            "example": ""
+            "example": "",
+            "errword":["艳"]
         },
         {
             "name": "后继有人",
             "mean": "有后人继承前人的事业。",
-            "example": ""
+            "example": "",
+            "errword":["继"]
         },
         {
-            "name": "十年树木，百年树人",
-            "mean": "树，种植。比喻培养人才是长久之计，也表示培养人才很不容易。",
-            "example": ""
+            "name": "百年树人",
+            "mean": "比喻培养人才是长久之计，也表示培养人才很不容易。",
+            "example": "",
+            "errword":["树"]
         },
         {
             "name": "以身许国",
             "mean": "把自己献给国家，忠心报国。",
-            "example": ""
+            "example": "",
+            "errword":["许"]
         },
         {
             "name": "碧血丹心",
             "mean": "珍贵的热血，赤诚的忠心。用以称颂为正义事业牺牲的烈士。",
-            "example": ""
+            "example": "",
+            "errword":["碧"]
         },
         {
             "name": "疾恶如仇",
             "mean": "痛恨坏人坏事就跟对待仇敌一样。形容正义感极强。",
-            "example": ""
+            "example": "",
+            "errword":["疾"]
         },
         {
             "name": "大义灭亲",
             "mean": "为了维护正义，对犯罪的亲属不徇私情，使其受到法律的制裁。",
-            "example": ""
+            "example": "",
+            "errword":["义"]
         },
         {
             "name": "敢怒敢言",
             "mean": "心里愤怒也敢讲出来。",
-            "example": ""
+            "example": "",
+            "errword":["怒"]
         },
         {
             "name": "忧国忧民",
             "mean": "忧虑国家的命运和人民的疾苦。",
-            "example": ""
+            "example": "",
+            "errword":["忧"]
         },
         {
             "name": "横眉冷对",
             "mean": "形容对敌人坚决斗争，决不屈服。",
-            "example": ""
+            "example": "",
+            "errword":["横"]
         },
         {
             "name": "浩气长存",
             "mean": "正大刚直的精神，永远长存。",
-            "example": ""
+            "example": "",
+            "errword":["浩"]
         },
         {
             "name": "湖光山色",
             "mean": "山水的风光和景色。形容美好的自然风景。",
-            "example": ""
+            "example": "",
+            "errword":["湖"]
         },
         {
             "name": "人间天堂",
             "mean": "比喻人世间极其幸福美好的生活环境。",
-            "example": ""
+            "example": "",
+            "errword":["堂"]
         },
         {
             "name": "明月清风",
             "mean": "本指皎洁的圆月，清爽的微风。后指摆脱尘世羁绊的悠闲生活。",
-            "example": ""
+            "example": "",
+            "errword":["清"]
         },
         {
             "name": "桂子飘香",
             "mean": "桂花散发着浓浓清香。形容秋天的佳景。",
-            "example": ""
+            "example": "",
+            "errword":["飘"]
         },
         {
             "name": "水光接天",
             "mean": "水的光色与天的光色相连接。指水域宽广。",
-            "example": ""
+            "example": "",
+            "errword":["接"]
         },
         {
             "name": "相得益彰",
             "mean": "两者相互配合协调，双方的优点和长处就更能显露出来。",
-            "example": ""
+            "example": "",
+            "errword":["彰"]
         },
         {
             "name": "江山如画",
             "mean": "比喻山河美丽如画。",
-            "example": ""
+            "example": "",
+            "errword":["画"]
         },
         {
             "name": "鱼米之乡",
             "mean": "盛产鱼和米的乡村。泛指农副水产丰富的地方。",
-            "example": ""
+            "example": "",
+            "errword":["乡"]
         },
         {
             "name": "混沌不分",
             "mean": "指天地浑然一体，分不清楚。",
-            "example": ""
+            "example": "",
+            "errword":["沌"]
         },
         {
             "name": "昏天黑地",
             "mean": "形容天色昏暗。",
-            "example": ""
+            "example": "",
+            "errword":["昏"]
         },
         {
             "name": "大刀阔斧",
             "mean": "比喻办事果断而有魄力。",
-            "example": ""
+            "example": "",
+            "errword":["阔"]
         },
         {
             "name": "开天辟地",
             "mean": "比喻开创历史，也比喻前所未有。",
-            "example": ""
+            "example": "",
+            "errword":["辟"]
         },
         {
             "name": "与日俱增",
             "mean": "形容不断增长或增长速度很快。",
-            "example": ""
+            "example": "",
+            "errword":["俱"]
         },
         {
             "name": "顶天立地",
             "mean": "形容形象高大，气概雄伟豪迈。",
-            "example": ""
+            "example": "",
+            "errword":["顶"]
         },
         {
             "name": "变化万端",
             "mean": "形容变化的项目、样子极多。",
-            "example": ""
+            "example": "",
+            "errword":["端"]
         },
         {
             "name": "改天换地",
             "mean": "指从根本上改变大自然，也比喻巨大变革。",
-            "example": ""
+            "example": "",
+            "errword":["换"]
         },
         {
             "name": "学富五车",
             "mean": "形容读书多，学问渊博。",
-            "example": ""
+            "example": "",
+            "errword":["富"]
         },
         {
             "name": "满腹经纶",
             "mean": "形容很有学问和才能。",
-            "example": ""
+            "example": "",
+            "errword":["纶"]
         },
         {
             "name": "学贯中西",
             "mean": "有关中西方的学问都通晓。形容学问渊博。",
-            "example": ""
+            "example": "",
+            "errword":["贯"]
         },
         {
             "name": "博古通今",
             "mean": "对古代的事知道很多，又通晓现代的事情。",
-            "example": ""
+            "example": "",
+            "errword":["博"]
         },
         {
             "name": "功成名就",
             "mean": "功业建立了，名誉也就有了。",
-            "example": ""
+            "example": "",
+            "errword":["功"]
         },
         {
             "name": "著作等身",
             "mean": "著述之多，堆起来和身体一样高。形容著作极丰。",
-            "example": ""
+            "example": "",
+            "errword":["著"]
         },
         {
             "name": "温文尔雅",
             "mean": "态度温和，举止文雅端庄。",
-            "example": ""
+            "example": "",
+            "errword":["雅"]
         },
         {
             "name": "文质彬彬",
             "mean": "原形容人既文雅又朴实，后来形容人文雅有礼貌。",
-            "example": ""
+            "example": "",
+            "errword":["彬"]
         },
         {
             "name": "肝胆相照",
             "mean": "比喻以真心相见，赤诚相待。",
-            "example": ""
+            "example": "",
+            "errword":["胆"]
         },
         {
             "name": "开诚相见",
             "mean": "跟人接触时，诚恳地对待。",
-            "example": ""
+            "example": "",
+            "errword":["诚"]
         },
         {
             "name": "同舟共济",
             "mean": "同乘一条船过河。比喻团结一致，共同战胜困难。",
-            "example": ""
+            "example": "",
+            "errword":["济"]
         },
         {
             "name": "心照不宣",
             "mean": "彼此心里明白而不需要说出来。",
-            "example": ""
+            "example": "",
+            "errword":["宣"]
         },
         {
             "name": "志同道合",
             "mean": "志向相同，意见相合。",
-            "example": ""
+            "example": "",
+            "errword":["志"]
         },
         {
             "name": "亲密无间",
             "mean": "形容非常亲密，没有任何隔阂。",
-            "example": ""
+            "example": "",
+            "errword":["密"]
         },
         {
             "name": "荣辱与共",
             "mean": "光荣和耻辱一同承担。",
-            "example": ""
+            "example": "",
+            "errword":["辱"]
         },
         {
             "name": "唇亡齿寒",
             "mean": "嘴唇没有了，牙齿就会觉得冷。比喻关系密切，利害相关。",
-            "example": ""
+            "example": "",
+            "errword":["唇"]
         },
         {
             "name": "春满人间",
             "mean": "整个人间都弥漫着春的气息。",
-            "example": ""
+            "example": "",
+            "errword":["满"]
         },
         {
             "name": "欣欣向荣",
             "mean": "形容草木长得茂盛。也比喻事业蓬勃发展、兴旺昌盛。",
-            "example": ""
+            "example": "",
+            "errword":["欣"]
         },
         {
             "name": "千帆竞发",
             "mean": "许多船只争着出发前行，形容声势浩大。",
-            "example": ""
+            "example": "",
+            "errword":["竞"]
         },
         {
             "name": "万马奔腾",
             "mean": "形容声势浩大，进展迅速，气氛热烈。",
-            "example": ""
+            "example": "",
+            "errword":["腾"]
         },
         {
             "name": "六畜兴旺",
             "mean": "六蓄指牛、马、羊、鸡、犬、豕。比喻养殖业兴旺发达。",
-            "example": ""
+            "example": "",
+            "errword":["畜"]
         },
         {
             "name": "五谷丰登",
             "mean": "五谷指稻、黍（小米）、稷（高粱）、麦、菽（豆），泛指农作物。",
-            "example": ""
+            "example": "",
+            "errword":["登"]
         },
         {
             "name": "国泰民安",
             "mean": "国家太平，人民生活安定。",
-            "example": ""
+            "example": "",
+            "errword":["泰"]
         },
         {
             "name": "人寿年丰",
             "mean": "人健康，年成好，形容生活安乐美好。",
-            "example": ""
+            "example": "",
+            "errword":["寿"]
         }
     ],
     "5":[
         {
             "name": "刻舟求剑",
             "mean": "比喻死心眼，不懂得变通。",
-            "example": ""
+            "example": "",
+            "errword":["刻"]
         },
         {
             "name": "守株待兔",
             "mean": "株，树桩子。比喻不经过努力而想获得成功的侥幸心理。",
-            "example": ""
+            "example": "",
+            "errword":["株"]
         },
         {
             "name": "螳臂当车",
             "mean": "当，阻挡。比喻自不量力去做办不到的事，必然失败。",
-            "example": ""
+            "example": "",
+            "errword":["螳"]
         },
         {
             "name": "滥竽充数",
             "mean": "比喻没有真才实学的人混在行家里充数，或拿不好的东西混在好的东西里充数。",
-            "example": ""
+            "example": "",
+            "errword":["竽"]
         },
         {
             "name": "掩耳盗铃",
             "mean": "比喻自己欺骗自己，明明掩盖不住的事情偏要想法子掩盖。",
-            "example": ""
+            "example": "",
+            "errword":["掩"]
         },
         {
             "name": "买椟还珠",
             "mean": "椟，木匣子。比喻没有眼光，取舍不当。",
-            "example": ""
+            "example": "",
+            "errword":["椟"]
         },
         {
             "name": "东施效颦",
             "mean": "颦，皱眉。比喻胡乱模仿，效果很坏。",
-            "example": ""
+            "example": "",
+            "errword":["颦"]
         },
         {
             "name": "邯郸学步",
             "mean": "比喻模仿别人不成，反而丧失了原有的技能。",
-            "example": ""
+            "example": "",
+            "errword":["郸"]
         },
         {
             "name": "哀鸿遍野",
             "mean": "悲鸣的大雁遍布原野。比喻到处都是流离失所的灾民。",
-            "example": ""
+            "example": "",
+            "errword":["鸿"]
         },
         {
             "name": "劫富济贫",
             "mean": "劫，夺取。夺取富人的财产，救济穷人。",
-            "example": ""
+            "example": "",
+            "errword":["劫"]
         },
         {
             "name": "铤而走险",
             "mean": "铤，快跑的样子。因走投无路而采取冒险行动。",
-            "example": ""
+            "example": "",
+            "errword":["铤"]
         },
         {
-            "name": "兵来将挡，水来土掩",
-            "mean": "敌军来了，就派将官率军抵挡；洪水来了，就用土筑坝拦截。比喻对待不同的情况采用不同的态度。",
-            "example": ""
+            "name": "兵来将挡",
+            "mean": "比喻不管对方使用什么手段，总有相应的对付方法。也比喻对待不同情况采取不同的对策。",
+            "example": "",
+            "errword":["挡"]
         },
         {
             "name": "替天行道",
             "mean": "代替上天执行正道，即按照天意，在人世间做正义的事。",
-            "example": ""
+            "example": "",
+            "errword":["替"]
         },
         {
             "name": "志存高远",
             "mean": "形容志向远大。",
-            "example": ""
+            "example": "",
+            "errword":["志"]
         },
         {
             "name": "无所不晓",
             "mean": "没有什么不知道的。形容人广见博识。",
-            "example": ""
+            "example": "",
+            "errword":["晓"]
         },
         {
             "name": "挺身而出",
             "mean": "形容不避艰险，勇敢地站出来。例：面对险情，解放军战士挺身而出，保护国家财产和人民的生命安全。",
-            "example": ""
+            "example": "",
+            "errword":["挺"]
         },
         {
             "name": "两全其美",
             "mean": "做一件事顾全两方面，使两方面都好。例：做家务事，既可以锻炼自己独立生活的能力，又能减轻父母的负担，这不是两全其美吗？",
-            "example": ""
+            "example": "",
+            "errword":["其"]
         },
         {
             "name": "初出茅庐",
             "mean": "初次出来做事。或比喻刚参加工作缺乏经验，还很幼稚。",
-            "example": ""
+            "example": "",
+            "errword":["茅"]
         },
         {
             "name": "才华横溢",
             "mean": "才能充分显露。",
-            "example": ""
+            "example": "",
+            "errword":["溢"]
         },
         {
             "name": "料事如神",
             "mean": "形容预料未来的事情非常准确。",
-            "example": ""
+            "example": "",
+            "errword":["料"]
         },
         {
             "name": "胆大心细",
             "mean": "做事既果断又谨慎。",
-            "example": ""
+            "example": "",
+            "errword":["胆"]
         },
         {
-            "name": "鞠躬尽瘁，死而后已",
-            "mean": "竭尽全力去效劳，一直到死为止。",
-            "example": ""
+            "name": "鞠躬尽瘁",
+            "mean": "指小心谨慎，贡献出全部精力。",
+            "example": "",
+            "errword":["鞠"]
         },
         {
             "name": "独木难支",
             "mean": "比喻崩溃之形势，非一个人的力量所能支持、挽救。也比喻艰巨的事情非一个人所能胜任。",
-            "example": ""
+            "example": "",
+            "errword":["支"]
         },
         {
             "name": "回天无力",
             "mean": "比喻无法挽回严重的局势或病情。",
-            "example": ""
+            "example": "",
+            "errword":["回"]
         },
         {
             "name": "白衣天使",
             "mean": "是人们对医护工作者的尊称。",
-            "example": ""
+            "example": "",
+            "errword":["使"]
         },
         {
             "name": "玉洁冰清",
             "mean": "像玉和冰一样洁净。比喻人的操行洁白。",
-            "example": ""
+            "example": "",
+            "errword":["清"]
         },
         {
             "name": "救死扶伤",
             "mean": "救活快要死的人，帮助受伤的人。形容医务工作者全心全意为人民服务的精神。",
-            "example": ""
+            "example": "",
+            "errword":["扶"]
         },
         {
             "name": "处变不惊",
             "mean": "面对变乱，能镇定自若，不惊慌。",
-            "example": ""
+            "example": "",
+            "errword":["惊"]
         },
         {
             "name": "万众一心",
             "mean": "千千万万的人一条心。",
-            "example": ""
+            "example": "",
+            "errword":["众"]
         },
         {
             "name": "众志成城",
             "mean": "大家同心协力，就像城墙一样的牢固。比喻大家团结一致，就能克服困难，得到成功。",
-            "example": ""
+            "example": "",
+            "errword":["城"]
         },
         {
             "name": "含辛茹苦",
             "mean": "经受艰辛困苦。",
-            "example": ""
+            "example": "",
+            "errword":["茹"]
         },
         {
             "name": "舍生忘死",
             "mean": "形容不顾生命危险。",
-            "example": ""
+            "example": "",
+            "errword":["忘"]
         },
         {
             "name": "倦鸟知还",
             "mean": "累了的小鸟知道回到巢中。",
-            "example": ""
+            "example": "",
+            "errword":["倦"]
         },
         {
             "name": "成群结队",
             "mean": "人们聚集起来成了群，结合成了队伍。形容人很多。",
-            "example": ""
+            "example": "",
+            "errword":["结"]
         },
         {
             "name": "一唱一和",
             "mean": "一人唱歌，一人附合。比喻双方彼此呼应，互相配合。",
-            "example": ""
+            "example": "",
+            "errword":["和"]
         },
         {
             "name": "呼朋引类",
             "mean": "招呼朋友，带领同类。",
-            "example": ""
+            "example": "",
+            "errword":["类"]
         },
         {
             "name": "欢呼雀跃",
             "mean": "高兴得大叫起来，像麻雀似的跳跃着。形容欢乐的情景。",
-            "example": ""
+            "example": "",
+            "errword":["跃"]
         }
     ],
     "6":[
         {
             "name": "生旦净丑",
             "mean": "指戏曲表演中的角色。“生”指男子；“旦”指女子；“净”指花脸；“丑”指小丑。",
-            "example": ""
+            "example": "",
+            "errword":["净"]
         },
         {
             "name": "喜闻乐见",
             "mean": "喜欢听，乐意看。指很受欢迎。",
-            "example": ""
+            "example": "",
+            "errword":["闻"]
         },
         {
             "name": "粉墨登场",
             "mean": "原指演戏前涂上粉或墨，登场演戏。后比喻某些人乔装打扮后登上政治舞台，带讥讽之意。",
-            "example": ""
+            "example": "",
+            "errword":["墨"]
         },
         {
             "name": "锣鼓喧天",
             "mean": "敲锣打鼓的声音响彻天空。形容欢乐喜庆的气氛。",
-            "example": ""
+            "example": "",
+            "errword":["喧"]
         },
         {
             "name": "唱念做打",
             "mean": "戏曲表演中的四种基本功。泛指要有扎实的基础，才能做好事。",
-            "example": ""
+            "example": "",
+            "errword":["做"]
         },
         {
             "name": "有板有眼",
             "mean": "音乐戏曲的曲调、唱腔合乎节拍，比喻言语行动有条不紊，富有节奏或章法。",
-            "example": ""
+            "example": "",
+            "errword":["板"]
         },
         {
             "name": "余音绕梁",
             "mean": "音乐停止后，余音仿佛正在绕着屋梁回旋。形容歌声或音乐优美动听，耐人回味。",
-            "example": ""
+            "example": "",
+            "errword":["绕"]
         },
         {
             "name": "字正腔圆",
             "mean": "指唱戏、唱歌或念白、朗读时吐字清晰准确，腔调圆润悦耳。",
-            "example": ""
+            "example": "",
+            "errword":["腔"]
         },
         {
             "name": "惟妙惟肖",
             "mean": "形容描写或模仿得非常好，非常逼真。惟，助词；肖，相似。",
-            "example": ""
+            "example": "",
+            "errword":["肖"]
         },
         {
             "name": "活灵活现",
             "mean": "形容描述或模仿的人或事物非常逼真，使人感到好像亲眼看到一样。",
-            "example": ""
+            "example": "",
+            "errword":["现"]
         },
         {
             "name": "感人肺腑",
             "mean": "使人内心深受感动。肺腑，内心深处。",
-            "example": ""
+            "example": "",
+            "errword":["腑"]
         },
         {
             "name": "动人心弦",
             "mean": "把心比作琴，拨动了心的弦，形容事物激动人心。",
-            "example": ""
+            "example": "",
+            "errword":["弦"]
         },
         {
             "name": "令出如山",
             "mean": "命令一出，就像山一样。",
-            "example": ""
+            "example": "",
+            "errword":["令"]
         },
         {
             "name": "振臂一呼",
             "mean": "挥动手臂，一声号召。",
-            "example": ""
+            "example": "",
+            "errword":["振"]
         },
         {
             "name": "浩浩荡荡",
             "mean": "形容水势广阔浩大，或形容气势雄伟，规模宏大。",
-            "example": ""
+            "example": "",
+            "errword":["荡"]
         },
         {
             "name": "络绎于途",
             "mean": "络绎，往来不断，前后相续。形容沿途过往的人马车船接连不断。",
-            "example": ""
+            "example": "",
+            "errword":["绎"]
         },
         {
             "name": "惊涛骇浪",
             "mean": "令人惊惧的大波浪。比喻险恶的环境遭遇或艰难的考验。",
-            "example": ""
+            "example": "",
+            "errword":["骇"]
         },
         {
             "name": "水土不服",
             "mean": "出门在外，不适应当地的气候、饮食、习惯而产生一些病。",
-            "example": ""
+            "example": "",
+            "errword":["服"]
         },
         {
             "name": "讲和通好",
             "mean": "指相互和解，并建立友好的关系。",
-            "example": ""
+            "example": "",
+            "errword":["通"]
         },
         {
             "name": "观风问俗",
             "mean": "指观察了解风俗人情。",
-            "example": ""
+            "example": "",
+            "errword":["俗"]
         },
         {
             "name": "奇珍异宝",
             "mean": "奇异的珍宝。形容稀有的、难得的宝物。",
-            "example": ""
+            "example": "",
+            "errword":["异"]
         },
         {
             "name": "互通有无",
             "mean": "用自己有的交换自己没有的。指相互交换。",
-            "example": ""
+            "example": "",
+            "errword":["通"]
         },
         {
             "name": "五湖四海",
             "mean": "泛指全国各地。",
-            "example": ""
+            "example": "",
+            "errword":["湖"]
         },
         {
             "name": "心悦诚服",
             "mean": "心里喜悦而真诚佩服。",
-            "example": ""
+            "example": "",
+            "errword":["悦"]
         },
         {
             "name": "头头是道",
             "mean": "形容说话很有条理而且有理有据；做事有条不紊，很有办法。",
-            "example": ""
+            "example": "",
+            "errword":["道"]
         },
         {
             "name": "娓娓而谈",
             "mean": "娓娓，说话连续不倦的样子。形容说话不知疲倦，婉转生动。",
-            "example": ""
+            "example": "",
+            "errword":["娓"]
         },
         {
             "name": "信口开河",
             "mean": "不经思索，不负责任地随口乱说。",
-            "example": ""
+            "example": "",
+            "errword":["信"]
         },
         {
             "name": "夸夸其谈",
             "mean": "夸夸，说大话。说话或写文章浮夸，不切实际。",
-            "example": ""
+            "example": "",
+            "errword":["谈"]
         },
         {
             "name": "理直气壮",
             "mean": "理由正确充分，说话气势旺盛。",
-            "example": ""
+            "example": "",
+            "errword":["壮"]
         },
         {
             "name": "侃侃而谈",
             "mean": "侃侃，说话从容不迫的样子。从容不迫、理直气壮地谈论。",
-            "example": ""
+            "example": "",
+            "errword":["侃"]
         }
     ]
 

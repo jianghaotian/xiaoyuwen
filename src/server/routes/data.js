@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const fs = require('fs');
+const path = require('path');
+
 const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
@@ -136,11 +139,27 @@ router.post('/bcsj', function (req, res, next) {
             let day = getTimestamp_13();
             runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'bcsj', num, day], (result1) => {
                 if (result1.status === 0) {
-                    let jsonData = {
-                        status: 0,
-                        data: day
+                    let fileCont = {
+                        answer: answer,
+                        grade: num
                     }
-                    res.json(jsonData);
+                    let filePath = path.join(__dirname, '../data/users/bcsj/' + day + '.json');
+                    let str = JSON.stringify(fileCont);
+                    fs.writeFile(filePath, str, (err) => {
+                        if (err) {
+                            let jsonData = {
+                                status: -1,
+                                message: 'write file error'
+                            }
+                            res.json(jsonData);
+                        } else {
+                            let jsonData = {
+                                status: 0,
+                                data: day
+                            }
+                            res.json(jsonData);
+                        }
+                    });
                 } else {
                     res.json(result1);
                 }
@@ -152,12 +171,12 @@ router.post('/bcsj', function (req, res, next) {
 });
 
 router.get('/bcsj/grade', function (req, res, next) {
-    let { grade } = req.query;
+    let { time } = req.query;
     // let token = req.header('token');
 
     let jsonData = {
         status: 0,
-        data: getBuchongshiju(grade)
+        data: ''
     }
     res.json(jsonData);
 });
