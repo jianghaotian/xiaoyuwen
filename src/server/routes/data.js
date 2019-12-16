@@ -173,10 +173,11 @@ router.post('/bcsj', function (req, res, next) {
 router.get('/bcsj/grade', function (req, res, next) {
     let { time } = req.query;
     // let token = req.header('token');
+    let data = require(path.join(__dirname, '../data/users/bcsj/' + time + '.json'));
 
     let jsonData = {
         status: 0,
-        data: ''
+        data: data
     }
     res.json(jsonData);
 });
