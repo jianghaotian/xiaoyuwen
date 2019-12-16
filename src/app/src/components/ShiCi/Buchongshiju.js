@@ -71,7 +71,7 @@ export default class Buchongshiju extends Component {
             Toast.loading('正在判题...', 10, () => {
                 Toast.offline('网络异常', 1, null, false);
             });
-            let answer = {};
+            let answer = [];
             for (var i = 1; i < 11; i++) {
                 if (this.state.data[i].answer === this.state.answerArr[i]) {
                     let shang = '';
@@ -83,7 +83,7 @@ export default class Buchongshiju extends Component {
                         shang = this.state.data[i].answer;
                         xia = this.state.data[i].show;
                     }
-                    answer[i] = {flag: 1, show: '' + shang + xia, ans: ''};
+                    answer.push({flag: 1, show: '' + shang + xia, ans: ''});
                 } else {
                     let shang = '';
                     let xia = '';
@@ -100,19 +100,19 @@ export default class Buchongshiju extends Component {
                         shangAns = this.state.data[i].answer;
                         xiaAns = this.state.data[i].show;
                     }
-                    answer[i] = {flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns};
+                    answer.push({flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns});
                 }
             }
-            this.$api.post_buchongshiju(answer).then(res => {
-                
-                
-                console.log(res);
+            // if () {
+
+
+            // }
+
+            this.$api.post_buchongshiju({answer: answer}).then(res => {
+              
+            
 
             })
-
-
-
-
         }
         if (this.state.num < 10) {
             this.setState({
