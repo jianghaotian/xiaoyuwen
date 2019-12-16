@@ -91,20 +91,19 @@ export default class Buchongshiju extends Component {
                     let xiaAns = '';
                     if (this.state.data[i].flag == 0) {
                         shang = this.state.data[i].show;
-                        xia = this.state.data[i].answer;
+                        xia = this.state.answerArr[i] || '';
                         shangAns = this.state.data[i].show;
-                        xiaAns = this.state.answerArr[i];
+                        xiaAns = this.state.data[i].answer;
                     } else {
-                        shang = this.state.data[i].answer;
+                        shang = this.state.answerArr[i] || '';
                         xia = this.state.data[i].show;
-                        shangAns = this.state.answerArr[i];
+                        shangAns = this.state.data[i].answer;
                         xiaAns = this.state.data[i].show;
                     }
                     answer[i] = {flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns};
                 }
             }
-            console.log(answer);
-            this.$api.post_buchongshiju({answer}).then(res => {
+            this.$api.post_buchongshiju(answer).then(res => {
                 
                 
                 console.log(res);

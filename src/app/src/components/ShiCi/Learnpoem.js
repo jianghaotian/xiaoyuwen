@@ -83,7 +83,7 @@ export default class Learnpoem extends Component {
                 <div className="learnpeombody"> 
                     
                     <div className="learnpeomcon">
-                        <SearchBar
+                        {/* <SearchBar
                             placeholder="查找"
                             onSubmit={value => console.log(value, 'onSubmit')}
                             onClear={value => console.log(value, 'onClear')}
@@ -92,7 +92,7 @@ export default class Learnpoem extends Component {
                             onCancel={() => console.log('onCancel')}
                             onChange={this.onChange}
                             style={{height:"2rem"}}
-                        />
+                        /> */}
                     <div>
                     <div className='sm-box'>
                         <div className='sm-textBox'>

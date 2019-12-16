@@ -122,15 +122,22 @@ router.get('/bcsj', function (req, res, next) {
  *     data: {}
  */
 router.post('/bcsj', function (req, res, next) {
-    let { answer } = req.body;
+    let answer = req.body;
     let token = req.header('token');
 
     checkToken(token, (result) => {
+        let num = 0;
         if (result.status === 0) {
             // result.data.uid
+            // for (var i = 1; i < 11; i++) {
+            //     if (answer[i].flag) {
+            //         num++;
+            //     }
+            // }
+        
 
             console.log(answer);
-            res.json(answer);
+            // res.json(answer);
 
         } else {
             let jsonData = {
