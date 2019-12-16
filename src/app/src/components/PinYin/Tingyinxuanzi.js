@@ -163,6 +163,8 @@ export default class Tingyinxuanzi extends Component {
 
     submit=()=>{
         this.result[this.count+1]=this.state.value;
+        this.props.history.push("/pinyin/tingyin/grade");
+
         console.log("交卷");
         console.log(this.result);
     }
