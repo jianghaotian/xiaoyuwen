@@ -64,6 +64,60 @@ export default class Tingyinxuanzi extends Component {
                 }
         ]
         };
+        this.data=[
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            }
+
+        ]
+        this.score=0;
         this.Btn1=<button className="t11" onClick={this.prev}>上一题</button>;
         this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
         this.count=0;
@@ -163,7 +217,19 @@ export default class Tingyinxuanzi extends Component {
 
     submit=()=>{
         this.result[this.count+1]=this.state.value;
-        this.props.history.push("/pinyin/tingyin/grade");
+        for(var i=0;i<this.data.length;i++){
+            this.data[i].write=this.result[i];
+            this.data[i].answer=this.state.content[i].zi;
+            if(this.result[i]===this.state.content[i].zi){
+                this.data[i].status=true;
+                this.score++;
+            }
+            else{
+                this.data[i].status=false;
+
+            }
+        }
+        this.props.history.push({pathname:'/pinyin/tingyin/grade',state:{data:this.data,score:this.score}});
 
         console.log("交卷");
         console.log(this.result);
@@ -186,7 +252,10 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div className="t1">
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
+                <NavBar
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
+                    style={{backgroundColor:"#617ca6"}}
+                    >听 音 选 字</NavBar>
                 {/* <div className='t1'></div> */}
                 <div className="s2">
                     <div className='sm-box'>

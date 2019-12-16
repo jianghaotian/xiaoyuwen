@@ -4,63 +4,11 @@ import {NavBar,Icon} from 'antd-mobile';
 import '../../css/PinYin/tygrade.css'
 
 export default class Kzgrade extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
-            score:3,
-            data:[
-                {
-                    write:{one:"tɑi",two:"yɑng"},
-                    answer:{one:"tɑi",two:"yɑng"},
-                    status:true    
-                },
-                {
-                    write:{one:"zɑo",two:"shɑng"},
-                    answer:{one:"zɑo",two:"shɑng"},
-                    status:true    
-                },
-                {
-                    write:{one:"zhong",two:"wu"},
-                    answer:{one:"zhong",two:"wu"},
-                    status:true    
-                },
-                {
-                    write:{one:"yüe",two:"liɑng"},
-                    answer:{one:"wɑn",two:"shɑng"},
-                    status:false    
-                },
-                {
-                    write:{one:"wɑn",two:"shɑng"},
-                    answer:{one:"yüe",two:"liɑng"},
-                    status:false    
-                },
-                {
-                    write:{one:"xing",two:"xing"},
-                    answer:{one:"xing",two:"xing"},
-                    status:true    
-                },
-                {
-                    write:{one:"ɑi",two:"tɑi"},
-                    answer:{one:"di",two:"qiu"},
-                    status:false    
-                },
-                {
-                    write:{one:"ɑi",two:"tɑiii"},
-                    answer:{one:"nü",two:"sheng"},
-                    status:false    
-                },
-                {
-                    write:{one:"tɑi",two:"tɑi"},
-                    answer:{one:"nɑn",two:"sheng"},
-                    status:false    
-                },
-                {
-                    write:{one:"tɑi",two:"tɑi"},
-                    answer:{one:"tɑi",two:"tɑi"},
-                    status:true    
-                }
-
-            ]
+            score:this.props.location.state.score,
+            data:this.props.location.state.data
         }
     }
     render() {
