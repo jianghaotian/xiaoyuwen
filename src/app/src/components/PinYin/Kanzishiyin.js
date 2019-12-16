@@ -258,8 +258,6 @@ export default class Kanzishiyin extends Component {
     }
     submit=()=>{
         this.result[this.count+1]=this.state.value;
-        this.props.history.push("/pinyin/kanzi/grade");
-
         console.log("交卷");
         console.log(this.result);
 
