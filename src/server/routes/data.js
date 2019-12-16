@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const fs = require('fs');
+const path = require('path');
+
 const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
@@ -122,42 +125,58 @@ router.get('/bcsj', function (req, res, next) {
  *     data: {}
  */
 router.post('/bcsj', function (req, res, next) {
-    let answer = req.body;
+    let { answer } = req.body;
     let token = req.header('token');
 
     checkToken(token, (result) => {
         let num = 0;
-        if (result.status === 0) {
-            // result.data.uid
-            // for (var i = 1; i < 11; i++) {
-            //     if (answer[i].flag) {
-            //         num++;
-            //     }
-            // }
-        
-
-            console.log(answer);
-            // res.json(answer);
-
-        } else {
-            let jsonData = {
-                status: 0,
-                data: getBuchongshiju(grade)
+        answer.forEach(value => {
+            if (value.flag) {
+                num++;
             }
-            res.json(jsonData);
+        });
+        if (result.status === 0) {
+            let day = getTimestamp_13();
+            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'bcsj', num, day], (result1) => {
+                if (result1.status === 0) {
+                    let fileCont = {
+                        answer: answer,
+                        grade: num
+                    }
+                    let filePath = path.join(__dirname, '../data/users/bcsj/' + day + '.json');
+                    let str = JSON.stringify(fileCont);
+                    fs.writeFile(filePath, str, (err) => {
+                        if (err) {
+                            let jsonData = {
+                                status: -1,
+                                message: 'write file error'
+                            }
+                            res.json(jsonData);
+                        } else {
+                            let jsonData = {
+                                status: 0,
+                                data: day
+                            }
+                            res.json(jsonData);
+                        }
+                    });
+                } else {
+                    res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
         }
     });
-
-    
 });
 
 router.get('/bcsj/grade', function (req, res, next) {
-    let { grade } = req.query;
+    let { time } = req.query;
     // let token = req.header('token');
 
     let jsonData = {
         status: 0,
-        data: getBuchongshiju(grade)
+        data: ''
     }
     res.json(jsonData);
 });

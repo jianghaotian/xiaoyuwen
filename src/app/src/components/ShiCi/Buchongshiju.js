@@ -68,10 +68,7 @@ export default class Buchongshiju extends Component {
                 next:'下一题'
             })
         } else if (this.state.num == 10){
-            Toast.loading('正在判题...', 10, () => {
-                Toast.offline('网络异常', 1, null, false);
-            });
-            let answer = {};
+            let answer = [];
             for (var i = 1; i < 11; i++) {
                 if (this.state.data[i].answer === this.state.answerArr[i]) {
                     let shang = '';
@@ -83,7 +80,7 @@ export default class Buchongshiju extends Component {
                         shang = this.state.data[i].answer;
                         xia = this.state.data[i].show;
                     }
-                    answer[i] = {flag: 1, show: '' + shang + xia, ans: ''};
+                    answer.push({flag: 1, show: '' + shang + xia, ans: ''});
                 } else {
                     let shang = '';
                     let xia = '';
@@ -100,15 +97,27 @@ export default class Buchongshiju extends Component {
                         shangAns = this.state.data[i].answer;
                         xiaAns = this.state.data[i].show;
                     }
-                    answer[i] = {flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns};
+                    answer.push({flag: 0, show: '' + shang + xia, ans: '' + shangAns + xiaAns});
                 }
             }
-            this.$api.post_buchongshiju(answer).then(res => {
-                
-                
-                console.log(res);
+            if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+                Toast.loading('正在判题...', 10, () => {
+                    Toast.offline('网络异常', 1, null, false);
+                });
+                this.$api.post_buchongshiju({answer: answer}).then(res => {
+                    Toast.hide();
+                    if (res.data.status === 0) {
+                        this.props.history.push('/shici/buchong/grade/' + res.data.data);
+                    } else {
+                        Toast.offline('网络异常', 1, null, false);
+                    }
+                })
 
-            })
+
+            } else {
+                Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+                
+            }
 
 
 
