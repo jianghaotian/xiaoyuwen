@@ -116,8 +116,7 @@ export default class Learnpoem extends Component {
                             
                         </div>
                         <div className="poemothers">
-                            <img src={require("../../images/shici.jpeg") }></img>
-                            <textarea value={"白话翻译:"+this.state.translation+"\n"+"创作背景:"+this.state.makeground}></textarea>
+                            {"白话翻译:"+this.state.translation+"\n"+"创作背景:"+this.state.makeground}
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@ const api = {
     get_token: p => get('users/gettoken', p),
     get_info: p => get('info/get',p),
 
-
     change_pwd: p => post('users/changepwd', p),
     change_pwd_veri: p => post('users/cpwdveri', p),
     veri_change_pwd: p => post('users/vericpwd', p),
@@ -28,6 +27,9 @@ const api = {
 
 
     get_buchongshiju: p => get('data/bcsj', p),
+    post_buchongshiju: p => post('data/bcsj', p),
+    get_bcsj_grade: p => get('data/bcsj/grade', p),
+
     get_xueshici: p => get('data/xsc', p),
     
 

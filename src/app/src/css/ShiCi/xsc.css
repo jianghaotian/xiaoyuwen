@@ -87,14 +87,26 @@
     border:2px dashed gray;
 }
 .poemothers{
-  width:64vw;
+  background: url("../../images/shici.jpeg");
+  width:75vw;
   height:51vw;
   font-size: 5vw;
   margin: 0 auto;
   margin-top: 15%;
+  overflow: auto;
+  padding: 8px;
+  border-top:1.5px solid gray;
+  border-bottom:1.5px solid gray;
+  border-left:1.5px dashed gray;
+  border-right:1.5px dashed gray;
+  font-size: 18px;
+  border-radius: 8px;
 }
-.poemothers img{
-  width:64vw;
+.poemothers::-webkit-scrollbar {
+  display: none;
+}
+/* .poemothers img{
+  width:82vw;
   height:51vw;
   opacity: 0.4;
   position:fixed;
@@ -113,7 +125,7 @@
     border-left:1.5px dashed gray;
     border-right:1.5px dashed gray;
     z-index: 10;
-}
+} */
 .poemlaba{
   font-size:24;
   color:#617ca6;
