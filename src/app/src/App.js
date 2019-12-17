@@ -70,6 +70,7 @@ export default class App extends Component {
                     <Route exact path="/pinyin/kanzi/grade" component={Kzgrade} />
                     <Route exact path="/pinyin/kanzi/grade/:id" component={Kzgrade} />
                     <Route exact path="/pinyin/tingyin/grade" component={Tygrade} />
+                    <Route exact path="/pinyin/tingyin/grade/:id" component={Tygrade} />
 
                     {/* 成语 */}
                     <Route exact path="/chengyu/xuechengyu" component={LearnIdioms} />
@@ -77,6 +78,10 @@ export default class App extends Component {
                     <Route exact path="/chengyu/caichengyu" component={Guessidioms} />
                     <Route exact path="/chengyu/chengjielong" component={Idiomjielong} />
                     <Route exact path="/chengyu/jielong/grade" component={Jlgrade}/>
+                    <Route exact path="/chengyu/jielong/grade/:id" component={Jlgrade}/>
+                    <Route exact path="/chengyu/cai/grade" component={Jlgrade}/>
+                    <Route exact path="/chengyu/cai/grade/:id" component={Jlgrade}/>
+
 
                     {/* 诗词 */}
                     <Route exact path="/shici/buchong" component={Buchongshiju} />
