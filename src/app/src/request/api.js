@@ -32,6 +32,7 @@ const api = {
     get_tyxz_grade: p => get('data/tyxz/grade', p),
 
     // 成语
+    get_cyycz: p => get('data/cyycz', p),
 
     // 诗词
     get_buchongshiju: p => get('data/bcsj', p),

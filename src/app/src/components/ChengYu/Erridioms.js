@@ -1,41 +1,61 @@
 import React, { Component } from 'react'
-import {NavBar,SearchBar,TextareaItem,Icon} from 'antd-mobile';
-import {BrowserRouter as Router,Link} from "react-router-dom"
+import {NavBar,SearchBar,TextareaItem,Icon,Toast} from 'antd-mobile';
 import "../../css/ChengYu/err.css"
 export default class Guessidioms extends Component {
     constructor(){
         super();
-        this.content={
-            chengyu:"一毛不拔",
-            errwords:["拔"]
-        }
         this.state={
-            num:1
+            chengyu:"",
+            errwords:[],
+            arr: [],
+            num: 1,
+            max: 1
         }
-        this.arr=(this.content.chengyu).split("");
     }
-    change=(e)=>{
-        e.target.className=(e.target.className=="iconfont icon-xingxing black")?"iconfont icon-xingxing1 yello":"iconfont icon-xingxing black"
+	componentDidMount() {
+        this.getTi();
     }
-    minus=(e)=>{
-        this.setState((state)=>{
-            if(state.num==1){
-                return{
-                    num:1
-                }
-            }
-            return{
-                num:--state.num
-            }
-        })
+    getTi = () => {
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
+        this.$api.get_cyycz({grade: this.$store.getState().users.grade || 1, index: this.state.num - 1}).then(res => {
+			Toast.hide();
+			
+			let arr = (res.data.data.chengyu).split("");
+
+            this.setState({
+				chengyu: res.data.data.chengyu,
+				errwords: res.data.data.errwords,
+				arr: arr,
+                max: res.data.data.max
+            });
+        });
     }
-    adds=()=>{
-        
-        this.setState((state)=>{
-            return{
-                num:++state.num
-            }
-        })
+	shoucang = () => {
+        if (this.state.shoucangClass == "icon-xingxing black") {
+            this.setState({
+                shoucangClass: "icon-xingxing1 yello"
+            })
+        } else {
+            this.setState({
+                shoucangClass: "icon-xingxing black"
+            })
+        }
+    }
+    minus = () => {
+        if (this.state.num > 1) {
+            this.setState({
+                num: this.state.num - 1
+            }, () => {this.getTi()})
+        }
+    }
+    adds = () => {
+        if (this.state.num < this.state.max) {
+            this.setState({
+                num: this.state.num + 1
+            }, () => {this.getTi()})
+        }
     }
     render() {
         return (
@@ -47,18 +67,18 @@ export default class Guessidioms extends Component {
                         <div>
                             <div className='sm-box'>
                                 <div className='sm-textBox'>
-                                    第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                                    第 <span>{this.state.num}</span><span> / </span><span>{this.state.max}</span> 个
                                 </div>
                             </div>
-                            <div onClick={this.change} className="iconfont icon-xingxing black"></div>
+                    		<div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
                             <div className="errcon">
                                 {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
-                                {/* <div className="erridiom">{this.props.content.chengyu}</div> */}
+                                {/* <div className="erridiom">{this.props.state.chengyu}</div> */}
                                 <div className="erridiom">
                                     {
-                                        this.arr.map((item,index)=>{
+                                        this.state.arr.map((item,index)=>{
                                             var str='black';
-                                            this.content.errwords.map((item1,index1)=>{
+                                            this.state.errwords.map((item1,index1)=>{
                                                 console.log(item,item1,index)
                                                 if(item==item1){
                                                     str='red';
@@ -71,7 +91,7 @@ export default class Guessidioms extends Component {
                                 </div>
                                 
                                 <div className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginTop:"20%"}}></div>
-                                {(this.content.errwords).map((item,index)=>(
+                                {(this.state.errwords).map((item,index)=>(
                                     <div key={index} className="errword">{item}</div>
                                 ))}
                                 <div className="outfeiji">
@@ -81,10 +101,8 @@ export default class Guessidioms extends Component {
                         </div>
                     </div>
                
-               <Router>
-                   <div className="idiomsleft" ><Link onClick={this.minus} className="iconfont icon-ico_leftarrow"></Link></div>
-                   <div className="idiomsright" onClick={this.adds}><Link  className="iconfont icon-ico_leftarrow"></Link></div>
-               </Router>
+					<div className="idiomsleft" onClick={this.minus}><i className="iconfont icon-ico_leftarrow"></i></div>
+                	<div className="idiomsright" onClick={this.adds}><i className="iconfont icon-ico_leftarrow"></i></div>
             </div>
         </div>
         )
