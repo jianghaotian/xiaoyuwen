@@ -107,7 +107,7 @@
     float: left;
     margin-right: 5%;
     margin-bottom: 4%;
-    box-shadow: 5px 5px 10px #747272;
+    box-shadow: 5px 5px 5px #747272;
 }
 .k11:hover{
     box-shadow: none;
