@@ -82,7 +82,7 @@
   height:9.5vw;
   float:left;
   background-color:#fff;
-  border:1px solid gray;
+  outline:1px solid gray;
   font-size:6vw;
   line-height: 9.5vw;
   text-align: center;
@@ -92,7 +92,7 @@
   height:9.5vw;
   float:left;
   background-color: #fff;
-  border:1px solid gray;
+  outline:1px solid gray;
   color:rgba(0, 0, 255, 0)
 }
 .nocode{
@@ -100,7 +100,7 @@
   height:9.5vw;
   float:left;
   background-color: rgba(255, 255, 240, 0);
-  border:1px solid rgba(128, 128, 128, 0);
+  outline:1px solid rgba(128, 128, 128, 0);
   color:rgba(255, 0, 0, 0);
 }
 .answercode{

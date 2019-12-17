@@ -10,11 +10,11 @@ export default class LearnIdioms extends Component {
             num: 1,
             max: 1,
             chengyu: "",
+            pinyin:"",
             shiyi: "",
-            biyu: "",
             liju: "",
-            image: "",
-            story: ""
+            nearword:"",
+            autoword:""
         }
     }
     componentDidMount() {
@@ -29,10 +29,10 @@ export default class LearnIdioms extends Component {
             this.setState({
                 chengyu: res.data.data.main.name,
                 shiyi: res.data.data.main.mean,
-                biyu: "",
-                liju: "",
-                image: "",
-                story: "",
+                pinyin: res.data.data.main.pinyin,
+                liju: res.data.data.main.example,
+                nearword: res.data.data.main.nearword,
+                autoword: res.data.data.main.autoword,
                 max: res.data.data.num
             });
         });
@@ -90,11 +90,11 @@ export default class LearnIdioms extends Component {
                             <div className="idiomcon">
                                 {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
                                 <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.state.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
+                                <div className="whiteline"><span className="special">拼音: </span>{this.state.pinyin}</div>
                                 <div className="whiteline"><span className="special">释义: </span>{this.state.shiyi}</div>
-                                {/* <div className="whiteline"><span className="special">比喻: </span>{this.state.biyu}</div> */}
-                                {/* <div className="whiteline"><span className="special">例句: </span>{this.state.liju}</div> */}
-                                <img src={this.state.image}/>
-                                <textarea className="idiomstory" value={this.state.story}></textarea>
+                                <div className="whiteline"><span className="special">例句: </span>{this.state.liju}</div>
+                                <div className="whiteline"><span className="special">近义词: </span>{this.state.nearword}</div>
+                                <div className="whiteline"><span className="special">反义词: </span>{this.state.autoword}</div>
                             </div>
                         </div>   
                     </div>
