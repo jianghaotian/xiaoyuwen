@@ -77,6 +77,9 @@
     font-size: 18px;
     margin-top: 2%;
 }
+.ty-backtrue>span{
+    color: #000;
+}
 .ty-backerr{
     color: #617ca6;
     margin-left: 2rem;
