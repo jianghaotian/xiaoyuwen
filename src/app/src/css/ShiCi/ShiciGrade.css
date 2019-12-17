@@ -43,7 +43,7 @@
     color: red;
 }
 .sc-backtrue{
-    color: red;
+    color: green;
     margin-left: 2rem;
     width: 90%;
     font-size: 18px;
@@ -55,4 +55,7 @@
     width: 90%;
     font-size: 18px;
     margin-top: 2%;
+}
+.sc-backerr>span {
+    color: red;
 }

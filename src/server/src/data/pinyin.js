@@ -13,7 +13,9 @@ function getPinyin(flag, index) {
 
 
 
-// TODO: 有问题
+
+
+
 function getKanzishiyin(grade) {
 
     let ciyui = getRandom(ciyu[grade].length, 10);

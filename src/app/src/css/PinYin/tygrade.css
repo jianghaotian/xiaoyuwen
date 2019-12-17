@@ -78,12 +78,16 @@
     margin-top: 2%;
 }
 .ty-backerr{
-    color: #617ca6;
+    color: rgb(35, 43, 161);
     margin-left: 2rem;
     width: 90%;
     font-size: 18px;
     margin-top: 2%;
 }
-.ty-backerr>span{
+.ty-backerr>span:first-child{
     color: red;
 }
+.ty-backerr>span:last-child{
+    color: #000;
+}
+

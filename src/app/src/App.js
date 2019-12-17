@@ -67,6 +67,7 @@ export default class App extends Component {
                     <Route exact path="/pinyin/tingyin" component={Tingyinxuanzi} />
 
                     <Route exact path="/pinyin/kanzi/grade" component={Kzgrade} />
+                    <Route exact path="/pinyin/kanzi/grade/:id" component={Kzgrade} />
                     <Route exact path="/pinyin/tingyin/grade" component={Tygrade} />
 
                     {/* 成语 */}
