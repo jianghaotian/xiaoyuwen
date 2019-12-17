@@ -8,11 +8,11 @@ const api = {
     register: p => post('users/register', p),
     get_token: p => get('users/gettoken', p),
     get_info: p => get('info/get',p),
-
+    // 修改密码
     change_pwd: p => post('users/changepwd', p),
     change_pwd_veri: p => post('users/cpwdveri', p),
     veri_change_pwd: p => post('users/vericpwd', p),
-
+    // 修改个人资料
     set_grade: p => post('info/setgrade', p),
     set_name: p => post('info/setname', p),
     set_signature: p => post('info/setsignature', p),
@@ -21,11 +21,13 @@ const api = {
     set_phone_veri: p => post('info/sphoneveri', p),
     set_phone: p => post('info/setphone', p),
 
-
+    // 拼音
     get_xuepinyin: p => get('data/xpy', p),
     get_xuechengyu: p => get('data/xcy', p),
 
+    // 成语
 
+    // 诗词
     get_buchongshiju: p => get('data/bcsj', p),
     post_buchongshiju: p => post('data/bcsj', p),
     get_bcsj_grade: p => get('data/bcsj/grade', p),
