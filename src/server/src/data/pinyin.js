@@ -11,11 +11,6 @@ function getPinyin(flag, index) {
     return dict;
 }
 
-
-
-
-
-
 function getKanzishiyin(grade) {
 
     let ciyui = getRandom(ciyu[grade].length, 10);
