@@ -1,6 +1,6 @@
 let { getRandom } = require('./random');
 
-let chengyu = require('../../data/sys/chengyu.json');
+// let chengyu = require('../../data/sys/chengyu.json');
 
 function getChengyu(grade, index) {
     let dict = {
