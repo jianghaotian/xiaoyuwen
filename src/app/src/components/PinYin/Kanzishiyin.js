@@ -97,21 +97,20 @@ export default class Kanzishiyin extends Component {
             this.setState({
                 content: res.data.data
             },()=>{
+                var str1=this.state.str1;
+                var str2=this.state.str2;
                 for(var i=0;i<this.state.content[0][0].mu.length;i++){
-                    console.log(this.state.str1);
-                    this.setState((state)=>{
-                        return{
-                            str1:state.str1+" "
-                        }
-                    })
+                    str1+=" "
                 }
+                this.setState({
+                    str1:str1
+                })
                 for(var i=0;i<this.state.content[0][1].mu.length;i++){
-                    this.setState((state)=>{
-                        return{
-                            str2:state.str2+" "
-                        }
-                    })
+                    str2+=" "
                 }
+                this.setState({
+                    str2:str2
+                })
             })
         });
 
@@ -136,23 +135,23 @@ export default class Kanzishiyin extends Component {
             this.setState({
                 str1:"",
                 str2:""
+            },()=>{
+                var str1=this.state.str1;
+                var str2=this.state.str2;
+                for(var i=0;i<this.state.content[this.count+1][0].mu.length;i++){
+                    str1+=" "
+                }
+                this.setState({
+                    str1:str1
+                })
+                for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
+                    str2+=" "
+                }
+                this.setState({
+                    str2:str2
+                })
             })
-            for(var i=0;i<this.state.content[this.count+1][0].mu.length;i++){
-                console.log(this.state.str1);
-                this.setState((state)=>{
-                    return{
-                        str1:state.str1+" "
-                    }
-                })
-            }
-            console.log(this.state.content);
-            for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
-                this.setState((state)=>{
-                    return{
-                        str2:state.str2+" "
-                    }
-                })
-            }
+        
 
             if(this.count===8){
                 this.result[this.count].one=this.state.str1;
