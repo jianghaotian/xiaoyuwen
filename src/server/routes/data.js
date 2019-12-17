@@ -229,7 +229,7 @@ router.get('/xcy', function (req, res, next) {
 
     let jsonData = {
         status: 0,
-        data: getChengyu(grade, index)
+        // data: getChengyu(grade, index)
     }
     res.json(jsonData);
 });
