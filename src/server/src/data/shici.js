@@ -129,10 +129,20 @@ function getShici(grade, index) {
         num: shici[grade].length
     }
     return dict;
+}
 
+function getShiciycz(grade, index) {
+    let dict = {
+        shici: shici[grade][index].content.join(''),
+		name: shici[grade][index].name,
+		errwords: shici[grade][index].errword,
+        max: shici[grade].length
+    }
+    return dict;
 }
 
 
 
-module.exports = { getBuchongshiju, getShici }
+
+module.exports = { getBuchongshiju, getShici, getShiciycz }
 
