@@ -75,8 +75,8 @@ export default class Kanzishiyin extends Component {
             num:0,
             value:'',
             content:[[{diao: []}, {diao: []}]],
-            str1:"   ",
-            str2:"    "
+            str1:"",
+            str2:""
         }
         this.count=1;
         this.flag="";
@@ -96,6 +96,22 @@ export default class Kanzishiyin extends Component {
 
             this.setState({
                 content: res.data.data
+            },()=>{
+                for(var i=0;i<this.state.content[0][0].mu.length;i++){
+                    console.log(this.state.str1);
+                    this.setState((state)=>{
+                        return{
+                            str1:state.str1+" "
+                        }
+                    })
+                }
+                for(var i=0;i<this.state.content[0][1].mu.length;i++){
+                    this.setState((state)=>{
+                        return{
+                            str2:state.str2+" "
+                        }
+                    })
+                }
             })
         });
 
@@ -129,6 +145,7 @@ export default class Kanzishiyin extends Component {
                     }
                 })
             }
+            console.log(this.state.content);
             for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
                 this.setState((state)=>{
                     return{
