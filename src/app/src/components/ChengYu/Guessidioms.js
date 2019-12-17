@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {NavBar,Icon,Toast} from 'antd-mobile';
+import {NavBar,Icon,Toast,Button} from 'antd-mobile';
 import "../../css/ChengYu/guess.css"
 
 export default class Guessidioms extends Component {
@@ -59,7 +59,9 @@ export default class Guessidioms extends Component {
         ]
         this.state={
             num:1,
-            next:"下一题"
+            next:"下一题",
+            scsubmitFront: 'jlsubmit-front',
+			front: '上一题',
         }
         this.no=0;
         this.objArr=[];
@@ -79,7 +81,8 @@ export default class Guessidioms extends Component {
             console.log(this.answerArr);
             return{
                 num:state.num,
-                next:"下一题"
+                next:"下一题",
+                scsubmitFront:'jlsubmit-front'
             }
         })
     }
@@ -97,7 +100,8 @@ export default class Guessidioms extends Component {
             this.judge(state.num);
             return{
                 num:state.num,
-                next:"下一题"
+                next:"下一题",
+                scsubmitFront:'jlsubmit-front1'
             }
         })    
     }
@@ -220,9 +224,9 @@ export default class Guessidioms extends Component {
                     </div>
                     
                     <div className="outsubmit">
-                        <button onClick={this.minus} className="submitguess">上一题</button>
+                        <Button style={{width:'27vw',marginTop:'1%'}} onClick={this.minus} className={this.state.scsubmitFront}>上一题</Button>
                         <button onClick={()=>this.clear(this.state.num)} className="submitguess" style={{display:"inline"}}>清空</button>
-                        <button onClick={this.adds} className="submitguess">{this.state.next}</button>
+                        <Button style={{width:'27vw',marginTop:'1%'}} onClick={this.adds} className="jlsubmit-next">{this.state.next}</Button>
                     </div>
                     
                 </div>
