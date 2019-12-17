@@ -516,11 +516,17 @@ router.get('/chengji', function (req, res, next) {
     // let { grade, index } = req.query;
     let token = req.header('token');
 
-    let jsonData = {
-        status: 0,
-        // data: getShiciycz(grade, index)
-    }
-    res.json(jsonData);
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+
+            runSql('select * from question where uid = ?', [result.data.uid], (result) => {
+                res.json(result);
+            });
+
+        } else {
+            res.json(result);
+        }
+    });
 });
 
 
