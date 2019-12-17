@@ -23,7 +23,6 @@ const api = {
 
     // 拼音
     get_xuepinyin: p => get('data/xpy', p),
-    get_xuechengyu: p => get('data/xcy', p),
 
     get_kanzishiyin: p => get('data/kzsy', p),
     post_kanzishiyin: p => post('data/kzsy', p),
@@ -32,7 +31,11 @@ const api = {
     get_tyxz_grade: p => get('data/tyxz/grade', p),
 
     // 成语
+    get_xuechengyu: p => get('data/xcy', p),
     get_cyycz: p => get('data/cyycz', p),
+    get_ccy : p => get('data/ccy', p),
+    post_ccy : p => post('data/ccy', p),
+    get_ccy_grade: p => get('data/ccy/grade', p),
 
     // 诗词
     get_buchongshiju: p => get('data/bcsj', p),
