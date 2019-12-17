@@ -8,6 +8,59 @@ export default class Kanzishiyin extends Component {
         this.index=0;
         this.result=[{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""},{one:"",two:""}];
         this.jian=['ɑ','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','ü','w','x','y','z'];
+        this.data=[
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            },
+            {
+                write:{one:"",two:""},
+                answer:{one:"",two:""},
+                status:false  
+            }
+            
+        ];
         this.state={
             num:0,
             value:'',
@@ -103,7 +156,7 @@ export default class Kanzishiyin extends Component {
                         mu:"nü"
                     },
                     {
-                        diao:['','ˉ','','',''],
+                        diao:['','','ˉ','',''],
                         zi:'生',
                         mu:"sheng"
                     }
@@ -138,6 +191,7 @@ export default class Kanzishiyin extends Component {
         }
         this.count=1;
         this.flag="";
+        this.score=0;
         this.Btn1=<button className="t11" onClick={this.prev}>上一题</button>;
         this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
                  
@@ -257,9 +311,24 @@ export default class Kanzishiyin extends Component {
         }
     }
     submit=()=>{
-        this.result[this.count+1]=this.state.value;
-        this.props.history.push("/pinyin/kanzi/grade");
+        this.result[this.count+1].one=this.state.str1;
+        this.result[this.count+1].two=this.state.str2;
+        for(var i=0;i<this.data.length;i++){
+            this.data[i].write=this.result[i];
+            this.data[i].answer.one=this.state.content[i][0].mu;
+            this.data[i].answer.two=this.state.content[i][1].mu;
+            if(this.result[i].one===this.state.content[i][0].mu&&this.result[i].two===this.state.content[i][1].mu){
+                this.data[i].status=true;
+                this.score++;
+            }
+            else{
+                this.data[i].status=false;
 
+            }
+
+        }
+        
+        this.props.history.push({pathname:'/pinyin/kanzi/grade',state:{data:this.data,score:this.score}});
         console.log("交卷");
         console.log(this.result);
 

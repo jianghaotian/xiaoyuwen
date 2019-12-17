@@ -16,9 +16,9 @@ axios.interceptors.request.use((config) => {
     if (store.getState().token.token) {
         config.headers.common['token'] = store.getState().token.token;
     }
-    if(config.method  === 'post'){
-        config.data = qs.stringify(config.data);
-    }
+    // if(config.method  === 'post'){
+    //     config.data = qs.stringify(config.data);
+    // }
     return config;
 }, (error) =>{
     console.log('错误的传参');
