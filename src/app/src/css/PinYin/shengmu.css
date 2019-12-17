@@ -49,11 +49,11 @@
     height:30%;
     margin:auto;
     margin-top: 5%;
-    padding-top: 5%;
+    /* padding-top: 5%; */
     /* border: 1px solid #ececec;
     border-radius: 10px;
     background: #ffffff; */
-    background: url(../../images/board1.jpg);
+    background: url(../../images/board2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -87,7 +87,7 @@
      margin-top: 25%;
     font-size:6vw;
     text-align: center;
-    color:#617ca6;
+    color:#345ea7;
  }
  .s7{
      width: 100%;
