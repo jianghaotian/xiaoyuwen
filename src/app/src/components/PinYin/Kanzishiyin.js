@@ -12,51 +12,61 @@ export default class Kanzishiyin extends Component {
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             },
             {
                 write:{one:"",two:""},
                 answer:{one:"",two:""},
+                word:"",
                 status:false  
             }
             
@@ -64,128 +74,7 @@ export default class Kanzishiyin extends Component {
         this.state={
             num:0,
             value:'',
-            content:[
-                [
-                    {
-                        diao:['','`',''],
-                        zi:'太',
-                        mu:"tɑi"
-                    },
-                    {
-                        diao:['','´','',''],
-                        zi:'阳',
-                        mu:"yɑng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','ˇ',''],
-                        zi:'早',
-                        mu:"zɑo"
-                    },
-                    {
-                        diao:['','','`','',''],
-                        zi:'上',
-                        mu:"shɑng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','','ˉ','',''],
-                        zi:'中',
-                        mu:"zhong"
-                    },
-                    {
-                        diao:['','ˇ'],
-                        zi:'午',
-                        mu:"wu"
-                    }
-                ],
-                [
-                    {
-                        diao:['','ˇ',''],
-                        zi:'晚',
-                        mu:"wɑn"
-                    },
-                    {
-                        diao:['','','`','',''],
-                        zi:'上',
-                        mu:"shɑng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','`',''],
-                        zi:'月',
-                        mu:"yüe"
-                    },
-                    {
-                        diao:['','','`','',''],
-                        zi:'亮',
-                        mu:"liɑng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','`','',''],
-                        zi:'星',
-                        mu:"xing"
-                    },
-                    {
-                        diao:['','`','',''],
-                        zi:'星',
-                        mu:"xing"
-                    }
-                ],
-                [
-                    {
-                        diao:['','`'],
-                        zi:'地',
-                        mu:"di"
-                    },
-                    {
-                        diao:['','´',''],
-                        zi:'球',
-                        mu:"qiu"
-                    }
-                ],
-                [
-                    {
-                        diao:['','ˇ'],
-                        zi:'女',
-                        mu:"nü"
-                    },
-                    {
-                        diao:['','','ˉ','',''],
-                        zi:'生',
-                        mu:"sheng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','´',''],
-                        zi:'男',
-                        mu:"nɑn"
-                    },
-                    {
-                        diao:['','','ˉ','',''],
-                        zi:'生',
-                        mu:"sheng"
-                    }
-                ],
-                [
-                    {
-                        diao:['','`',''],
-                        zi:'太',
-                        mu:"tɑi"
-                    },
-                    {
-                        diao:['','`',''],
-                        zi:'太',
-                        mu:"tɑi"
-                    }
-                ]
-            ], 
+            content:[[{diao: []}, {diao: []}]],
             str1:"   ",
             str2:"    "
         }
@@ -193,11 +82,24 @@ export default class Kanzishiyin extends Component {
         this.flag="";
         this.score=0;
         this.Btn1=<button className="t11" onClick={this.prev}>上一题</button>;
-        this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
-                 
+        this.Btn2=<button onClick={this.next} className="t11">下一题</button>; 
     }
+    componentDidMount() {
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
 
+        let grade = this.$store.getState().users.grade || 1;
+        this.$api.get_kanzishiyin({grade: grade}).then(res => {
+            Toast.hide();
+            console.log(res);
 
+            this.setState({
+                content: res.data.data
+            })
+        });
+
+    }
     next=()=>{
         this.index=0;
         this.count=this.state.num;
@@ -315,22 +217,40 @@ export default class Kanzishiyin extends Component {
         this.result[this.count+1].two=this.state.str2;
         for(var i=0;i<this.data.length;i++){
             this.data[i].write=this.result[i];
-            this.data[i].answer.one=this.state.content[i][0].mu;
-            this.data[i].answer.two=this.state.content[i][1].mu;
+            this.data[i].word=this.state.content[i][0].word + this.state.content[i][1].word;
+            this.data[i].answer.one=this.state.content[i][0].spell;
+            this.data[i].answer.two=this.state.content[i][1].spell;
+            console.log(this.result[i]);
+            console.log(this.state.content[i]);
+
             if(this.result[i].one===this.state.content[i][0].mu&&this.result[i].two===this.state.content[i][1].mu){
                 this.data[i].status=true;
                 this.score++;
             }
             else{
                 this.data[i].status=false;
-
             }
+        }
 
+        if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+            Toast.loading('正在判题...', 10, () => {
+                Toast.offline('网络异常', 1, null, false);
+            });
+            this.$api.post_kanzishiyin({data:this.data,score:this.score}).then(res => {
+                Toast.hide();
+                if (res.data.status === 0) {
+                    this.props.history.push('/pinyin/kanzi/grade/' + res.data.data);
+                } else {
+                    Toast.offline('网络异常', 1, null, false);
+                }
+            })
+        } else {
+            Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+            this.props.history.push({pathname:'/pinyin/kanzi/grade',state:{data:this.data,score:this.score}});
         }
         
-        this.props.history.push({pathname:'/pinyin/kanzi/grade',state:{data:this.data,score:this.score}});
-        console.log("交卷");
-        console.log(this.result);
+        // console.log("交卷");
+        // console.log(this.result);
 
         // console.log(this.state.str1,this.state.str2,this.state.content[0].mu+this.state.content[1].mu)
         // if(this.state.str1+this.state.str2===this.state.content[0].mu+this.state.content[1].mu){
@@ -496,7 +416,7 @@ export default class Kanzishiyin extends Component {
                                     })
                                 }
                             </div>
-                            <div className='k9'>{this.state.content[this.state.num][0].zi}</div>
+                            <div className='k9'>{this.state.content[this.state.num][0].word}</div>
                         </div>
                         <div className="k3">
                             <div className="k4" ref="second">
@@ -511,7 +431,7 @@ export default class Kanzishiyin extends Component {
                                     })
                                 }
                             </div>
-                            <div className='k9'>{this.state.content[this.state.num][1].zi}</div>
+                            <div className='k9'>{this.state.content[this.state.num][1].word}</div>
                         </div>
                     </div>
                     <div className="k10">

@@ -25,6 +25,12 @@ const api = {
     get_xuepinyin: p => get('data/xpy', p),
     get_xuechengyu: p => get('data/xcy', p),
 
+    get_kanzishiyin: p => get('data/kzsy', p),
+    post_kanzishiyin: p => post('data/kzsy', p),
+    get_kzsy_grade: p => get('data/kzsy/grade', p),
+    post_tingyinxuanzi: p => post('data/tyxz', p),
+    get_tyxz_grade: p => get('data/tyxz/grade', p),
+
     // 成语
 
     // 诗词

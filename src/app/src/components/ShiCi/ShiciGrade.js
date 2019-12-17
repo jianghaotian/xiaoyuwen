@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grade from '../Grade';
+import {NavBar,Icon} from 'antd-mobile';
 import '../../css/ShiCi/ShiciGrade.css'
 
 export default class ShiciGrade extends Component {
@@ -25,7 +26,15 @@ export default class ShiciGrade extends Component {
         return (
             <div>
                 <div className="grade-back"></div>
-                <Grade num={this.state.num}/>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>补 充 诗 句</NavBar>
+                {/* <Grade num={this.state.num}/> */}
+                <div className="ty1">
+                    <img className="ty2" src={require('../../images/word3.PNG')} />
+                    <div className="ty3">
+                        <div className="ty4">总分：</div>
+                        <img  src={require('../../images/num'+this.state.num+'.PNG') } className="ty5" />
+                    </div>
+                </div>
                 <div style={{minHeight:'53rem',marginTop:'5%',marginBottom:20}}>
                     {
                         this.state.answer.map((value, index) => {
@@ -46,7 +55,7 @@ export default class ShiciGrade extends Component {
                                             <span className="sc-text">{index + 1}.{value.show}</span>
                                             <i className={'iconfont icon-cuowu2 sc-panduancuo'}></i>
                                         </div>
-                                        <div className='sc-backerr'>答案是:{value.ans}</div>
+                                        <div className='sc-backerr'>正确答案: <span>{value.ans}</span></div>
                                     </div>
                                 )
                             }

@@ -7,8 +7,24 @@ export default class Kzgrade extends Component {
     constructor(props){
         super(props);
         this.state={
-            score:this.props.location.state.score,
-            data:this.props.location.state.data
+            score: 0,
+            data: []
+        }
+    }
+    componentDidMount() {
+        if (this.props.location.state) {
+            this.setState({
+                score: this.props.location.state.score,
+                data: this.props.location.state.data
+            });
+        } else {
+            this.$api.get_kzsy_grade({time: this.props.match.params.id}).then(res => {
+                let { score, data } = res.data.data;
+                this.setState({
+                    score: score,
+                    data: data                
+                });
+            });
         }
     }
     render() {
@@ -23,7 +39,7 @@ export default class Kzgrade extends Component {
                         <img  src={require('../../images/num'+this.state.score+'.PNG') } className="ty5" />
                     </div>
                 </div>
-                <div style={{minHeight:'40rem'}}>
+                <div style={{minHeight:'53rem',marginTop:'5%',marginBottom:20}}>
                     {
                         this.state.data.map((item,index)=>{
                             if(item.status){
@@ -44,7 +60,7 @@ export default class Kzgrade extends Component {
                                             <span className="ty-text">{(index+1)+'.  '+item.write.one+" "+item.write.two}</span>
                                             <i className={'iconfont icon-cuowu2 ty-panduan-cuo'}></i>
                                         </div>
-                                        <div className='ty-backerr'>正确答案:  <span>{item.answer.one+" "+item.answer.two}</span></div>
+                                        <div className='ty-backerr'>正确答案:  <span>{item.answer.one+" "+item.answer.two}</span><span>（{item.word}）</span></div>
                                     </div>
                                 )
                             }
