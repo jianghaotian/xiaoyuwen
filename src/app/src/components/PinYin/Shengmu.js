@@ -29,6 +29,9 @@ export default class Shengmu extends Component {
         }
         this.getTi();
     }
+    play = () => {
+        this.au.play();
+    }
     getTi = () => {
         Toast.loading('正在加载...', 10, () => {
             Toast.offline('网络异常', 1, null, false);
@@ -40,8 +43,8 @@ export default class Shengmu extends Component {
                 diao: res.data.data.main.spell,
                 zi: res.data.data.main.word,
                 ci: res.data.data.main.example,
-                audio: res.data.data.main.audio,
-                img: res.data.data.main.image,
+                audio: pyAudioUrl + res.data.data.main.audio,
+                img: pyImgUrl + res.data.data.main.image,
                 max: res.data.data.num
             });
         });
@@ -74,6 +77,7 @@ export default class Shengmu extends Component {
     render() {
         return (
             <div className="s1">
+                <audio src={this.state.audio} preload="auto" ref={child => this.au = child}></audio>
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}}/>} style={{backgroundColor:"#617ca6"}}>{this.state.tittle}</NavBar>
                 <div className="s2">
                     {/* <SearchBar
@@ -95,7 +99,7 @@ export default class Shengmu extends Component {
                     <div className="s3">
                         <div className="s4">{this.state.yin}</div>
                         <div className='s5'>
-                            <div className="iconfont icon-laba1 s6"></div>
+                            <div className="iconfont icon-laba1 s6" onClick={this.play}></div>
                             <div className="s7">{this.state.diao}</div>
                             <div className="s8">{this.state.zi}</div>
                         </div>
@@ -106,7 +110,7 @@ export default class Shengmu extends Component {
                     </div>
                     
                     <div className="s10">
-                        <img src={pyImgUrl + this.state.img}/>
+                        <img src={this.state.img}/>
                     </div>
                 </div>
                
