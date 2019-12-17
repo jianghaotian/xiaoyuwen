@@ -45,6 +45,10 @@ const api = {
     get_xueshici: p => get('data/xsc', p),
     get_scycz: p => get('data/scycz', p),
 
+
+    // 成绩单
+    get_chengji: p => get('data/chengji', p)
+
 }
 
 

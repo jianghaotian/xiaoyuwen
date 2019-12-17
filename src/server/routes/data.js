@@ -502,6 +502,28 @@ router.get('/scycz', function (req, res, next) {
     res.json(jsonData);
 });
 
+/**
+ * （易错字）
+ * GET
+ * 接收参数:
+ *     grade : 用户年级
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/chengji', function (req, res, next) {
+    // let { grade, index } = req.query;
+    let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        // data: getShiciycz(grade, index)
+    }
+    res.json(jsonData);
+});
+
+
 
 
 module.exports = router;
