@@ -174,17 +174,14 @@
  margin-top: 50%;
 }
 .submitguess{
-padding: 5%;
+padding: 3%;
 font-size: 18px;
-width:25vw;
-height: 11vw;
-line-height:1vw;
 text-align: center;
 background-color:#6189B8;
 color:#fff;
-border-radius: 5px;
+border-radius: 10px;
 border:1px solid #6189B8;
-margin:0 2%
+margin:0 2%;
 }
 .pointerevent{
 pointer-events: none;
