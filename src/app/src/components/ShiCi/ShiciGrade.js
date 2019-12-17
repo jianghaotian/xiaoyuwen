@@ -26,7 +26,7 @@ export default class ShiciGrade extends Component {
         return (
             <div>
                 <div className="grade-back"></div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>补 充 诗 句</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.goBack()}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>补 充 诗 句</NavBar>
                 {/* <Grade num={this.state.num}/> */}
                 <div className="ty1">
                     <img className="ty2" src={require('../../images/word3.PNG')} />
