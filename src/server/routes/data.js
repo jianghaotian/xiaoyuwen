@@ -8,9 +8,9 @@ const runSql = require('../mysql');
 const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
-let { getBuchongshiju, getShici } = require('../src/data/shici.js')
-let { getPinyin, getKanzishiyin } = require('../src/data/pinyin.js')
-let { getChengyu } = require('../src/data/chengyu');
+let { getBuchongshiju, getShici, getShiciycz } = require('../src/data/shici')
+let { getPinyin, getKanzishiyin } = require('../src/data/pinyin')
+let { getChengyu, getChengyuycz } = require('../src/data/chengyu');
 
 
 
@@ -229,7 +229,28 @@ router.get('/xcy', function (req, res, next) {
 
     let jsonData = {
         status: 0,
-        // data: getChengyu(grade, index)
+        data: getChengyu(grade, index)
+    }
+    res.json(jsonData);
+});
+
+/**
+ * （易错字）
+ * GET
+ * 接收参数:
+ *     grade : 用户年级
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/cyycz', function (req, res, next) {
+    let { grade, index } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getChengyuycz(grade, index)
     }
     res.json(jsonData);
 });
@@ -362,7 +383,7 @@ router.get('/bcsj/grade', function (req, res, next) {
 });
 
 
-/**  TODO
+/**
  * （易错字）
  * GET
  * 接收参数:
@@ -372,15 +393,15 @@ router.get('/bcsj/grade', function (req, res, next) {
  *     message: "OK",
  *     data: {}
  */
-router.get('/ycz', function (req, res, next) {
-    let { grade } = req.query;
+router.get('/scycz', function (req, res, next) {
+    let { grade, index } = req.query;
     // let token = req.header('token');
 
-    // let jsonData = {
-    //     status: 0,
-    //     data: ？？？(grade, index)
-    // }
-    // res.json(jsonData);
+    let jsonData = {
+        status: 0,
+        data: getShiciycz(grade, index)
+    }
+    res.json(jsonData);
 });
 
 
