@@ -43,6 +43,7 @@ import Guanqia from './components/Guanqia';
 import ShiciGrade from './components/ShiCi/ShiciGrade'
 import Kzgrade from './components/PinYin/Kzgrade';
 import Tygrade from './components/PinYin/Tygrade';
+import Jlgrade from './components/ChengYu/Jlgrade'
 
 export default class App extends Component {
     render() {
@@ -75,6 +76,7 @@ export default class App extends Component {
                     <Route exact path="/chengyu/yicuozi" component={Erridioms} />
                     <Route exact path="/chengyu/caichengyu" component={Guessidioms} />
                     <Route exact path="/chengyu/chengjielong" component={Idiomjielong} />
+                    <Route exact path="/chengyu/jielong/grade" component={Jlgrade}/>
 
                     {/* 诗词 */}
                     <Route exact path="/shici/buchong" component={Buchongshiju} />
