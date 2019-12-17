@@ -64,7 +64,7 @@ export default class Xuexijindu extends Component {
             if (res.data.status === 0) {
                 console.log(res);
                 this.setState({
-                    data: res.data.data
+                    data: res.data.data || []
                 })
             } else {
                 Toast.fail('加载失败', 1);
@@ -77,6 +77,9 @@ export default class Xuexijindu extends Component {
                 <div className="wode_back"></div>
                 <NavBar mode="dark" icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/wode')}}/>} style={{background:'#617ca6',color:'#fff'}}>成 绩 单</NavBar>
                 <div style={{minHeight:'5rem', marginBottom:'5%'}}>
+                {
+                    this.state.data.length == 0 ? <div style={{textAlign: 'center'}}><div style={{height:'50vh',lineHeight:'50vh',fontSize:'30px'}}>没有成绩记录!</div></div> : ''
+                }
                     {
                         this.state.data.map(value => (
                             <div className="xxjd_box a_click" key={value.Qid} onClick={() => {this.showURL(value.Qtype, value.Qday)}}>
