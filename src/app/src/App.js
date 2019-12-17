@@ -81,6 +81,7 @@ export default class App extends Component {
                     <Route exact path="/shici/yicuozi" component={Shicierr} />
 
                     <Route exact path="/shici/buchong/grade" component={ShiciGrade} />
+                    <Route exact path="/shici/buchong/grade/:id" component={ShiciGrade} />
 
 
                     {/* 我的 */}

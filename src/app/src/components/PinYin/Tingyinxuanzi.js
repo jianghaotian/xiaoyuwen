@@ -15,55 +15,109 @@ export default class Tingyinxuanzi extends Component {
                 {
                     yin:'zǎo',
                     zi:'早',
-                    choice:['旱','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['旱','卓','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'shàng',
                     zi:'上',
-                    choice:['上','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['下','卓','阜','皁','上','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'wǒ',
                     zi:'我',
-                    choice:['我','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['俄','卓','阜','皁','我','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'chī',
                     zi:'吃',
-                    choice:['吃','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['呓','卓','阜','皁','乞','炮','饱','抱','吃','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'le',
                     zi:'了',
-                    choice:['了','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['子','字','阜','皁','早','炮','饱','抱','袍','了','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'jī',
                     zi:'鸡',
-                    choice:['鸡','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['鸟','卓','袅','皁','早','炮','饱','鸡','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'dàn',
                     zi:'蛋',
-                    choice:['蛋','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['疍','蜃','胥','皁','早','炮','饱','抱','袍','泡','補','蛋','哺','脯','仆']
                 },
                 {
                     yin:'hé',
                     zi:'和',
-                    choice:['和','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['种','卓','阜','皁','早','炮','和','抱','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'miàn',
                     zi:'面',
-                    choice:['面','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['面','而','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
                 },
                 {
                     yin:'bāo',
                     zi:'包',
-                    choice:['包','卓','阜','皁','早','旱','卓','阜','皁','早','旱','卓','阜','皁','早']
+                    choice:['句','卓','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','包']
                 }
         ]
         };
+        this.data=[
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            },
+            {
+                write:'',
+                answer:"",
+                status:false    
+            }
+
+        ]
+        this.score=0;
         this.Btn1=<button className="t11" onClick={this.prev}>上一题</button>;
         this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
         this.count=0;
@@ -163,7 +217,19 @@ export default class Tingyinxuanzi extends Component {
 
     submit=()=>{
         this.result[this.count+1]=this.state.value;
-        this.props.history.push("/pinyin/tingyin/grade");
+        for(var i=0;i<this.data.length;i++){
+            this.data[i].write=this.result[i];
+            this.data[i].answer=this.state.content[i].zi;
+            if(this.result[i]===this.state.content[i].zi){
+                this.data[i].status=true;
+                this.score++;
+            }
+            else{
+                this.data[i].status=false;
+
+            }
+        }
+        this.props.history.push({pathname:'/pinyin/tingyin/grade',state:{data:this.data,score:this.score}});
 
         console.log("交卷");
         console.log(this.result);
@@ -186,7 +252,10 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div className="t1">
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6"}}>听 音 选 字</NavBar>
+                <NavBar
+                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
+                    style={{backgroundColor:"#617ca6"}}
+                    >听 音 选 字</NavBar>
                 {/* <div className='t1'></div> */}
                 <div className="s2">
                     <div className='sm-box'>

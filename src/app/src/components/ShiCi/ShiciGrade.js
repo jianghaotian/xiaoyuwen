@@ -3,62 +3,55 @@ import Grade from '../Grade';
 import '../../css/ShiCi/ShiciGrade.css'
 
 export default class ShiciGrade extends Component {
+    constructor(){
+        super();
+        this.state={
+            num: 0,
+            answer: []
+        }
+    }
+    componentDidMount() {
+        this.$api.get_bcsj_grade({time: this.props.match.params.id}).then(res => {
+            let { answer, grade } = res.data.data;
+
+            this.setState({
+                num: grade,
+                answer: answer                
+            });
+        });
+
+    }
     render() {
         return (
             <div>
                 <div className="grade-back"></div>
-                <Grade />
-                <div style={{minHeight:'53rem',marginTop:'5%'}}>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">1.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">2.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-cuowu2 sc-panduancuo'}></i>
-                    </div>
-                    <div className='sc-backerr'>答案是:床前明月光，疑是地上霜</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">3.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">4.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-cuowu2 sc-panduancuo'}></i>
-                    </div>
-                    <div className='sc-backerr'>答案是:床前明月光，疑是地上霜</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">5.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">6.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-cuowu2 sc-panduancuo'}></i>
-                    </div>
-                    <div className='sc-backerr'>答案是:床前明月光，疑是地上霜。少时诵诗书。双双双双是。</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">7.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">8.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">9.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
-                    <div className='sc-listBox'>
-                        <span className="sc-text">10.床前明月光，疑是地上霜</span>
-                        <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
-                    </div>
-                    <div className='sc-backtrue'>答对啦！</div>
+                <Grade num={this.state.num}/>
+                <div style={{minHeight:'53rem',marginTop:'5%',marginBottom:20}}>
+                    {
+                        this.state.answer.map((value, index) => {
+                            if (value.flag) {
+                                return (
+                                    <div key={index}>
+                                        <div className='sc-listBox'>
+                                            <span className="sc-text">{index + 1}.{value.show}</span>
+                                            <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
+                                        </div>
+                                        <div className='sc-backtrue'>答对啦！</div>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div key={index}>
+                                        <div className='sc-listBox'>
+                                            <span className="sc-text">{index + 1}.{value.show}</span>
+                                            <i className={'iconfont icon-cuowu2 sc-panduancuo'}></i>
+                                        </div>
+                                        <div className='sc-backerr'>答案是:{value.ans}</div>
+                                    </div>
+                                )
+                            }
+                        })   
+                    }
                 </div>
             </div>
         )
