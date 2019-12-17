@@ -7,7 +7,6 @@
 .learnidiomcon{
   width:85%;
   height:100%;
-
   margin:0 auto;
 }
 .orange{
@@ -33,12 +32,13 @@
   font-size:17px;
 }
 .idiomstory{
-  width:98%;
+  overflow: auto;
+  /* width:90%; */
   height:34vw;
   font-size: 17px;
   background-color: rgb(255, 255, 255);
   margin-top:10vw;
-  font-family: "仿宋";
+  padding:8px;
   font-size: 18px;
   resize:none;
   border-top:1.5px solid gray;
@@ -104,7 +104,7 @@
   font-family: "华文新魏";
 }
 .theidiom{
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 18px;
 }
 
