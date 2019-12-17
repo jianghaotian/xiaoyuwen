@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../css/PinYin/shengmu.css';
 import '../../css/PinYin/kanzishiyin.css'
-import {NavBar,Icon,Toast} from 'antd-mobile';
+import {NavBar,Icon,Toast,Button} from 'antd-mobile';
 export default class Kanzishiyin extends Component {
     constructor(){
         super();
@@ -81,8 +81,8 @@ export default class Kanzishiyin extends Component {
         this.count=1;
         this.flag="";
         this.score=0;
-        this.Btn1=<button className="t11" onClick={this.prev}>上一题</button>;
-        this.Btn2=<button onClick={this.next} className="t11">下一题</button>; 
+        this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
+        this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>; 
     }
     componentDidMount() {
         Toast.loading('正在加载...', 10, () => {
@@ -97,20 +97,22 @@ export default class Kanzishiyin extends Component {
             this.setState({
                 content: res.data.data
             },()=>{
-                var str1=this.state.str1;
-                var str2=this.state.str2;
+                var str1="";
+                var str2="";
                 for(var i=0;i<this.state.content[0][0].mu.length;i++){
                     str1+=" "
                 }
                 this.setState({
                     str1:str1
+                },()=>{
+                    for(var i=0;i<this.state.content[0][1].mu.length;i++){
+                        str2+=" "
+                    }
+                    this.setState({
+                        str2:str2
+                    })
                 })
-                for(var i=0;i<this.state.content[0][1].mu.length;i++){
-                    str2+=" "
-                }
-                this.setState({
-                    str2:str2
-                })
+                
             })
         });
 
@@ -136,33 +138,35 @@ export default class Kanzishiyin extends Component {
                 str1:"",
                 str2:""
             },()=>{
-                var str1=this.state.str1;
-                var str2=this.state.str2;
+                var str1="";
+                var str2="";
                 for(var i=0;i<this.state.content[this.count+1][0].mu.length;i++){
                     str1+=" "
                 }
                 this.setState({
                     str1:str1
+                },()=>{
+                    for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
+                        str2+=" "
+                    }
+                    this.setState({
+                        str2:str2
+                    })
                 })
-                for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
-                    str2+=" "
-                }
-                this.setState({
-                    str2:str2
-                })
+                
             })
         
 
             if(this.count===8){
                 this.result[this.count].one=this.state.str1;
                 this.result[this.count].two=this.state.str2;
-                this.Btn2=<button onClick={this.submit} className="t11">交卷</button>;
+                this.Btn2=<Button onClick={this.submit} className="t11">交卷</Button>;
                 this.setState({
                     num:this.state.num+1,
                 })
             }
             else{
-                this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
+                this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
                 this.result[this.count].one=this.state.str1;
                 this.result[this.count].two=this.state.str2;
                 this.setState({
@@ -178,7 +182,7 @@ export default class Kanzishiyin extends Component {
                 str2:this.result[this.count+1].two,
             })
             if(this.count===8){
-                this.Btn2=<button onClick={this.submit} className="t11">交卷</button>;
+                this.Btn2=<Button onClick={this.submit} className="t11">交卷</Button>;
                 this.result[this.count].one=this.state.str1;
                 this.result[this.count].two=this.state.str2;
                 this.setState({
@@ -186,7 +190,7 @@ export default class Kanzishiyin extends Component {
                 })
             }
             else{
-                this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
+                this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
                 this.result[this.count].one=this.state.str1;
                 this.result[this.count].two=this.state.str2;
                 this.setState({
@@ -214,7 +218,7 @@ export default class Kanzishiyin extends Component {
         }
         div1[this.index].className="k5 k7";
         if(this.count===0){
-            this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
+            this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
             this.setState({
                 num:0
             })
@@ -225,7 +229,7 @@ export default class Kanzishiyin extends Component {
                 str2:this.result[this.count-1].two,
                 num:this.state.num-1
             })
-            this.Btn2=<button onClick={this.next} className="t11">下一题</button>;
+            this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
         }
     }
     submit=()=>{
@@ -278,7 +282,7 @@ export default class Kanzishiyin extends Component {
         //     Toast.info('恭喜你，答对啦！撒花🎉！！', 1);
         //     this.count=this.count+1;
         //     if(this.count===4){
-        //         this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        //         this.Btn=<Button onClick={this.enter} className="t11">下一关</Button>
         //     }
         // }
         // else{
@@ -288,7 +292,7 @@ export default class Kanzishiyin extends Component {
         //     Toast.info('太遗憾了，你答错啦！😭！', 1);
         //     this.count=this.count+1;
         //     if(this.count===4){
-        //         this.Btn=<button onClick={this.enter} className="t11">下一关</button>
+        //         this.Btn=<Button onClick={this.enter} className="t11">下一关</Button>
         //     }
         // }
     }
