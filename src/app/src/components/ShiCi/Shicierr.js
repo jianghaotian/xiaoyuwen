@@ -107,10 +107,9 @@ export default class Shicierr extends Component {
 							</div>
 						</div>
 					</div>
-					<Router>
-						<div className="idiomsleft" ><Link onClick={this.minus} className="iconfont icon-ico_leftarrow"></Link></div>
-						<div className="idiomsright" onClick={this.adds}><Link className="iconfont icon-ico_leftarrow"></Link></div>
-					</Router>
+					
+					<div className="idiomsleft" onClick={this.minus}><i className="iconfont icon-ico_leftarrow"></i></div>
+                	<div className="idiomsright" onClick={this.adds}><i className="iconfont icon-ico_leftarrow"></i></div>
 				</div>
 			</div>
 		)
