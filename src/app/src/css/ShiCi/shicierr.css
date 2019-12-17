@@ -17,22 +17,6 @@
   color:red;
   font-size: 12px;
 }
-/* .learnimg{
-  opacity: 0.6;
-  position:fixed;
-  top: 0;
-  left: 0;
-  width:100%;
-  height:100%;
-  z-index:-10;
-  zoom: 1;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-position: center 0;
-} */
 .idiomsleft{
   left:0;
   top:50%;
@@ -70,9 +54,27 @@
   position: relative;
 }
 .erridiom{
-  margin:0 auto;
+  /* margin:0 auto;
   font-size: 37px;
-  margin-top: 20%;
+  margin-top: 20%; */
+  width:75vw;
+  /* height:50vw; */
+  padding:10px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: bottom;
+  font-size: 4.5vw;
+  text-align: center;
+  margin: 0 auto;      
+  position: relative;
+  border-radius: 10px;
+  border:2px dashed gray;
+}
+.shortpoem{
+  width:55vw;
+  margin:0 auto
+   
 }
 .scerrword{
   width:18vw;
