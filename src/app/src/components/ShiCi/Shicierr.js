@@ -7,6 +7,7 @@ export default class Shicierr extends Component {
 	constructor() {
 		super();
 		this.state = {
+			shortclassName:'',
             shoucangClass: 'icon-xingxing black',
 			chengyu: "",
 			name: "",
@@ -27,6 +28,16 @@ export default class Shicierr extends Component {
 			Toast.hide();
 			
 			let arr = (res.data.data.shici).split("");
+			console.log(arr,arr.length%6)
+			if (arr.length%6=== 0) {
+				this.setState({
+						shortclassName:"shortpoem"
+				})
+			} else {
+				this.setState({
+						shortclassName:""
+				})
+			}
 
             this.setState({
 				chengyu: res.data.data.shici,
@@ -75,6 +86,7 @@ export default class Shicierr extends Component {
 							<div className="errcon">
 								{/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg")} /></div> */}
 								<div className="erridiom">
+									<div className={this.state.shortclassName}>
 									{
 										this.state.arr.map((item, index) => {
 											var str = 'black';
@@ -87,8 +99,10 @@ export default class Shicierr extends Component {
 											return <span key={index} style={{ color: str }}>{item}</span>
 										})
 									}
+									</div>
+									<div className="shiciname">{"-------" + "《"+this.state.name+"》"}</div>
 								</div>
-								<div className="shiciname">{"-------" + this.state.name}</div>
+								
 								<div className="scallcode">
 									{(this.state.errwords).map((item, index) => {
 										return (
