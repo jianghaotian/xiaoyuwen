@@ -111,8 +111,9 @@
     /* margin: auto; */
     width:70%;
     height: 100%;
-    /* line-height: 100%; */
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#6189B8;
     color:#fff;
     border:1px solid #6189B8;
