@@ -170,6 +170,16 @@ router.post('/bcsj', function (req, res, next) {
     });
 });
 
+/**
+ * （补充诗句成绩单）
+ * POST
+ * 接收参数:
+ *     time : 文件名
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
 router.get('/bcsj/grade', function (req, res, next) {
     let { time } = req.query;
     // let token = req.header('token');
