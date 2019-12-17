@@ -19,5 +19,10 @@ function getChengyuycz(grade, index) {
     return dict;
 }
 
+function getCaichengyu(grade) {
 
-module.exports = { getChengyu, getChengyuycz }
+
+
+}
+
+module.exports = { getChengyu, getChengyuycz, getCaichengyu }

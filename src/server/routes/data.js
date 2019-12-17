@@ -10,7 +10,7 @@ const { getToken, checkToken } = require('../src/token');
 
 let { getBuchongshiju, getShici, getShiciycz } = require('../src/data/shici')
 let { getPinyin, getKanzishiyin } = require('../src/data/pinyin')
-let { getChengyu, getChengyuycz } = require('../src/data/chengyu');
+let { getChengyu, getChengyuycz, getCaichengyu } = require('../src/data/chengyu');
 
 
 
@@ -40,7 +40,7 @@ router.get('/xpy', function (req, res, next) {
 });
 
 /**
- * （看字拾音）
+ * （看字识音）
  * GET
  * 接收参数:
  *     grade : 用户年级
@@ -61,7 +61,7 @@ router.get('/kzsy', function (req, res, next) {
 });
 
 /**
- * （看字拾音判题后存储）
+ * （看字识音判题后存储）
  * POST
  * 接收参数:
  *     answer : 用户答案信息
@@ -110,7 +110,7 @@ router.post('/kzsy', function (req, res, next) {
 });
 
 /**
- * （看字拾音成绩单）
+ * （看字识音成绩单）
  * GET
  * 接收参数:
  *     time : 文件名
@@ -213,7 +213,7 @@ router.get('/tyxz/grade', function (req, res, next) {
 // ---------- 成 语 ---------- //
 
 /**
- * （成语）
+ * （学成语）
  * GET
  * 接收参数:
  *     grade : 年级
@@ -255,6 +255,104 @@ router.get('/cyycz', function (req, res, next) {
     res.json(jsonData);
 });
 
+/**
+ * （猜成语）
+ * GET
+ * 接收参数:
+ *     grade : 用户年级
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/ccy', function (req, res, next) {
+    let { grade } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getCaichengyu(grade)
+    }
+    res.json(jsonData);
+});
+
+/**
+ * （猜成语判题后存储）
+ * POST
+ * 接收参数:
+ *     answer : 用户答案信息
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/ccy', function (req, res, next) {
+    let { answer } = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        let num = 0;
+        answer.forEach(value => {
+            if (value.flag) {
+                num++;
+            }
+        });
+        if (result.status === 0) {
+            let day = getTimestamp_13();
+            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'ccy', num, day], (result1) => {
+                if (result1.status === 0) {
+                    let fileCont = {
+                        answer: answer,
+                        grade: num
+                    }
+                    let filePath = path.join(__dirname, '../data/users/bcsj/' + day + '.json');
+                    let str = JSON.stringify(fileCont);
+                    fs.writeFile(filePath, str, (err) => {
+                        if (err) {
+                            let jsonData = {
+                                status: -1,
+                                message: 'write file error'
+                            }
+                            res.json(jsonData);
+                        } else {
+                            let jsonData = {
+                                status: 0,
+                                data: day
+                            }
+                            res.json(jsonData);
+                        }
+                    });
+                } else {
+                    res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * （猜成语成绩单）
+ * GET
+ * 接收参数:
+ *     time : 文件名
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/ccy/grade', function (req, res, next) {
+    let { time } = req.query;
+    // let token = req.header('token');
+    let data = require(path.join(__dirname, '../data/users/bcsj/' + time + '.json'));
+
+    let jsonData = {
+        status: 0,
+        data: data
+    }
+    res.json(jsonData);
+});
 
 
 
