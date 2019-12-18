@@ -51,7 +51,8 @@
     max-width:85%;
     margin: 0 auto;
     margin-top:8%;
-    text-shadow:1px 1px gray,-1px -1px rgb(241, 241, 241)
+    font-weight: bolder;
+    /* text-shadow:1px 1px gray,-1px -1px rgb(241, 241, 241) */
 }
 .bcsj_option{
     height: 30%;
