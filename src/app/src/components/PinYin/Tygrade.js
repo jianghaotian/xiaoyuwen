@@ -68,7 +68,7 @@ export default class Tygrade extends Component {
             <div>
                 <div className="ty-grade-back"></div>
                 <NavBar
-                    icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
+                    icon={<Icon type="left" onClick={()=>{this.props.history.goBack()}} />}
                     style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}
                     >听 音 选 字</NavBar>
                 <div className="ty1">
@@ -89,7 +89,7 @@ export default class Tygrade extends Component {
                                             <span className="ty-text">{(index+1)+'.  '+item.write}</span>
                                             <i className={'iconfont icon-zhengque2 ty-panduan-dui'}></i>
                                         </div>
-                                        <div className='ty-backtrue'>答对啦！</div>
+                                        <div className='ty-backtrue'>答对啦！ <span>{item.answer}</span></div>
                                     </div>
                                 )
                             }
