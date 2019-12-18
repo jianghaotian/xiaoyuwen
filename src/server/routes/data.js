@@ -354,6 +354,73 @@ router.get('/ccy/grade', function (req, res, next) {
     res.json(jsonData);
 });
 
+/**
+ * （成语接龙判题后存储）
+ * POST
+ * 接收参数:
+ *     answer : 用户答案信息
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.post('/cyjl', function (req, res, next) {
+    let answer = req.body;
+    let token = req.header('token');
+
+    checkToken(token, (result) => {
+        if (result.status === 0) {
+            let day = getTimestamp_13();
+            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'cyjl', answer.core, day], (result1) => {
+                if (result1.status === 0) {
+                    let filePath = path.join(__dirname, '../data/users/cyjl/' + day + '.json');
+                    let str = JSON.stringify(answer);
+                    fs.writeFile(filePath, str, (err) => {
+                        if (err) {
+                            let jsonData = {
+                                status: -1,
+                                message: 'write file error'
+                            }
+                            res.json(jsonData);
+                        } else {
+                            let jsonData = {
+                                status: 0,
+                                data: day
+                            }
+                            res.json(jsonData);
+                        }
+                    });
+                } else {
+                    res.json(result1);
+                }
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+/**
+ * （成语接龙成绩单）
+ * GET
+ * 接收参数:
+ *     time : 文件名
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/cyjl/grade', function (req, res, next) {
+    let { time } = req.query;
+    // let token = req.header('token');
+    let data = require(path.join(__dirname, '../data/users/cyjl/' + time + '.json'));
+
+    let jsonData = {
+        status: 0,
+        data: data
+    }
+    res.json(jsonData);
+});
 
 
 
@@ -502,8 +569,9 @@ router.get('/scycz', function (req, res, next) {
     res.json(jsonData);
 });
 
+
 /**
- * （易错字）
+ * （成绩单信息）
  * GET
  * 接收参数:
  *     grade : 用户年级
