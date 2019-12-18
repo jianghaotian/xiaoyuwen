@@ -36,6 +36,8 @@ const api = {
     get_ccy : p => get('data/ccy', p),
     post_ccy : p => post('data/ccy', p),
     get_ccy_grade: p => get('data/ccy/grade', p),
+    post_cyjl : p => post('data/cyjl', p),
+    get_cyjl_grade: p => get('data/cyjl/grade', p),
 
     // 诗词
     get_buchongshiju: p => get('data/bcsj', p),

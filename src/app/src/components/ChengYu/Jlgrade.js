@@ -6,10 +6,26 @@ export default class Jlgrade extends Component {
   constructor(props){
     super(props);
     this.state={
-        score:this.props.location.state.score,
-        data:this.props.location.state.data
+        score:0,
+        data:[]
     }
-}
+  }
+  componentDidMount() {
+    if (this.props.location.state) {
+        this.setState({
+            score: this.props.location.state.score,
+            data: this.props.location.state.data
+        });
+    } else {
+        this.$api.get_cyjl_grade({time: this.props.match.params.id}).then(res => {
+            let { score, data } = res.data.data;
+            this.setState({
+                score: score,
+                data: data                
+            });
+        });
+    }
+  }
   render() {
     return (
       <div>

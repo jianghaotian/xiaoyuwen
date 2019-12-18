@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router,Link} from "react-router-dom"
 import {NavBar,Icon, Toast,Button} from 'antd-mobile';
 import "../../css/ChengYu/jielong.css"
 
@@ -430,7 +429,7 @@ export default class Idiomjielong extends Component {
 		var x = parseInt(this.takeArr[0].split("")[0]);
 		var y = parseInt(this.takeArr[0].split("")[1]);
 		if (this.takeArr[0] === "") {
-			Toast.info("请选择要填入汉字的位置");
+			Toast.info("请选择要填入汉字的位置",1,null,false);
 			this.takeArr[1] = ""
 			return;
 		}
@@ -499,7 +498,28 @@ export default class Idiomjielong extends Component {
 				this.score++;
 			}
 		})
-		this.props.history.push({pathname:'/chengyu/jielong/grade',state:{data:this.data,score:this.score}});
+
+		if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+        	Toast.loading('正在判题...', 10, () => {
+                Toast.offline('网络异常', 1, null, false);
+			});
+			
+            this.$api.post_cyjl({data:this.data,score:this.score}).then(res => {
+                Toast.hide();
+                if (res.data.status === 0) {
+                    this.props.history.push('/chengyu/jielong/grade/' + res.data.data);
+                } else {
+                    Toast.offline('网络异常', 1, null, false);
+                }
+            })
+        } else {
+            Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+			this.props.history.push({pathname:'/chengyu/jielong/grade',state:{data:this.data,score:this.score}});
+        }
+
+
+
+		
 	}
 	componentDidUpdate(){
 		this.idArr=[];

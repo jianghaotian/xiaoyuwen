@@ -63,8 +63,9 @@ export default class Xuexijindu extends Component {
         this.$api.get_chengji().then(res => {
             if (res.data.status === 0) {
                 console.log(res);
+
                 this.setState({
-                    data: res.data.data || []
+                    data: res.data.data.reverse() || []
                 })
             } else {
                 Toast.fail('加载失败', 1);
