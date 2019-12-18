@@ -255,7 +255,7 @@
         },
         {
             "name": "天长地久",
-            "pinyin": "tian chang di jiu",
+            "pinyin": "tiān cháng dì jiǔ",
             "mean": "跟天和地存在的时间那样长。形容时间悠久。也形容永远不变（多指爱情）。",
             "example": "愿我俩的友谊天长地久。",
             "nearword": "日久天长、成年累月、长此以往、 坚韧不拔、坚忍不拔、海枯石烂、坚定不移、年深日久、天长日久、矢志不移、海誓山盟、山高水长",
@@ -1219,7 +1219,7 @@
         },
         {
             "name": "群龙无首",
-            "pinyin": "láng bēn shǐ tū",
+            "pinyin": "qún lóng wú shǒu",
             "mean": "比喻人多而没有领头的人。",
             "example": "老师走开了，教室里犹如群龙无首，一片混乱。",
             "nearword": "各自为政、乌合之众",
@@ -1314,6 +1314,18 @@
             "audio": "lgyc.wav"
         },
         {
+            "name": "呼风唤雨",
+            "pinyin": "hū fēng huàn yǔ",
+            "mean": "比喻能够支配自然。",
+            "example": "有些人利用权势来呼风唤雨,随心所欲。",
+            "nearword": "兴风作浪、推波助澜、兴妖作怪",
+            "autoword": "息事宁人",
+            "errword": [
+                "唤"
+            ],
+            "audio": "hfhy.wav"
+        },
+        {
             "name": "美轮美奂",
             "pinyin": "měi lún měi huàn",
             "mean": "形容房屋高大华丽，多用来赞美新屋美景。",
@@ -1324,6 +1336,18 @@
                 "奂"
             ],
             "audio": "mlmh.wav"
+        },
+        {
+            "name": "春风化雨",
+            "pinyin": "chūn fēng huà yǔ",
+            "mean": "适于草木生长的风雨，比喻良好的教育。",
+            "example": "经过老师一番春风化雨的开导，倔强的明明认识到了自己的错误。",
+            "nearword": "和声细语、如沐春风、化雨春风、如坐春风、如沫春风",
+            "autoword": " ",
+            "errword": [
+                "化"
+            ],
+            "audio": "cfhy.wav"
         },
         {
             "name": "巧夺天工",
@@ -1348,30 +1372,6 @@
                 "细"
             ],
             "audio": "hfxy.wav"
-        },
-        {
-            "name": "春风化雨",
-            "pinyin": "chūn fēng huà yǔ",
-            "mean": "适于草木生长的风雨，比喻良好的教育。",
-            "example": "经过老师一番春风化雨的开导，倔强的明明认识到了自己的错误。",
-            "nearword": "和声细语、如沐春风、化雨春风、如坐春风、如沫春风",
-            "autoword": " ",
-            "errword": [
-                "化"
-            ],
-            "audio": "cfhy.wav"
-        },
-        {
-            "name": "呼风唤雨",
-            "pinyin": "hū fēng huàn yǔ",
-            "mean": "比喻能够支配自然。",
-            "example": "有些人利用权势来呼风唤雨,随心所欲。",
-            "nearword": "兴风作浪、推波助澜、兴妖作怪",
-            "autoword": "息事宁人",
-            "errword": [
-                "唤"
-            ],
-            "audio": "hfhy.wav"
         },
         {
             "name": "栉风沐雨",
@@ -1410,18 +1410,6 @@
             "audio": "qfky.wav"
         },
         {
-            "name": "暴风骤雨",
-            "pinyin": "bào fēng zhòu yǔ",
-            "mean": "来势迅猛的风雨。比喻声势浩大、发展迅猛的群众运动。",
-            "example": "辛亥革命就象暴风骤雨一样,很快席卷全国。",
-            "nearword": "狂风暴雨、急风暴雨",
-            "autoword": "和风细雨、东风化雨",
-            "errword": [
-                "骤"
-            ],
-            "audio": "bfzy.wav"
-        },
-        {
             "name": "戎马一生",
             "pinyin": "róng mǎ yī shēng",
             "mean": "一辈子都从事军事活动。",
@@ -1432,6 +1420,18 @@
                 "戎"
             ],
             "audio": "rmys.wav"
+        },
+        {
+            "name": "暴风骤雨",
+            "pinyin": "bào fēng zhòu yǔ",
+            "mean": "来势迅猛的风雨。比喻声势浩大、发展迅猛的群众运动。",
+            "example": "辛亥革命就象暴风骤雨一样,很快席卷全国。",
+            "nearword": "狂风暴雨、急风暴雨",
+            "autoword": "和风细雨、东风化雨",
+            "errword": [
+                "骤"
+            ],
+            "audio": "bfzy.wav"
         },
         {
             "name": "身经百战",
@@ -2507,7 +2507,7 @@
         },
         {
             "name": "玉洁冰清",
-            "pinyin": "bīng qīng yù jié",
+            "pinyin": "yù jié bīng qīng ",
             "mean": "像玉和冰一样洁净。比喻人的操行洁白。",
             "example": "人们对李玉花玉洁冰清的品格大加赞赏。",
             "nearword": "冰清玉润",
@@ -2567,7 +2567,7 @@
         },
         {
             "name": "含辛茹苦",
-            "pinyin": "hánxīn rú kǔ",
+            "pinyin": "hán xīn rú kǔ",
             "mean": "经受艰辛困苦。",
             "example": "老师含辛茹苦地教育我们，我们不能忘记恩师。",
             "nearword": "饱经风霜、千辛万苦",
@@ -2821,7 +2821,7 @@
         },
         {
             "name": "络绎于途",
-            "pinyin": "luò yìyú tú",
+            "pinyin": "luò yì yú tú",
             "mean": "形容沿途过往的人马车船接连不断。",
             "example": "科学家比喻,如今探月者络绎于途,不久之后,月球表面就要像蜂窝般忙碌热闹了。",
             "nearword": "连绵不断、川流不息、源源不断、络绎不绝",
