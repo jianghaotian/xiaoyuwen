@@ -8,30 +8,31 @@ export default class Guessidioms extends Component {
         this.state={
             num:1,
             next:"下一题",
-            scsubmitFront: 'jlsubmit-front',
+            jlsubmitFront: 'jlsubmit-front',
             front: '上一题',
-            all: [{description:[],words:[]}]
+            all: [{description:[],words:[]}],
         }
         this.no=0;
         this.objArr=[];
         this.arr=[];
         this.answerArr={1:{},2:{},3:{},4:{},5:{},6:{},7:{},8:{},9:{},10:{}};
         this.bool=false;
+        this.status=false;
+        this.score=0;
     }
     minus=(e)=>{
         this.setState((state)=>{
             if(--state.num<1){
                 return{
-                    num:1
+                    num:1,
+                    jlsubmitFront:'jlsubmit-front'
                 }
             };
             this.borderclear();
-            this.judge(state.num);
-            console.log(this.answerArr);
+            this.judge(this.state.num);
             return{
                 num:state.num,
-                next:"下一题",
-                scsubmitFront:'jlsubmit-front'
+                next:"下一题"
             }
         })
     }
@@ -39,22 +40,32 @@ export default class Guessidioms extends Component {
         this.objArr=[];
         this.no=0;
         this.setState((state)=>{
-            if(++state.num>9){
-                return{
-                    num:10,
+            if(state.num===10){
+                this.submit();
+            }
+            if(state.num===9){
+                this.setState({
                     next:"提交"
+                })
+            }
+            if(++state.num>10){
+                return{
+                    num:10
+                    // next:"提交"
                 }
             };
+            console.log("state.num:"+state.num)
             this.borderclear();
             this.judge(state.num);
             return{
                 num:state.num,
                 next:"下一题",
-                scsubmitFront:'jlsubmit-front1'
+                jlsubmitFront:'jlsubmit-front1'
             }
         })    
     }
     judge=(num)=>{
+        console.log(num)
         if(Object.keys(this.answerArr[num]).length !== 0){
             this.arr.map((item,index)=>{
                 if(this.answerArr[num][index+1] !== undefined){
@@ -115,6 +126,29 @@ export default class Guessidioms extends Component {
         }
         
     }
+    submit=(e)=>{
+        for(var i=0;i<this.state.all.length;i++){
+            var str="";
+            Object.keys(this.answerArr[i+1]).map(item=>{
+                str+=this.answerArr[i+1][item]
+                this.answerArr[i+1].str=str
+            })
+            if(str===this.state.all[i].answer){
+                this.answerArr[i+1].status=true;
+                this.score++;
+                this.answerArr[i+1].answer=this.state.all[i].answer
+            }
+            else{
+                this.answerArr[i+1].status=false;
+                this.answerArr[i+1].answer=this.state.all[i].answer
+            }
+            console.log(str)
+            console.log(this.state.all[i].answer);
+            console.log(this.answerArr[i+1])
+        }
+        console.log(this.answerArr,this.score)
+        this.props.history.push({pathname:'/chengyu/guess/grade',state:{data:this.answerArr,score:this.score}});
+    }
     componentDidMount(){
         Toast.loading('正在加载...', 10, () => {
             Toast.offline('网络异常', 1, null, false);
@@ -158,7 +192,10 @@ export default class Guessidioms extends Component {
                             {/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div> */}
                             <div className="guesscon">
                                 <div className="descrip">
-                                    <p>{this.state.all[this.state.num-1].description}</p>
+                                    <textarea readOnly value={this.state.all[this.state.num-1].description}>
+                                        
+                                    </textarea>
+                                    
                                 </div>
                                 <div className="answer">
                                     <div ref="a" style={{width:"60vw",height:"12vw"}}>
@@ -190,7 +227,7 @@ export default class Guessidioms extends Component {
                     </div>
                     
                     <div className="outsubmit">
-                        <Button style={{width:'27vw',marginTop:'1%'}} onClick={this.minus} className={this.state.scsubmitFront}>上一题</Button>
+                        <Button style={{width:'27vw',marginTop:'1%'}} onClick={this.minus} className={this.state.jlsubmitFront}>上一题</Button>
                         <button onClick={()=>this.clear(this.state.num)} className="submitguess" style={{display:"inline"}}>清空</button>
                         <Button style={{width:'27vw',marginTop:'1%'}} onClick={this.adds} className="jlsubmit-next">{this.state.next}</Button>
                     </div>
