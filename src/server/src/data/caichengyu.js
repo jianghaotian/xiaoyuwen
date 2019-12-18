@@ -15,9 +15,10 @@ function createCCY(chengyu,grade){
       }else{
         if(obj.words.includes(data[arr[i]].example[j]) || 
         data[arr[i]].example[j] == ',' || data[arr[i]].example[j] == ':' || data[arr[i]].example[j] == '。' || 
-        data[arr[i]].example[j] == ' ' || data[arr[i]].example[j] == '(' || 
-        data[arr[i]].example[j] == ')' || data[arr[i]].example[j] == '～' || 
-        data[arr[i]].example[j] == '，'){
+        data[arr[i]].example[j] == ' ' || data[arr[i]].example[j] == '（' || 
+        data[arr[i]].example[j] == '）' || data[arr[i]].example[j] == '～' || 
+        data[arr[i]].example[j] == '，' || data[arr[i]].example[j] == '“' || data[arr[i]].example[j] == '”'
+        || data[arr[i]].example[j] == '"') {
           continue;
         }else{
           obj.words.push(data[arr[i]].example[j]);

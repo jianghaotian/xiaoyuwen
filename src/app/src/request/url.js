@@ -13,6 +13,6 @@ export let pyAudioUrl = 'https://xyw.htapi.pub/sys/pyaudios/';  // 拼音语音�
 export let cyAudioUrl = 'https://xyw.htapi.pub/sys/cyaudios/';  // 成语语音获取地址
 // export let cyAudioUrl = 'http://localhost:8001/sys/cyaudios/';  // 成语语音获取地址
 
-export let tyAudioUrl = 'https://xyw.htapi.pub/sys/tyaudios/';  // 成语语音获取地址
-// export let tyAudioUrl = 'http://localhost:8001/sys/tyaudios/';  // 成语语音获取地址
+export let tyAudioUrl = 'https://xyw.htapi.pub/sys/tyaudios/';  // 听音选字语音获取地址
+// export let tyAudioUrl = 'http://localhost:8001/sys/tyaudios/';  // 听音选字语音获取地址
 
