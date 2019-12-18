@@ -11,7 +11,7 @@ export default class Guanyu extends Component {
                 <div className="about_box">
                     <div className='about_logo_box'>
                         <div style={{textAlign:'center'}}>
-                            <img className='about_logo' src={require('../../images/headImage.jpg')} />
+                            <img className='about_logo' src={require('../../images/logo.png')} />
                             <div className="about_text_box">
                                 <span className='about_text1'>小语文 XiaoYW</span>
                                 <br />
