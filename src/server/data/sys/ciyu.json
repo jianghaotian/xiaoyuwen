@@ -149,9 +149,10 @@
       "spell": "rén",
       "mu": "ren"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "ˋ"],
@@ -275,9 +276,9 @@
       "mu": "yɑ"
     }],
     [{
-      "diao": ["", "ˋ"],
+      "diao": ["", "ˊ"],
       "word": "不",
-      "spell": "bù",
+      "spell": "bú",
       "mu": "bu"
     }, {
       "diao": ["", "ˉ", ""],
@@ -940,9 +941,10 @@
       "spell": "nǐ",
       "mu": "ni"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "ˊ", "", ""],
@@ -1203,9 +1205,10 @@
       "spell": "kàn",
       "mu": "kɑn"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "着",
-      "spell": "zhe"
+      "spell": "zhe",
+      "mu":"zhe"
     }],
     [{
       "diao": ["", "", "ˋ"],
@@ -1840,9 +1843,10 @@
       "spell": "wǒ",
       "mu": "wo"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "", "ˋ"],
@@ -1872,9 +1876,10 @@
       "spell": "tā",
       "mu": "tɑ"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "", "ˋ"],
@@ -1926,9 +1931,10 @@
       "spell": "wǎng",
       "mu": "wɑng"
     }, {
-      "diao": [],
+      "diao": ["",""],
       "word": "吧",
-      "spell": "bɑ"
+      "spell": "bɑ",
+      "mu":"bɑ"
     }],
     [{
       "diao": ["", "", "ˊ", "", ""],
@@ -2640,9 +2646,10 @@
       "spell": "huó",
       "mu": "huo"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "着",
-      "spell": "zhe"
+      "spell": "zhe",
+      "mu":"zhe"
     }],
     [{
       "diao": ["", "", "ˉ"],
@@ -2997,9 +3004,10 @@
       "mu": "shɑng"
     }],
     [{
-      "diao": [],
+      "diao": ["","",""],
       "word": "着",
-      "spell": "zhe"
+      "spell": "zhe",
+      "mu":"zhe"
     }, {
       "diao": ["", "ˊ"],
       "word": "急",
@@ -3289,9 +3297,10 @@
       "spell": "tā",
       "mu": "tɑ"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["ˉ", ""],
@@ -4476,9 +4485,10 @@
       "spell": "hǎo",
       "mu": "hɑo"
     }, {
-      "diao": [],
+      "diao": ["",""],
       "word": "哇",
-      "spell": "wɑ"
+      "spell": "wɑ",
+      "mu":"wɑ"
     }],
     [{
       "diao": ["", "ˊ"],
@@ -4508,9 +4518,10 @@
       "spell": "zěn",
       "mu": "zen"
     }, {
-      "diao": [],
+      "diao": ["",""],
       "word": "么",
-      "spell": "me"
+      "spell": "me",
+      "mu":"me"
     }],
     [{
       "diao": ["", "ˉ"],
@@ -6993,9 +7004,10 @@
       "spell": "wǒ",
       "mu": "wo"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "ˋ"],
@@ -8345,9 +8357,10 @@
       "spell": "līn",
       "mu": "lin"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "着",
-      "spell": "zhe"
+      "spell": "zhe",
+      "mu":"zhe"
     }],
     [{
       "diao": ["", "ˋ"],
@@ -9281,9 +9294,10 @@
       "spell": "zán",
       "mu": "zɑn"
     }, {
-      "diao": [],
+      "diao": ["","",""],
       "word": "们",
-      "spell": "men"
+      "spell": "men",
+      "mu":"men"
     }],
     [{
       "diao": ["", "ˋ", ""],
@@ -9627,9 +9641,10 @@
       "mu": "guɑi"
     }],
     [{
-      "diao": [],
+      "diao": ["","",""],
       "word": "著",
-      "spell": "zhe"
+      "spell": "zhù",
+      "mu":"zhu"
     }, {
       "diao": ["", "ˊ", "", ""],
       "word": "名",
@@ -12623,9 +12638,10 @@
       "spell": "yī",
       "mu": "yi"
     }, {
-      "diao": [],
+      "diao": ["","","","",""],
       "word": "裳",
-      "spell": "shɑng"
+      "spell": "shɑng",
+      "mu":"shɑng"
     }],
     [{
       "diao": ["", "ˇ"],
@@ -20830,9 +20846,10 @@
       "spell": "bà",
       "mu": "bɑ"
     }, {
-      "diao": [],
+      "diao": ["",""],
       "word": "了",
-      "spell": "le"
+      "spell": "le",
+      "mu":"le"
     }],
     [{
       "diao": ["", "ˋ", "", ""],
@@ -29045,9 +29062,10 @@
       "mu": "huɑng"
     }],
     [{
-      "diao": [],
+      "diao": ["","",""],
       "word": "着",
-      "spell": "zhe"
+      "spell": "zhe",
+      "mu":"zhe"
     }, {
       "diao": ["", "ˊ"],
       "word": "迷",

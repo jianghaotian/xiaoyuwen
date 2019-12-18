@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
+import { cyAudioUrl } from '../../request/url';
 import "../../css/ChengYu/xcy.css"
 
 export default class LearnIdioms extends Component {
@@ -14,7 +15,8 @@ export default class LearnIdioms extends Component {
             shiyi: "",
             liju: "",
             nearword:"",
-            autoword:""
+            autoword:"",
+            audio:""
         }
     }
     componentDidMount() {
@@ -33,9 +35,13 @@ export default class LearnIdioms extends Component {
                 liju: res.data.data.main.example,
                 nearword: res.data.data.main.nearword,
                 autoword: res.data.data.main.autoword,
-                max: res.data.data.num
+                max: res.data.data.num,
+                audio: cyAudioUrl + res.data.data.main.audio,
             });
         });
+    }
+    play = () => {
+        this.au.play();
     }
     shoucang = () => {
         if (this.state.shoucangClass == "icon-xingxing black") {
@@ -65,6 +71,7 @@ export default class LearnIdioms extends Component {
     render() {
         return (
             <div>
+                <audio src={this.state.audio} preload="auto" ref={child => this.au = child}></audio>
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{backgroundColor:"#617ca6"}}>学 成 语</NavBar>
                 
                 <div className="learnidiombody"> 
@@ -89,7 +96,8 @@ export default class LearnIdioms extends Component {
                             <div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
                             <div className="idiomcon">
                                 {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
-                                <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.state.chengyu}</span><span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}}></span></div>
+                                <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.state.chengyu}</span>
+                                <span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}} onClick={this.play}></span></div>
                                 <div className="whiteline"><span className="special">拼音: </span>{this.state.pinyin}</div>
                                 <div className="whiteline"><span className="special">释义: </span>{this.state.shiyi}</div>
                                 <div className="whiteline"><span className="special">例句: </span>{this.state.liju}</div>

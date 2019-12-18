@@ -147,6 +147,8 @@ export default class Kanzishiyin extends Component {
                 this.setState({
                     str1:str1
                 },()=>{
+                    console.log(this.count)
+                    console.log(this.state.content[this.count+1][1])
                     for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
                         str2+=" "
                     }
