@@ -3,2246 +3,2986 @@
     "1": [
         {
             "name": "欢声雷动",
-            "pinyin":"huān shēng léi dòng",
+            "pinyin": "huān shēng léi dòng",
             "mean": "欢笑的声音象雷一样响着。形容热烈欢呼的动人场面。",
-            "example":"话音刚刚落地,孩子们欢声雷动,一片沸腾。",
-            "nearword":"欢声如雷、喜气云腾",
-            "autoword":"鸦雀无声、怒气冲天、闷闷不乐",
-            "errword":["雷"]
+            "example": "话音刚刚落地,孩子们欢声雷动,一片沸腾。",
+            "nearword": "欢声如雷、喜气云腾",
+            "autoword": "鸦雀无声、怒气冲天、闷闷不乐",
+            "errword": [
+                "雷"
+            ],
+            "audio": "hsld.wav"
         },
         {
             "name": "欣喜若狂",
-            "pinyin":"xīn xǐ ruò kuáng",
+            "pinyin": "xīn xǐ ruò kuáng",
             "mean": "形容高兴到了极点。",
             "example": "这次作文获得一等奖，他欣喜若狂。",
-            "nearword":"兴高采烈、喜出望外、喜不自胜、欢天喜地、欢欣雀跃、乐不思蜀、欣喜异常、欢呼雀跃、喜不自禁、眉飞色舞、惊喜若狂",
-            "autoword":"悲痛欲绝、哀哀欲绝、悲不自胜、哭天动地、肝肠寸断、心如刀割、痛不欲生",
-            "errword":["喜"]
+            "nearword": "兴高采烈、喜出望外、喜不自胜、欢天喜地、欢欣雀跃、乐不思蜀、欣喜异常、欢呼雀跃、喜不自禁、眉飞色舞、惊喜若狂",
+            "autoword": "悲痛欲绝、哀哀欲绝、悲不自胜、哭天动地、肝肠寸断、心如刀割、痛不欲生",
+            "errword": [
+                "喜"
+            ],
+            "audio": "xxrk.wav"
         },
         {
             "name": "载歌载舞",
-            "pinyin":"zài gē zài wǔ",
+            "pinyin": "zài gē zài wǔ",
             "mean": "边唱歌，边跳舞。形容尽情欢乐。",
             "example": "大家载歌载舞，沉浸在欢庆的海洋里。",
-            "nearword":"兴高采烈、手舞足蹈、欢欣鼓舞、轻歌曼舞、载歌且舞、翩翩起舞",
-            "autoword":"垂头丧气",
-            "errword":["舞"]
+            "nearword": "兴高采烈、手舞足蹈、欢欣鼓舞、轻歌曼舞、载歌且舞、翩翩起舞",
+            "autoword": "垂头丧气",
+            "errword": [
+                "舞"
+            ],
+            "audio": "zgzw.wav"
         },
         {
             "name": "灯火辉煌",
-            "pinyin":"dēng huǒ huī huáng",
+            "pinyin": "dēng huǒ huī huáng",
             "mean": "形容夜晚灯光明亮的繁华景象。",
             "example": "夜晚的大街上霓虹闪烁，灯火辉煌。",
-            "nearword":"火树银光、张灯结彩",
-            "autoword":"黑灯瞎火、昏天黑地",
-            "errword":["辉"]
+            "nearword": "火树银光、张灯结彩",
+            "autoword": "黑灯瞎火、昏天黑地",
+            "errword": [
+                "辉"
+            ],
+            "audio": "dhhh.wav"
         },
         {
             "name": "春暖花开",
-            "pinyin":"chūn nuǎn huā kāi",
+            "pinyin": "chūn nuǎn huā kāi",
             "mean": "春天气候温暖，百花盛开，景色优美。比喻游览、观赏的大好时机。",
             "example": "在春暖花开的日子，大自然几乎成了花的世界，各种花纷纷开放，红的艳，白的娇，黄的嫩，构成了一幅五彩缤纷的图画，发出了沁人心脾的芳香。",
-            "nearword":"大地回春、百花齐放",
-            "autoword":"天寒地冻、冰天雪地",
-            "errword":["暖"]
+            "nearword": "大地回春、百花齐放",
+            "autoword": "天寒地冻、冰天雪地",
+            "errword": [
+                "暖"
+            ],
+            "audio": "cnhk.wav"
         },
         {
             "name": "春色满园",
-            "pinyin":"chūn sè mǎn yuán",
+            "pinyin": "chūn sè mǎn yuán",
             "mean": "园内到处都是春天美丽的景色。比喻欣欣向荣的景象。",
             "example": "春色满园,百花盛开的春天,也是小蜜蜂一年中最忙碌的时候。",
-            "nearword":"万紫千红、春意盎然",
-            "autoword":"冰天雪地、天寒地冻、秋风萧瑟",
-            "errword":["满"]
+            "nearword": "万紫千红、春意盎然",
+            "autoword": "冰天雪地、天寒地冻、秋风萧瑟",
+            "errword": [
+                "满"
+            ],
+            "audio": "csmy.wav"
         },
         {
             "name": "春光明媚",
-            "pinyin":"chūn guāng míng mèi",
+            "pinyin": "chūn guāng míng mèi",
             "mean": "形容春天的景物鲜明可爱。",
             "example": "在春光明媚的日子里，老师带我们到郊外去踏青。",
-            "nearword":"春暖花开、花红柳绿",
-            "autoword":"天寒地冻",
-            "errword":["媚"]
+            "nearword": "春暖花开、花红柳绿",
+            "autoword": "天寒地冻",
+            "errword": [
+                "媚"
+            ],
+            "audio": "cgmm.wav"
         },
         {
             "name": "春意盎然",
-            "pinyin":"chūn yì àng rán",
+            "pinyin": "chūn yì àng rán",
             "mean": "春天的意味正浓。",
             "example": " 在公园里,处处可看到春意盎然的景色。",
-            "nearword":"春风得意、春色满园、春深似海",
-            "autoword":"春寒料峭、春意阑珊",
-            "errword":["盎"]
+            "nearword": "春风得意、春色满园、春深似海",
+            "autoword": "春寒料峭、春意阑珊",
+            "errword": [
+                "盎"
+            ],
+            "audio": "cyar.wav"
         },
         {
             "name": "精卫填海",
-            "pinyin":"jīng wèi tián hǎi",
+            "pinyin": "jīng wèi tián hǎi",
             "mean": "精卫衔来木石，决心填平大海。旧时比喻仇恨极深，立志报复。后比喻意志坚决，不畏艰难。",
             "example": "如果要实现自己的梦想，就要有精卫填海的精神。",
-            "nearword":"矢志不移、移山倒海、愚公移山、坚韧不拔",
-            "autoword":"虎头蛇尾、有头无尾",
-            "errword":["填"]
+            "nearword": "矢志不移、移山倒海、愚公移山、坚韧不拔",
+            "autoword": "虎头蛇尾、有头无尾",
+            "errword": [
+                "填"
+            ],
+            "audio": "jwth.wav"
         },
         {
             "name": "愚公移山",
-            "pinyin":"yú gōng yí shān",
+            "pinyin": "yú gōng yí shān",
             "mean": "比喻坚持不懈地改造自然和坚定不移地进行斗争。",
             "example": "我们要以愚公移山的精神征服沙漠，让它变成绿洲。",
-            "nearword":"持之以恒、铁杵磨针、精卫填海、铁杵成针、锲而不舍",
-            "autoword":"虎头蛇尾、有头无尾",
-            "errword":["愚"]
+            "nearword": "持之以恒、铁杵磨针、精卫填海、铁杵成针、锲而不舍",
+            "autoword": "虎头蛇尾、有头无尾",
+            "errword": [
+                "愚"
+            ],
+            "audio": "ygys.wav"
         },
         {
             "name": "百折不回",
-            "pinyin":"bǎi zhé bù huí",
+            "pinyin": "bǎi zhé bù huí",
             "mean": "比喻意志坚强，无论受到多少次挫折，毫不动摇退缩。",
             "example": "在学习上，我们要有百折不回的毅力。",
-            "nearword":"百折不挠、坚强不屈",
-            "autoword":"一蹶不振",
-            "errword":["折"]
+            "nearword": "百折不挠、坚强不屈",
+            "autoword": "一蹶不振",
+            "errword": [
+                "折"
+            ],
+            "audio": "bzbh.wav"
         },
         {
             "name": "勇往直前",
-            "pinyin":"yǒng wǎng zhí qián",
+            "pinyin": "yǒng wǎng zhí qián",
             "mean": "勇敢地一直向前进。",
             "example": "我们要勇往直前，即使遇到再大的困难也不退缩。",
-            "nearword":"一往无前、奋勇向前、昂首阔步",
-            "autoword":"畏缩不前、畏首畏尾、趑趄不前",
-            "errword":["勇"]
+            "nearword": "一往无前、奋勇向前、昂首阔步",
+            "autoword": "畏缩不前、畏首畏尾、趑趄不前",
+            "errword": [
+                "勇"
+            ],
+            "audio": "ywzq.wav"
         },
         {
             "name": "痛痒相关",
-            "pinyin":"tòng yǎng xiāng guān",
+            "pinyin": "tòng yǎng xiāng guān",
             "mean": "形容彼此关系密切。",
             "example": "我们同是炎黄子孙,痛痒相关,祖国富强了,我们就扬眉吐气了。",
-            "nearword":"休戚相关、休戚与共、息息相关、一脉相连、血肉相连",
-            "autoword":"痛痒无关、无关痛痒",
-            "errword":["痛"]
+            "nearword": "休戚相关、休戚与共、息息相关、一脉相连、血肉相连",
+            "autoword": "痛痒无关、无关痛痒",
+            "errword": [
+                "痛"
+            ],
+            "audio": "tyxg.wav"
         },
         {
             "name": "情深似海",
-            "pinyin":"qíng shēn sì hǎi",
+            "pinyin": "qíng shēn sì hǎi",
             "mean": "形容情爱深厚，像大海一样不可量。",
             "example": "兄弟如手足，共患难，同享福。友情深似海，一路走，绝不改。",
-            "nearword":"情深谊长、真心实意、情真意切、情深意重",
-            "autoword":"虚情假意、装模作样、忘恩负义",
-            "errword":["深"]
+            "nearword": "情深谊长、真心实意、情真意切、情深意重",
+            "autoword": "虚情假意、装模作样、忘恩负义",
+            "errword": [
+                "深"
+            ],
+            "audio": "qssh.wav"
         },
         {
             "name": "恩重如山",
-            "pinyin":"ēn zhòng rú shān",
+            "pinyin": "ēn zhòng rú shān",
             "mean": "恩情深厚，像山一样深重。",
             "example": "父母的养育恩重如山，做儿女的一生也报答不完。",
-            "nearword":"恩深义重",
-            "autoword":"绝情寡义 深仇大恨血海深仇",
-            "errword":["重"]
+            "nearword": "恩深义重",
+            "autoword": "绝情寡义 深仇大恨血海深仇",
+            "errword": [
+                "重"
+            ],
+            "audio": "ezrs.wav"
         },
         {
             "name": "循序渐进",
-            "pinyin":"xún xù jiàn jìn",
+            "pinyin": "xún xù jiàn jìn",
             "mean": "指学习工作等按照一定的步骤逐渐深入或提高。",
             "example": "学习知识应循序渐进,一步一个脚印。",
-            "nearword":"按部就班、由浅入深",
-            "autoword":"一步登天",
-            "errword":["循"]
+            "nearword": "按部就班、由浅入深",
+            "autoword": "一步登天",
+            "errword": [
+                "循"
+            ],
+            "audio": "xxjj.wav"
         },
         {
             "name": "由浅入深",
-            "pinyin":"yóu qiǎn rù shēn",
+            "pinyin": "yóu qiǎn rù shēn",
             "mean": "从浅到深，逐步深奥",
             "example": "抓住自己最有兴趣的东西，由浅入深，循序渐进地学。",
-            "nearword":"深入浅出",
-            "autoword":"捉襟见肘、一筹莫展",
-            "errword":["深"]
+            "nearword": "深入浅出",
+            "autoword": "捉襟见肘、一筹莫展",
+            "errword": [
+                "深"
+            ],
+            "audio": "yqrs.wav"
         },
         {
             "name": "日积月累",
-            "pinyin":"rì jī yuè lěi",
+            "pinyin": "rì jī yuè lěi",
             "mean": "一天一天地、一月一月地不断积累。指长时间不断地积累。",
             "example": "每天背一个英语单词，日积月累就能背会许多词。",
-            "nearword":"积少成多、成年累月",
-            "autoword":"一曝十寒、挥霍无度",
-            "errword":["累"]
+            "nearword": "积少成多、成年累月",
+            "autoword": "一曝十寒、挥霍无度",
+            "errword": [
+                "累"
+            ],
+            "audio": "rjyl.wav"
         },
         {
             "name": "温故知新",
-            "pinyin":"wēn gù zhī xīn",
+            "pinyin": "wēn gù zhī xīn",
             "mean": "温习旧的知识，得到新的理解和体会。也指回忆过去，能更好地认识现在。",
             "example": "学习不能学了新的就忘了旧的，要时常复习，温故知新，才会真的进步。",
-            "nearword":"数往知来、忆苦思甜",
-            "autoword":"数典忘祖",
-            "errword":["温"]
+            "nearword": "数往知来、忆苦思甜",
+            "autoword": "数典忘祖",
+            "errword": [
+                "温"
+            ],
+            "audio": "wgzx.wav"
         },
         {
             "name": "漫山遍野",
-            "pinyin":"màn shān biàn yě",
+            "pinyin": "màn shān biàn yě",
             "mean": "山上和田野里到处都是。形容很多。",
             "example": "一到春天，家乡的山上就会开满蒲公英，漫山遍野一片金黄。",
-            "nearword":"比比皆是、俯拾即是",
-            "autoword":"寥寥无几、寥若晨星",
-            "errword":["野"]
+            "nearword": "比比皆是、俯拾即是",
+            "autoword": "寥寥无几、寥若晨星",
+            "errword": [
+                "野"
+            ],
+            "audio": "msby.wav"
         },
         {
             "name": "绿叶成阴",
-            "pinyin":"lǜ yè chéng yīn",
+            "pinyin": "lǜ yè chéng yīn",
             "mean": "指女子出嫁生了子女。也比喻绿叶繁茂覆盖成荫。",
             "example": "公园里绿叶成阴,景色迷人。",
-            "nearword":"绿树成荫",
-            "autoword":" ",
-            "errword":["阴"]
+            "nearword": "绿树成荫",
+            "autoword": " ",
+            "errword": [
+                "阴"
+            ],
+            "audio": "lycy.wav"
         },
         {
             "name": "天长地久",
-            "pinyin":"tian chang di jiu",
+            "pinyin": "tian chang di jiu",
             "mean": "跟天和地存在的时间那样长。形容时间悠久。也形容永远不变（多指爱情）。",
             "example": "愿我俩的友谊天长地久。",
-            "nearword":"日久天长、成年累月、长此以往、 坚韧不拔、坚忍不拔、海枯石烂、坚定不移、年深日久、天长日久、矢志不移、海誓山盟、山高水长",
-            "autoword":"稍纵即逝、一时半刻、曾几何时、一朝一夕、彩云易散",
-            "errword":["地"]
+            "nearword": "日久天长、成年累月、长此以往、 坚韧不拔、坚忍不拔、海枯石烂、坚定不移、年深日久、天长日久、矢志不移、海誓山盟、山高水长",
+            "autoword": "稍纵即逝、一时半刻、曾几何时、一朝一夕、彩云易散",
+            "errword": [
+                "地"
+            ],
+            "audio": "tcdj.wav"
         },
         {
             "name": "树大根深",
-            "pinyin":"shù dà gēn shēn",
+            "pinyin": "shù dà gēn shēn",
             "mean": "比喻势力强大，根基牢固。",
             "example": "一般的树不能迁移是因为树大根深,移动便要伤根。",
-            "nearword":"根深蒂固",
-            "autoword":"头重脚轻、摇摇欲坠、摇摆不定、腾云驾雾",
-            "errword":["根"]
+            "nearword": "根深蒂固",
+            "autoword": "头重脚轻、摇摇欲坠、摇摆不定、腾云驾雾",
+            "errword": [
+                "根"
+            ],
+            "audio": "sdgs.wav"
         },
         {
             "name": "有备无患",
-            "pinyin":"yǒu bèi wú huàn",
+            "pinyin": "yǒu bèi wú huàn",
             "mean": "事先有准备，就可以避免祸患。",
             "example": "天阴得很厉害，妈妈要我带上雨伞有备无患。",
-            "nearword":"居安思危、积谷防饥、未雨绸缪、早为之所、以防万一",
-            "autoword":"临阵磨枪、江心补漏、贼去关门、临渴掘井、措手不及",
-            "errword":["患"]
+            "nearword": "居安思危、积谷防饥、未雨绸缪、早为之所、以防万一",
+            "autoword": "临阵磨枪、江心补漏、贼去关门、临渴掘井、措手不及",
+            "errword": [
+                "患"
+            ],
+            "audio": "ybwh.wav"
         },
         {
             "name": "防患未然",
-            "pinyin":"fánɡ huàn wèi rán",
+            "pinyin": "fánɡ huàn wèi rán",
             "mean": "防止事故或祸害于尚未发生之前。",
             "example": "各单位都要做好消防工作,以防患未然。",
-            "nearword":"防微杜渐、有备无患、未雨绸缪、曲突徙薪",
-            "autoword":"临渴掘井、江心补漏、患至呼天",
-            "errword":["患"]
+            "nearword": "防微杜渐、有备无患、未雨绸缪、曲突徙薪",
+            "autoword": "临渴掘井、江心补漏、患至呼天",
+            "errword": [
+                "患"
+            ],
+            "audio": "fhwr.wav"
         },
         {
             "name": "临危不惧",
-            "pinyin":"lín wēi bù jù",
+            "pinyin": "lín wēi bù jù",
             "mean": "遇到危难的时候，一点也不怕。",
             "example": " 面对敌人，他临危不惧，真不简单。",
-            "nearword":"无私无畏、视死如归",
-            "autoword":"惊慌失措、临阵脱逃",
-            "errword":["惧"]
+            "nearword": "无私无畏、视死如归",
+            "autoword": "惊慌失措、临阵脱逃",
+            "errword": [
+                "惧"
+            ],
+            "audio": "lwbj.wav"
         },
         {
             "name": "多谋善断",
-            "pinyin":"duō móu shàn duàn",
+            "pinyin": "duō móu shàn duàn",
             "mean": "很有智谋，又善于判断。",
             "example": "诸葛亮多谋善断，打了许多胜仗。",
-            "nearword":"好谋善断、能谋善断",
-            "autoword":"多谋少断",
-            "errword":["谋"]
+            "nearword": "好谋善断、能谋善断",
+            "autoword": "多谋少断",
+            "errword": [
+                "谋"
+            ],
+            "audio": "dmsd.wav"
         },
         {
             "name": "从容不迫",
-            "pinyin":"cóng róng bú pò",
+            "pinyin": "cóng róng bú pò",
             "mean": "不慌不忙，沉着镇定。",
             "example": "在大家的掌声中，他从容不迫地走上了讲台。",
-            "nearword":"镇定自若、处之泰然、不动声色、视若等闲、泰然自若、不慌不忙、沉着镇定、慢条斯理、好整以暇、气定神闲",
-            "autoword":"胆颤心惊、面无人色、惊慌失措、手足无措、如坐针毡、张皇失措、心慌意乱、胆战心惊、手慌脚乱",
-            "errword":["迫"]
+            "nearword": "镇定自若、处之泰然、不动声色、视若等闲、泰然自若、不慌不忙、沉着镇定、慢条斯理、好整以暇、气定神闲",
+            "autoword": "胆颤心惊、面无人色、惊慌失措、手足无措、如坐针毡、张皇失措、心慌意乱、胆战心惊、手慌脚乱",
+            "errword": [
+                "迫"
+            ],
+            "audio": "crbp.wav"
         },
         {
             "name": "方寸不乱",
-            "pinyin":"fāng cùn bù luàn",
+            "pinyin": "fāng cùn bù luàn",
             "mean": "形容人遇到特殊紧急的情况时能够从容镇定。",
             "example": "面对危局,张居正虽然焦虑窝火,但始终方寸不乱。",
-            "nearword":"坐怀不乱",
-            "autoword":"方寸大乱",
-            "errword":["乱"]
+            "nearword": "坐怀不乱",
+            "autoword": "方寸大乱",
+            "errword": [
+                "乱"
+            ],
+            "audio": "fcbl.wav"
         }
     ],
-    "2":[
+    "2": [
         {
             "name": "金风送爽",
-            "pinyin":"jīn fēng sòng shuǎng",
+            "pinyin": "jīn fēng sòng shuǎng",
             "mean": "指秋天带来了凉意。",
             "example": "北国的秋天，金风送爽，瓜果遍地。",
-            "nearword":"秋风送爽",
-            "autoword":" "
+            "nearword": "秋风送爽",
+            "autoword": " ",
+            "audio": "jfss.wav"
         },
         {
             "name": "雁过留声",
-            "pinyin":"yàn guò liú shēng",
+            "pinyin": "yàn guò liú shēng",
             "mean": "比喻留名声于身后。",
             "example": "雁过留声，欢迎留下你要说的话来，如果你不想让人看见，可以给我发送邮件。",
-            "nearword":"功成名就 人过留名",
-            "autoword":"踏雪无痕",
-            "errword":["雁"]
+            "nearword": "功成名就 人过留名",
+            "autoword": "踏雪无痕",
+            "errword": [
+                "雁"
+            ],
+            "audio": "ygls.wav"
         },
         {
             "name": "天朗气清",
-            "pinyin":"tiān lǎng qì qīng",
+            "pinyin": "tiān lǎng qì qīng",
             "mean": "形容天空晴朗，空气清新。",
             "example": "游目骋怀此地有崇山峻岭，仰观俯察是日也天朗气清。",
-            "nearword":"日丽风和、和风细雨",
-            "autoword":"暴风疾雨、天昏地暗、风雨如晦",
-            "errword":["朗"]
+            "nearword": "日丽风和、和风细雨",
+            "autoword": "暴风疾雨、天昏地暗、风雨如晦",
+            "errword": [
+                "朗"
+            ],
+            "audio": "tlqq.wav"
         },
         {
             "name": "日月如梭",
-            "pinyin":"rì yuè rú suō",
+            "pinyin": "rì yuè rú suō",
             "mean": "太阳和月亮象穿梭一样地来去。形容时间过得很快。",
             "example": "日月如梭,一转眼我就小学毕业了。",
-            "nearword":"似水流年、岁月如流、白驹过隙、寒来暑往、似水年华、乌飞兔走、光阴似箭、尺璧寸阴",
-            "autoword":"度日如年、老牛破车",
-            "errword":["梭"]
+            "nearword": "似水流年、岁月如流、白驹过隙、寒来暑往、似水年华、乌飞兔走、光阴似箭、尺璧寸阴",
+            "autoword": "度日如年、老牛破车",
+            "errword": [
+                "梭"
+            ],
+            "audio": "ryrs.wav"
         },
         {
             "name": "光阴似箭",
-            "pinyin":"guāng yīn sì jiàn",
+            "pinyin": "guāng yīn sì jiàn",
             "mean": "时间如箭，迅速流逝。形容时间过得极快。",
             "example": "光阴似箭，岁月如梭，要珍惜时间啊！",
-            "nearword":"日月如梭、白驹过隙",
-            "autoword":"度日如年",
-            "errword":["箭"]
+            "nearword": "日月如梭、白驹过隙",
+            "autoword": "度日如年",
+            "errword": [
+                "箭"
+            ],
+            "audio": "gysj.wav"
         },
         {
             "name": "寒来暑往",
-            "pinyin":"hán lái shǔ wǎng",
+            "pinyin": "hán lái shǔ wǎng",
             "mean": "盛夏已过，寒冬将至。泛指时光流逝。",
             "example": "讲台上，寒来暑往，春夏秋冬，撒下心血点点；花园里，扶残助弱，风霜雨雪，育出新蕊亭亭。",
-            "nearword":"光阴似箭、寒暑易节、日月如梭、暑往寒来",
-            "autoword":"无冬无夏、度日如年",
-            "errword":["暑"]
+            "nearword": "光阴似箭、寒暑易节、日月如梭、暑往寒来",
+            "autoword": "无冬无夏、度日如年",
+            "errword": [
+                "暑"
+            ],
+            "audio": "hlsw.wav"
         },
         {
             "name": "星移物换",
-            "pinyin":"xīng yí wù huàn",
+            "pinyin": "xīng yí wù huàn",
             "mean": "景物改变了，星辰的位置也移动了。比喻时间的变化。",
             "example": "上课铃声忽然响起,同学们如星移物换一般跑进教室里。",
-            "nearword":" ",
-            "autoword":" ",
-            "errword":["移"]
+            "nearword": " ",
+            "autoword": " ",
+            "errword": [
+                "移"
+            ],
+            "audio": "xywh.wav"
         },
         {
             "name": "风吹草动",
-            "pinyin":"fēng chuī cǎo dòng",
+            "pinyin": "fēng chuī cǎo dòng",
             "mean": "风稍一吹，草就摇晃。比喻微小的变动。",
             "example": "侦察兵小王十分机灵，一有风吹草动他马上就察觉了。",
-            "nearword":"蛛丝马迹",
-            "autoword":"风平浪静",
-            "errword":["动"]
+            "nearword": "蛛丝马迹",
+            "autoword": "风平浪静",
+            "errword": [
+                "动"
+            ],
+            "audio": "fccd.wav"
         },
         {
             "name": "雨过天晴",
-            "pinyin":"yǔ guò tiān qíng",
+            "pinyin": "yǔ guò tiān qíng",
             "mean": "雨后转晴。也比喻政治上由黑暗到光明。",
             "example": "雨过天晴，小蚂蚁又出来寻找食物了。",
-            "nearword":"苦尽甘来、云消雾散、雨后初霁、云开日出",
-            "autoword":"风雨凄凄、天昏地暗、大雨如注、彤云密布",
-            "errword":["晴"]
+            "nearword": "苦尽甘来、云消雾散、雨后初霁、云开日出",
+            "autoword": "风雨凄凄、天昏地暗、大雨如注、彤云密布",
+            "errword": [
+                "晴"
+            ],
+            "audio": "ygtq.wav"
         },
         {
             "name": "瓜熟蒂落",
-            "pinyin":"guā shú dì luò",
+            "pinyin": "guā shú dì luò",
             "mean": "瓜熟了，瓜蒂自然脱落。指时机一旦成熟，事情自然成功。",
             "example": "你不用发愁，到了一定时机，事情自然就会瓜熟蒂落的。",
-            "nearword":"水到渠成",
-            "autoword":"欲速不达",
-            "errword":["蒂"]
+            "nearword": "水到渠成",
+            "autoword": "欲速不达",
+            "errword": [
+                "蒂"
+            ],
+            "audio": "gsdl.wav"
         },
         {
             "name": "水到渠成",
-            "pinyin":"shuǐ dào qú chéng",
+            "pinyin": "shuǐ dào qú chéng",
             "mean": "水流到的地方自然形成一条水道。比喻条件成熟，事情自然会成功。",
             "example": "上课认真听讲，下课及时复习，知识掌握起来就是水到渠成的事了。",
-            "nearword":"迎刃而解、瓜熟蒂落、顺理成章",
-            "autoword":"徒劳无功",
-            "errword":["渠"]
+            "nearword": "迎刃而解、瓜熟蒂落、顺理成章",
+            "autoword": "徒劳无功",
+            "errword": [
+                "渠"
+            ],
+            "audio": "sdqc.wav"
         },
         {
             "name": "学无止境",
-            "pinyin":"xué wú zhǐ jìng",
+            "pinyin": "xué wú zhǐ jìng",
             "mean": "指学业上是没有尽头的，应奋进不息。",
             "example": "人不能有丝毫的自满心理。因为学无止境，活到老学到老，浅尝辄止或半途而废，就学不到高深的技艺。",
-            "nearword":"学海无涯、学则不固、永无止境",
-            "autoword":"不学无术",
-            "errword":["境"]
+            "nearword": "学海无涯、学则不固、永无止境",
+            "autoword": "不学无术",
+            "errword": [
+                "境"
+            ],
+            "audio": "xwzj.wav"
         },
         {
             "name": "一往无前",
-            "pinyin":"yī wǎng wú qián",
+            "pinyin": "yī wǎng wú qián",
             "mean": "一直往前，无所阻挡。形容勇猛无畏地前进。",
             "example": "革命家都有一往无前的勇气。",
-            "nearword":"勇往直前、所向披靡、所向无敌",
-            "autoword":"畏葸不前、裹足不前、畏首畏尾",
-            "errword":["前"]
+            "nearword": "勇往直前、所向披靡、所向无敌",
+            "autoword": "畏葸不前、裹足不前、畏首畏尾",
+            "errword": [
+                "前"
+            ],
+            "audio": "ywwq.wav"
         },
         {
             "name": "滴水成冰",
-            "pinyin":"dī shuǐ chéng bīng",
+            "pinyin": "dī shuǐ chéng bīng",
             "mean": "水滴下去就结成冰。形容天气十分寒冷。",
             "example": "严冬的早晨，寒风凛冽，滴水成冰。",
-            "nearword":"冰天雪地、冰天雪窖、天寒地冻",
-            "autoword":"汗流浃背、流金铄石、骄阳似火、风和日丽、铄石流金、赤日炎炎",
-            "errword":["滴"]
+            "nearword": "冰天雪地、冰天雪窖、天寒地冻",
+            "autoword": "汗流浃背、流金铄石、骄阳似火、风和日丽、铄石流金、赤日炎炎",
+            "errword": [
+                "滴"
+            ],
+            "audio": "dscb.wav"
         },
         {
             "name": "鹅毛大雪",
-            "pinyin":"é máo dà xuě",
+            "pinyin": "é máo dà xuě",
             "mean": "像鹅毛一样的雪花。形容雪下得大而猛。",
             "example": "寒冷的冬天，鹅毛大雪在空中飞舞，凛洌的寒风吹着哨，猛烈地摇摆着松树。大片大片的雪花往松树上压，它的枝杈上积满厚厚的雪。",
-            "nearword":"大雪纷飞、搓绵扯絮、漫天风雪",
-            "autoword":"小雪纷飞",
-            "errword":["鹅"]
+            "nearword": "大雪纷飞、搓绵扯絮、漫天风雪",
+            "autoword": "小雪纷飞",
+            "errword": [
+                "鹅"
+            ],
+            "audio": "emdx.wav"
         },
         {
             "name": "雪兆丰年",
-            "pinyin":"xuě zhào fēng nián",
+            "pinyin": "xuě zhào fēng nián",
             "mean": "指冬天大雪是来年丰收的预兆。",
             "example": "俗话说，瑞雪兆丰年，明年准是个好年成。",
-            "nearword":"瑞雪兆丰年",
-            "autoword":" ",
-            "errword":["雪"]
+            "nearword": "瑞雪兆丰年",
+            "autoword": " ",
+            "errword": [
+                "雪"
+            ],
+            "audio": "xzfn.wav"
         },
         {
             "name": "勤能补拙",
-            "pinyin":"qín néng bǔ zhuō",
+            "pinyin": "qín néng bǔ zhuō",
             "mean": "勤奋能够弥补不足。",
             "example": "他的手脚虽然慢,但勤能补拙,因为坚持不懈,一天出的活也不在少数。",
-            "nearword":"功在不舍、勤学苦练",
-            "autoword":"锲而舍之",
-            "errword":["拙"]
+            "nearword": "功在不舍、勤学苦练",
+            "autoword": "锲而舍之",
+            "errword": [
+                "拙"
+            ],
+            "audio": "qnbz.wav"
         },
         {
             "name": "笨鸟先飞",
-            "pinyin":"bèn niǎo xiān fēi",
+            "pinyin": "bèn niǎo xiān fēi",
             "mean": "行动笨拙的鸟要先飞。比喻能力差的人怕落后，做事比别人先动手。示例：女儿刻苦、自觉、用功，全靠～保持了各门功课全班第一。",
             "example": "要想力争上游，就要有笨鸟先飞的精神。",
-            "nearword":"跛鳖千里",
-            "autoword":"甘居人后",
-            "errword":["笨"]
+            "nearword": "跛鳖千里",
+            "autoword": "甘居人后",
+            "errword": [
+                "笨"
+            ],
+            "audio": "bnxf.wav"
         },
         {
             "name": "人一己百",
-            "pinyin":"rén yī jǐ bǎi",
+            "pinyin": "rén yī jǐ bǎi",
             "mean": "别人一次就做好或学会的，自己做一百次，学一百次。比喻以百倍的努力赶上别人。",
             "example": "我国工业虽然落后,但只要用人一己百的精神去干,就可以迅速赶上去。",
-            "nearword":"笨鸟先飞",
-            "autoword":" ",
-            "errword":["己"]
+            "nearword": "笨鸟先飞",
+            "autoword": " ",
+            "errword": [
+                "己"
+            ],
+            "audio": "ryjb.wav"
         },
         {
             "name": "奋起直追",
-            "pinyin":"fèn qǐ zhí zhuī",
+            "pinyin": "fèn qǐ zhí zhuī",
             "mean": "振作起来，紧紧赶上去。",
             "example": "他奋起直追，学习成绩很快便有了提升。",
-            "nearword":"奋发图强、迎头赶上、急起直追",
-            "autoword":"踌躇不前、得过且过",
-            "errword":["奋"]
+            "nearword": "奋发图强、迎头赶上、急起直追",
+            "autoword": "踌躇不前、得过且过",
+            "errword": [
+                "奋"
+            ],
+            "audio": "fqzz.wav"
         },
         {
             "name": "宁折不弯",
-            "pinyin":"nìng zhé bù wān",
+            "pinyin": "nìng zhé bù wān",
             "mean": "本指白杨木受到外力作用，只会断折，不会弯曲变形。后用来比喻宁可死也绝不屈服妥协。",
             "example": "竹，未曾出土先有节，至凌云处尚虚心，宁折不弯，能够表达士人行为上的品质、操守，谦虚而刚毅的精神。",
-            "nearword":"宁死不屈",
-            "autoword":"委曲求全",
-            "errword":["折"]
+            "nearword": "宁死不屈",
+            "autoword": "委曲求全",
+            "errword": [
+                "折"
+            ],
+            "audio": "nzbw.wav"
         },
         {
             "name": "义正词严",
-            "pinyin":"yì zhèng cí yán",
+            "pinyin": "yì zhèng cí yán",
             "mean": "道理正当公允，严肃的措词。",
             "example": "他义正词严地驳斥了对方的谬论。",
-            "nearword":"义正辞严、辞严义正、辞严意正、词严理正",
-            "autoword":"强词夺理、理屈词穷",
-            "errword":["严"]
+            "nearword": "义正辞严、辞严义正、辞严意正、词严理正",
+            "autoword": "强词夺理、理屈词穷",
+            "errword": [
+                "严"
+            ],
+            "audio": "yzcy.wav"
         },
         {
             "name": "威武不屈",
-            "pinyin":"wēi wǔ bù qū",
+            "pinyin": "wēi wǔ bù qū",
             "mean": "强暴的压力不能使之屈服。表示坚贞顽强。",
             "example": "刘胡兰面对敌人的残暴威武不屈、视死如归。",
-            "nearword":"坚贞不屈、宁死不屈",
-            "autoword":"奴颜婢膝、奴颜媚骨",
-            "errword":["武"]
+            "nearword": "坚贞不屈、宁死不屈",
+            "autoword": "奴颜婢膝、奴颜媚骨",
+            "errword": [
+                "武"
+            ],
+            "audio": "wwbq.wav"
         },
         {
             "name": "大义凛然",
-            "pinyin":"dà yì lǐn rán",
+            "pinyin": "dà yì lǐn rán",
             "mean": "由于胸怀正义而神态庄严，令人敬畏。",
             "example": "面对敌人的绞架，李大钊大义凛然，毫无惧色。",
-            "nearword":"临危不惧、正气浩然",
-            "autoword":"奴颜婢膝、卑躬屈膝",
-            "errword":["凛"]
+            "nearword": "临危不惧、正气浩然",
+            "autoword": "奴颜婢膝、卑躬屈膝",
+            "errword": [
+                "凛"
+            ],
+            "audio": "dylr.wav"
         },
         {
             "name": "火树银花",
-            "pinyin":"huǒ shù yín huā",
+            "pinyin": "huǒ shù yín huā",
             "mean": "形容张灯结彩或大放焰火的灿烂夜景。",
             "example": "节日的花灯把城市装扮得火树银花、五彩缤纷。",
-            "nearword":"张灯结彩、灯火辉煌、灯火通明",
-            "autoword":"漆黑一团、黑灯瞎火、昏天黑地",
-            "errword":["树"]
+            "nearword": "张灯结彩、灯火辉煌、灯火通明",
+            "autoword": "漆黑一团、黑灯瞎火、昏天黑地",
+            "errword": [
+                "树"
+            ],
+            "audio": "hsyh.wav"
         },
         {
             "name": "数不胜数",
-            "pinyin":"shǔ bù shèng shǔ",
+            "pinyin": "shǔ bù shèng shǔ",
             "mean": "数都数不过来。形容数量极多，很难计算。",
             "example": "对于老屋的美好回忆，犹如天上的星星，多得数不胜数。",
-            "nearword":"不计其数、多如牛毛、不可胜数",
-            "autoword":"屈指可数、寥寥无几",
-            "errword":["胜"]
+            "nearword": "不计其数、多如牛毛、不可胜数",
+            "autoword": "屈指可数、寥寥无几",
+            "errword": [
+                "胜"
+            ],
+            "audio": "sbss.wav"
         },
         {
             "name": "观者如堵",
-            "pinyin":"guān zhě rú dǔ",
+            "pinyin": "guān zhě rú dǔ",
             "mean": "观看的人象一堵墙一样。形容观看人数众多。",
             "example": "龙舟赛那天,太阳还没有出来,河边已是观者如堵了。",
-            "nearword":"座无虚席、水泄不通、观者如垛、观者成堵",
-            "autoword":"冷冷清清",
-            "errword":["堵"]
+            "nearword": "座无虚席、水泄不通、观者如垛、观者成堵",
+            "autoword": "冷冷清清",
+            "errword": [
+                "堵"
+            ],
+            "audio": "gzrd.wav"
         }
     ],
     "3": [
         {
             "name": "大雨滂沱",
-            "pinyin":"dà yǔ pāng tuó",
+            "pinyin": "dà yǔ pāng tuó",
             "mean": "形容雨下得很大。",
             "example": "今天上午,突然狂风四起,大雨滂沱,下得满街水像河一样流。",
-            "nearword":"大雨倾盆",
-            "autoword":"风和日丽",
-            "errword":["滂"]
+            "nearword": "大雨倾盆",
+            "autoword": "风和日丽",
+            "errword": [
+                "滂"
+            ],
+            "audio": "dypt.wav"
         },
         {
             "name": "夕阳西下",
-            "pinyin":"xī yáng xī xià",
+            "pinyin": "xī yáng xī xià",
             "mean": "指傍晚日落时的景象。也比喻迟暮之年或事物走向衰落。",
             "example": "夕阳西下，云儿穿上了美丽的彩装。",
-            "nearword":"日落西山",
-            "autoword":"旭日东升、晨光熹微",
-            "errword":["阳"]
+            "nearword": "日落西山",
+            "autoword": "旭日东升、晨光熹微",
+            "errword": [
+                "阳"
+            ],
+            "audio": "xyxx.wav"
         },
         {
             "name": "草长莺飞",
-            "pinyin":"cǎo zhǎng yīng fēi",
+            "pinyin": "cǎo zhǎng yīng fēi",
             "mean": "形容江南暮春的景色。",
             "example": "阳春三月,草长莺飞,正是春游的好季节。",
-            "nearword":"鸟语花香，春暖花开",
-            "autoword":"万物凋零",
-            "errword":["莺"]
+            "nearword": "鸟语花香，春暖花开",
+            "autoword": "万物凋零",
+            "errword": [
+                "莺"
+            ],
+            "audio": "czyf.wav"
         },
         {
             "name": "连绵不断",
-            "pinyin":"lián mián bù duàn",
+            "pinyin": "lián mián bù duàn",
             "mean": "形容连续不止，从不中断。",
             "example": "桂林的山危峰兀立，峰峦叠嶂，犹如连绵不断的画卷。",
-            "nearword":"源源不断、连续不断",
-            "autoword":"断断续续、一刀两断",
-            "errword":["绵"]
+            "nearword": "源源不断、连续不断",
+            "autoword": "断断续续、一刀两断",
+            "errword": [
+                "绵"
+            ],
+            "audio": "lmbd.wav"
         },
         {
             "name": "根深叶茂",
-            "pinyin":"gēn shēn yè mào",
+            "pinyin": "gēn shēn yè mào",
             "mean": "根扎得深，叶子就茂盛。比喻基础牢固，就会兴旺发展。",
             "example": "村头那棵大槐树根深叶茂，已有一百多年的历史了。",
-            "nearword":"本固枝荣、根深蒂固",
-            "autoword":"墙上芦苇、枯木朽株",
-            "errword":["茂"]
+            "nearword": "本固枝荣、根深蒂固",
+            "autoword": "墙上芦苇、枯木朽株",
+            "errword": [
+                "茂"
+            ],
+            "audio": "gsym.wav"
         },
         {
             "name": "高堂广厦",
-            "pinyin":"gāo táng guǎng shà",
+            "pinyin": "gāo táng guǎng shà",
             "mean": "指高大、宽阔的厅堂、房屋。",
             "example": "家是人们心中一个理想化的概念，高堂广厦是家、茅庐草舍也是家，其中蕴涵了每个人的理想与生活追求。",
-            "nearword":"玉宇琼楼",
-            "autoword":" ",
-            "errword":["厦"]
+            "nearword": "玉宇琼楼",
+            "autoword": " ",
+            "errword": [
+                "厦"
+            ],
+            "audio": "gtgs.wav"
         },
         {
             "name": "玉宇琼楼",
-            "pinyin":"yù yǔ qióng lóu",
+            "pinyin": "yù yǔ qióng lóu",
             "mean": "指月中宫殿，仙界楼台。也形容富丽堂皇的建筑物。",
             "example": "环顾四周,古色古香的建筑风格,亭台楼阁,玉宇琼楼",
-            "nearword":"琼楼玉宇、高堂广厦",
-            "autoword":" ",
-            "errword":["琼"]
+            "nearword": "琼楼玉宇、高堂广厦",
+            "autoword": " ",
+            "errword": [
+                "琼"
+            ],
+            "audio": "yyql.wav"
         },
         {
             "name": "湖光山色",
-            "pinyin":"hú guāng shān sè",
+            "pinyin": "hú guāng shān sè",
             "mean": "湖的风光，山的景色。指有水有山，风景秀丽。",
             "example": "眼前的湖光山色,令人陶醉,旅游胜地确实名不虚传。",
-            "nearword":"山清水秀、山明水秀",
-            "autoword":"穷山恶水",
-            "errword":["湖"]
+            "nearword": "山清水秀、山明水秀",
+            "autoword": "穷山恶水",
+            "errword": [
+                "湖"
+            ],
+            "audio": "hgss.wav"
         },
         {
             "name": "雏鹰展翅",
-            "pinyin":"chú yīng zhǎn chì",
+            "pinyin": "chú yīng zhǎn chì",
             "mean": "幼鹰展开翅膀飞翔。比喻青年人开始独立生活、工作。",
             "example": "我知道，在我们雏鹰展翅的时候会被大风刮倒，会被雨点打，但总有一天，我将飞向蓝天，在阳光下飞翔",
-            "nearword":"独立自主",
-            "autoword":" ",
-            "errword":["鹰"]
+            "nearword": "独立自主",
+            "autoword": " ",
+            "errword": [
+                "鹰"
+            ],
+            "audio": "cyzc.wav"
         },
         {
             "name": "意味深长",
-            "pinyin":"yì wèi shēn cháng",
+            "pinyin": "yì wèi shēn cháng",
             "mean": "意思含畜深远，耐人寻味。",
             "example": "老人的这番话意味深长，值得我们深思。",
-            "nearword":"情意深长、语重情长、语重心长",
-            "autoword":"兴味索然、索然无味",
-            "errword":["意"]
+            "nearword": "情意深长、语重情长、语重心长",
+            "autoword": "兴味索然、索然无味",
+            "errword": [
+                "意"
+            ],
+            "audio": "ywsc.wav"
         },
         {
             "name": "错落有致",
-            "pinyin":"cuò luò yǒu zhì",
+            "pinyin": "cuò luò yǒu zhì",
             "mean": "形容事物的布局虽然参差不齐，但却极有情趣，使人看了有好感。",
             "example": "这个小区的建筑错落有致，让人感到很舒服。",
-            "nearword":"有条不紊、有条有理",
-            "autoword":"杂乱无章、错落不齐",
-            "errword":["致"]
+            "nearword": "有条不紊、有条有理",
+            "autoword": "杂乱无章、错落不齐",
+            "errword": [
+                "致"
+            ],
+            "audio": "clyz.wav"
         },
         {
             "name": "曲径通幽",
-            "pinyin":"qū jìng tōng yōu",
+            "pinyin": "qū jìng tōng yōu",
             "mean": "弯曲的小路，通到幽深僻静的地方。",
             "example": "爷爷家住在曲径通幽的山坳里。",
-            "nearword":"幽静山谷",
-            "autoword":"繁华闹市",
-            "errword":["幽"]
+            "nearword": "幽静山谷",
+            "autoword": "繁华闹市",
+            "errword": [
+                "幽"
+            ],
+            "audio": "qjty.wav"
         },
         {
             "name": "千岩竞秀",
-            "pinyin":"qiān yán jìng xiù",
+            "pinyin": "qiān yán jìng xiù",
             "mean": "重山叠岭的风景好象互相比美。形容山景秀丽。",
             "example": "长江三峡,千岩竞秀,万壑争流,草木青翠,云蒸霞蔚,是著名的旅游胜地。",
-            "nearword":"万壑争流",
-            "autoword":" ",
-            "errword":["竞"]
+            "nearword": "万壑争流",
+            "autoword": " ",
+            "errword": [
+                "竞"
+            ],
+            "audio": "qyjx.wav"
         },
         {
             "name": "万壑争流",
-            "pinyin":"wàn hè zhēng liú",
+            "pinyin": "wàn hè zhēng liú",
             "mean": "许多溪水竞相奔流。形容山中胜景。",
             "example": "巍峨的群山耸立于长江和汉水之间,千峰攒簇,万壑争流,林海茫茫,郁郁葱葱。",
-            "nearword":"层峦叠嶂、千山万壑",
-            "autoword":"一马平川",
-            "errword":["壑"]
-
+            "nearword": "层峦叠嶂、千山万壑",
+            "autoword": "一马平川",
+            "errword": [
+                "壑"
+            ],
+            "audio": "whzl.wav"
         },
         {
             "name": "鸡飞狗跳",
-            "pinyin":"jī fēi gǒu tiào",
+            "pinyin": "jī fēi gǒu tiào",
             "mean": "把鸡吓得飞起来，把狗吓得到处乱跳。形容惊慌得乱成一团。",
             "example": "经过一番鸡飞狗跳之后,李辰逸完美落网,俗话说天网恢恢疏而不漏就是这个道理。",
-            "nearword":"鸡飞狗窜、鸡犬不宁、鸡飞狗走、鸡飞狗叫",
-            "autoword":"鸡犬不惊、莺歌燕舞、鱼跃鸢飞",
-            "errword":["跳"]
+            "nearword": "鸡飞狗窜、鸡犬不宁、鸡飞狗走、鸡飞狗叫",
+            "autoword": "鸡犬不惊、莺歌燕舞、鱼跃鸢飞",
+            "errword": [
+                "跳"
+            ],
+            "audio": "jfgt.wav"
         },
         {
             "name": "山崩地裂",
-            "pinyin":"shān bēng dì liè",
+            "pinyin": "shān bēng dì liè",
             "mean": "山岳倒塌，大地裂开。形容响声巨大或变化剧烈。",
             "example": "那场山崩地裂的灾难，令每一个经历过它的人都刻骨铭心。",
-            "nearword":"山崩地陷、山塌地崩",
-            "autoword":"岿然不动",
-            "errword":["裂"]
+            "nearword": "山崩地陷、山塌地崩",
+            "autoword": "岿然不动",
+            "errword": [
+                "裂"
+            ],
+            "audio": "sbdl.wav"
         },
         {
             "name": "惊涛拍岸",
-            "pinyin":"jīng tāo pāi àn ",
+            "pinyin": "jīng tāo pāi àn ",
             "mean": "汹涌的波涛不断地向岸边涌来。",
             "example": "浪石穿空，惊涛拍岸，卷起千堆雪，江山如画，一时多少豪杰。",
-            "nearword":"惊涛骇浪、大风大浪、波涛汹涌、汹涌湍急、惊涛巨浪",
-            "autoword":"风平浪静",
-            "errword":["拍"]
+            "nearword": "惊涛骇浪、大风大浪、波涛汹涌、汹涌湍急、惊涛巨浪",
+            "autoword": "风平浪静",
+            "errword": [
+                "拍"
+            ],
+            "audio": "jtpa.wav"
         },
         {
             "name": "骄阳似火",
-            "pinyin":"jiāo yáng sì huǒ",
+            "pinyin": "jiāo yáng sì huǒ",
             "mean": "强烈的太阳光像火那样热，把树叶都晒蔫了。形容天气非常炎热。",
             "example": "在骄阳似火的七月，我们举行了毕业典礼。",
-            "nearword":"烈日炎炎、烈日当空",
-            "autoword":"天寒地冻、冰天雪地、冷若冰霜",
-            "errword":["骄"]
+            "nearword": "烈日炎炎、烈日当空",
+            "autoword": "天寒地冻、冰天雪地、冷若冰霜",
+            "errword": [
+                "骄"
+            ],
+            "audio": "jysh.wav"
         },
         {
             "name": "形态各异",
-            "pinyin":"xíng tài gè yì",
+            "pinyin": "xíng tài gè yì",
             "mean": "事物的形状或表现各不相同。",
             "example": "花园里各种菊花都盛开了,形态各异,异彩纷呈,游人们纷纷驻足合影。",
-            "nearword":"千姿百态、各式各样、花样百出",
-            "autoword":"千篇一律",
-            "errword":["形"]
+            "nearword": "千姿百态、各式各样、花样百出",
+            "autoword": "千篇一律",
+            "errword": [
+                "形"
+            ],
+            "audio": "xtgy.wav"
         },
         {
             "name": "一碧如洗",
-            "pinyin":"yī bì rú xǐ",
+            "pinyin": "yī bì rú xǐ",
             "mean": "蓝天仿佛被水冲洗过一样，非常美丽。",
             "example": "天空一碧如洗，灿烂的阳光正从密密的松针的缝隙间射下来，形成一束束粗粗细细的光柱，把飘荡着轻纱般薄雾的林荫照得通亮。",
-            "nearword":"晴空万里、万里无云、碧空如洗",
-            "autoword":"乌云密布",
-            "errword":["碧"]
+            "nearword": "晴空万里、万里无云、碧空如洗",
+            "autoword": "乌云密布",
+            "errword": [
+                "碧"
+            ],
+            "audio": "ybrx.wav"
         },
         {
             "name": "五彩斑斓",
-            "pinyin":"wǔ cǎi bān lán",
+            "pinyin": "wǔ cǎi bān lán",
             "mean": "形容颜色灿烂多彩，艳丽夺目。",
             "example": "童年生活像一个五彩斑斓的梦，使人留恋，使人向往。童年生活中发生的一件件有趣的事，常常把我带入美好的回忆中。",
-            "nearword":"五颜六色、五彩缤纷、五光十色、色彩斑斓、色彩缤纷、万紫千红、绚丽多彩",
-            "autoword":"黯然失色、色彩单一",
-            "errword":["斓"]
+            "nearword": "五颜六色、五彩缤纷、五光十色、色彩斑斓、色彩缤纷、万紫千红、绚丽多彩",
+            "autoword": "黯然失色、色彩单一",
+            "errword": [
+                "斓"
+            ],
+            "audio": "wcbl.wav"
         },
         {
             "name": "波光粼粼",
-            "pinyin":"bō guāng lín lín",
+            "pinyin": "bō guāng lín lín",
             "mean": "形容波光明净。",
             "example": "波光粼粼的湖面上，渔帆点点",
-            "nearword":"水光潋滟",
-            "autoword":"惊涛骇浪、水平如镜",
-            "errword":["粼"]
+            "nearword": "水光潋滟",
+            "autoword": "惊涛骇浪、水平如镜",
+            "errword": [
+                "粼"
+            ],
+            "audio": "bgll.wav"
         },
         {
             "name": "茁壮成长",
-            "pinyin":"zhuó zhuàng chéng zhǎng",
+            "pinyin": "zhuó zhuàng chéng zhǎng",
             "mean": "健康地成长。",
             "example": "看到下一代健康活泼地茁壮成长，为人父母者无不感到十分欣慰。",
-            "nearword":"健康成长",
-            "autoword":"奄奄一息",
-            "errword":["茁"]
-            
+            "nearword": "健康成长",
+            "autoword": "奄奄一息",
+            "errword": [
+                "茁"
+            ],
+            "audio": "zzcz.wav"
         },
         {
             "name": "竞相开放",
-            "pinyin":"jìng xiāng kāi fàng",
+            "pinyin": "jìng xiāng kāi fàng",
             "mean": "互相争着开放。",
-            "example":"春天里，各种花竞相开放。",
-            "nearword":"竞相怒放、争奇斗艳",
-            "autoword":"相继凋零",
-            "errword":["竞"]
+            "example": "春天里，各种花竞相开放。",
+            "nearword": "竞相怒放、争奇斗艳",
+            "autoword": "相继凋零",
+            "errword": [
+                "竞"
+            ],
+            "audio": "jxkf.wav"
         },
         {
             "name": "称霸一方",
-            "pinyin":"chēng bà yī fāng",
+            "pinyin": "chēng bà yī fāng",
             "mean": "倚仗权势，欺压别人，成为一方的霸主。",
             "example": "土改时，对那些称霸一方，为富不仁的乡绅土豪，根据人民的意愿，进行了狠狠地打击。",
-            "nearword":"圈地为王",
-            "autoword":"偏安一隅",
-            "errword":["霸"]
+            "nearword": "圈地为王",
+            "autoword": "偏安一隅",
+            "errword": [
+                "霸"
+            ],
+            "audio": "cbyf.wav"
         },
         {
             "name": "连绵起伏",
-            "pinyin":"lián mián qǐ fú",
+            "pinyin": "lián mián qǐ fú",
             "mean": "或高或低，接连不断的样子。",
             "example": "大青山连绵起伏，在苍茫的夜色中显得更加雄伟。",
-            "nearword":"绵亘不绝、连绵不断",
-            "autoword":"一望无际、一马平川",
-            "errword":["绵"]
+            "nearword": "绵亘不绝、连绵不断",
+            "autoword": "一望无际、一马平川",
+            "errword": [
+                "绵"
+            ],
+            "audio": "lmqf.wav"
         },
         {
             "name": "滔天巨浪",
-            "pinyin":"tāo tiān jù làng ",
+            "pinyin": "tāo tiān jù làng ",
             "mean": "形容波浪极大。",
             "example": "倏然,翻江倒海再度袭来,滔天巨浪中,一串信息诡异浮现……",
-            "nearword":"汹涌澎湃、波涛汹涌",
-            "autoword":"风平浪静",
-            "errword":["滔"]
+            "nearword": "汹涌澎湃、波涛汹涌",
+            "autoword": "风平浪静",
+            "errword": [
+                "滔"
+            ],
+            "audio": "ttjl.wav"
         },
         {
             "name": "兴风作浪",
-            "pinyin":"xīng fēng zuò làng",
+            "pinyin": "xīng fēng zuò làng",
             "mean": "比喻挑起事端或进行破坏活动。",
             "example": "要坚决铲除那些在人民群众中兴风作浪的坏人。",
-            "nearword":"无事生非、惹是生非",
-            "autoword":"风平浪静、相安无事",
-            "errword":["浪"]
+            "nearword": "无事生非、惹是生非",
+            "autoword": "风平浪静、相安无事",
+            "errword": [
+                "浪"
+            ],
+            "audio": "xfzl.wav"
         },
         {
             "name": "胡作非为",
-            "pinyin":"hú zuò fēi wéi",
+            "pinyin": "hú zuò fēi wéi",
             "mean": "不顾法纪或舆论，任意行为。",
             "example": "崔华是个很安分的人，从不胡作非为。",
-            "nearword":"飞扬跋扈、惹是生非、任性妄为、轻举妄动、不可一世、滥加粗暴",
-            "autoword":"循规蹈矩、奉公守法、安分守己、秋毫无犯、谨言慎行、安分守纪、安贫乐道",
-            "errword":["作"]
+            "nearword": "飞扬跋扈、惹是生非、任性妄为、轻举妄动、不可一世、滥加粗暴",
+            "autoword": "循规蹈矩、奉公守法、安分守己、秋毫无犯、谨言慎行、安分守纪、安贫乐道",
+            "errword": [
+                "作"
+            ],
+            "audio": "hzfw.wav"
         },
         {
             "name": "唉声叹气",
-            "pinyin":"āi shēng tàn qì",
+            "pinyin": "āi shēng tàn qì",
             "mean": "因伤感、烦闷或痛苦而发出的叹息声。",
             "example": "在遇到困难时，与其唉声叹气，不如努力想办法克服它。",
-            "nearword":"长吁短叹、垂头丧气、无精打采",
-            "autoword":"喜眉笑眼、喜笑颜开、喜气洋洋",
-            "errword":["唉"]
+            "nearword": "长吁短叹、垂头丧气、无精打采",
+            "autoword": "喜眉笑眼、喜笑颜开、喜气洋洋",
+            "errword": [
+                "唉"
+            ],
+            "audio": "astq.wav"
         },
         {
             "name": "万般无奈",
-            "pinyin":"wàn bān wú nài",
+            "pinyin": "wàn bān wú nài",
             "mean": "形容一点儿办法都没有。",
             "example": "万般无奈之下，他只好取消了原来的计划。",
-            "nearword":"无可奈何、一筹莫展",
-            "autoword":"千依万肯",
-            "errword":["般"]
+            "nearword": "无可奈何、一筹莫展",
+            "autoword": "千依万肯",
+            "errword": [
+                "般"
+            ],
+            "audio": "wbwn.wav"
         },
         {
             "name": "忍辱负重",
-            "pinyin":"rěn rǔ fù zhòng",
+            "pinyin": "rěn rǔ fù zhòng",
             "mean": "忍受耻辱，承当重任。指为了一切而承受屈辱。",
             "example": "为了窃取重要的情报，她忍辱负重潜入敌营。",
-            "nearword":"忍气吞声、含垢忍辱",
-            "autoword":"忍无可忍",
-            "errword":["辱"]
+            "nearword": "忍气吞声、含垢忍辱",
+            "autoword": "忍无可忍",
+            "errword": [
+                "辱"
+            ],
+            "audio": "rrfz.wav"
         },
         {
             "name": "发奋图强",
-            "pinyin":"fā fèn tú qiáng",
+            "pinyin": "fā fèn tú qiáng",
             "mean": "下定决心，努力谋求富强。",
             "example": "我们要发奋图强，立志攀登科学技术的高峰。",
-            "nearword":"发愤图强",
-            "autoword":"无所作为",
-            "errword":["图"]
+            "nearword": "发愤图强",
+            "autoword": "无所作为",
+            "errword": [
+                "图"
+            ],
+            "audio": "fftq.wav"
         },
         {
             "name": "救亡图存",
-            "pinyin":"jiù wáng tú cún",
+            "pinyin": "jiù wáng tú cún",
             "mean": "拯救祖国的危亡。",
             "example": "早在30年代,一大批有识之士就以救亡图存为己任,投身到社会变革的洪流之中。",
-            "nearword":"吊民伐罪、存亡继绝、存亡断绝、拨乱反正、毁家纾难",
-            "autoword":"闭关自守、卖国求荣",
-            "errword":["救"]
+            "nearword": "吊民伐罪、存亡继绝、存亡断绝、拨乱反正、毁家纾难",
+            "autoword": "闭关自守、卖国求荣",
+            "errword": [
+                "救"
+            ],
+            "audio": "jwtc.wav"
         },
         {
             "name": "卧薪尝胆",
-            "pinyin":"wò  xīn cháng dǎn",
+            "pinyin": "wò  xīn cháng dǎn",
             "mean": "形容人刻苦自励，立志为国家报仇雪耻。",
             "example": "越王勾践卧薪尝胆,闻鸡起舞,最后打败了吴国。",
-            "nearword":"含垢忍辱、奋发图强、坐薪悬胆、枕戈饮胆、自强不息、忍辱负重",
-            "autoword":"妄自菲薄、胸无大志、自甘堕落",
-            "errword":["薪"]
+            "nearword": "含垢忍辱、奋发图强、坐薪悬胆、枕戈饮胆、自强不息、忍辱负重",
+            "autoword": "妄自菲薄、胸无大志、自甘堕落",
+            "errword": [
+                "薪"
+            ],
+            "audio": "wxcd.wav"
         },
         {
             "name": "羽翼丰满",
-            "pinyin":"yǔ yì fēng mǎn",
+            "pinyin": "yǔ yì fēng mǎn",
             "mean": "比喻已经成熟，力量已经壮大。",
             "example": "春天在一点一点化开的过程中，一天天地羽翼丰满起来了。待它可以展翅高飞的时候，解冻后的大地，又怎能不做了春天的天空呢！",
-            "nearword":"羽毛丰满",
-            "autoword":" ",
-            "errword":["翼"]
+            "nearword": "羽毛丰满",
+            "autoword": " ",
+            "errword": [
+                "翼"
+            ],
+            "audio": "yyfm.wav"
         },
         {
             "name": "报仇雪恨",
-            "pinyin":"bào chóu xuě hèn",
+            "pinyin": "bào chóu xuě hèn",
             "mean": "通过报仇而彻底消除心头之恨。",
             "example": "人民政府为白毛女报仇雪恨，枪毙了黄世仁。",
-            "nearword":"报仇雪耻、深仇大恨、以牙还牙",
-            "autoword":"以德报怨、忍辱负重、忍气吞声",
-            "errword":["雪"]
+            "nearword": "报仇雪耻、深仇大恨、以牙还牙",
+            "autoword": "以德报怨、忍辱负重、忍气吞声",
+            "errword": [
+                "雪"
+            ],
+            "audio": "bcxh.wav"
         },
         {
             "name": "叶落归根",
-            "pinyin":"yè luò guī gēn ",
+            "pinyin": "yè luò guī gēn ",
             "mean": "树叶总凋落在树根旁。比喻人或事物都要有一定的归宿。",
             "example": "叶落归根,回到故乡安度晚年,是在外漂荡了几十年的爷爷的夙愿。",
-            "nearword":"饮水思源、衣锦还乡",
-            "autoword":"忘恩负义",
-            "errword":["归"]
+            "nearword": "饮水思源、衣锦还乡",
+            "autoword": "忘恩负义",
+            "errword": [
+                "归"
+            ],
+            "audio": "ylhg.wav"
         },
         {
             "name": "一帆风顺",
-            "pinyin":"yī fān fēng shùn",
+            "pinyin": "yī fān fēng shùn",
             "mean": "船挂着满帆顺风行驶。比喻很顺利，没有任何阻碍。",
             "example": "愿你在人生的旅途中一帆风顺。",
-            "nearword":"无往不利、一往无前、一路顺风",
-            "autoword":"一波三折、暴风骤雨、凶涛恶浪",
-            "errword":["帆"]
+            "nearword": "无往不利、一往无前、一路顺风",
+            "autoword": "一波三折、暴风骤雨、凶涛恶浪",
+            "errword": [
+                "帆"
+            ],
+            "audio": "yffs.wav"
         },
         {
             "name": "老马识途",
-            "pinyin":"lǎo mǎ shí tú",
+            "pinyin": "lǎo mǎ shí tú",
             "mean": "比喻有经验的人能提出解决问题的办法，起到引导作用。",
             "example": "工作中老马识途之人的指导必不可少。",
-            "nearword":"老骥伏枥、老当益壮、 识途老马、驾轻就熟、轻车熟路",
-            "autoword":"老气横秋、老态龙钟、不知所以、初出茅庐、乳臭未干",
-            "errword":["途"]
+            "nearword": "老骥伏枥、老当益壮、 识途老马、驾轻就熟、轻车熟路",
+            "autoword": "老气横秋、老态龙钟、不知所以、初出茅庐、乳臭未干",
+            "errword": [
+                "途"
+            ],
+            "audio": "lmst.wav"
         },
         {
             "name": "目不暇接",
-            "pinyin":"mù bù xiá jiē",
+            "pinyin": "mù bù xiá jiē",
             "mean": "指东西很多，眼睛都看不过来。",
             "example": "车窗外飞掠的景物令他目不暇接。",
-            "nearword":"应接不暇",
-            "autoword":"目不忍睹",
-            "errword":["暇"]
+            "nearword": "应接不暇",
+            "autoword": "目不忍睹",
+            "errword": [
+                "暇"
+            ],
+            "audio": "mbxj.wav"
         },
         {
             "name": "美不胜收",
-            "pinyin":"měi bù shèng shōu",
+            "pinyin": "měi bù shèng shōu",
             "mean": "形容好的东西很多，一时看不过来。",
             "example": "九寨沟的自然风光美不胜收，是旅游的好去处。",
-            "nearword":"琳琅满目、应接不暇、目不暇接",
-            "autoword":"丑陋不堪、不堪入目",
-            "errword":["胜"]
+            "nearword": "琳琅满目、应接不暇、目不暇接",
+            "autoword": "丑陋不堪、不堪入目",
+            "errword": [
+                "胜"
+            ],
+            "audio": "mbss.wav"
         },
         {
             "name": "鱼贯而入",
-            "pinyin":"yú guàn ér rù",
-            "mean":"如鱼头尾相接般连续进入。",
+            "pinyin": "yú guàn ér rù",
+            "mean": "如鱼头尾相接般连续进入。",
             "example": "一队学生鱼贯而入，共有十四五个人。",
-            "nearword":"井然有序、有条不紊",
-            "autoword":"一拥而入、破门而入",
-            "errword":["贯"]
+            "nearword": "井然有序、有条不紊",
+            "autoword": "一拥而入、破门而入",
+            "errword": [
+                "贯"
+            ],
+            "audio": "yger.wav"
         },
         {
             "name": "倾巢而出",
-            "pinyin":"qīng cháo ér chū",
+            "pinyin": "qīng cháo ér chū",
             "mean": "比喻全部出动。",
             "example": "国民党反动派倾巢而出，对红军根据地进行围剿。",
-            "nearword":"不遗余力、倾城而出",
-            "autoword":"按兵不动",
-            "errword":["巢"]
+            "nearword": "不遗余力、倾城而出",
+            "autoword": "按兵不动",
+            "errword": [
+                "巢"
+            ],
+            "audio": "qcec.wav"
         },
         {
             "name": "狼奔豕突",
-            "pinyin":"láng bēn shǐ tū",
+            "pinyin": "láng bēn shǐ tū",
             "mean": "像狼和猪那样奔跑乱窜。",
             "example": "一听到警笛,这些赌徒立即狼奔豕突。",
-            "nearword":"横冲直撞、抱头鼠窜、群魔乱舞",
-            "autoword":"有条不紊、井然有序、井井有条",
-            "errword":["豕"]
+            "nearword": "横冲直撞、抱头鼠窜、群魔乱舞",
+            "autoword": "有条不紊、井然有序、井井有条",
+            "errword": [
+                "豕"
+            ],
+            "audio": "lbst.wav"
         },
         {
             "name": "群龙无首",
-            "pinyin":"láng bēn shǐ tū",
+            "pinyin": "láng bēn shǐ tū",
             "mean": "比喻人多而没有领头的人。",
             "example": "老师走开了，教室里犹如群龙无首，一片混乱。",
-            "nearword":"各自为政、乌合之众",
-            "autoword":"一呼百应",
-            "errword":["群"]
+            "nearword": "各自为政、乌合之众",
+            "autoword": "一呼百应",
+            "errword": [
+                "群"
+            ],
+            "audio": "qlws.wav"
         },
         {
             "name": "狡兔三窟",
-            "pinyin":"jiǎo tù sān kū",
+            "pinyin": "jiǎo tù sān kū",
             "mean": "狡猾的兔子有三个洞穴。比喻藏身的地方多。",
             "example": "尽管这帮歹徒狡兔三窟，但最终还是难逃法网。",
-            "nearword":"移花接木、掩人耳目",
-            "autoword":"瓮中之鳖、坐以待毙",
-            "errword":["窟"]
+            "nearword": "移花接木、掩人耳目",
+            "autoword": "瓮中之鳖、坐以待毙",
+            "errword": [
+                "窟"
+            ],
+            "audio": "jtsk.wav"
         },
         {
             "name": "大街小巷",
-            "pinyin":"dà jiē xiǎo xiàng",
+            "pinyin": "dà jiē xiǎo xiàng",
             "mean": "形容到处都是，覆盖的地域广。",
             "example": "国庆节到了，大街小巷彩旗飞扬，一派喜庆气氛。",
-            "nearword":"街头巷尾、四面八方",
-            "autoword":" ",
-            "errword":["巷"]
+            "nearword": "街头巷尾、四面八方",
+            "autoword": " ",
+            "errword": [
+                "巷"
+            ],
+            "audio": "djxx.wav"
         },
         {
             "name": "人头攒动",
-            "pinyin":"rén tóu cuán dòng",
+            "pinyin": "rén tóu cuán dòng",
             "mean": "形容人很多。",
             "example": "广场上人头攒动，好比星空中的点点星光。",
-            "nearword":"熙熙攘攘，人流如潮",
-            "autoword":"人烟稀少，人迹罕至。",
-            "errword":["攒"]
+            "nearword": "熙熙攘攘，人流如潮",
+            "autoword": "人烟稀少，人迹罕至。",
+            "errword": [
+                "攒"
+            ],
+            "audio": "rtcd.wav"
         },
         {
             "name": "风驰电掣",
-            "pinyin":"fēng chí diàn chè",
+            "pinyin": "fēng chí diàn chè",
             "mean": "形容非常迅速，急闪而过。",
             "example": "摩托车风驰电掣,一会儿就到达了目的地。",
-            "nearword":"流星赶月、电炮火石",
-            "autoword":"老牛破车、蜗行牛步",
-            "errword":["掣"]
+            "nearword": "流星赶月、电炮火石",
+            "autoword": "老牛破车、蜗行牛步",
+            "errword": [
+                "掣"
+            ],
+            "audio": "fcdc.wav"
         },
         {
             "name": "车水马龙",
-            "pinyin":"chē shuǐ mǎ lóng",
+            "pinyin": "chē shuǐ mǎ lóng",
             "mean": "形容车马来往不绝的繁华热闹景象。",
             "example": "入夜，人民大街华灯璀璨，车水马龙。",
-            "nearword":"门庭若市、络绎不绝",
-            "autoword":"门可罗雀、门庭冷落",
-            "errword":["龙"]
+            "nearword": "门庭若市、络绎不绝",
+            "autoword": "门可罗雀、门庭冷落",
+            "errword": [
+                "龙"
+            ],
+            "audio": "csml.wav"
         },
         {
             "name": "华灯初上",
-            "pinyin":"huá dēng chū shàng",
+            "pinyin": "huá dēng chū shàng",
             "mean": "夜晚来临，装饰精美、光辉灿烂的灯刚刚开放。",
             "example": "华灯初上，昏黄而冷落。眼前，一场烟花落正缤纷上演，在空中耀眼地铺展，如花瓣轻洒。",
-            "nearword":"灯火初明、灯火辉煌",
-            "autoword":"灯火阑珊、月暗灯昏",
-            "errword":["华"]
+            "nearword": "灯火初明、灯火辉煌",
+            "autoword": "灯火阑珊、月暗灯昏",
+            "errword": [
+                "华"
+            ],
+            "audio": "hdcs.wav"
         },
         {
             "name": "流光溢彩",
-            "pinyin":"liú guāng yì cǎi",
+            "pinyin": "liú guāng yì cǎi",
             "mean": "指灯光绚烂多彩。",
             "example": "我们居住的小区现在已经装饰得流光溢彩了。",
-            "nearword":"光彩夺目、熠熠生辉",
-            "autoword":"暗淡无光、黯然失色",
-            "errword":["溢"]
+            "nearword": "光彩夺目、熠熠生辉",
+            "autoword": "暗淡无光、黯然失色",
+            "errword": [
+                "溢"
+            ],
+            "audio": "lgyc.wav"
         },
         {
             "name": "美轮美奂",
-            "pinyin":"měi lún měi huàn",
+            "pinyin": "měi lún měi huàn",
             "mean": "形容房屋高大华丽，多用来赞美新屋美景。",
             "example": "家乡就像一个世外桃源，在我心中美轮美奂。",
-            "nearword":"雕栏玉砌、竹苞松茂、富丽堂皇",
-            "autoword":"黯然失色、暗淡无光、平淡无奇",
-            "errword":["奂"]
+            "nearword": "雕栏玉砌、竹苞松茂、富丽堂皇",
+            "autoword": "黯然失色、暗淡无光、平淡无奇",
+            "errword": [
+                "奂"
+            ],
+            "audio": "mlmh.wav"
         },
         {
             "name": "巧夺天工",
-            "pinyin":"qiǎo duó tiān gōng",
+            "pinyin": "qiǎo duó tiān gōng",
             "mean": "形容制作技艺高超。",
             "example": "这座园林设计精美，可谓巧夺天工。",
-            "nearword":"玲珑剔透、鬼斧神工",
-            "autoword":"天造地设",
-            "errword":["巧"]
+            "nearword": "玲珑剔透、鬼斧神工",
+            "autoword": "天造地设",
+            "errword": [
+                "巧"
+            ],
+            "audio": "qdtg.wav"
         },
         {
             "name": "和风细雨",
-            "pinyin":"hé fēng xì yǔ",
+            "pinyin": "hé fēng xì yǔ",
             "mean": "比喻做事态度温和，方式和缓，不粗暴。",
             "example": "同志之间开展批评要和风细雨，不能简单粗暴。",
-            "nearword":"和颜悦色、温文尔雅",
-            "autoword":"暴风骤雨、咄咄逼人",
-            "errword":["细"]
+            "nearword": "和颜悦色、温文尔雅",
+            "autoword": "暴风骤雨、咄咄逼人",
+            "errword": [
+                "细"
+            ],
+            "audio": "hfxy.wav"
         },
         {
             "name": "春风化雨",
-            "pinyin":"chūn fēng huà yǔ",
+            "pinyin": "chūn fēng huà yǔ",
             "mean": "适于草木生长的风雨，比喻良好的教育。",
             "example": "经过老师一番春风化雨的开导，倔强的明明认识到了自己的错误。",
-            "nearword":"和声细语、如沐春风、化雨春风、如坐春风、如沫春风",
-            "autoword":" ",
-            "errword":["化"]
+            "nearword": "和声细语、如沐春风、化雨春风、如坐春风、如沫春风",
+            "autoword": " ",
+            "errword": [
+                "化"
+            ],
+            "audio": "cfhy.wav"
         },
         {
             "name": "呼风唤雨",
-            "pinyin":"hū fēng huàn yǔ",
+            "pinyin": "hū fēng huàn yǔ",
             "mean": "比喻能够支配自然。",
             "example": "有些人利用权势来呼风唤雨,随心所欲。",
-            "nearword":"兴风作浪、推波助澜、兴妖作怪",
-            "autoword":"息事宁人",
-            "errword":["唤"]
+            "nearword": "兴风作浪、推波助澜、兴妖作怪",
+            "autoword": "息事宁人",
+            "errword": [
+                "唤"
+            ],
+            "audio": "hfhy.wav"
         },
         {
             "name": "栉风沐雨",
-            "pinyin":"zhì fēng mù yǔ",
+            "pinyin": "zhì fēng mù yǔ",
             "mean": "形容奔波劳碌，不避风雨。",
             "example": "勘探工作者冒严寒,顶酷暑,栉风沐雨,探寻出一个又一个宝藏。",
-            "nearword":"餐风露宿",
-            "autoword":" ",
-            "errword":["栉"]
+            "nearword": "餐风露宿",
+            "autoword": " ",
+            "errword": [
+                "栉"
+            ],
+            "audio": "zfmy.wav"
         },
         {
             "name": "见风是雨",
-            "pinyin":"jiàn fēng shì yǔ",
+            "pinyin": "jiàn fēng shì yǔ",
             "mean": "比喻只看到一点迹象，就轻率地信以为真。",
             "example": "沈桐对自己见风是雨的工作作法为深感自责。",
-            "nearword":" ",
-            "autoword":" ",
-            "errword":["雨"]
+            "nearword": " ",
+            "autoword": " ",
+            "errword": [
+                "雨"
+            ],
+            "audio": "jfsy.wav"
         },
         {
             "name": "凄风苦雨",
-            "pinyin":"qī fēng kǔ yǔ",
+            "pinyin": "qī fēng kǔ yǔ",
             "mean": "形容天气恶劣。比喻境遇悲惨凄凉。",
             "example": "凄风苦雨中,她思前想后,新愁旧恨都涌上了心头。",
-            "nearword":"风雨交加、风雨如晦",
-            "autoword":" ",
-            "errword":["凄"]
+            "nearword": "风雨交加、风雨如晦",
+            "autoword": " ",
+            "errword": [
+                "凄"
+            ],
+            "audio": "qfky.wav"
         },
         {
             "name": "暴风骤雨",
-            "pinyin":"bào fēng zhòu yǔ",
+            "pinyin": "bào fēng zhòu yǔ",
             "mean": "来势迅猛的风雨。比喻声势浩大、发展迅猛的群众运动。",
             "example": "辛亥革命就象暴风骤雨一样,很快席卷全国。",
-            "nearword":"狂风暴雨、急风暴雨",
-            "autoword":"和风细雨、东风化雨",
-            "errword":["骤"]
+            "nearword": "狂风暴雨、急风暴雨",
+            "autoword": "和风细雨、东风化雨",
+            "errword": [
+                "骤"
+            ],
+            "audio": "bfzy.wav"
         },
         {
             "name": "戎马一生",
-            "pinyin":"róng mǎ yī shēng",
+            "pinyin": "róng mǎ yī shēng",
             "mean": "一辈子都从事军事活动。",
             "example": "李将军金戈铁马、戎马一生，到头来连个王侯也没封了。",
-            "nearword":"戎马生涯、戎马倥偬、军旅生涯",
-            "autoword":"安居乐业、安于现状、安土重迁",
-            "errword":["戎"]
+            "nearword": "戎马生涯、戎马倥偬、军旅生涯",
+            "autoword": "安居乐业、安于现状、安土重迁",
+            "errword": [
+                "戎"
+            ],
+            "audio": "rmys.wav"
         },
         {
             "name": "身经百战",
-            "pinyin":"shēn jīng bǎi zhàn",
+            "pinyin": "shēn jīng bǎi zhàn",
             "mean": "亲身经历过许多次战斗。",
             "example": "朱德元帅身经百战,立下了赫赫战功。",
-            "nearword":"出生入死，枪林弹雨",
-            "autoword":"坐而论道，纸上谈兵",
-            "errword":["经"]
+            "nearword": "出生入死，枪林弹雨",
+            "autoword": "坐而论道，纸上谈兵",
+            "errword": [
+                "经"
+            ],
+            "audio": "sjbz.wav"
         },
         {
             "name": "传为美谈",
-            "pinyin":"chuán wéi měi tán",
+            "pinyin": "chuán wéi měi tán",
             "mean": "被人们广泛称道或赞颂。",
             "example": "那位女孩舍身救助丹顶鹤的故事，一时被传为美谈。",
-            "nearword":"传为佳话",
-            "autoword":"平淡无奇",
-            "errword":["谈"]
+            "nearword": "传为佳话",
+            "autoword": "平淡无奇",
+            "errword": [
+                "谈"
+            ],
+            "audio": "cwmt.wav"
         },
         {
             "name": "约法三章",
-            "pinyin":"yuē fǎ sān zhāng",
+            "pinyin": "yuē fǎ sān zhāng",
             "mean": "原指军队法纪严明，后泛指约好或提出几条规定，大家共同遵守。",
             "example": "新的班主任张老师和我们约法三章。",
-            "nearword":"明文规定",
-            "autoword":"胡作非为、为所欲为",
-            "errword":["章"]
+            "nearword": "明文规定",
+            "autoword": "胡作非为、为所欲为",
+            "errword": [
+                "章"
+            ],
+            "audio": "yfsz.wav"
         },
         {
             "name": "秋毫无犯",
-            "pinyin":"qiū háo wú fàn",
+            "pinyin": "qiū háo wú fàn",
             "mean": "形容军队纪律严明，对百姓没有丝毫侵犯。",
             "example": "人民军队纪律严明，所经之处秋毫无犯。",
-            "nearword":"鸡犬不惊、道不拾遗",
-            "autoword":"胡作非为、无恶不作",
-            "errword":["毫"]
+            "nearword": "鸡犬不惊、道不拾遗",
+            "autoword": "胡作非为、无恶不作",
+            "errword": [
+                "毫"
+            ],
+            "audio": "qhwf.wav"
         },
         {
             "name": "运筹帷幄",
-            "pinyin":" yùn chóu wéi wò",
+            "pinyin": " yùn chóu wéi wò",
             "mean": "常指在后方决定作战方案。泛指主持大计，考虑决策。",
             "example": "第一线工人辛勤劳动，贡献的确不小，领导和科技人员运筹帷幄的功劳一样不可埋没。",
-            "nearword":"握筹布画、运筹决策",
-            "autoword":"纸上谈兵",
-            "errword":["幄"]
+            "nearword": "握筹布画、运筹决策",
+            "autoword": "纸上谈兵",
+            "errword": [
+                "幄"
+            ],
+            "audio": "ycww.wav"
         },
         {
             "name": "好谋善断",
-            "pinyin":"hào móu shàn duàn",
+            "pinyin": "hào móu shàn duàn",
             "mean": "喜欢出谋划策，善于作出判断。",
             "example": "他，是个特别的人，卓尔不群，好谋善断。",
-            "nearword":"多谋善断",
-            "autoword":"好谋无断",
-            "errword":["谋"]
+            "nearword": "多谋善断",
+            "autoword": "好谋无断",
+            "errword": [
+                "谋"
+            ],
+            "audio": "hmsd.wav"
         },
         {
             "name": "学海无涯",
-            "pinyin":"xué hǎi wú yá",
+            "pinyin": "xué hǎi wú yá",
             "mean": "学习像是在海上航行，没有边际，要学的知识无穷无尽。",
             "example": "我把“学海无涯苦作舟”这条名训铭记在心头。",
-            "nearword":"学无止境",
-            "autoword":"不学无术",
-            "errword":["涯"]
+            "nearword": "学无止境",
+            "autoword": "不学无术",
+            "errword": [
+                "涯"
+            ],
+            "audio": "xhwy.wav"
         },
         {
             "name": "九牛一毛",
-            "pinyin":"jiǔ niú yī máo",
+            "pinyin": "jiǔ niú yī máo",
             "mean": "像是九头牛身上的一根毛，比喻极大数量中微不足道的数量。",
             "example": "这些钱对于一个百万富翁来说不过是九牛一毛。",
-            "nearword":"沧海一粟，太仓一粟，一丝一毫",
-            "autoword":"不计其数、举不胜举、恒河沙数",
-            "errword":["毛"]
+            "nearword": "沧海一粟，太仓一粟，一丝一毫",
+            "autoword": "不计其数、举不胜举、恒河沙数",
+            "errword": [
+                "毛"
+            ],
+            "audio": "jnym.wav"
         },
         {
             "name": "沧海一粟",
-            "pinyin":"cāng hǎi yī sù",
+            "pinyin": "cāng hǎi yī sù",
             "mean": "大海里的一颗谷粒，形容非常渺小。",
             "example": "恒河沙数",
-            "nearword":"九牛一毛、太仓一粟、微不足道",
-            "autoword":"恒河沙数",
-            "errword":["粟"]
+            "nearword": "九牛一毛、太仓一粟、微不足道",
+            "autoword": "恒河沙数",
+            "errword": [
+                "粟"
+            ],
+            "audio": "chys.wav"
         },
         {
             "name": "孜孜以求",
-            "pinyin":"zī zī yǐ qiú",
+            "pinyin": "zī zī yǐ qiú",
             "mean": "不断追求，不知劳累。",
             "example": "人类的梦想是从根本上征服衰老，科学家正孜孜以求。",
-            "nearword":"孜孜不倦",
-            "autoword":" ",
-            "errword":["孜"]
+            "nearword": "孜孜不倦",
+            "autoword": " ",
+            "errword": [
+                "孜"
+            ],
+            "audio": "zzyq.wav"
         },
         {
             "name": "全力以赴",
-            "pinyin":"quán lì yǐ fù",
+            "pinyin": "quán lì yǐ fù",
             "mean": "付出所有的精力去做成一件事情。",
             "example": "我们要全力以赴地搞好“希望工程”，绝不吝惜财力或物力。",
-            "nearword":"事与愿违",
-            "autoword":"如愿以偿、尽如人意",
-            "errword":["赴"]
+            "nearword": "事与愿违",
+            "autoword": "如愿以偿、尽如人意",
+            "errword": [
+                "赴"
+            ],
+            "audio": "qlyf.wav"
         },
         {
             "name": "百尺竿头",
-            "pinyin":"bǎi chǐ gān tóu ",
+            "pinyin": "bǎi chǐ gān tóu ",
             "mean": "比喻在学问、技术等方面达到了很高的程度。",
             "example": "老师以百尺竿头的话勉励拿到奖学金的同学,希望他们升入中学后,更进一步。",
-            "nearword":"扶摇直上、日新月异、百丈竿头、一日千里、欣欣向荣、步步高升、蒸蒸日上",
-            "autoword":"每况愈下",
-            "errword":["竿"]
+            "nearword": "扶摇直上、日新月异、百丈竿头、一日千里、欣欣向荣、步步高升、蒸蒸日上",
+            "autoword": "每况愈下",
+            "errword": [
+                "竿"
+            ],
+            "audio": "bcgt.wav"
         }
     ],
-    "4":[
+    "4": [
         {
             "name": "文思敏捷",
-            "pinyin":"wén sī mǐn jié",
+            "pinyin": "wén sī mǐn jié",
             "mean": "指写文章的灵感和思路非常顺畅。",
             "example": "这学生天资聪颖，文思敏捷，下笔成章，将来未可限量。",
-            "nearword":"下笔成文",
-            "autoword":"胸无点墨",
-            "errword":["捷"]
+            "nearword": "下笔成文",
+            "autoword": "胸无点墨",
+            "errword": [
+                "捷"
+            ],
+            "audio": "wsmj.wav"
         },
         {
             "name": "聪明过人",
-            "pinyin":"cōng míng guò rén",
+            "pinyin": "cōng míng guò rén",
             "mean": "形容人资质颖慧，超过一般人。",
             "example": "李自成虽然聪明过人,过目成诵,但他从不自高自大,放松学习。",
-            "nearword":"聪明伶俐、机智过人",
-            "autoword":"愚蠢至极",
-            "errword":["聪"]
+            "nearword": "聪明伶俐、机智过人",
+            "autoword": "愚蠢至极",
+            "errword": [
+                "聪"
+            ],
+            "audio": "cmgr.wav"
         },
         {
             "name": "青出于蓝",
-            "pinyin":"qīng chū yú lán",
+            "pinyin": "qīng chū yú lán",
             "mean": "比喻学生超过老师或后人胜过前人。",
             "example": "从师生作品水准来看，显然徒弟已青出于蓝。",
-            "nearword":"略胜一筹、后来居上、后起之秀、后发先至、后继有人",
-            "autoword":"不可企及、每况愈下、减师半德",
-            "errword":["蓝"]
+            "nearword": "略胜一筹、后来居上、后起之秀、后发先至、后继有人",
+            "autoword": "不可企及、每况愈下、减师半德",
+            "errword": [
+                "蓝"
+            ],
+            "audio": "qcyl.wav"
         },
         {
             "name": "一鸣惊人",
-            "pinyin":"yī míng jīng rén",
+            "pinyin": "yī míng jīng rén",
             "mean": "比喻平时没有突出的表现，一下子做出惊人的成绩。",
             "example": "十年间他一直默默无闻，后来一部作品使他一鸣惊人。",
-            "nearword":"一举成名、一炮而红、一步登天、名满天下、不同凡响",
-            "autoword":"屡试不第、出师不利、身败名裂、臭名远扬、丢人现眼、寂寂无闻、没没无闻、默默无闻",
-            "errword":["鸣"]
+            "nearword": "一举成名、一炮而红、一步登天、名满天下、不同凡响",
+            "autoword": "屡试不第、出师不利、身败名裂、臭名远扬、丢人现眼、寂寂无闻、没没无闻、默默无闻",
+            "errword": [
+                "鸣"
+            ],
+            "audio": "ymjr.wav"
         },
         {
             "name": "桃李争艳",
-            "pinyin":"táo lǐ zhēng yàn",
+            "pinyin": "táo lǐ zhēng yàn",
             "mean": "指春天桃花和李花争相开放。形容春光美丽。",
             "example": "人生很忙，放空一点，看桃李争艳美景无限。",
-            "nearword":"桃李争辉、桃柳争妍",
-            "autoword":" ",
-            "errword":["艳"]
+            "nearword": "桃李争辉、桃柳争妍",
+            "autoword": " ",
+            "errword": [
+                "艳"
+            ],
+            "audio": "tlzy.wav"
         },
         {
             "name": "后继有人",
-            "pinyin":"hòu jì yǒu rén",
+            "pinyin": "hòu jì yǒu rén",
             "mean": "有后人继承前人的事业。",
             "example": "革命的事业后继有人。",
-            "nearword":"传宗接代、青出于蓝",
-            "autoword":"青黄不接、接二连三、后继乏人、后继无人、断子绝孙",
-            "errword":["继"]
+            "nearword": "传宗接代、青出于蓝",
+            "autoword": "青黄不接、接二连三、后继乏人、后继无人、断子绝孙",
+            "errword": [
+                "继"
+            ],
+            "audio": "hjyr.wav"
         },
         {
             "name": "百年树人",
-            "pinyin":"bǎi nián shù rén",
+            "pinyin": "bǎi nián shù rén",
             "mean": "比喻培养人才是长久之计，也表示培养人才很不容易。",
             "example": "办教育是百年树人的大业,要有长远的规划。",
-            "nearword":"百载树人",
-            "autoword":"君子之泽",
-            "errword":["树"]
+            "nearword": "百载树人",
+            "autoword": "君子之泽",
+            "errword": [
+                "树"
+            ],
+            "audio": "bnsr.wav"
         },
         {
             "name": "以身许国",
-            "pinyin":"yǐ shēn xǔ guó",
+            "pinyin": "yǐ shēn xǔ guó",
             "mean": "把自己献给国家，忠心报国。",
             "example": "军人就是要以身许国,把成仁取义的道理永记在心中。",
-            "nearword":"舍生取义",
-            "autoword":"苟且偷生、苟且偏安 、贪生怕死",
-            "errword":["许"]
+            "nearword": "舍生取义",
+            "autoword": "苟且偷生、苟且偏安 、贪生怕死",
+            "errword": [
+                "许"
+            ],
+            "audio": "ysxg.wav"
         },
         {
             "name": "碧血丹心",
-            "pinyin":"bì xuè dān xīn",
+            "pinyin": "bì xuè dān xīn",
             "mean": "珍贵的热血，赤诚的忠心。用以称颂为正义事业牺牲的烈士。",
             "example": "桃李满园竞芳菲，碧血丹心写未来！",
-            "nearword":"赤子之心、赤胆忠心、丹心碧血、披肝沥胆",
-            "autoword":"包藏祸心、叵测之心、狼心狗肺、背信弃义",
-            "errword":["碧"]
+            "nearword": "赤子之心、赤胆忠心、丹心碧血、披肝沥胆",
+            "autoword": "包藏祸心、叵测之心、狼心狗肺、背信弃义",
+            "errword": [
+                "碧"
+            ],
+            "audio": "bxdx.wav"
         },
         {
             "name": "疾恶如仇",
-            "pinyin":"jí è rú chóu",
+            "pinyin": "jí è rú chóu",
             "mean": "痛恨坏人坏事就跟对待仇敌一样。形容正义感极强。",
             "example": "他爱憎分明，疾恶如仇，受到了人们的拥护。",
-            "nearword":"义不容辞、见义勇为",
-            "autoword":"同流合污",
-            "errword":["疾"]
+            "nearword": "义不容辞、见义勇为",
+            "autoword": "同流合污",
+            "errword": [
+                "疾"
+            ],
+            "audio": "jerc.wav"
         },
         {
             "name": "大义灭亲",
-            "pinyin":"dà yì miè qīn",
+            "pinyin": "dà yì miè qīn",
             "mean": "为了维护正义，对犯罪的亲属不徇私情，使其受到法律的制裁。",
             "example": "他执法不徇私情,大义灭亲地把儿子送入法庭。",
-            "nearword":"大公无私、不徇私情、铁面无私",
-            "autoword":"徇情枉法、徇私舞弊、认贼作父",
-            "errword":["义"]
+            "nearword": "大公无私、不徇私情、铁面无私",
+            "autoword": "徇情枉法、徇私舞弊、认贼作父",
+            "errword": [
+                "义"
+            ],
+            "audio": "dymq.wav"
         },
         {
             "name": "敢怒敢言",
-            "pinyin":"gǎn nù gǎn yán",
+            "pinyin": "gǎn nù gǎn yán",
             "mean": "心里愤怒也敢讲出来。",
             "example": "真正的男人敢怒敢言",
-            "nearword":"敢作敢为,勇敢率真,敢说敢做,直言不讳",
-            "autoword":"畏畏缩缩",
-            "errword":["怒"]
+            "nearword": "敢作敢为,勇敢率真,敢说敢做,直言不讳",
+            "autoword": "畏畏缩缩",
+            "errword": [
+                "怒"
+            ],
+            "audio": "gngy.wav"
         },
         {
             "name": "忧国忧民",
-            "pinyin":"yōu guó yōu mín",
+            "pinyin": "yōu guó yōu mín",
             "mean": "忧虑国家的命运和人民的疾苦。",
             "example": "唐代大诗人杜甫的许多诗篇抒发了忧国忧民的思想感情。",
-            "nearword":"忧国忘家 、忧国恤民",
-            "autoword":"祸国殃民",
-            "errword":["忧"]
+            "nearword": "忧国忘家 、忧国恤民",
+            "autoword": "祸国殃民",
+            "errword": [
+                "忧"
+            ],
+            "audio": "ygym.wav"
         },
         {
             "name": "横眉冷对",
-            "pinyin":"héng méi lěng duì",
+            "pinyin": "héng méi lěng duì",
             "mean": "形容对敌人坚决斗争，决不屈服。",
             "example": "大度睿智的低调做人，有时比横眉冷对的高高在上更有助于问题的解决。",
-            "nearword":"怒目横眉、横眉冷眼、横眉竖眼、横眉怒目 、横眉冷目",
-            "autoword":"和颜悦色",
-            "errword":["横"]
+            "nearword": "怒目横眉、横眉冷眼、横眉竖眼、横眉怒目 、横眉冷目",
+            "autoword": "和颜悦色",
+            "errword": [
+                "横"
+            ],
+            "audio": "hmld.wav"
         },
         {
             "name": "浩气长存",
-            "pinyin":"hào qì cháng cún",
+            "pinyin": "hào qì cháng cún",
             "mean": "正大刚直的精神，永远长存。",
             "example": "文明之道，贵在和谐。三省吾身，浩气长存。",
-            "nearword":"名垂千古",
-            "autoword":"遗臭万年",
-            "errword":["浩"]
+            "nearword": "名垂千古",
+            "autoword": "遗臭万年",
+            "errword": [
+                "浩"
+            ],
+            "audio": "hqcc.wav"
         },
         {
             "name": "湖光山色",
-            "pinyin":"hú guāng shān sè",
+            "pinyin": "hú guāng shān sè",
             "mean": "山水的风光和景色。形容美好的自然风景。",
             "example": "这里优美的湖光山色令人流连忘返。",
-            "nearword":"山光水色、山明水秀、山清水秀",
-            "autoword":"穷山恶水",
-            "errword":["湖"]
+            "nearword": "山光水色、山明水秀、山清水秀",
+            "autoword": "穷山恶水",
+            "errword": [
+                "湖"
+            ],
+            "audio": "hgss.wav"
         },
         {
             "name": "人间天堂",
-            "pinyin":"rén jiān tiān táng ",
+            "pinyin": "rén jiān tiān táng ",
             "mean": "比喻人世间极其幸福美好的生活环境。",
             "example": "秋天的夜啊！你真是家乡的人间天堂，毫不吝啬地给我们美丽欢乐！",
-            "nearword":"天上人间、人间仙境",
-            "autoword":"人间地狱",
-            "errword":["堂"]
+            "nearword": "天上人间、人间仙境",
+            "autoword": "人间地狱",
+            "errword": [
+                "堂"
+            ],
+            "audio": "rjtt.wav"
         },
         {
             "name": "明月清风",
-            "pinyin":"míng yuè qīng fēng",
+            "pinyin": "míng yuè qīng fēng",
             "mean": "本指皎洁的圆月，清爽的微风。后指摆脱尘世羁绊的悠闲生活。",
             "example": "高山流水诗千首,明月清风茶一壶。",
-            "nearword":"清风明月",
-            "autoword":"乌烟瘴气",
-            "errword":["清"]
+            "nearword": "清风明月",
+            "autoword": "乌烟瘴气",
+            "errword": [
+                "清"
+            ],
+            "audio": "myqf.wav"
         },
         {
             "name": "水光接天",
-            "pinyin":"shuǐ guāng jiē tiān",
+            "pinyin": "shuǐ guāng jiē tiān",
             "mean": "水的光色与天的光色相连接。指水域宽广。",
             "example": "水光接天,碧波粼粼嘈杂的时候也别忘了看看身边的美景",
-            "nearword":"水天一色、上下天光",
-            "autoword":" ",
-            "errword":["接"]
+            "nearword": "水天一色、上下天光",
+            "autoword": " ",
+            "errword": [
+                "接"
+            ],
+            "audio": "sgjt.wav"
         },
         {
             "name": "相得益彰",
-            "pinyin":"xiāng dé yì zhāng",
+            "pinyin": "xiāng dé yì zhāng",
             "mean": "两者相互配合协调，双方的优点和长处就更能显露出来。",
             "example": "音乐会上，那段优美的歌声和动人的琴声可谓相得益彰。",
-            "nearword":"相辅相成",
-            "autoword":"势不两立、两败俱伤",
-            "errword":["彰"]
+            "nearword": "相辅相成",
+            "autoword": "势不两立、两败俱伤",
+            "errword": [
+                "彰"
+            ],
+            "audio": "xdyz.wav"
         },
         {
             "name": "江山如画",
-            "pinyin":"jiāng shān rú huà",
+            "pinyin": "jiāng shān rú huà",
             "mean": "比喻山河美丽如画。",
             "example": "六十五个春秋，江山如画诗意酣畅",
-            "nearword":"江山似锦、大好河山、锦绣山河",
-            "autoword":"国破家亡",
-            "errword":["画"]
+            "nearword": "江山似锦、大好河山、锦绣山河",
+            "autoword": "国破家亡",
+            "errword": [
+                "画"
+            ],
+            "audio": "jsrh.wav"
         },
         {
             "name": "鱼米之乡",
-            "pinyin":"yú mǐ zhī xiāng",
+            "pinyin": "yú mǐ zhī xiāng",
             "mean": "盛产鱼和米的乡村。泛指农副水产丰富的地方。",
             "example": "我的故乡太湖之滨，是富饶美丽的鱼米之乡。",
-            "nearword":"洞天福地、天府之国、世外桃源",
-            "autoword":"万丈深渊、穷乡僻壤、穷途末路",
-            "errword":["乡"]
+            "nearword": "洞天福地、天府之国、世外桃源",
+            "autoword": "万丈深渊、穷乡僻壤、穷途末路",
+            "errword": [
+                "乡"
+            ],
+            "audio": "ymzx.wav"
         },
         {
             "name": "混沌不分",
-            "pinyin":"hùn dùn bù fēn",
+            "pinyin": "hùn dùn bù fēn",
             "mean": "指天地浑然一体，分不清楚。",
             "example": "步行街的服装区规格混沌不分，女装和男装左邻右舍。",
-            "nearword":"浑浑沌沌",
-            "autoword":"一清二楚",
-            "errword":["沌"]
+            "nearword": "浑浑沌沌",
+            "autoword": "一清二楚",
+            "errword": [
+                "沌"
+            ],
+            "audio": "hdbf.wav"
         },
         {
             "name": "昏天黑地",
-            "pinyin":"hūn tiān hēi dì",
+            "pinyin": "hūn tiān hēi dì",
             "mean": "形容天色昏暗。",
             "example": "为了迎接期中考试，这段时间，小伟忙得昏天黑地的。",
-            "nearword":"天昏地暗、神志不清",
-            "autoword":"一清二楚、光天化日",
-            "errword":["昏"]
+            "nearword": "天昏地暗、神志不清",
+            "autoword": "一清二楚、光天化日",
+            "errword": [
+                "昏"
+            ],
+            "audio": "hthd.wav"
         },
         {
             "name": "大刀阔斧",
-            "pinyin":"dà dāo kuò fǔ",
+            "pinyin": "dà dāo kuò fǔ",
             "mean": "比喻办事果断而有魄力。",
             "example": "是有利于生产发展的事,我们就应该大刀阔斧地去干。",
-            "nearword":"雷厉风行",
-            "autoword":"束手无策、缩手缩脚",
-            "errword":["阔"]
+            "nearword": "雷厉风行",
+            "autoword": "束手无策、缩手缩脚",
+            "errword": [
+                "阔"
+            ],
+            "audio": "ddkf.wav"
         },
         {
             "name": "开天辟地",
-            "pinyin":"kāi tiān pì dì",
+            "pinyin": "kāi tiān pì dì",
             "mean": "比喻开创历史，也比喻前所未有。",
             "example": "中华人民共和国的成立,是一件开天辟地的大事。",
-            "nearword":"鸿蒙初辟、史无前例、天地开辟、筚路蓝缕、亘古未有",
-            "autoword":"司空见惯",
-            "errword":["辟"]
+            "nearword": "鸿蒙初辟、史无前例、天地开辟、筚路蓝缕、亘古未有",
+            "autoword": "司空见惯",
+            "errword": [
+                "辟"
+            ],
+            "audio": "ktpd.wav"
         },
         {
             "name": "与日俱增",
-            "pinyin":"yǔ rì jù zēng",
+            "pinyin": "yǔ rì jù zēng",
             "mean": "形容不断增长或增长速度很快。",
             "example": "这么多天过去了，我对妈妈的思念不但没有消减，反而与日俱增",
-            "nearword":"日积月累、有增无已",
-            "autoword":"每况愈下",
-            "errword":["俱"]
+            "nearword": "日积月累、有增无已",
+            "autoword": "每况愈下",
+            "errword": [
+                "俱"
+            ],
+            "audio": "yrjz.wav"
         },
         {
             "name": "顶天立地",
-            "pinyin":"dǐng tiān lì dì",
+            "pinyin": "dǐng tiān lì dì",
             "mean": "形容形象高大，气概雄伟豪迈。",
             "example": "几年不见，那个爱哭鬼已经成长为一个顶天立地的男子汉。",
-            "nearword":"英姿勃勃、威风凛凛、气概不凡",
-            "autoword":"低头折节、瞻前顾后、低头哈腰、特立独行、卑躬屈膝",
-            "errword":["顶"]
+            "nearword": "英姿勃勃、威风凛凛、气概不凡",
+            "autoword": "低头折节、瞻前顾后、低头哈腰、特立独行、卑躬屈膝",
+            "errword": [
+                "顶"
+            ],
+            "audio": "dtld.wav"
         },
         {
             "name": "变化万端",
-            "pinyin":"biàn huà wàn duān",
+            "pinyin": "biàn huà wàn duān",
             "mean": "形容变化的项目、样子极多。",
             "example": "大自然所表现出来的智慧，真是形形色色，变化万端。为了了解它，我们必须联合我们大家的知识和努力才行。",
-            "nearword":"变化多端",
-            "autoword":"一成不变",
-            "errword":["端"]
+            "nearword": "变化多端",
+            "autoword": "一成不变",
+            "errword": [
+                "端"
+            ],
+            "audio": "bhwd.wav"
         },
         {
             "name": "改天换地",
-            "pinyin":"gǎi tiān huàn dì",
+            "pinyin": "gǎi tiān huàn dì",
             "mean": "指从根本上改变大自然，也比喻巨大变革。",
             "example": "我们无法改天换地，但是没有人能阻止我们为改天换地贡献一份力量，只要我们不放弃理想。",
-            "nearword":"改头换面",
-            "autoword":"一成不变",
-            "errword":["换"]
+            "nearword": "改头换面",
+            "autoword": "一成不变",
+            "errword": [
+                "换"
+            ],
+            "audio": "gthd.wav"
         },
         {
             "name": "学富五车",
-            "pinyin":"xué fù wǔ chē",
+            "pinyin": "xué fù wǔ chē",
             "mean": "形容读书多，学问渊博。",
             "example": " 苏轼是个学富五车的大文学家。",
-            "nearword":" 八斗之才、两脚书橱、真才实学、立地书橱、才高八斗",
-            "autoword":"不学无术、才疏学浅",
-            "errword":["富"]
+            "nearword": " 八斗之才、两脚书橱、真才实学、立地书橱、才高八斗",
+            "autoword": "不学无术、才疏学浅",
+            "errword": [
+                "富"
+            ],
+            "audio": "xfwc.wav"
         },
         {
             "name": "满腹经纶",
-            "pinyin":"mǎn fù jīng lún",
+            "pinyin": "mǎn fù jīng lún",
             "mean": "形容很有学问和才能。",
             "example": "我的语文老师是个满腹经纶的人。",
-            "nearword":"才高八斗",
-            "autoword":"胸无点墨、才疏学浅",
-            "errword":["纶"]
+            "nearword": "才高八斗",
+            "autoword": "胸无点墨、才疏学浅",
+            "errword": [
+                "纶"
+            ],
+            "audio": "mfjl.wav"
         },
         {
             "name": "学贯中西",
-            "pinyin":"xué guàn zhōng xī",
+            "pinyin": "xué guàn zhōng xī",
             "mean": "有关中西方的学问都通晓。形容学问渊博。",
             "example": "这个人知识上博古通今，学贯中西，创业时也是大刀阔斧，真是顶天立地的男子汉。",
-            "nearword":"学富五车、博古通今",
-            "autoword":"不学无术、目不识丁",
-            "errword":["贯"]
+            "nearword": "学富五车、博古通今",
+            "autoword": "不学无术、目不识丁",
+            "errword": [
+                "贯"
+            ],
+            "audio": "xgzx.wav"
         },
         {
             "name": "博古通今",
-            "pinyin":"bó gǔ tōng jīn",
+            "pinyin": "bó gǔ tōng jīn",
             "mean": "对古代的事知道很多，又通晓现代的事情。",
             "example": "爷爷博古通今，是位知识渊博的老人。",
-            "nearword":"满腹经纶、真才实学、见多识广",
-            "autoword":"不学无术、寡见少闻、孤陋寡闻",
-            "errword":["博"]
+            "nearword": "满腹经纶、真才实学、见多识广",
+            "autoword": "不学无术、寡见少闻、孤陋寡闻",
+            "errword": [
+                "博"
+            ],
+            "audio": "bgtj.wav"
         },
         {
             "name": "功成名就",
-            "pinyin":"gōng chéng míng jiù",
+            "pinyin": "gōng chéng míng jiù",
             "mean": "功业建立了，名誉也就有了。",
             "example": "他旅居海外多年，虽已功成名就，但心中最企盼的还是叶落归根，终老家乡。",
-            "nearword":"功成名遂",
-            "autoword":"身败名裂",
-            "errword":["功"]
+            "nearword": "功成名遂",
+            "autoword": "身败名裂",
+            "errword": [
+                "功"
+            ],
+            "audio": "gcmj.wav"
         },
         {
             "name": "著作等身",
-            "pinyin":"zhù zuò děng shēn",
+            "pinyin": "zhù zuò děng shēn",
             "mean": "著述之多，堆起来和身体一样高。形容著作极丰。",
             "example": "他一生著作等身，宏论盖世，为人谦逊，治学严谨。",
-            "nearword":"学富五车",
-            "autoword":"目不识丁、胸无点墨",
-            "errword":["著"]
+            "nearword": "学富五车",
+            "autoword": "目不识丁、胸无点墨",
+            "errword": [
+                "著"
+            ],
+            "audio": "zzds.wav"
         },
         {
             "name": "温文尔雅",
-            "pinyin":"wēn wén ěr yǎ",
+            "pinyin": "wēn wén ěr yǎ",
             "mean": "态度温和，举止文雅端庄。",
             "example": "看他温文尔雅的样子,肯定是个学生。",
-            "nearword":"斯斯文文、和风细雨、文质彬彬、温文儒雅、温柔敦厚、彬彬有礼、文质斌斌",
-            "autoword":"咄咄逼人、出言不逊、雷霆万钧、令行禁止、喜怒无常",
-            "errword":["雅"]
+            "nearword": "斯斯文文、和风细雨、文质彬彬、温文儒雅、温柔敦厚、彬彬有礼、文质斌斌",
+            "autoword": "咄咄逼人、出言不逊、雷霆万钧、令行禁止、喜怒无常",
+            "errword": [
+                "雅"
+            ],
+            "audio": "wwey.wav"
         },
         {
             "name": "文质彬彬",
-            "pinyin":"wén zhì bīn bīn",
+            "pinyin": "wén zhì bīn bīn",
             "mean": "原形容人既文雅又朴实，后来形容人文雅有礼貌。",
             "example": "李叔叔白净的脸上戴着一副眼镜，看起来文质彬彬的。",
-            "nearword":"温文尔雅、彬彬有礼",
-            "autoword":"野调无腔、出言不逊",
-            "errword":["彬"]
+            "nearword": "温文尔雅、彬彬有礼",
+            "autoword": "野调无腔、出言不逊",
+            "errword": [
+                "彬"
+            ],
+            "audio": "wzbb.wav"
         },
         {
             "name": "肝胆相照",
-            "pinyin":"gān dǎn xiāng zhào",
+            "pinyin": "gān dǎn xiāng zhào",
             "mean": "比喻以真心相见，赤诚相待。",
             "example": "他俩肝胆相照，有难同当，有福同享。",
-            "nearword":"开诚相见、赤胆忠心、开诚布公、沥胆披肝、推诚相见、真心诚意、委以心腹、坦怀相待、推心置腹、忠心耿耿、",
-            "autoword":"勾心斗角、尔虞我诈",
-            "errword":["胆"]
+            "nearword": "开诚相见、赤胆忠心、开诚布公、沥胆披肝、推诚相见、真心诚意、委以心腹、坦怀相待、推心置腹、忠心耿耿、",
+            "autoword": "勾心斗角、尔虞我诈",
+            "errword": [
+                "胆"
+            ],
+            "audio": "gdxz.wav"
         },
         {
             "name": "开诚相见",
-            "pinyin":"kāi chéng xiāng jiàn",
+            "pinyin": "kāi chéng xiāng jiàn",
             "mean": "跟人接触时，诚恳地对待。",
             "example": "朋友之间应开诚相见。",
-            "nearword":"披肝沥胆",
-            "autoword":"勾心斗角、尔虞我诈",
-            "errword":["诚"]
+            "nearword": "披肝沥胆",
+            "autoword": "勾心斗角、尔虞我诈",
+            "errword": [
+                "诚"
+            ],
+            "audio": "kcxj.wav"
         },
         {
             "name": "同舟共济",
-            "pinyin":"tóng zhōu gòng jì",
+            "pinyin": "tóng zhōu gòng jì",
             "mean": "同乘一条船过河。比喻团结一致，共同战胜困难。",
             "example": "在困难的时候,我们应该同舟共济。",
-            "nearword":"患难与共、风雨同舟",
-            "autoword":"反目成仇、各行其事",
-            "errword":["济"]
+            "nearword": "患难与共、风雨同舟",
+            "autoword": "反目成仇、各行其事",
+            "errword": [
+                "济"
+            ],
+            "audio": "tzgj.wav"
         },
         {
             "name": "心照不宣",
-            "pinyin":"xīn zhào bù xuān",
+            "pinyin": "xīn zhào bù xuān",
             "mean": "彼此心里明白而不需要说出来。",
             "example": "虽然成绩还没公布，大家心照不宣，前三名的同学都猜得到。",
-            "nearword":"心中有数、心领神会、心心相印",
-            "autoword":"一窍不通、百思不解",
-            "errword":["宣"]
+            "nearword": "心中有数、心领神会、心心相印",
+            "autoword": "一窍不通、百思不解",
+            "errword": [
+                "宣"
+            ],
+            "audio": "xzbx.wav"
         },
         {
             "name": "志同道合",
-            "pinyin":"zhì tóng dào hé",
+            "pinyin": "zhì tóng dào hé",
             "mean": "志向相同，意见相合。",
             "example": "李明、王刚是一对志同道合的朋友。",
-            "nearword":"情投意合、心心相印、莫逆之交、志趣相投、心意相通、息息相通、志同道合",
-            "autoword":"分道扬镳、貌合神离、同床异梦丶鸡同鸭讲",
-            "errword":["志"]
+            "nearword": "情投意合、心心相印、莫逆之交、志趣相投、心意相通、息息相通、志同道合",
+            "autoword": "分道扬镳、貌合神离、同床异梦丶鸡同鸭讲",
+            "errword": [
+                "志"
+            ],
+            "audio": "ztdh.wav"
         },
         {
             "name": "亲密无间",
-            "pinyin":"qīn mì wú jiàn",
+            "pinyin": "qīn mì wú jiàn",
             "mean": "形容非常亲密，没有任何隔阂。",
             "example": "患难之中我们建立了亲密无间的友谊。",
-            "nearword":" 情同手足、形影不离",
-            "autoword":"敬而远之、视同陌路",
-            "errword":["密"]
+            "nearword": " 情同手足、形影不离",
+            "autoword": "敬而远之、视同陌路",
+            "errword": [
+                "密"
+            ],
+            "audio": "qmwj.wav"
         },
         {
             "name": "荣辱与共",
-            "pinyin":"róng rǔ yǔ gòng",
+            "pinyin": "róng rǔ yǔ gòng",
             "mean": "光荣和耻辱一同承担。",
             "example": "一个公司需要许多精英人才,但更需要能够和老板荣辱与共、同舟共济的人。",
-            "nearword":"风雨同舟、唇亡齿寒、同甘共苦",
-            "autoword":"同床异梦",
-            "errword":["辱"]
+            "nearword": "风雨同舟、唇亡齿寒、同甘共苦",
+            "autoword": "同床异梦",
+            "errword": [
+                "辱"
+            ],
+            "audio": "rryg.wav"
         },
         {
             "name": "唇亡齿寒",
-            "pinyin":"chún wáng chǐ hán",
+            "pinyin": "chún wáng chǐ hán",
             "mean": "嘴唇没有了，牙齿就会觉得冷。比喻关系密切，利害相关。",
             "example": "水和鱼是唇亡齿寒的关系。",
-            "nearword":"荣辱与共、唇齿相依、息息相关、城门失火，殃及池鱼、皮之不存，毛将焉附、生死相依、互相关注、辅车相依、巢毁卵破、巢倾卵破、休戚相关",
-            "autoword":"隔岸观火、素昧平生、水火不容、同床异梦、势不两立",
-            "errword":["唇"]
+            "nearword": "荣辱与共、唇齿相依、息息相关、城门失火，殃及池鱼、皮之不存，毛将焉附、生死相依、互相关注、辅车相依、巢毁卵破、巢倾卵破、休戚相关",
+            "autoword": "隔岸观火、素昧平生、水火不容、同床异梦、势不两立",
+            "errword": [
+                "唇"
+            ],
+            "audio": "cwch.wav"
         },
         {
             "name": "春满人间",
-            "pinyin":"chūn mǎn rén jiān",
+            "pinyin": "chūn mǎn rén jiān",
             "mean": "整个人间都弥漫着春的气息。",
             "example": "如今风调雨顺，人们安居乐业，春满人间。",
-            "nearword":"大地回春",
-            "autoword":"暮气沉沉",
-            "errword":["满"]
+            "nearword": "大地回春",
+            "autoword": "暮气沉沉",
+            "errword": [
+                "满"
+            ],
+            "audio": "cmrj.wav"
         },
         {
             "name": "欣欣向荣",
-            "pinyin":"xīn xīn xiàng róng",
+            "pinyin": "xīn xīn xiàng róng",
             "mean": "形容草木长得茂盛。也比喻事业蓬勃发展、兴旺昌盛。",
             "example": "祖国到处呈现出一派欣欣向荣的景象。",
-            "nearword":"朝气蓬勃、方兴未艾、蒸蒸日上",
-            "autoword":"日暮途穷、大势已去、死气沉沉、江河日下、苟延残喘",
-            "errword":["欣"]
+            "nearword": "朝气蓬勃、方兴未艾、蒸蒸日上",
+            "autoword": "日暮途穷、大势已去、死气沉沉、江河日下、苟延残喘",
+            "errword": [
+                "欣"
+            ],
+            "audio": "xxxr.wav"
         },
         {
             "name": "千帆竞发",
-            "pinyin":"qiān fān jìng fā",
+            "pinyin": "qiān fān jìng fā",
             "mean": "许多船只争着出发前行，形容声势浩大。",
             "example": "千帆竞发，百舸争流。我们坚信，只有持续发展才能铸就辉煌！",
-            "nearword":"万箭齐发、百家争鸣、万马齐喧,、百花齐放、百舸争流、百川朝海",
-            "autoword":" ",
-            "errword":["竞"]
+            "nearword": "万箭齐发、百家争鸣、万马齐喧,、百花齐放、百舸争流、百川朝海",
+            "autoword": " ",
+            "errword": [
+                "竞"
+            ],
+            "audio": "qfjf.wav"
         },
         {
             "name": "万马奔腾",
-            "pinyin":"wàn mǎ bēn téng",
+            "pinyin": "wàn mǎ bēn téng",
             "mean": "形容声势浩大，进展迅速，气氛热烈。",
             "example": "社会主义改革的大潮如万马奔腾,势不可挡!",
-            "nearword":"气势磅礴、声势浩大",
-            "autoword":"万马齐喑",
-            "errword":["腾"]
+            "nearword": "气势磅礴、声势浩大",
+            "autoword": "万马齐喑",
+            "errword": [
+                "腾"
+            ],
+            "audio": "wmbt.wav"
         },
         {
             "name": "六畜兴旺",
-            "pinyin":"liù chù xīng wàng",
+            "pinyin": "liù chù xīng wàng",
             "mean": "比喻养殖业兴旺发达。",
             "example": "他的家乡在江南,年年五谷丰登,六畜兴旺。",
-            "nearword":"五谷丰登",
-            "autoword":"凶年饥岁、凶年恶岁",
-            "errword":["畜"]
+            "nearword": "五谷丰登",
+            "autoword": "凶年饥岁、凶年恶岁",
+            "errword": [
+                "畜"
+            ],
+            "audio": "lcxw.wav"
         },
         {
             "name": "五谷丰登",
-            "pinyin":"wǔ gǔ fēng dēng",
+            "pinyin": "wǔ gǔ fēng dēng",
             "mean": "指年成好，粮食丰收",
             "example": "风调雨顺，五谷丰登是每个农民伯伯的心愿。",
-            "nearword":"年谷顺成",
-            "autoword":"颗粒无收",
-            "errword":["登"]
+            "nearword": "年谷顺成",
+            "autoword": "颗粒无收",
+            "errword": [
+                "登"
+            ],
+            "audio": "wgfd.wav"
         },
         {
             "name": "国泰民安",
-            "pinyin":"guó tài mín ān",
+            "pinyin": "guó tài mín ān",
             "mean": "国家太平，人民生活安定。",
             "example": "我们都希望过上国泰民安的日子。",
-            "nearword":"天下太平、歌舞升平、河清海晏",
-            "autoword":"兵荒马乱、国弱民穷、国破家亡",
-            "errword":["泰"]
+            "nearword": "天下太平、歌舞升平、河清海晏",
+            "autoword": "兵荒马乱、国弱民穷、国破家亡",
+            "errword": [
+                "泰"
+            ],
+            "audio": "gtma.wav"
         },
         {
             "name": "人寿年丰",
-            "pinyin":"rén shòu nián fēng",
+            "pinyin": "rén shòu nián fēng",
             "mean": "人健康，年成好，形容生活安乐美好。",
             "example": "如今的农村人寿年丰,农民生活一天比一天好。",
-            "nearword":"丰衣足食、国泰民安",
-            "autoword":"人生如寄、饥寒交迫",
-            "errword":["寿"]
+            "nearword": "丰衣足食、国泰民安",
+            "autoword": "人生如寄、饥寒交迫",
+            "errword": [
+                "寿"
+            ],
+            "audio": "rsnf.wav"
         }
     ],
-    "5":[
+    "5": [
         {
             "name": "刻舟求剑",
-            "pinyin":"kè zhōu qiú jiàn",
+            "pinyin": "kè zhōu qiú jiàn",
             "mean": "比喻死心眼，不懂得变通。",
             "example": "他由于不学理论,不关心时政,所以在工作中常常闹出刻舟求剑那样的笑话来。",
-            "nearword":"一成不变、依样葫芦、守株待兔",
-            "autoword":"借坡下驴、因地制宜、因时制宜",
-            "errword":["刻"]
+            "nearword": "一成不变、依样葫芦、守株待兔",
+            "autoword": "借坡下驴、因地制宜、因时制宜",
+            "errword": [
+                "刻"
+            ],
+            "audio": "kzqj.wav"
         },
         {
             "name": "守株待兔",
-            "pinyin":"shǒu zhū dài tù",
+            "pinyin": "shǒu zhū dài tù",
             "mean": "比喻不经过努力而想获得成功的侥幸心理。",
             "example": "守株待兔的作法只会让机会白白溜走。",
-            "nearword":"刻舟求剑、缘木求鱼、墨守成规、好逸恶劳、坐享其成、固守成规",
-            "autoword":"随机应变、见风使舵、通权达变、除旧布新、标新立异、借坡下驴、",
-            "errword":["株"]
+            "nearword": "刻舟求剑、缘木求鱼、墨守成规、好逸恶劳、坐享其成、固守成规",
+            "autoword": "随机应变、见风使舵、通权达变、除旧布新、标新立异、借坡下驴、",
+            "errword": [
+                "株"
+            ],
+            "audio": "szdt.wav"
         },
         {
             "name": "螳臂当车",
-            "pinyin":"táng bì dāng chē",
+            "pinyin": "táng bì dāng chē",
             "mean": "比喻自不量力去做办不到的事，必然失败。",
             "example": "这场比赛，地主队有点像螳臂当车一样，稳输的！",
-            "nearword":"自不量力、泰山压卵、蚍蜉撼树、以卵击石",
-            "autoword":"量力而行",
-            "errword":["螳"]
+            "nearword": "自不量力、泰山压卵、蚍蜉撼树、以卵击石",
+            "autoword": "量力而行",
+            "errword": [
+                "螳"
+            ],
+            "audio": "tbdc.wav"
         },
         {
             "name": "滥竽充数",
-            "pinyin":"làn yú chōng shù",
+            "pinyin": "làn yú chōng shù",
             "mean": "比喻没有真才实学的人混在行家里充数，或拿不好的东西混在好的东西里充数。",
             "example": "南郭先生本事不济,却又偏偏要滥竽充数。",
-            "nearword":"名不副实、掩人耳目、鱼目混珠",
-            "autoword":"货真价实、名副其实",
-            "errword":["竽"]
+            "nearword": "名不副实、掩人耳目、鱼目混珠",
+            "autoword": "货真价实、名副其实",
+            "errword": [
+                "竽"
+            ],
+            "audio": "lycs.wav"
         },
         {
             "name": "掩耳盗铃",
-            "pinyin":"yǎn ěr dào líng",
+            "pinyin": "yǎn ěr dào líng",
             "mean": "比喻自己欺骗自己，明明掩盖不住的事情偏要想法子掩盖。",
             "example": "他这个人从来都不会做掩耳盗铃的事情。",
-            "nearword":"自欺欺人、弄巧成拙",
-            "autoword":"众所周知",
-            "errword":["掩"]
+            "nearword": "自欺欺人、弄巧成拙",
+            "autoword": "众所周知",
+            "errword": [
+                "掩"
+            ],
+            "audio": "yedl.wav"
         },
         {
             "name": "买椟还珠",
-            "pinyin":"mǎi dú huán zhū",
+            "pinyin": "mǎi dú huán zhū",
             "mean": "比喻没有眼光，取舍不当。",
             "example": "学习上我们要有主次之分，千万不能买椟还珠。",
-            "nearword":"舍本逐末、本末倒置、反裘负薪",
-            "autoword":"去粗取精",
-            "errword":["椟"]
+            "nearword": "舍本逐末、本末倒置、反裘负薪",
+            "autoword": "去粗取精",
+            "errword": [
+                "椟"
+            ],
+            "audio": "mdhz.wav"
         },
         {
             "name": "东施效颦",
-            "pinyin":"dōng shī xiào pín",
+            "pinyin": "dōng shī xiào pín",
             "mean": "比喻胡乱模仿，效果很坏。",
             "example": "每个人自有特质，何必如东施效颦般胡乱模仿？",
-            "nearword":"邯郸学步、亦步亦趋",
-            "autoword":"独辟蹊径、标新立异、自我作古、择善而从",
-            "errword":["颦"]
+            "nearword": "邯郸学步、亦步亦趋",
+            "autoword": "独辟蹊径、标新立异、自我作古、择善而从",
+            "errword": [
+                "颦"
+            ],
+            "audio": "dsxp.wav"
         },
         {
             "name": "邯郸学步",
-            "pinyin":"hán dān xué bù",
+            "pinyin": "hán dān xué bù",
             "mean": "比喻模仿别人不成，反而丧失了原有的技能。",
             "example": "邯郸学步,生搬硬套,是学不会真正的东西的。",
-            "nearword":"鹦鹉学舌、东施效颦、照猫画虎、生搬硬套、亦步亦趋",
-            "autoword":"标新立异、独辟蹊径、自我作古、择善而从、与众不同、独具匠心",
-            "errword":["郸"]
+            "nearword": "鹦鹉学舌、东施效颦、照猫画虎、生搬硬套、亦步亦趋",
+            "autoword": "标新立异、独辟蹊径、自我作古、择善而从、与众不同、独具匠心",
+            "errword": [
+                "郸"
+            ],
+            "audio": "hdxb.wav"
         },
         {
             "name": "哀鸿遍野",
-            "pinyin":"āi hóng biàn yě",
+            "pinyin": "āi hóng biàn yě",
             "mean": "悲鸣的大雁遍布原野。比喻到处都是流离失所的灾民。",
             "example": "军阀混战时期,中国大地上哀鸿遍野。",
-            "nearword":"啼饥号寒、饿殍载道、民不聊生",
-            "autoword":"安居乐业、国泰民安、丰衣足食",
-            "errword":["鸿"]
+            "nearword": "啼饥号寒、饿殍载道、民不聊生",
+            "autoword": "安居乐业、国泰民安、丰衣足食",
+            "errword": [
+                "鸿"
+            ],
+            "audio": "ahby.wav"
         },
         {
             "name": "劫富济贫",
-            "pinyin":"jié fù jì pín",
+            "pinyin": "jié fù jì pín",
             "mean": "夺取富人的财产，救济穷人。",
             "example": "果我会功夫肯定会劫富济贫，路见不平拔刀相助。",
-            "nearword":"除暴安良、杀富济贫",
-            "autoword":"为虎作伥、助纣为虐",
-            "errword":["劫"]
+            "nearword": "除暴安良、杀富济贫",
+            "autoword": "为虎作伥、助纣为虐",
+            "errword": [
+                "劫"
+            ],
+            "audio": "jfjp.wav"
         },
         {
             "name": "铤而走险",
-            "pinyin":"tǐng ér zǒu xiǎn",
+            "pinyin": "tǐng ér zǒu xiǎn",
             "mean": "因走投无路而采取冒险行动。",
             "example": "如今救人如救火，只好铤而走险，直闯虎穴了！",
-            "nearword":"见义勇为、孤注一掷、无路可走",
-            "autoword":"畏缩不前",
-            "errword":["铤"]
+            "nearword": "见义勇为、孤注一掷、无路可走",
+            "autoword": "畏缩不前",
+            "errword": [
+                "铤"
+            ],
+            "audio": "tezx.wav"
         },
         {
             "name": "替天行道",
-            "pinyin":"tì tiān xíng dào",
+            "pinyin": "tì tiān xíng dào",
             "mean": "代替上天执行正道，即按照天意，在人世间做正义的事。",
             "example": "《水浒传》里宋江等人打的旗号是替天行道。",
-            "nearword":"为民除害",
-            "autoword":"助纣为虐",
-            "errword":["替"]
+            "nearword": "为民除害",
+            "autoword": "助纣为虐",
+            "errword": [
+                "替"
+            ],
+            "audio": "ttxd.wav"
         },
         {
             "name": "志存高远",
-            "pinyin":"zhì cún gāo yuǎn",
+            "pinyin": "zhì cún gāo yuǎn",
             "mean": "形容志向远大。",
             "example": "志存高远，从小事做起，顽强拼搏，共同进步，创造华彩人生！",
-            "nearword":"壮志凌云、志在四方、雄心壮志、胸怀大志",
-            "autoword":"好高骛远",
-            "errword":["志"]
+            "nearword": "壮志凌云、志在四方、雄心壮志、胸怀大志",
+            "autoword": "好高骛远",
+            "errword": [
+                "志"
+            ],
+            "audio": "zcgy.wav"
         },
         {
             "name": "无所不晓",
-            "pinyin":"wú suǒ bù xiǎo",
+            "pinyin": "wú suǒ bù xiǎo",
             "mean": "没有什么不知道的。形容人广见博识。",
             "example": "他们能将观点和事实区别开来，但是不会装作无所不晓。",
-            "nearword":"无所不通、无所不知",
-            "autoword":"一无所知",
-            "errword":["晓"]
+            "nearword": "无所不通、无所不知",
+            "autoword": "一无所知",
+            "errword": [
+                "晓"
+            ],
+            "audio": "wsbx.wav"
         },
         {
             "name": "挺身而出",
-            "pinyin":"tǐng shēn ér chū",
+            "pinyin": "tǐng shēn ér chū",
             "mean": "形容不避艰险，勇敢地站出来。",
             "example": "在抗洪抢险的紧急关头，解放军战士挺身而出。",
-            "nearword":"勇往直前、无所畏惧、锐意进取、马不停蹄、奋勇向前、自告奋勇",
-            "autoword":"望而却步、停滞不前、缩手缩脚、畏缩不前、望而生畏、畏葸不前、踌躇不前、踌躇不安",
-            "errword":["挺"]
+            "nearword": "勇往直前、无所畏惧、锐意进取、马不停蹄、奋勇向前、自告奋勇",
+            "autoword": "望而却步、停滞不前、缩手缩脚、畏缩不前、望而生畏、畏葸不前、踌躇不前、踌躇不安",
+            "errword": [
+                "挺"
+            ],
+            "audio": "tsec.wav"
         },
         {
             "name": "两全其美",
-            "pinyin":"liǎng quán qí měi",
+            "pinyin": "liǎng quán qí měi",
             "mean": "做一件事顾全两方面，使两方面都好。",
             "example": "我既想看球赛，又得写作业，有没有两全其美的办法呢？",
-            "nearword":"一箭双雕、一举两得",
-            "autoword":"玉石俱焚、两败俱伤",
-            "errword":["其"]
+            "nearword": "一箭双雕、一举两得",
+            "autoword": "玉石俱焚、两败俱伤",
+            "errword": [
+                "其"
+            ],
+            "audio": "lqqm.wav"
         },
         {
             "name": "初出茅庐",
-            "pinyin":"chū chū máo lú",
+            "pinyin": "chū chū máo lú",
             "mean": "初次出来做事。或比喻刚参加工作缺乏经验，还很幼稚。",
             "example": "初出茅庐的王强战胜了老将张明，取得了这次乒乓球比赛的冠军。",
-            "nearword":"初露头角、乳臭未干、初露锋芒",
-            "autoword":"老成持重、老马识途",
-            "errword":["茅"]
+            "nearword": "初露头角、乳臭未干、初露锋芒",
+            "autoword": "老成持重、老马识途",
+            "errword": [
+                "茅"
+            ],
+            "audio": "ccml.wav"
         },
         {
             "name": "才华横溢",
-            "pinyin":"cái huá héng yì",
+            "pinyin": "cái huá héng yì",
             "mean": "才能充分显露。",
             "example": "他是一位才华横溢的青年作家。",
-            "nearword":"才华盖世、才高八斗、学富五车",
-            "autoword":"才疏学浅",
-            "errword":["溢"]
+            "nearword": "才华盖世、才高八斗、学富五车",
+            "autoword": "才疏学浅",
+            "errword": [
+                "溢"
+            ],
+            "audio": "chhy.wav"
         },
         {
             "name": "料事如神",
-            "pinyin":"liào shì rú shén",
+            "pinyin": "liào shì rú shén",
             "mean": "形容预料未来的事情非常准确。",
             "example": "诸葛亮料事如神的故事被人们广为传颂。",
-            "nearword":"心中有数、先见之明",
-            "autoword":"鼠目寸光、目光如豆",
-            "errword":["料"]
+            "nearword": "心中有数、先见之明",
+            "autoword": "鼠目寸光、目光如豆",
+            "errword": [
+                "料"
+            ],
+            "audio": "lsrs.wav"
         },
         {
             "name": "胆大心细",
-            "pinyin":"dǎn dà xīn xì",
+            "pinyin": "dǎn dà xīn xì",
             "mean": "做事既果断又谨慎。",
             "example": "这次实验十分麻烦，需要胆大心细才能完成。",
-            "nearword":"胆大心小",
-            "autoword":"胆大心粗",
-            "errword":["胆"]
+            "nearword": "胆大心小",
+            "autoword": "胆大心粗",
+            "errword": [
+                "胆"
+            ],
+            "audio": "ddxx.wav"
         },
         {
             "name": "独木难支",
-            "pinyin":"dú mù nán zhī",
+            "pinyin": "dú mù nán zhī",
             "mean": "比喻崩溃之形势，非一个人的力量所能支持、挽救。也比喻艰巨的事情非一个人所能胜任。",
             "example": "虽然小明的篮球很厉害，但是独木难支，他们班还是输掉了比赛。",
-            "nearword":"力不从心、孤掌难鸣、回天乏术",
-            "autoword":"力挽狂澜、砥柱中流、回天之力、众星捧月",
-            "errword":["支"]
+            "nearword": "力不从心、孤掌难鸣、回天乏术",
+            "autoword": "力挽狂澜、砥柱中流、回天之力、众星捧月",
+            "errword": [
+                "支"
+            ],
+            "audio": "dmnz.wav"
         },
         {
             "name": "回天无力",
-            "pinyin":"huí tiān wú lì",
+            "pinyin": "huí tiān wú lì",
             "mean": "比喻无法挽回严重的局势或病情。",
             "example": "人们虽然早已察觉末世的前兆,但回天无力。",
-            "nearword":"回天乏术、无力回天",
-            "autoword":" ",
-            "errword":["回"]
+            "nearword": "回天乏术、无力回天",
+            "autoword": " ",
+            "errword": [
+                "回"
+            ],
+            "audio": "htwl.wav"
         },
         {
             "name": "白衣天使",
-            "pinyin":"bái yī tiān shǐ",
+            "pinyin": "bái yī tiān shǐ",
             "mean": "人们对医护工作者的尊称。",
             "example": "每一个白衣天使的背后，都会有一条医德医风铺就起来的道路。",
-            "nearword":" ",
-            "autoword":" ",
-            "errword":["使"]
+            "nearword": " ",
+            "autoword": " ",
+            "errword": [
+                "使"
+            ],
+            "audio": "byts.wav"
         },
         {
             "name": "玉洁冰清",
-            "pinyin":"bīng qīng yù jié",
+            "pinyin": "bīng qīng yù jié",
             "mean": "像玉和冰一样洁净。比喻人的操行洁白。",
             "example": "人们对李玉花玉洁冰清的品格大加赞赏。",
-            "nearword":"冰清玉润",
-            "autoword":"浅尝辄止",
-            "errword":["清"]
+            "nearword": "冰清玉润",
+            "autoword": "浅尝辄止",
+            "errword": [
+                "清"
+            ],
+            "audio": "yjbq.wav"
         },
         {
             "name": "救死扶伤",
-            "pinyin":"jiù sǐ fú shāng",
+            "pinyin": "jiù sǐ fú shāng",
             "mean": "救活快要死的人，帮助受伤的人。形容医务工作者全心全意为人民服务的精神。",
             "example": "我们要学习白求恩大夫救死扶伤的精神。",
-            "nearword":"治病救人",
-            "autoword":"落井下石",
-            "errword":["扶"]
+            "nearword": "治病救人",
+            "autoword": "落井下石",
+            "errword": [
+                "扶"
+            ],
+            "audio": "jsfs.wav"
         },
         {
             "name": "处变不惊",
-            "pinyin":"chǔ biàn bù jīng",
+            "pinyin": "chǔ biàn bù jīng",
             "mean": "面对变乱，能镇定自若，不惊慌。",
             "example": "把生活当成戏的人，可以处变不惊；把戏当成生活的人，容易抑郁成疾。",
-            "nearword":"行若无事、若无其事、泰然自若、不动声色、面不改色、宠辱不惊、稳如泰山、镇定自若、波澜不惊,",
-            "autoword":"怦怦直跳、心惊肉跳",
-            "errword":["惊"]
+            "nearword": "行若无事、若无其事、泰然自若、不动声色、面不改色、宠辱不惊、稳如泰山、镇定自若、波澜不惊,",
+            "autoword": "怦怦直跳、心惊肉跳",
+            "errword": [
+                "惊"
+            ],
+            "audio": "cbbj.wav"
         },
         {
             "name": "万众一心",
-            "pinyin":"wàn zhòng yī xīn",
+            "pinyin": "wàn zhòng yī xīn",
             "mean": "千千万万的人一条心。",
             "example": "只要万众一心，再大的困难也阻挡不住我们前进的脚步。",
-            "nearword":"万全之策、同心同德",
-            "autoword":"挂一漏万、各自为政",
-            "errword":["众"]
+            "nearword": "万全之策、同心同德",
+            "autoword": "挂一漏万、各自为政",
+            "errword": [
+                "众"
+            ],
+            "audio": "wzyx.wav"
         },
         {
             "name": "众志成城",
-            "pinyin":"zhòng zhì chéng chéng",
+            "pinyin": "zhòng zhì chéng chéng",
             "mean": "大家同心协力，就像城墙一样的牢固。比喻大家团结一致，就能克服困难，得到成功。",
             "example": "全国人民正众志成城地搞经济建设。",
-            "nearword":"众擎易举、万众一心、戮力同心",
-            "autoword":"一盘散沙、四分五裂、同床异梦",
-            "errword":["城"]
+            "nearword": "众擎易举、万众一心、戮力同心",
+            "autoword": "一盘散沙、四分五裂、同床异梦",
+            "errword": [
+                "城"
+            ],
+            "audio": "zzcc.wav"
         },
         {
             "name": "含辛茹苦",
-            "pinyin":"hánxīn rú kǔ",
+            "pinyin": "hánxīn rú kǔ",
             "mean": "经受艰辛困苦。",
             "example": "老师含辛茹苦地教育我们，我们不能忘记恩师。",
-            "nearword":"饱经风霜、千辛万苦",
-            "autoword":"无忧无虑、养尊处优",
-            "errword":["茹"]
+            "nearword": "饱经风霜、千辛万苦",
+            "autoword": "无忧无虑、养尊处优",
+            "errword": [
+                "茹"
+            ],
+            "audio": "hxrk.wav"
         },
         {
             "name": "舍生忘死",
-            "pinyin":"shě shēng wàng sǐ",
+            "pinyin": "shě shēng wàng sǐ",
             "mean": "形容不顾生命危险。",
             "example": "他是个舍生忘死的好干部。",
-            "nearword":" 奋不顾身",
-            "autoword":"贪生怕死",
-            "errword":["忘"]
+            "nearword": " 奋不顾身",
+            "autoword": "贪生怕死",
+            "errword": [
+                "忘"
+            ],
+            "audio": "ssws.wav"
         },
         {
             "name": "倦鸟知还",
-            "pinyin":"juàn niǎo zhī huán",
+            "pinyin": "juàn niǎo zhī huán",
             "mean": "累了的小鸟知道回到巢中。",
             "example": "倦鸟知还,在外奔波了几十年,如今老了,更加想念家乡。",
-            "nearword":"穷家难舍、不忘初心",
-            "autoword":"乐不思蜀、四海为家",
-            "errword":["倦"]
+            "nearword": "穷家难舍、不忘初心",
+            "autoword": "乐不思蜀、四海为家",
+            "errword": [
+                "倦"
+            ],
+            "audio": "jnzh.wav"
         },
         {
             "name": "成群结队",
-            "pinyin":"chéng qún jié duì",
+            "pinyin": "chéng qún jié duì",
             "mean": "人们聚集起来成了群，结合成了队伍。形容人很多。",
             "example": "聚集在一起的大雁成群结队地向南方飞去。",
-            "nearword":"三五成群",
-            "autoword":"孑然一身、形单影只",
-            "errword":["结"]
+            "nearword": "三五成群",
+            "autoword": "孑然一身、形单影只",
+            "errword": [
+                "结"
+            ],
+            "audio": "cqjd.wav"
         },
         {
             "name": "一唱一和",
-            "pinyin":"yī chàng yī hè",
+            "pinyin": "yī chàng yī hè",
             "mean": "一人唱歌，一人附合。比喻双方彼此呼应，互相配合。",
             "example": "他们俩在晚会上一唱一和，配合得十分默契。",
-            "nearword":"遥相呼应、亦步亦趋、一拍即合",
-            "autoword":"各自为政、各行其是、各持己见",
-            "errword":["和"]
+            "nearword": "遥相呼应、亦步亦趋、一拍即合",
+            "autoword": "各自为政、各行其是、各持己见",
+            "errword": [
+                "和"
+            ],
+            "audio": "ycyh.wav"
         },
         {
             "name": "呼朋引类",
-            "pinyin":"hū péng yǐn lèi",
+            "pinyin": "hū péng yǐn lèi",
             "mean": "招呼朋友，带领同类。",
             "example": "这个小伙子游手好闲,专能呼朋引类,胡打乱闹。",
-            "nearword":"呼朋唤友 呼群结党",
-            "autoword":"息事宁人",
-            "errword":["类"]
+            "nearword": "呼朋唤友 呼群结党",
+            "autoword": "息事宁人",
+            "errword": [
+                "类"
+            ],
+            "audio": "hpyl.wav"
         },
         {
             "name": "欢呼雀跃",
-            "pinyin":"huān hū què yuè",
+            "pinyin": "huān hū què yuè",
             "mean": "高兴得大叫起来，像麻雀似的跳跃着。形容欢乐的情景。",
             "example": "听到要举办元旦晚会的消息，同学们一阵欢呼雀跃。",
-            "nearword":"欢喜若狂、欢欣鼓舞、兴高采烈",
-            "autoword":"愁眉苦脸、肝肠寸断、黯然销魂",
-            "errword":["跃"]
+            "nearword": "欢喜若狂、欢欣鼓舞、兴高采烈",
+            "autoword": "愁眉苦脸、肝肠寸断、黯然销魂",
+            "errword": [
+                "跃"
+            ],
+            "audio": "hhqy.wav"
         }
     ],
-    "6":[
+    "6": [
         {
             "name": "生旦净丑",
-            "pinyin":"shēng dàn jìng chǒu",
+            "pinyin": "shēng dàn jìng chǒu",
             "mean": "指戏曲表演中的角色。",
             "example": "人生就像一个大舞台，幕布起落间，生旦净丑。",
-            "nearword":"生旦净末、三教九流、士农工商",
-            "autoword":" ",
-            "errword":["净"]
+            "nearword": "生旦净末、三教九流、士农工商",
+            "autoword": " ",
+            "errword": [
+                "净"
+            ],
+            "audio": "sdjc.wav"
         },
         {
             "name": "喜闻乐见",
-            "pinyin":"xǐ wén lè jiàn",
+            "pinyin": "xǐ wén lè jiàn",
             "mean": "喜欢听，乐意看。指很受欢迎。",
             "example": "相声是广大群众喜闻乐见的艺术形式。",
-            "nearword":"脍炙人口、喜闻乐道",
-            "autoword":"惨不忍闻、惨不忍睹、痛恨不已",
-            "errword":["闻"]
+            "nearword": "脍炙人口、喜闻乐道",
+            "autoword": "惨不忍闻、惨不忍睹、痛恨不已",
+            "errword": [
+                "闻"
+            ],
+            "audio": "xwlj.wav"
         },
         {
             "name": "粉墨登场",
-            "pinyin":"fěn mò dēng chǎng",
+            "pinyin": "fěn mò dēng chǎng",
             "mean": "原指演戏前涂上粉或墨，登场演戏。后比喻某些人乔装打扮后登上政治舞台，带讥讽之意。",
             "example": "她这次参加剧团粉墨登场后，大家才知道她的表演才华。",
-            "nearword":"走马上任、抛头露面",
-            "autoword":"匿影藏形、消声匿迹",
-            "errword":["墨"]
+            "nearword": "走马上任、抛头露面",
+            "autoword": "匿影藏形、消声匿迹",
+            "errword": [
+                "墨"
+            ],
+            "audio": "fmdc.wav"
         },
         {
             "name": "锣鼓喧天",
-            "pinyin":"luó gǔ xuān tiān",
+            "pinyin": "luó gǔ xuān tiān",
             "mean": "敲锣打鼓的声音响彻天空。形容欢乐喜庆的气氛。",
             "example": "庆祝大会上彩旗飞舞，锣鼓喧天。",
-            "nearword":"敲锣打鼓、吹吹打打",
-            "autoword":"哑然失声、万籁俱寂",
-            "errword":["喧"]
+            "nearword": "敲锣打鼓、吹吹打打",
+            "autoword": "哑然失声、万籁俱寂",
+            "errword": [
+                "喧"
+            ],
+            "audio": "lgxt.wav"
         },
         {
             "name": "有板有眼",
-            "pinyin":"yǒu bǎn yǒu yǎn",
+            "pinyin": "yǒu bǎn yǒu yǎn",
             "mean": "音乐戏曲的曲调、唱腔合乎节拍，比喻言语行动有条不紊，富有节奏或章法。",
             "example": "小华无论做什么事情都有板有眼的，我们真该向她学习。",
-            "nearword":"有条有理、有条不紊、有声有色",
-            "autoword":"乱七八糟、杂乱无章",
-            "errword":["板"]
+            "nearword": "有条有理、有条不紊、有声有色",
+            "autoword": "乱七八糟、杂乱无章",
+            "errword": [
+                "板"
+            ],
+            "audio": "ybyy.wav"
         },
         {
             "name": "余音绕梁",
-            "pinyin":"yú yīn rào liáng",
+            "pinyin": "yú yīn rào liáng",
             "mean": "音乐停止后，余音仿佛正在绕着屋梁回旋。形容歌声或音乐优美动听，耐人回味。",
             "example": "一曲“春江花月夜”之后,余音绕梁。",
-            "nearword":"余音袅袅、绕梁三日",
-            "autoword":"不堪入耳、索然寡味",
-            "errword":["绕"]
+            "nearword": "余音袅袅、绕梁三日",
+            "autoword": "不堪入耳、索然寡味",
+            "errword": [
+                "绕"
+            ],
+            "audio": "yyrl.wav"
         },
         {
             "name": "字正腔圆",
-            "pinyin":"zì zhèng qiāng yuán",
+            "pinyin": "zì zhèng qiāng yuán",
             "mean": "指唱戏、唱歌或念白、朗读时吐字清晰准确，腔调圆润悦耳。",
             "example": "温厚的声音，字正腔圆，学英语的好典范。",
-            "nearword":"唱念做打、余音绕梁",
-            "autoword":"南腔北调",
-            "errword":["腔"]
+            "nearword": "唱念做打、余音绕梁",
+            "autoword": "南腔北调",
+            "errword": [
+                "腔"
+            ],
+            "audio": "zzqy.wav"
         },
         {
             "name": "惟妙惟肖",
-            "pinyin":"wéi miào wéi xiào",
+            "pinyin": "wéi miào wéi xiào",
             "mean": "形容描写或模仿得非常好，非常逼真。",
             "example": "卢沟桥上的那些石头狮子被雕刻得惟妙惟肖，吸引了很多游客来观看。",
-            "nearword":"栩栩如生",
-            "autoword":"画虎类犬",
-            "errword":["肖"]
+            "nearword": "栩栩如生",
+            "autoword": "画虎类犬",
+            "errword": [
+                "肖"
+            ],
+            "audio": "wmwx.wav"
         },
         {
             "name": "活灵活现",
-            "pinyin":"huó líng huó xiàn",
+            "pinyin": "huó líng huó xiàn",
             "mean": "形容描述或模仿的人或事物非常逼真，使人感到好像亲眼看到一样。",
             "example": "看到这个小女孩三两下就画出一只活灵活现的老虎，我感到很惊讶。",
-            "nearword":"栩栩如生、绘声绘色、有声有色、呼之欲出、惟妙惟肖、活龙活现",
-            "autoword":"泥塑木雕",
-            "errword":["现"]
+            "nearword": "栩栩如生、绘声绘色、有声有色、呼之欲出、惟妙惟肖、活龙活现",
+            "autoword": "泥塑木雕",
+            "errword": [
+                "现"
+            ],
+            "audio": "hlhx.wav"
         },
         {
             "name": "感人肺腑",
-            "pinyin":"gǎn rén fèi fǔ",
+            "pinyin": "gǎn rén fèi fǔ",
             "mean": "使人内心深受感动。",
             "example": "这部小说演绎了一段感人肺腑的爱情故事。",
-            "nearword":"动人心弦、荡人心腑",
-            "autoword":"无动于衷",
-            "errword":["腑"]
+            "nearword": "动人心弦、荡人心腑",
+            "autoword": "无动于衷",
+            "errword": [
+                "腑"
+            ],
+            "audio": "grff.wav"
         },
         {
             "name": "动人心弦",
-            "pinyin":"dòng rén xīn xián",
+            "pinyin": "dòng rén xīn xián",
             "mean": "把心比作琴，拨动了心的弦，形容事物激动人心。",
             "example": "丰富多彩的音乐世界使我流连忘返，各种动人心弦的音符组成了千丝万缕的妙曲，感人至深。",
-            "nearword":"扣人心弦、感人肺腑",
-            "autoword":"平淡无奇",
-            "errword":["弦"]
+            "nearword": "扣人心弦、感人肺腑",
+            "autoword": "平淡无奇",
+            "errword": [
+                "弦"
+            ],
+            "audio": "drxx.wav"
         },
         {
             "name": "令出如山",
-            "pinyin":"lìng chū rú shān",
+            "pinyin": "lìng chū rú shān",
             "mean": "命令一出，就像山一样。",
             "example": "令出如山,不可违抗,迟疑间还是冲了上去。",
-            "nearword":"令出唯行",
-            "autoword":"收回成命",
-            "errword":["令"]
+            "nearword": "令出唯行",
+            "autoword": "收回成命",
+            "errword": [
+                "令"
+            ],
+            "audio": "lcrs.wav"
         },
         {
             "name": "振臂一呼",
-            "pinyin":"zhèn bì yī hū",
+            "pinyin": "zhèn bì yī hū",
             "mean": "挥动手臂，一声号召。",
             "example": "这位将军振臂一呼，敌寇吓得调头就跑。",
-            "nearword":"大声疾呼",
-            "autoword":"一呼百应、景从云集",
-            "errword":["振"]
+            "nearword": "大声疾呼",
+            "autoword": "一呼百应、景从云集",
+            "errword": [
+                "振"
+            ],
+            "audio": "zbyh.wav"
         },
         {
             "name": "浩浩荡荡",
-            "pinyin":"hào hào dàng dàng",
+            "pinyin": "hào hào dàng dàng",
             "mean": "形容水势广阔浩大，或形容气势雄伟，规模宏大。",
             "example": "九曲黄河浩浩荡荡，气势磅礴地流向大海。",
-            "nearword":"汹涌澎湃、波澜壮阔、气壮山河、铺天盖地",
-            "autoword":"风平浪静",
-            "errword":["荡"]
+            "nearword": "汹涌澎湃、波澜壮阔、气壮山河、铺天盖地",
+            "autoword": "风平浪静",
+            "errword": [
+                "荡"
+            ],
+            "audio": "hhdd.wav"
         },
         {
             "name": "络绎于途",
-            "pinyin":"luò yìyú tú",
+            "pinyin": "luò yìyú tú",
             "mean": "形容沿途过往的人马车船接连不断。",
             "example": "科学家比喻,如今探月者络绎于途,不久之后,月球表面就要像蜂窝般忙碌热闹了。",
-            "nearword":"连绵不断、川流不息、源源不断、络绎不绝",
-            "autoword":"门可罗雀、人迹罕至、门庭冷落、静如极夜",
-            "errword":["绎"]
+            "nearword": "连绵不断、川流不息、源源不断、络绎不绝",
+            "autoword": "门可罗雀、人迹罕至、门庭冷落、静如极夜",
+            "errword": [
+                "绎"
+            ],
+            "audio": "lyyt.wav"
         },
         {
             "name": "惊涛骇浪",
-            "pinyin":"jīng tāo hài làng",
+            "pinyin": "jīng tāo hài làng",
             "mean": "令人惊惧的大波浪。比喻险恶的环境遭遇或艰难的考验。",
             "example": "海燕在翻滚着惊涛骇浪的海面上展翅飞翔。",
-            "nearword":"大风大浪",
-            "autoword":"风平浪静",
-            "errword":["骇"]
+            "nearword": "大风大浪",
+            "autoword": "风平浪静",
+            "errword": [
+                "骇"
+            ],
+            "audio": "jthl.wav"
         },
         {
             "name": "水土不服",
-            "pinyin":"shuǐ tǔ bù fú",
+            "pinyin": "shuǐ tǔ bù fú",
             "mean": "出门在外，不适应当地的气候、饮食、习惯而产生一些病。",
             "example": "洋品牌已经逐渐克服水土不服，开始学会在我们的后院安营扎寨了。",
-            "nearword":"不服水土、不伏水土",
-            "autoword":" ",
-            "errword":["服"]
+            "nearword": "不服水土、不伏水土",
+            "autoword": " ",
+            "errword": [
+                "服"
+            ],
+            "audio": "stbf.wav"
         },
         {
             "name": "讲和通好",
-            "pinyin":"jiǎng hé tōng hǎo",
+            "pinyin": "jiǎng hé tōng hǎo",
             "mean": "指相互和解，并建立友好的关系。",
             "example": "我们吵架之后最终讲和通好了",
-            "nearword":"和平共处、和睦相处、友好往来、同舟共济",
-            "autoword":" ",
-            "errword":["通"]
+            "nearword": "和平共处、和睦相处、友好往来、同舟共济",
+            "autoword": " ",
+            "errword": [
+                "通"
+            ],
+            "audio": "jhth.wav"
         },
         {
             "name": "奇珍异宝",
-            "pinyin":"qí zhēn yì bǎo",
+            "pinyin": "qí zhēn yì bǎo",
             "mean": "奇异的珍宝。形容稀有的、难得的宝物。",
             "example": "故宫博物院里保存着许多奇珍异宝。",
-            "nearword":"无价之宝",
-            "autoword":"平淡无奇",
-            "errword":["异"]
+            "nearword": "无价之宝",
+            "autoword": "平淡无奇",
+            "errword": [
+                "异"
+            ],
+            "audio": "qzyb.wav"
         },
         {
             "name": "互通有无",
-            "pinyin":"hù tōng yǒu wú",
+            "pinyin": "hù tōng yǒu wú",
             "mean": "用自己有的交换自己没有的。指相互交换。",
             "example": "商品交换可以互通有无，促进经济发展。",
-            "nearword":"投桃报李、有无相通、取长补短",
-            "autoword":" ",
-            "errword":["通"]
+            "nearword": "投桃报李、有无相通、取长补短",
+            "autoword": " ",
+            "errword": [
+                "通"
+            ],
+            "audio": "htyw.wav"
         },
         {
             "name": "五湖四海",
-            "pinyin":"wǔ hú sì hǎi",
+            "pinyin": "wǔ hú sì hǎi",
             "mean": "指全国各地，有时也指世界各地。现有时也比喻广泛的团结。",
             "example": "来自五湖四海的同学们能相聚在一起，真是有缘！",
-            "nearword":"四面八方、五洲四海",
-            "autoword":"方寸之地",
-            "errword":["湖"]
+            "nearword": "四面八方、五洲四海",
+            "autoword": "方寸之地",
+            "errword": [
+                "湖"
+            ],
+            "audio": "whsh.wav"
         },
         {
             "name": "心悦诚服",
-            "pinyin":"xīn yuè chéng fú",
+            "pinyin": "xīn yuè chéng fú",
             "mean": "心里喜悦而真诚佩服。",
             "example": "他为对手精湛的棋艺而心悦诚服。",
-            "nearword":"心甘情愿、心服口服",
-            "autoword":"口服心不服",
-            "errword":["悦"]
+            "nearword": "心甘情愿、心服口服",
+            "autoword": "口服心不服",
+            "errword": [
+                "悦"
+            ],
+            "audio": "xycf.wav"
         },
         {
             "name": "头头是道",
-            "pinyin":"tóu tóu shì dào",
+            "pinyin": "tóu tóu shì dào",
             "mean": "形容说话很有条理而且有理有据；做事有条不紊，很有办法。",
             "example": "他虽然能将大道理讲得头头是道，却总是无法付诸行动。",
-            "nearword":"井井有条、条理分明、有条不紊、有条有理、层次井然",
-            "autoword":"颠三倒四、乱七八糟、杂乱无章、语无伦次",
-            "errword":["道"]
+            "nearword": "井井有条、条理分明、有条不紊、有条有理、层次井然",
+            "autoword": "颠三倒四、乱七八糟、杂乱无章、语无伦次",
+            "errword": [
+                "道"
+            ],
+            "audio": "ttsd.wav"
         },
         {
             "name": "娓娓而谈",
-            "pinyin":"wěi wěi ér tán",
+            "pinyin": "wěi wěi ér tán",
             "mean": "形容说话不知疲倦，婉转生动。",
             "example": "能与自己娓娓而谈的人决不会感到孤独。",
-            "nearword":"口齿伶俐、口若悬河、夸夸其谈、滔滔不绝、大言不惭、喋喋不休、娓娓动听、侃侃而谈、口如悬河、媚媚动听、夸夸而谈",
-            "autoword":"枯燥无味、索然无味",
-            "errword":["娓"]
+            "nearword": "口齿伶俐、口若悬河、夸夸其谈、滔滔不绝、大言不惭、喋喋不休、娓娓动听、侃侃而谈、口如悬河、媚媚动听、夸夸而谈",
+            "autoword": "枯燥无味、索然无味",
+            "errword": [
+                "娓"
+            ],
+            "audio": "wwet.wav"
         },
         {
             "name": "信口开河",
-            "pinyin":"xìn kǒu kāi hé",
+            "pinyin": "xìn kǒu kāi hé",
             "mean": "不经思索，不负责任地随口乱说。",
             "example": "领导干部讲话要慎重，切不可信口开河。",
-            "nearword":"胡言乱语、胡说八道、信口胡言",
-            "autoword":"信而有征、言之凿凿",
-            "errword":["信"]
+            "nearword": "胡言乱语、胡说八道、信口胡言",
+            "autoword": "信而有征、言之凿凿",
+            "errword": [
+                "信"
+            ],
+            "audio": "xkkh.wav"
         },
         {
             "name": "夸夸其谈",
-            "pinyin":"kuā kuā qí tán",
+            "pinyin": "kuā kuā qí tán",
             "mean": "说话或写文章浮夸，不切实际。",
             "example": "刚才还夸夸其谈,行家来了你就仗马寒蝉了。",
-            "nearword":"娓娓而谈、侃侃而谈、高谈阔论",
-            "autoword":"守口如瓶、默不做声、噤若寒蝉",
-            "errword":["谈"]
+            "nearword": "娓娓而谈、侃侃而谈、高谈阔论",
+            "autoword": "守口如瓶、默不做声、噤若寒蝉",
+            "errword": [
+                "谈"
+            ],
+            "audio": "kkqt.wav"
         },
         {
             "name": "理直气壮",
-            "pinyin":"lǐ zhí qì zhuàng",
+            "pinyin": "lǐ zhí qì zhuàng",
             "mean": "理由正确充分，说话气势旺盛。",
             "example": "只有大公无私，说话做事才能理直气壮。",
-            "nearword":"振振有词、义正言辞、据理力争",
-            "autoword":"理屈词穷、强词夺理、做贼心虚",
-            "errword":["壮"]
+            "nearword": "振振有词、义正言辞、据理力争",
+            "autoword": "理屈词穷、强词夺理、做贼心虚",
+            "errword": [
+                "壮"
+            ],
+            "audio": "lzqz.wav"
         },
         {
             "name": "侃侃而谈",
-            "pinyin":"kǎn kǎn ér tán",
+            "pinyin": "kǎn kǎn ér tán",
             "mean": "从容不迫、理直气壮地谈论。",
             "example": "他对这件事情侃侃而谈时，常常表现出老成持重的样子。",
-            "nearword":"口若悬河、夸夸其谈、娓娓而谈",
-            "autoword":"闭口无言、吞吞吐吐、张口结舌",
-            "errword":["侃"]
+            "nearword": "口若悬河、夸夸其谈、娓娓而谈",
+            "autoword": "闭口无言、吞吞吐吐、张口结舌",
+            "errword": [
+                "侃"
+            ],
+            "audio": "kket.wav"
         }
     ]
 }
