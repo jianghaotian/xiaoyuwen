@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../../css/PinYin/shengmu.css';
 import '../../css/PinYin/tingyinxuanzi.css'
 
-import {NavBar,Icon,Button} from 'antd-mobile';
+import {NavBar,Icon,Button,Toast} from 'antd-mobile';
 export default class Tingyinxuanzi extends Component {
     constructor(){
         super();
@@ -11,58 +11,7 @@ export default class Tingyinxuanzi extends Component {
             num:0,
             correct:0, 
             value:'',
-            content:[
-                {
-                    yin:'zǎo',
-                    zi:'早',
-                    choice:['旱','卓','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'shàng',
-                    zi:'上',
-                    choice:['下','卓','阜','皁','上','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'wǒ',
-                    zi:'我',
-                    choice:['俄','卓','阜','皁','我','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'chī',
-                    zi:'吃',
-                    choice:['呓','卓','阜','皁','乞','炮','饱','抱','吃','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'le',
-                    zi:'了',
-                    choice:['子','字','阜','皁','早','炮','饱','抱','袍','了','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'jī',
-                    zi:'鸡',
-                    choice:['鸟','卓','袅','皁','早','炮','饱','鸡','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'dàn',
-                    zi:'蛋',
-                    choice:['疍','蜃','胥','皁','早','炮','饱','抱','袍','泡','補','蛋','哺','脯','仆']
-                },
-                {
-                    yin:'hé',
-                    zi:'和',
-                    choice:['种','卓','阜','皁','早','炮','和','抱','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'miàn',
-                    zi:'面',
-                    choice:['面','而','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','仆']
-                },
-                {
-                    yin:'bāo',
-                    zi:'包',
-                    choice:['句','卓','阜','皁','早','炮','饱','抱','袍','泡','補','辅','哺','脯','包']
-                }
-        ]
+            content: [{chioce:[]}]
         };
         this.data=[
             {
@@ -234,16 +183,32 @@ export default class Tingyinxuanzi extends Component {
             if(this.result[i]===this.state.content[i].zi){
                 this.data[i].status=true;
                 this.score++;
+                console.log(this.score)
             }
             else{
                 this.data[i].status=false;
 
             }
         }
-        this.props.history.push({pathname:'/pinyin/tingyin/grade',state:{data:this.data,score:this.score}});
 
-        console.log("交卷");
-        console.log(this.result);
+        if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+        	Toast.loading('正在判题...', 10, () => {
+                Toast.offline('网络异常', 1, null, false);
+			});
+			
+            this.$api.post_tingyinxuanzi({data:this.data,score:this.score}).then(res => {
+                Toast.hide();
+                if (res.data.status === 0) {
+                    this.props.history.push('/pinyin/tingyin/grade/' + res.data.data);
+                } else {
+                    Toast.offline('网络异常', 1, null, false);
+                }
+            })
+        } else {
+            Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+            this.props.history.push({pathname:'/pinyin/tingyin/grade',state:{data:this.data,score:this.score}});
+        }
+
     }
     add=(e)=>{
         if(e.target.id===this.state.content.zi){
@@ -259,7 +224,22 @@ export default class Tingyinxuanzi extends Component {
             })
         }
     }
+    componentDidMount() {
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
 
+        let grade = this.$store.getState().users.grade || 1;
+        this.$api.get_tingyinxuanzi({grade: grade}).then(res => {
+            Toast.hide();
+            console.log(res);
+
+            this.setState({
+                content: res.data.data
+            })
+        });
+
+    }
     render() {
         return (
             <div className="t1">
@@ -283,7 +263,7 @@ export default class Tingyinxuanzi extends Component {
                     </div>
                     <div className='t5'>
                         {
-                            this.state.content[this.state.num].choice.map((item,index)=>{
+                            this.state.content[this.state.num].chioce.map((item,index)=>{
                                 return(
                                     <div className='t6' onClick={this.add} id={item} key={index}>{item}</div>
                                 )

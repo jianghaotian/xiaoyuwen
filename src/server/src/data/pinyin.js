@@ -3,6 +3,8 @@ let { getRandom } = require('./random');
 let ciyu = require('../../data/sys/ciyu.json');
 let pinyin = require('../../data/sys/pinyin.json');
 
+let tyxz = require('./TingYinXuanZi').tyxz;
+
 function getPinyin(flag, index) {
     let dict = {
         main: pinyin[flag][index],
@@ -26,21 +28,13 @@ function getKanzishiyin(grade) {
     }
 }
 
-// function getTingyinxuanzi(grade) {
+function getTingyinxuanzi(grade) {
 
-//     let ciyui = getRandom(ciyu[grade].length, 10);
-    
-//     if (ciyui.length === 10) {
-//         let ciyuArr = [];
-//         ciyui.forEach((i) => {
-//             ciyuArr.push(ciyu[grade][i]);
-//         });
-//         return ciyuArr;
-//     } else {
-//         return null;
-//     }
-// }
+    let arr = tyxz(ciyu, grade);
+    return arr;
 
+}
 
+// console.log(getTingyinxuanzi(2));
 
-module.exports = { getPinyin, getKanzishiyin }
+module.exports = { getPinyin, getKanzishiyin, getTingyinxuanzi }
