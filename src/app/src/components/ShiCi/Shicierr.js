@@ -85,7 +85,7 @@ export default class Shicierr extends Component {
                     		<div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
 							<div className="errcon">
 								{/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg")} /></div> */}
-								<div className="erridiom">
+								<div className="errshici">
 									<div className={this.state.shortclassName}>
 									{
 										this.state.arr.map((item, index) => {

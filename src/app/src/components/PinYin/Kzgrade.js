@@ -31,7 +31,7 @@ export default class Kzgrade extends Component {
         return (
             <div>
                 <div className="ty-grade-back"></div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>看 字 识 音</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.goBack()}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>看 字 识 音</NavBar>
                 <div className="ty1">
                     <img className="ty2" src={require('../../images/word3.PNG')} />
                     <div className="ty3">
@@ -49,7 +49,7 @@ export default class Kzgrade extends Component {
                                             <span className="ty-text">{(index+1)+'.  '+item.write.one+" "+item.write.two}</span>
                                             <i className={'iconfont icon-zhengque2 ty-panduan-dui'}></i>
                                         </div>
-                                        <div className='ty-backtrue'>答对啦！</div>
+                                        <div className='ty-backtrue'>答对啦！<span>（{item.word}）</span></div>
                                     </div>
                                 )
                             }
