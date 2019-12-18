@@ -126,3 +126,19 @@
     display: flex;
     justify-content: center;
 }
+
+.t13{
+    /* float: left; */
+    /* padding: 5%; */
+    font-size: 5vw;
+    /* margin: auto; */
+    width:70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:grey;
+    color:#fff;
+    border:1px solid #6189B8;
+    border-radius: 5px;
+}
