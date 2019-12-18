@@ -358,6 +358,9 @@
             "example": "北国的秋天，金风送爽，瓜果遍地。",
             "nearword": "秋风送爽",
             "autoword": " ",
+            "errword": [
+                "爽"
+            ],
             "audio": "jfss.wav"
         },
         {

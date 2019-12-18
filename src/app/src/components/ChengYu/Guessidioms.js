@@ -80,8 +80,7 @@ export default class Guessidioms extends Component {
             this.arr.map((item,index)=>{
                 item.innerHTML= "";
             })
-        }
-        
+        }    
     }
     borderclear=()=>{
         this.arr.map((item,index)=>{
@@ -142,12 +141,29 @@ export default class Guessidioms extends Component {
                 this.answerArr[i+1].status=false;
                 this.answerArr[i+1].answer=this.state.all[i].answer
             }
-            console.log(str)
+            console.log(str);
             console.log(this.state.all[i].answer);
-            console.log(this.answerArr[i+1])
+            console.log(this.answerArr[i+1]);
         }
-        console.log(this.answerArr,this.score)
-        this.props.history.push({pathname:'/chengyu/guess/grade',state:{data:this.answerArr,score:this.score}});
+        console.log(this.answerArr,this.score);
+
+        if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
+            Toast.loading('正在判题...', 10, () => {
+                Toast.offline('网络异常', 1, null, false);
+            });
+            this.$api.post_ccy({data:this.answerArr,score:this.score}).then(res => {
+                Toast.hide();
+                if (res.data.status === 0) {
+                    this.props.history.push('/chengyu/cai/grade/' + res.data.data);
+                } else {
+                    Toast.offline('网络异常', 1, null, false);
+                }
+            })
+        } else {
+            Toast.info('当前未登录，不会存储答题信息', 1, null, false);
+            this.props.history.push({pathname:'/chengyu/cai/grade',state:{data:this.answerArr,score:this.score}});
+        }
+
     }
     componentDidMount(){
         Toast.loading('正在加载...', 10, () => {
@@ -163,8 +179,6 @@ export default class Guessidioms extends Component {
                 all: res.data.data
             })
         });
-
-
 
         for(var i=0;i<this.refs.a.children.length;i++){
             this.arr[i]=this.refs.a.children[i]

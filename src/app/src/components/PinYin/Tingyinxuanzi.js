@@ -247,7 +247,9 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div className="t1">
-                <audio src={tyAudioUrl + this.state.content[this.state.num].zi + '.wav'} preload="auto" ref={child => this.au = child}></audio>
+                {
+                    this.state.content[this.state.num].zi != undefined ? <audio src={tyAudioUrl + this.state.content[this.state.num].zi + '.wav'} preload="auto" ref={child => this.au = child}></audio> : ''
+                }
                 <NavBar
                     icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
                     style={{backgroundColor:"#617ca6"}}

@@ -31,7 +31,7 @@ export default class Jlgrade extends Component {
       <div>
         <div>
                 <div className="jlgradeback"></div>
-                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.goBack()}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>看 字 识 音</NavBar>
+                <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.goBack()}} />} style={{backgroundColor:"#617ca6",position:"fixed",width:"100%",zIndex:"10"}}>成 语 接 龙</NavBar>
                 <div className="jl1">
                     <img className="jl2" src={require('../../images/word3.PNG')} />
                     <div className="jl3">

@@ -80,9 +80,9 @@ export default class App extends Component {
                     <Route exact path="/chengyu/chengjielong" component={Idiomjielong} />
                     <Route exact path="/chengyu/jielong/grade" component={Jlgrade}/>
                     <Route exact path="/chengyu/jielong/grade/:id" component={Jlgrade}/>
-                    <Route exact path="/chengyu/cai/grade" component={Jlgrade}/>
-                    <Route exact path="/chengyu/cai/grade/:id" component={Jlgrade}/>
-                    <Route exact path="/chengyu/guess/grade" component={Guessgrade}/>
+                    <Route exact path="/chengyu/cai/grade" component={Guessgrade}/>
+                    <Route exact path="/chengyu/cai/grade/:id" component={Guessgrade}/>
+                    {/* <Route exact path="/chengyu/guess/grade" component={Guessgrade}/> */}
 
 
                     {/* 诗词 */}
