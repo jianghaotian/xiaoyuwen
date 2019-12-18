@@ -448,13 +448,13 @@ export default class Idiomjielong extends Component {
 		this.setState((state)=>{
 				if(--state.num<1){
 						return{
-								num:1
+								num:1,
+								scsubmitFront:'jlsubmit-front'
 						}
 				};
 				return{
 						num:state.num,
-						next:"下一题",
-						scsubmitFront:'jlsubmit-front'
+						next:"下一题"
 				}
 		})
 }
