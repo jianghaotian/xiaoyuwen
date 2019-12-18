@@ -81,7 +81,7 @@ export default class Kanzishiyin extends Component {
         this.count=1;
         this.flag="";
         this.score=0;
-        this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
+        this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
         this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>; 
     }
     componentDidMount() {
@@ -122,6 +122,7 @@ export default class Kanzishiyin extends Component {
         this.count=this.state.num;
         var div1=this.refs.first.children;
         var div2=this.refs.second.children;
+        this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
 
         for(var i=0;i<div1.length;i++){
             div1[i].className="k5";
@@ -218,9 +219,21 @@ export default class Kanzishiyin extends Component {
         }
         div1[this.index].className="k5 k7";
         if(this.count===0){
+            this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
+
             this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
             this.setState({
                 num:0
+            })
+        }
+        else if(this.count===1){
+            this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
+
+            this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
+            this.setState({
+                str1:this.result[this.count-1].one,
+                str2:this.result[this.count-1].two,
+                num:this.state.num-1
             })
         }
         else{
@@ -229,6 +242,7 @@ export default class Kanzishiyin extends Component {
                 str2:this.result[this.count-1].two,
                 num:this.state.num-1
             })
+            this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
             this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
         }
     }

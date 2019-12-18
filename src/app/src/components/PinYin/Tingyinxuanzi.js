@@ -118,13 +118,14 @@ export default class Tingyinxuanzi extends Component {
 
         ]
         this.score=0;
-        this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
+        this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
         this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
         this.count=0;
     }
 
     next=()=>{
         this.count=this.state.num;
+        this.Btn1=<Button className="t11" onClick={this.prev}>上一题</Button>;
         if(this.result[this.count+1]===undefined){
             this.setState({
                 value:""
@@ -168,9 +169,19 @@ export default class Tingyinxuanzi extends Component {
     prev=()=>{
         this.count=this.state.num;
         if(this.count===0){
+            this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
             this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
             this.setState({
                 num:0
+            })
+        }
+        else if(this.count===1){
+            this.Btn1=<Button className="t13" onClick={this.prev}>上一题</Button>;
+            this.Btn2=<Button onClick={this.next} className="t11">下一题</Button>;
+            this.result[this.count]=this.state.value;
+            this.setState({
+                value:this.result[this.count-1],
+                num:this.state.num-1
             })
         }
         else{
