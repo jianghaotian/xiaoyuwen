@@ -43,7 +43,8 @@ import Guanqia from './components/Guanqia';
 import ShiciGrade from './components/ShiCi/ShiciGrade'
 import Kzgrade from './components/PinYin/Kzgrade';
 import Tygrade from './components/PinYin/Tygrade';
-import Jlgrade from './components/ChengYu/Jlgrade'
+import Jlgrade from './components/ChengYu/Jlgrade';
+import Guessgrade from './components/ChengYu/Guessgrade'
 
 export default class App extends Component {
     render() {
@@ -81,6 +82,7 @@ export default class App extends Component {
                     <Route exact path="/chengyu/jielong/grade/:id" component={Jlgrade}/>
                     <Route exact path="/chengyu/cai/grade" component={Jlgrade}/>
                     <Route exact path="/chengyu/cai/grade/:id" component={Jlgrade}/>
+                    <Route exact path="/chengyu/guess/grade" component={Guessgrade}/>
 
 
                     {/* 诗词 */}
