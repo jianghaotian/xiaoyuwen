@@ -5,6 +5,7 @@ import "../../css/ChengYu/guess.css"
 export default class Guessidioms extends Component {
     constructor(){
         super();
+<<<<<<< HEAD
         this.all=[
             {
                 description:"形容好得难以用文字、语言表达。",
@@ -57,11 +58,14 @@ export default class Guessidioms extends Component {
                 words:["好","易","难","不","言","妙","以","可","表","语"]
             }
         ]
+=======
+>>>>>>> 5e119cbce9e0cf8b9e63a905e51edf1ef789f20a
         this.state={
             num:1,
             next:"下一题",
             scsubmitFront: 'jlsubmit-front',
-			front: '上一题',
+            front: '上一题',
+            all: [{description:[],words:[]}]
         }
         this.no=0;
         this.objArr=[];
@@ -121,6 +125,7 @@ export default class Guessidioms extends Component {
                 item.innerHTML= "";
             })
         }
+        
     }
     borderclear=()=>{
         this.arr.map((item,index)=>{
@@ -166,6 +171,22 @@ export default class Guessidioms extends Component {
         
     }
     componentDidMount(){
+        Toast.loading('正在加载...', 10, () => {
+            Toast.offline('网络异常', 1, null, false);
+        });
+
+        let grade = this.$store.getState().users.grade || 1;
+        this.$api.get_ccy({grade: grade}).then(res => {
+            Toast.hide();
+            console.log(res);
+
+            this.setState({
+                all: res.data.data
+            })
+        });
+
+
+
         for(var i=0;i<this.refs.a.children.length;i++){
             this.arr[i]=this.refs.a.children[i]
         };
@@ -186,13 +207,13 @@ export default class Guessidioms extends Component {
                         <div>
                             <div className='sm-box'>
                             <div className='sm-textBox'>
-                                第 <span>{this.state.num}</span><span> / </span><span>100</span> 个
+                                第 <span>{this.state.num}</span><span> / </span><span>10</span> 个
                             </div>
                         </div>
                             {/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div> */}
                             <div className="guesscon">
                                 <div className="descrip">
-                                    <p>{this.all[this.state.num-1].description}</p>
+                                    <p>{this.state.all[this.state.num-1].description}</p>
                                 </div>
                                 <div className="answer">
                                     <div ref="a" style={{width:"60vw",height:"12vw"}}>
@@ -210,7 +231,7 @@ export default class Guessidioms extends Component {
                                 <div className="chooseguess">
                                     <div style={{width:"75vw"}}>
                                         {
-                                            (this.all[this.state.num-1].words).map((item,index)=>(
+                                            (this.state.all[this.state.num-1].words).map((item,index)=>(
                                                 <div onClick={this.getGid} id={"g"+index} className="chooseone">
                                                     {item}
                                                 </div>

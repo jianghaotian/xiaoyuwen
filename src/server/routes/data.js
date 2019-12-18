@@ -298,26 +298,16 @@ router.get('/ccy', function (req, res, next) {
  *     data: {}
  */
 router.post('/ccy', function (req, res, next) {
-    let { answer } = req.body;
+    let answer = req.body;
     let token = req.header('token');
 
     checkToken(token, (result) => {
-        let num = 0;
-        answer.forEach(value => {
-            if (value.flag) {
-                num++;
-            }
-        });
         if (result.status === 0) {
             let day = getTimestamp_13();
-            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'ccy', num, day], (result1) => {
+            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'ccy', answer.score, day], (result1) => {
                 if (result1.status === 0) {
-                    let fileCont = {
-                        answer: answer,
-                        grade: num
-                    }
-                    let filePath = path.join(__dirname, '../data/users/bcsj/' + day + '.json');
-                    let str = JSON.stringify(fileCont);
+                    let filePath = path.join(__dirname, '../data/users/ccy/' + day + '.json');
+                    let str = JSON.stringify(answer);
                     fs.writeFile(filePath, str, (err) => {
                         if (err) {
                             let jsonData = {
@@ -353,10 +343,11 @@ router.post('/ccy', function (req, res, next) {
  *     message: "OK",
  *     data: {}
  */
+
 router.get('/ccy/grade', function (req, res, next) {
     let { time } = req.query;
     // let token = req.header('token');
-    let data = require(path.join(__dirname, '../data/users/bcsj/' + time + '.json'));
+    let data = require(path.join(__dirname, '../data/users/ccy/' + time + '.json'));
 
     let jsonData = {
         status: 0,
