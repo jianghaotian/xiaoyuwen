@@ -9,7 +9,7 @@ const { getTimestamp_13 } = require('../src/timer');
 const { getToken, checkToken } = require('../src/token');
 
 let { getBuchongshiju, getShici, getShiciycz } = require('../src/data/shici')
-let { getPinyin, getKanzishiyin } = require('../src/data/pinyin')
+let { getPinyin, getKanzishiyin, getTingyinxuanzi } = require('../src/data/pinyin')
 let { getChengyu, getChengyuycz, getCaichengyu } = require('../src/data/chengyu');
 
 
@@ -132,6 +132,27 @@ router.get('/kzsy/grade', function (req, res, next) {
 });
 
 /**
+ * （听音选字）
+ * GET
+ * 接收参数:
+ *     grade : 用户年级
+ * 返回参数:
+ *     status: 0,
+ *     message: "OK",
+ *     data: {}
+ */
+router.get('/tyxz', function (req, res, next) {
+    let { grade } = req.query;
+    // let token = req.header('token');
+
+    let jsonData = {
+        status: 0,
+        data: getTingyinxuanzi(grade)
+    }
+    res.json(jsonData);
+});
+
+/**
  * （听音选字判题后存储）
  * POST
  * 接收参数:
@@ -142,26 +163,16 @@ router.get('/kzsy/grade', function (req, res, next) {
  *     data: {}
  */
 router.post('/tyxz', function (req, res, next) {
-    let { answer } = req.body;
+    let answer = req.body;
     let token = req.header('token');
 
     checkToken(token, (result) => {
-        let num = 0;
-        answer.forEach(value => {
-            if (value.flag) {
-                num++;
-            }
-        });
         if (result.status === 0) {
             let day = getTimestamp_13();
-            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'tyxz', num, day], (result1) => {
+            runSql('insert into question(Uid, Qtype, Qscore, Qday) values (?,?,?,?)', [result.data.uid, 'tyxz', answer.score, day], (result1) => {
                 if (result1.status === 0) {
-                    let fileCont = {
-                        answer: answer,
-                        grade: num
-                    }
                     let filePath = path.join(__dirname, '../data/users/tyxz/' + day + '.json');
-                    let str = JSON.stringify(fileCont);
+                    let str = JSON.stringify(answer);
                     fs.writeFile(filePath, str, (err) => {
                         if (err) {
                             let jsonData = {

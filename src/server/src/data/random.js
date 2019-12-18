@@ -38,7 +38,6 @@ module.exports = { getRandom, randomNum, shuffleArray };
 // let num = 0;
 // while(1) {
 //     num ++;
-//     let q = randomNum(100);
-//     if (q == 101) console.log(q, num);
+//     let q = randomNum(10);
+//     if (q == 11) console.log(q, num);
 // }
-

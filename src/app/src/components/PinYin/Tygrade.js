@@ -6,63 +6,26 @@ export default class Tygrade extends Component {
     constructor(props){
         super(props);
         this.state={
-            score:this.props.location.state.score,
-            // data:[
-            //     {
-            //         write:'早',
-            //         answer:"早",
-            //         status:true    
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"上",
-            //         status:false   
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"我",
-            //         status:false    
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"吃",
-            //         status:false   
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"了",
-            //         status:false   
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"面",
-            //         status:false    
-            //     },
-            //     {
-            //         write:'早',
-            //         answer:"包",
-            //         status:false   
-            //     },
-            //     {
-            //         write:'面',
-            //         answer:"和",
-            //         status:false   
-            //     },
-            //     {
-            //         write:'鸡',
-            //         answer:"鸡",
-            //         status:true    
-            //     },
-            //     {
-            //         write:'蛋',
-            //         answer:"蛋",
-            //         status:true    
-            //     }
-
-            // ],
-            data:this.props.location.state.data
+            score:0,
+            data:[]
         }
     }
+    componentDidMount() {
+        if (this.props.location.state) {
+            this.setState({
+                score: this.props.location.state.score,
+                data: this.props.location.state.data
+            });
+        } else {
+            this.$api.get_tyxz_grade({time: this.props.match.params.id}).then(res => {
+                let { score, data } = res.data.data;
+                this.setState({
+                    score: score,
+                    data: data                
+                });
+            });
+        }
+      }
     render() {
         return (
             <div>
