@@ -96,8 +96,11 @@ export default class LearnIdioms extends Component {
                             <div onClick={this.shoucang} className={"iconfont " + this.state.shoucangClass}></div>
                             <div className="idiomcon">
                                 {/* <div><img className="learnimg" src={require("../../../images/learnbackground.jpg") }/></div> */}
-                                <div className="whiteline"><span className="special">成语: </span><span className="theidiom">{this.state.chengyu}</span>
-                                <span className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}} onClick={this.play}></span></div>
+                                <div className="whiteline">
+                                    <span className="special">成语: </span>
+                                    <span className="theidiom">{this.state.chengyu}</span>
+                                    <i className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginLeft:"10%"}} onClick={this.play}></i>
+                                </div>
                                 <div className="whiteline"><span className="special">拼音: </span>{this.state.pinyin}</div>
                                 <div className="whiteline"><span className="special">释义: </span>{this.state.shiyi}</div>
                                 <div className="whiteline"><span className="special">例句: </span>{this.state.liju}</div>
