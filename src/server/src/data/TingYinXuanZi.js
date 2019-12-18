@@ -54,9 +54,12 @@ function tyxz(result, grade) {
   }
   for(var j = 1,p=0;j<all.length;++j,++p){
     var ran = Math.ceil(Math.random()*9);
-    all[j][0][ran] = all[0][0][j-1];
-    all[j][1][ran] = all[0][1][j-1];
-    var obj = {
+    var obg={};
+    if(!(all[j][0][ran].includes(all[0][0][j-1]))){
+      all[j][0][ran] = all[0][0][j-1];
+      all[j][1][ran] = all[0][1][j-1];
+    }
+    obj = {
       zi:all[0][0][p],
       yin:all[0][1][p],
       chioce:[...all[j][0]]
