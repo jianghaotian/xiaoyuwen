@@ -1,6 +1,7 @@
 let { getRandom } = require('./random');
 
 let chengyu = require('../../data/sys/chengyu.json');
+let { createCCY } = require('./caichengyu');
 
 function getChengyu(grade, index) {
     let dict = {
@@ -20,9 +21,8 @@ function getChengyuycz(grade, index) {
 }
 
 function getCaichengyu(grade) {
-
-
-
+    let arr = createCCY(chengyu, grade);
+    return arr;
 }
 
 module.exports = { getChengyu, getChengyuycz, getCaichengyu }
