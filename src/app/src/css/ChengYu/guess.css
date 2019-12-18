@@ -76,22 +76,34 @@
     height:35vw;
     margin:0 auto;
     margin-top:10%;
-    font-size:6.5vw;
-    padding:0.5%;
+    font-size:6vw;
     /* border:1px solid gray;*/
     border-radius:10px;
-    border: 7px solid transparent;
+    /* border: 7px solid transparent;
     background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,
     repeating-linear-gradient(-45deg,
     rgb(176, 219, 240) 0, rgb(176, 219, 240) 12.5%,
     transparent 0, transparent 25%,
     rgb(250, 193, 220) 0, rgb(250, 193, 220) 37.5%,
     transparent 0, transparent 50%)
-    0 / 5em 5em;
+    0 / 5em 5em; */
     font-family:"楷体"
 }
-.descrip p{
-    text-indent: 2em;
+.descrip textarea{
+  /* width:60vw; */
+  height:35vw;
+  text-indent: 2em;
+  resize:none;
+  border-radius: 10px;
+  border: 8px solid transparent;
+  padding:0.5%;
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,
+  repeating-linear-gradient(-45deg,
+rgb(176, 219, 240) 0, rgb(176, 219, 240) 12.5%,
+  transparent 0, transparent 25%,
+rgb(250, 193, 220) 0, rgb(250, 193, 220) 37.5%,
+  transparent 0, transparent 50%)
+  0 / 5em 5em;
 }
 .answer{
     width:65%;

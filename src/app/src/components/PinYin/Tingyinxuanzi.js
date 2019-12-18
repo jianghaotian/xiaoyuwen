@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { tyAudioUrl } from '../../request/url';
 import '../../css/PinYin/shengmu.css';
 import '../../css/PinYin/tingyinxuanzi.css'
 
@@ -224,6 +225,9 @@ export default class Tingyinxuanzi extends Component {
             })
         }
     }
+    play = () => {
+        this.au.play();
+    }
     componentDidMount() {
         Toast.loading('正在加载...', 10, () => {
             Toast.offline('网络异常', 1, null, false);
@@ -243,6 +247,7 @@ export default class Tingyinxuanzi extends Component {
     render() {
         return (
             <div className="t1">
+                <audio src={tyAudioUrl + this.state.content[this.state.num].zi + '.wav'} preload="auto" ref={child => this.au = child}></audio>
                 <NavBar
                     icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />}
                     style={{backgroundColor:"#617ca6"}}
@@ -255,7 +260,7 @@ export default class Tingyinxuanzi extends Component {
                         </div>
                     </div>
                     {/* <div className="orange">第<span> {this.state.num}</span><span> / </span><span>100 </span>个</div> */}
-                    <div className="iconfont icon-laba1 t4"></div>
+                    <div className="iconfont icon-laba1 t4" onClick={this.play}></div>
                     <div className='t2'>{this.state.content[this.state.num].yin}</div>
                     <div className='t3'>
                         <img src={require('../../images/mizige.jpg')}/>
