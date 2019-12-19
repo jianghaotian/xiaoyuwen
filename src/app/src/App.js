@@ -52,7 +52,9 @@ export default class App extends Component {
             <Router>
                 <Switch>
                     {/* 主页面 */}
-                    <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} />
+                    {/* <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} /> */}
+                    <Route exact path="/" component={()=><Redirect from='/' to='/open' />} />
+
                     <Route exact path="/home" component={()=><Redirect from='/home' to='/home/pinyin' />} />
                     <Route exact path="/home/:tab" component={Bar} />
                     <Route exact path ="/guanqia"  component={Guanqia}/>
