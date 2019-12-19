@@ -54,7 +54,7 @@ export default class Guessidioms extends Component {
                     // next:"提交"
                 }
             };
-            console.log("state.num:"+state.num)
+            // console.log("state.num:"+state.num)
             this.borderclear();
             this.judge(state.num);
             return{
@@ -65,13 +65,13 @@ export default class Guessidioms extends Component {
         })    
     }
     judge=(num)=>{
-        console.log(num)
+        // console.log(num)
         if(Object.keys(this.answerArr[num]).length !== 0){
             this.arr.map((item,index)=>{
                 if(this.answerArr[num][index+1] !== undefined){
-                    console.log(num,this.answerArr[num][index+1]);
+                    // console.log(num,this.answerArr[num][index+1]);
                    item.innerHTML= this.answerArr[num][index+1];
-                   console.log(item); 
+                //    console.log(item); 
                 }else{
                     item.innerHTML="";
                 }
@@ -141,11 +141,11 @@ export default class Guessidioms extends Component {
                 this.answerArr[i+1].status=false;
                 this.answerArr[i+1].answer=this.state.all[i].answer
             }
-            console.log(str);
-            console.log(this.state.all[i].answer);
-            console.log(this.answerArr[i+1]);
+            // console.log(str);
+            // console.log(this.state.all[i].answer);
+            // console.log(this.answerArr[i+1]);
         }
-        console.log(this.answerArr,this.score);
+        // console.log(this.answerArr,this.score);
 
         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone !== '') {
             Toast.loading('正在判题...', 10, () => {
@@ -173,7 +173,7 @@ export default class Guessidioms extends Component {
         let grade = this.$store.getState().users.grade || 1;
         this.$api.get_ccy({grade: grade}).then(res => {
             Toast.hide();
-            console.log(res);
+            // console.log(res);
 
             this.setState({
                 all: res.data.data

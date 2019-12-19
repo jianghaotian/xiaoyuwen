@@ -21,7 +21,7 @@ export default class Shengri extends Component {
         if (this.$store.getState().users.phone !== '') {
             this.$api.set_birthday({date: sDate}).then(res => {
                 Toast.hide();
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     Toast.success('保存成功', 1, null, false);
                     this.$store.dispatch(setBirthday(sDate));

@@ -28,7 +28,7 @@ export default class Buchongshiju extends Component {
         let grade = this.$store.getState().users.grade || 1;
         this.$api.get_buchongshiju({grade: grade}).then(res => {
             Toast.hide();
-            console.log(res);
+            // console.log(res);
 
             this.setState({
                 data: res.data.data

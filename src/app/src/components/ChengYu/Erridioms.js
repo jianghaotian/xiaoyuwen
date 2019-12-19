@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {NavBar,SearchBar,TextareaItem,Icon,Toast} from 'antd-mobile';
+import { cyAudioUrl } from '../../request/url';
 import "../../css/ChengYu/err.css"
 export default class Guessidioms extends Component {
     constructor(){
@@ -9,7 +10,8 @@ export default class Guessidioms extends Component {
             errwords:[],
             arr: [],
             num: 1,
-            max: 1
+            max: 1,
+            audio:""
         }
     }
 	componentDidMount() {
@@ -28,7 +30,8 @@ export default class Guessidioms extends Component {
 				chengyu: res.data.data.chengyu,
 				errwords: res.data.data.errwords,
 				arr: arr,
-                max: res.data.data.max
+                max: res.data.data.max,
+                audio: cyAudioUrl + res.data.data.audio,
             });
         });
     }
@@ -57,9 +60,13 @@ export default class Guessidioms extends Component {
             }, () => {this.getTi()})
         }
     }
+    play = () => {
+        this.au.play();
+    }
     render() {
         return (
             <div>
+                <audio src={this.state.audio} preload="auto" ref={child => this.au = child}></audio>
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/chengyu')}}/>} style={{backgroundColor:"#617ca6"}}>成 语 易 错 字</NavBar>
                 <div className="idiomerrbody"> 
                     
@@ -79,7 +86,7 @@ export default class Guessidioms extends Component {
                                         this.state.arr.map((item,index)=>{
                                             var str='black';
                                             this.state.errwords.map((item1,index1)=>{
-                                                console.log(item,item1,index)
+                                                // console.log(item,item1,index)
                                                 if(item==item1){
                                                     str='red';
                                                 }
@@ -90,7 +97,7 @@ export default class Guessidioms extends Component {
                                     }
                                 </div>
                                 
-                                <div className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginTop:"20%"}}></div>
+                                <i className="iconfont icon-laba1" style={{fontSize:22,color:"#617ca6",marginTop:"20%",display:'block'}} onClick={this.play}></i>
                                 {(this.state.errwords).map((item,index)=>(
                                     <div key={index} className="errword">{item}</div>
                                 ))}

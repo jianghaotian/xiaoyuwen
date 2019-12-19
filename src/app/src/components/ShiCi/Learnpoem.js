@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {NavBar,SearchBar,TextareaItem,Icon, Toast} from 'antd-mobile';
+import {scAudioUrl} from '../../request/url';
 import "../../css/ShiCi/xsc.css"
 // import Peomcon from "./Poemcon"
 
@@ -14,6 +15,7 @@ export default class Learnpoem extends Component {
             line: "",
             translation: "",
             makeground: "",
+            audio:"",
             num: 1,
             max: 1
         }
@@ -46,7 +48,8 @@ export default class Learnpoem extends Component {
                 line: line,
                 translation: res.data.data.main.translation,
                 makeground: res.data.data.main.background,
-                max: res.data.data.num
+                max: res.data.data.num,
+                audio: scAudioUrl + res.data.data.main.audio
             });
         });
     }
@@ -75,9 +78,17 @@ export default class Learnpoem extends Component {
             }, () => {this.getTi()})
         }
     }
+    play = () => {
+        if (this.au.paused) {
+            this.au.play();
+        } else {
+            this.au.pause();
+        }
+    }
     render() {
         return (
             <div>
+                <audio src={this.state.audio} preload="auto" ref={child => this.au = child}></audio>
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/shici')}}/>} style={{backgroundColor:"#617ca6"}}>学 诗 词</NavBar>
                 
                 <div className="learnpeombody"> 
@@ -111,7 +122,7 @@ export default class Learnpoem extends Component {
                                     <span>{this.state.author}</span>
                                 </p>
                                 <p style={{marginTop:7}}>{this.state.line}</p>
-                                <div className="iconfont icon-laba1 poemlaba"></div>
+                                <div className="iconfont icon-laba1 poemlaba" onClick={this.play}></div>
                             </div>
                             
                         </div>

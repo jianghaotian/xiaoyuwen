@@ -41,7 +41,7 @@ export default class Login extends Component {
                 password: this.state.password
             }
             this.$api.login(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1, null, false);

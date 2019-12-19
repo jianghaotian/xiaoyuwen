@@ -45,7 +45,7 @@ export default class Yzmxiugai extends Component {
                 verityText: '正在获取...'
             })
             this.$api.change_pwd_veri({'phone': this.state.phone}).then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
                     let time = setInterval(() => {
@@ -115,7 +115,7 @@ export default class Yzmxiugai extends Component {
             }
             // TODO
             this.$api.veri_change_pwd(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('修改密码成功', 1, null, false);
