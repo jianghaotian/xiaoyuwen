@@ -42,7 +42,7 @@ export default class ShiciGrade extends Component {
                                 return (
                                     <div key={index}>
                                         <div className='sc-listBox'>
-                                            <span className="sc-text">{index + 1}.{value.show}</span>
+                                            <span className="sc-text" style={value.show.length > 13 ? {fontSize: '14px'} : {}}>{index + 1}.{value.show}</span>
                                             <i className={'iconfont icon-zhengque2 sc-panduandui'}></i>
                                         </div>
                                         <div className='sc-backtrue'>答对啦！</div>
