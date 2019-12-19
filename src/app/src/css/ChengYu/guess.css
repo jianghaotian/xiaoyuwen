@@ -91,11 +91,13 @@
 }
 .descrip textarea{
   /* width:60vw; */
+  /* margin: 0 auto; */
   height:35vw;
   text-indent: 2em;
   resize:none;
   border-radius: 10px;
   border: 8px solid transparent;
+  transform: translateX(-8px);
   padding:0.5%;
   background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,
   repeating-linear-gradient(-45deg,

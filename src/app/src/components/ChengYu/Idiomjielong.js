@@ -493,7 +493,7 @@ export default class Idiomjielong extends Component {
 				}
 			}
 		}
-		this.data.map(item=>{
+		this.data.forEach(item=>{
 			if(item.status===true){
 				this.score++;
 			}
@@ -554,13 +554,13 @@ export default class Idiomjielong extends Component {
 											this.state.content[this.state.num-1].question.map((item, index) => (
 												(item).map((item2, index2) => {
 													if (item2 === "") {
-														return <div id={index + "" + index2} onClick={this.show} className="wordcode">{item2}</div>
+														return <div key={''+index+'_'+index2} id={index + "" + index2} onClick={this.show} className="wordcode">{item2}</div>
 													}
 													else if (item2 === "#") {
-														return <div id={index + "" + index2} className="nocode">{item2}</div>
+														return <div key={''+index+'_'+index2} id={index + "" + index2} className="nocode">{item2}</div>
 													}
 													else {
-														return <div id={index + "" + index2} onClick={this.show} className="wordcode">{item2}</div>
+														return <div key={''+index+'_'+index2} id={index + "" + index2} onClick={this.show} className="wordcode">{item2}</div>
 													}
 												})
 											))
@@ -571,7 +571,7 @@ export default class Idiomjielong extends Component {
 								<div className="answercode">
 									{
 										this.content[this.state.num-1].choose.map((item, index) => {
-											return <div id={"f" + index} onClick={this.show} draggable="true" className="choosecode">{item}</div>
+											return <div key={''+'hh'+index} id={"f" + index} onClick={this.show} draggable="true" className="choosecode">{item}</div>
 										})
 									}
 								</div>

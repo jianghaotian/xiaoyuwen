@@ -47,7 +47,7 @@ export default class Guessgrade extends Component {
                           return(
                             <div key={index}>
                                 <div className='ty-listBox'>
-                                    <span className="ty-text">{index+1}. {this.state.data[item].str}</span>
+                                    <span className="ty-text">{''+index+'1'}. {this.state.data[item].str}</span>
                                     <i className={'iconfont icon-zhengque2 ty-panduan-dui'}></i>
                                 </div>
                                 <div className='ty-backtrue'>答对啦！</div>
@@ -58,7 +58,7 @@ export default class Guessgrade extends Component {
                           return(
                             <div key={index}>
                                 <div className='ty-listBox'>
-                                    <span className="ty-text">{index+1}. {this.state.data[item].str}</span>
+                                    <span className="ty-text">{''+index+'1'}. {this.state.data[item].str}</span>
                                     <i className={'iconfont icon-cuowu2 ty-panduan-cuo'}></i>
                                 </div>
                                 <div className='ty-backerr'>正确答案:  <span style={{color:'red'}}>{this.state.data[item].answer}</span></div>
