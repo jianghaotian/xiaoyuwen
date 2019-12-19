@@ -49,11 +49,11 @@ export default class Xuexijindu extends Component {
         } else if (type == 'cyjl') {
             url = '/chengyu/jielong/grade/' + time;
         } else if (type == 'ccy') {
-            url = '/chengyu/cai/grade' + time;
+            url = '/chengyu/cai/grade/' + time;
         } else if (type == 'kzsy') {
             url = '/pinyin/kanzi/grade/' + time;
         } else if (type == 'tyxz') {
-            url = '/pinyin/tingyin/grade' + time;
+            url = '/pinyin/tingyin/grade/' + time;
         } else {
             return '';
         }

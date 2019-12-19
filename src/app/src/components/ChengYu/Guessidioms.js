@@ -206,10 +206,9 @@ export default class Guessidioms extends Component {
                             {/* <div><img className="learnimg" src={require("../../../images/playbackground.jpeg") }/></div> */}
                             <div className="guesscon">
                                 <div className="descrip">
-                                    <textarea readOnly value={this.state.all[this.state.num-1].description}>
+                                    <textarea readOnly value={this.state.all[this.state.num-1].description} style={{display:'block'}}>
                                         
                                     </textarea>
-                                    
                                 </div>
                                 <div className="answer">
                                     <div ref="a" style={{width:"60vw",height:"12vw"}}>

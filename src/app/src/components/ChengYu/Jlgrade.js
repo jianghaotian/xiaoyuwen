@@ -41,23 +41,23 @@ export default class Jlgrade extends Component {
                 </div>
                 <div style={{minHeight:'40rem'}}>
                     {
-                        this.state.data.map((item,index)=>{
+                        this.state.data.map((item,index6)=>{
                             if(item.status){
                                 return(
-                                    <div key={index}>
+                                    <div key={index6}>
                                         <div className='jl-listBox'>
                                         <div className="myanswer">
                                               {
                                                 item.question.map((item, index) => (
                                                   (item).map((item2, index2) => {
                                                     if (item2 === "") {
-                                                      return <div   className="answerwordcode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6} className="answerwordcode">{item2}</div>
                                                     }
                                                     else if (item2 === "#") {
-                                                      return <div  className="answernocode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6} className="answernocode">{item2}</div>
                                                     }
                                                     else {
-                                                      return <div  className="answerwordcode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6} className="answerwordcode">{item2}</div>
                                                     }
                                                   })
                                                 ))
@@ -72,20 +72,20 @@ export default class Jlgrade extends Component {
                             }
                             else{
                                 return(
-                                    <div key={index}>
+                                    <div key={index6}>
                                         <div className='jl-listBox'>
                                           <div className="myanswer">
                                               {
                                                 item.question.map((item, index) => (
                                                   (item).map((item2, index2) => {
                                                     if (item2 === "") {
-                                                      return <div   className="answerwordcode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6}  className="answerwordcode">{item2}</div>
                                                     }
                                                     else if (item2 === "#") {
-                                                      return <div  className="answernocode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6} className="answernocode">{item2}</div>
                                                     }
                                                     else {
-                                                      return <div  className="answerwordcode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2+'_'+index6} className="answerwordcode">{item2}</div>
                                                     }
                                                   })
                                                 ))
@@ -100,13 +100,13 @@ export default class Jlgrade extends Component {
                                                 item.answer.map((item, index) => (
                                                   (item).map((item2, index2) => {
                                                     if (item2 === "") {
-                                                      return <div   className="answerwordcode">{item2}</div>
+                                                      return <div  key={''+index+'_'+index2} className="answerwordcode">{item2}</div>
                                                     }
                                                     else if (item2 === "#") {
-                                                      return <div  className="answernocode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2} className="answernocode">{item2}</div>
                                                     }
                                                     else {
-                                                      return <div style={{color:'red'}}  className="answerwordcode">{item2}</div>
+                                                      return <div key={''+index+'_'+index2} style={{color:'red'}}  className="answerwordcode">{item2}</div>
                                                     }
                                                   })
                                                 ))

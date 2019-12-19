@@ -17,6 +17,7 @@
     -o-background-size: cover;
     background-position: center 0; 
     /* opacity: 0.6; */
+    height: 100%;
 }
 .k2{
     width:100%;

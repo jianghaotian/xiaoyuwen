@@ -96,7 +96,7 @@ export default class Shicierr extends Component {
 												}
 
 											});
-											return <span key={index} style={{ color: str }}>{item}</span>
+											return <span key={''+index+'hhhh'} style={{ color: str }}>{item}</span>
 										})
 									}
 									</div>
@@ -106,9 +106,9 @@ export default class Shicierr extends Component {
 								<div className="scallcode">
 									{(this.state.errwords).map((item, index) => {
 										return (
-											<div className="scerrcode">
+											<div key={index} className="scerrcode">
 												<div className="iconfont icon-laba1" style={{ fontSize: 22, color: "#617ca6", marginTop: "20%" }}></div>
-												<div key={index} className="scerrword">{item}</div>
+												<div className="scerrword">{item}</div>
 											</div>
 										)
 									})}
