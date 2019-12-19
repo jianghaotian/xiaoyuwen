@@ -13,7 +13,7 @@ export default class Wode extends Component {
             head: require('../../images/headImage.jpg'),
             name: '未登录',
             signature: '点击此处登录',
-            grade: 1
+            grade: this.$store.getState().users.grade || 1
         };
     }
     componentDidMount() {
