@@ -56,7 +56,7 @@ export default class Register extends Component {
                 verityText: '正在获取...'
             })
             this.$api.register_veri({'phone': this.state.phone}).then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
                     let time = setInterval(() => {
@@ -124,7 +124,7 @@ export default class Register extends Component {
                 token: this.state.veriToken
             }
             this.$api.register(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('注册成功', 1);

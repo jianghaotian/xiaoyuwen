@@ -49,16 +49,16 @@ export default class Yunmu extends Component {
             <div className="s1">
                 <NavBar icon={<Icon type="left" onClick={()=>{this.props.history.push('/home/pinyin')}} />} style={{backgroundColor:"#617ca6"}}>韵 母</NavBar>
                 <div className="s2">
-                    <SearchBar
+                    {/* <SearchBar
                         placeholder="查找"
-                        onSubmit={value => console.log(value, 'onSubmit')}
-                        onClear={value => console.log(value, 'onClear')}
-                        onFocus={() => console.log('onFocus')}
-                        onBlur={() => console.log('onBlur')}
-                        onCancel={() => console.log('onCancel')}
+                        // onSubmit={value => console.log(value, 'onSubmit')}
+                        // onClear={value => console.log(value, 'onClear')}
+                        // onFocus={() => console.log('onFocus')}
+                        // onBlur={() => console.log('onBlur')}
+                        // onCancel={() => console.log('onCancel')}
                         onChange={this.onChange}
                         style={{height:"2rem",marginTop:'5%'}}
-                    />
+                    /> */}
                     <div className='sm-box'>
                         <div className='sm-textBox'>
                             第 <span>{this.state.num}</span><span> / </span><span>100</span> 个

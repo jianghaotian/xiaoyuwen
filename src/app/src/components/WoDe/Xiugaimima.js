@@ -59,7 +59,7 @@ class Xiugaimima extends Component {
             }
 
             this.$api.change_pwd(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('修改密码成功', 1, null, false);

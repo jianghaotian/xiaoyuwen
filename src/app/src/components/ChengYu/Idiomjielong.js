@@ -442,7 +442,7 @@ export default class Idiomjielong extends Component {
 				content: state.content
 			}
 		})
-		console.log(this.state.content,this.content)
+		// console.log(this.state.content,this.content)
 	}
 	minus=(e)=>{
 		this.setState((state)=>{

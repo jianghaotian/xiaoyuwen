@@ -62,7 +62,7 @@ export default class Xuexijindu extends Component {
     componentDidMount() {
         this.$api.get_chengji().then(res => {
             if (res.data.status === 0) {
-                console.log(res);
+                // console.log(res);
 
                 this.setState({
                     data: res.data.data.reverse() || []

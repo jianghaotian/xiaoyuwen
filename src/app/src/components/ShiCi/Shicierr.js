@@ -28,7 +28,7 @@ export default class Shicierr extends Component {
 			Toast.hide();
 			
 			let arr = (res.data.data.shici).split("");
-			console.log(arr,arr.length%6)
+			// console.log(arr,arr.length%6)
 			if (arr.length%6=== 0) {
 				this.setState({
 						shortclassName:"shortpoem"

@@ -92,7 +92,7 @@ export default class Kanzishiyin extends Component {
         let grade = this.$store.getState().users.grade || 1;
         this.$api.get_kanzishiyin({grade: grade}).then(res => {
             Toast.hide();
-            console.log(res);
+            // console.log(res);
 
             this.setState({
                 content: res.data.data
@@ -147,8 +147,8 @@ export default class Kanzishiyin extends Component {
                 this.setState({
                     str1:str1
                 },()=>{
-                    console.log(this.count)
-                    console.log(this.state.content[this.count+1][1])
+                    // console.log(this.count)
+                    // console.log(this.state.content[this.count+1][1])
                     for(var i=0;i<this.state.content[this.count+1][1].mu.length;i++){
                         str2+=" "
                     }
@@ -175,7 +175,7 @@ export default class Kanzishiyin extends Component {
                 this.setState({
                     num:this.state.num+1,
                 })
-                console.log(this.result)
+                // console.log(this.result)
             }
         }
         else{
@@ -256,8 +256,8 @@ export default class Kanzishiyin extends Component {
             this.data[i].word=this.state.content[i][0].word + this.state.content[i][1].word;
             this.data[i].answer.one=this.state.content[i][0].spell;
             this.data[i].answer.two=this.state.content[i][1].spell;
-            console.log(this.result[i]);
-            console.log(this.state.content[i]);
+            // console.log(this.result[i]);
+            // console.log(this.state.content[i]);
 
             if(this.result[i].one===this.state.content[i][0].mu&&this.result[i].two===this.state.content[i][1].mu){
                 this.data[i].status=true;
@@ -313,7 +313,7 @@ export default class Kanzishiyin extends Component {
         // }
     }
     one=(index)=>{
-        console.log(index);
+        // console.log(index);
         this.flag="one";
         this.index=index;
         var div1=this.refs.first.children;
@@ -357,7 +357,7 @@ export default class Kanzishiyin extends Component {
     // }
 
     add=(e)=>{
-        console.log(this.state.str1);
+        // console.log(this.state.str1);
         if(this.flag==="one"){
             this.setState({
                 str1:this.state.str1.substring(0,this.index)+e.target.innerHTML+this.state.str1.substring(this.index+1)
@@ -372,7 +372,7 @@ export default class Kanzishiyin extends Component {
         else{
             var div1=this.refs.first.children;
             var div2=this.refs.second.children;
-            console.log(this.state.str1);
+            // console.log(this.state.str1);
             if(this.state.str1.indexOf(' ')<0){
                 this.setState({
                     str2:this.state.str2.substring(0,this.index)+e.target.innerHTML+this.state.str2.substring(this.index+1)

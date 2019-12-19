@@ -58,7 +58,7 @@ class Yijianfanhui extends Component {
                     <ImagePicker
                         files={files}
                         onChange={this.onChange}
-                        onImageClick={(index, fs) => console.log(index, fs)}
+                        // onImageClick={(index, fs) => console.log(index, fs)}
                         selectable={files.length < 7}
                         multiple={true}
                     />

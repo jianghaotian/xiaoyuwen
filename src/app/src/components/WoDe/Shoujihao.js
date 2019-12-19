@@ -51,7 +51,7 @@ class Shoujihao extends Component {
                     verityText: '正在获取...'
                 })
                 this.$api.set_phone_veri({'phone': this.state.phone}).then(res => {
-                    console.log(res);
+                    // console.log(res);
                     if (res.data.status === 0) {
                         let verityNum = 60;
                         let time = setInterval(() => {
@@ -115,7 +115,7 @@ class Shoujihao extends Component {
                 veriToken: this.state.veriToken
             }
             this.$api.set_phone(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('修改成功', 1, null, false);
