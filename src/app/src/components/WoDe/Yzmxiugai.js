@@ -51,7 +51,7 @@ export default class Yzmxiugai extends Component {
                     let time = setInterval(() => {
                         verityNum--;
                         this.setState({
-                            verityText: verityNum + 's后重新获取'
+                            verityText: verityNum + 's重新获取'
                         })
                         if (verityNum <= 0) {
                             clearInterval(this.state.time);
@@ -65,7 +65,7 @@ export default class Yzmxiugai extends Component {
                         veriToken: res.data.data.veriToken,
                         verityDiv: 'verity-div1',
                         time: time,
-                        verityText: verityNum + 's后重新获取'
+                        verityText: verityNum + 's重新获取'
                     })
                 } else if (res.data.status === -1) {
                     Toast.fail('登录信息有误，请重新登录', 1, null, false);

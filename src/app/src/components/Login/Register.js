@@ -62,7 +62,7 @@ export default class Register extends Component {
                     let time = setInterval(() => {
                         verityNum--;
                         this.setState({
-                            verityText: verityNum + 's后重新获取'
+                            verityText: verityNum + 's重新获取'
                         })
                         if (verityNum <= 0) {
                             clearInterval(this.state.time);
@@ -76,7 +76,7 @@ export default class Register extends Component {
                         veriToken: res.data.data.veriToken,
                         verityDiv: 'verity-div1',
                         time: time,
-                        verityText: verityNum + 's后重新获取'
+                        verityText: verityNum + 's重新获取'
                     })
                 } else {
                     if (res.data.status === 1024 || res.data.status === 1023) {
