@@ -33,7 +33,7 @@ export default class Cropimg extends Component {
                 Toast.fail('上传超时', 1, null, false);
             });
             service.post('/images/head',formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     Toast.success('修改成功', 1 ,null, false);
                     this.$store.dispatch(setHead(res.data.data.filename));

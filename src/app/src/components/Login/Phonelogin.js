@@ -35,7 +35,7 @@ export default class Phonelogin extends Component {
                 verityText: '正在获取...'
             })
             this.$api.login_veri({'phone': this.state.phone}).then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     let verityNum = 60;
                     let time = setInterval(() => {
@@ -95,7 +95,7 @@ export default class Phonelogin extends Component {
                 token: this.state.veriToken
             }
             this.$api.veri_login(formData).then(res => {
-                console.log(res);
+                // console.log(res);
                 Toast.hide();
                 if (res.data.status === 0) {
                     Toast.success('登录成功', 1, null, false);

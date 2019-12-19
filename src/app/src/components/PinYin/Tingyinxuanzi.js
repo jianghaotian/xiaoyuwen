@@ -184,7 +184,7 @@ export default class Tingyinxuanzi extends Component {
             if(this.result[i]===this.state.content[i].zi){
                 this.data[i].status=true;
                 this.score++;
-                console.log(this.score)
+                // console.log(this.score)
             }
             else{
                 this.data[i].status=false;
@@ -236,7 +236,7 @@ export default class Tingyinxuanzi extends Component {
         let grade = this.$store.getState().users.grade || 1;
         this.$api.get_tingyinxuanzi({grade: grade}).then(res => {
             Toast.hide();
-            console.log(res);
+            // console.log(res);
 
             this.setState({
                 content: res.data.data

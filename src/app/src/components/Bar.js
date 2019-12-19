@@ -17,7 +17,7 @@ export default class Bar extends Component {
     componentDidMount() {
         if (this.$store.getState().token.uid !== '' && this.$store.getState().token.token !== '' && this.$store.getState().users.phone === '') {
             this.$api.get_info({uid: this.$store.getState().token.uid}).then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data.status === 0) {
                     let ownUsers = {
                         name: res.data.data[0].Uname || '',
