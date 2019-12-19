@@ -15,7 +15,8 @@ function getChengyuycz(grade, index) {
     let dict = {
         chengyu: chengyu[grade][index].name,
 		errwords: chengyu[grade][index].errword,
-        max: chengyu[grade].length
+        max: chengyu[grade].length,
+        audio: chengyu[grade][index].audio
     }
     return dict;
 }

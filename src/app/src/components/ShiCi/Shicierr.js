@@ -28,7 +28,7 @@ export default class Shicierr extends Component {
 			Toast.hide();
 			
 			let arr = (res.data.data.shici).split("");
-			console.log(arr,arr.length%6)
+			// console.log(arr,arr.length%6)
 			if (arr.length%6=== 0) {
 				this.setState({
 						shortclassName:"shortpoem"
@@ -107,7 +107,7 @@ export default class Shicierr extends Component {
 									{(this.state.errwords).map((item, index) => {
 										return (
 											<div key={index} className="scerrcode">
-												<div className="iconfont icon-laba1" style={{ fontSize: 22, color: "#617ca6", marginTop: "20%" }}></div>
+												{/* <div className="iconfont icon-laba1" style={{ fontSize: 22, color: "#617ca6", marginTop: "20%" }}></div> */}
 												<div className="scerrword">{item}</div>
 											</div>
 										)
