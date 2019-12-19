@@ -6,7 +6,7 @@ export default class Shengri extends Component {
     constructor() {
         super();
         this.state = {
-            date: new Date(this.$store.getState().users.birthday) || '',
+            date: this.$store.getState().users.birthday ? new Date(this.$store.getState().users.birthday) : new Date(),
             visible: true
         }
     }
