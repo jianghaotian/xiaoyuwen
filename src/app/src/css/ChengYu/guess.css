@@ -87,7 +87,7 @@
     rgb(250, 193, 220) 0, rgb(250, 193, 220) 37.5%,
     transparent 0, transparent 50%)
     0 / 5em 5em; */
-    font-family:"楷体"
+    /* font-family:"楷体" */
 }
 .descrip textarea{
   width:60vw;
