@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 // import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import {HashRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 
-
 import Bar from './components/Bar';
-import Open from './components/OpenScreen/Open';
+// import Open from './components/OpenScreen/Open';
 import Gerenxinxi from './components/WoDe/Gerenxinxi';
 import Nianji from './components/WoDe/Nianji';
 import Xuexijindu from './components/WoDe/Xuexijindu';
@@ -18,8 +17,8 @@ import Zhanghao from './components/WoDe/Zhanghao';
 import Xiugaimima from './components/WoDe/Xiugaimima';
 import Shoujihao from './components/WoDe/Shoujihao';
 import Shengmu from './components/PinYin/Shengmu';
-import Yunmu from './components/PinYin/Yunmu';
-import Zhengtiyin from './components/PinYin/Zhengtiyin';
+// import Yunmu from './components/PinYin/Yunmu';
+// import Zhengtiyin from './components/PinYin/Zhengtiyin';
 import Tingyinxuanzi from './components/PinYin/Tingyinxuanzi';
 import Kanzishiyin from './components/PinYin/Kanzishiyin';
 import Xingbie from './components/WoDe/Xingbie';
@@ -52,14 +51,14 @@ export default class App extends Component {
             <Router>
                 <Switch>
                     {/* 主页面 */}
-                    {/* <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} /> */}
-                    <Route exact path="/" component={()=><Redirect from='/' to='/open' />} />
+                    <Route exact path="/" component={()=><Redirect from='/' to='/home/pinyin' />} />
+                    {/* <Route exact path="/" component={()=><Redirect from='/' to='/open' />} /> */}
 
                     <Route exact path="/home" component={()=><Redirect from='/home' to='/home/pinyin' />} />
                     <Route exact path="/home/:tab" component={Bar} />
                     <Route exact path ="/guanqia"  component={Guanqia}/>
                     {/* 开屏 */}
-                    <Route exact path="/open" component={Open} />
+                    {/* <Route exact path="/open" component={Open} /> */}
                     {/* 拼音 */}
                     {/* <Route exact path="/pinyin/shengmu" component={Shengmu} />
                     <Route exact path="/pinyin/yunmu" component={Yunmu} />
