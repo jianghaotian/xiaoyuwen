@@ -1,0 +1,24 @@
+{
+    "title": "小语文App开发文档",
+    "author": "姜皓天",
+    "description": "小语文App开发文档",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./style.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+
+        }
+    },
+    "plugins": [
+        "-sharing"
+    ],
+    "pluginsConfig": {
+
+    }
+}

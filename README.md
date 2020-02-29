@@ -1,4 +1,2 @@
-# 小语文App Document
-
-Github：https://github.com/lemonoink/xiaoyuwen
+# 小语文App 开发文档
 
