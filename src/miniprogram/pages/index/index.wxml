@@ -1,2 +1,35 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  <view class="column">
+    <view class="row">
+      <view class="block shengmu" bindtap="bindFunc" data-id="shengmu" data-to="shengmu">
+        <text>声母</text>
+      </view>
+      <view class="block yunmu" bindtap="bindFunc" data-id="yunmu" data-to="yunmu">
+        <text>韵母</text>
+      </view>
+    </view>
+    <view class="row">
+      <view class="block zhengtiyin" bindtap="bindFunc" data-id="zhengtiyin" data-to="shengmu">
+        <text>整体音</text>
+      </view>
+      <view class="block shengdiao" bindtap="bindFunc" data-id="shengdiao" data-to="yunmu">
+        <text>声调</text>
+      </view>
+    </view>
+    <view class="row">
+      <view class="block zimubiao" bindtap="bindFunc" data-id="zimubiao" data-to="zimu">
+        <text>字母表</text>
+      </view>
+      <view class="block tingyinxuanzi">
+        <view class="blackboard" bindtap="bindFunc" data-id="tyxz" data-to="tyxz">
+          <text>听音选字</text>
+        </view>
+      </view>
+    </view>
+    <view class="row collection">
+      <view class="block shoucangjia" bindtap="bindFunc" data-id="shoucangjia" data-to="yunmu">
+        <text>收藏夹</text>
+      </view>
+    </view>
+  </view>
+</view>
