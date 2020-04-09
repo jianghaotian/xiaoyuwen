@@ -4,6 +4,20 @@
   display: flex;
   box-sizing: border-box;
 } 
+/* top bar */
+.topbar {
+  height: 70rpx;
+  width: 100%;
+  padding-left: 40rpx;
+  margin-bottom: 20rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  background-color: #F4E7D7;
+}
+.topbar .small {
+  margin-left: 26rpx;
+  font-size: 30rpx;
+}
 /* 字母表格样式 */
 .zimu {
   display: flex;
