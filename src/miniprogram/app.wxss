@@ -26,7 +26,7 @@
   /* 整体表格的间距 */
   /* margin: 0 auto; */
   /* width: 720rpx; */
-  transform: translateX(20rpx);
+  transform: translateX(3%);
   box-sizing: border-box;
 }
 .zimu_block {
