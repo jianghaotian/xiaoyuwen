@@ -1,3 +1,7 @@
+<view class="topbar">
+  <text>字母表</text>
+  <text class="small">23个</text>
+</view>
 <view class="zimu">
   <view wx:for="{{list}}" wx:key="index" class="zimu_block">
     <text>
