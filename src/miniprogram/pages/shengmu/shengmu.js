@@ -5,17 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: ''
-
+    id: '',
+    shengmu:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
+    zhengtiyin:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],
+    yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options.id);
-    this.setData({id: options.id});
-    console.log(this.data.id);
+    if(options.id == 'zhengtiyin'){
+      this.setData({
+        list:this.data.zhengtiyin,
+        title:"整体音",
+        count:16
+      })
+    }else if(options.id == 'shengmu'){
+      this.setData({
+        list:this.data.shengmu,
+        title:"声母",
+        count:23
+      })
+    }
   },
 
   /**
@@ -65,5 +77,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  detailPage:function(e){
+    let {id} = e.currentTarget.dataset;
+    console.log(id);
   }
 })
