@@ -10,13 +10,31 @@
       </view>
       <view class="tyxzti_pinyin">
         <view class="tyxzti_sixiansange">
-          <text>____________________________</text>
-          <text>____________________________</text>
-          <text>____________________________</text>
-          <text>____________________________</text>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
         </view>
         <view class="tyxzti_text">
-          <text>shǎng</text>
+          <text>dì</text>
+        </view>
+      </view>
+      <view class="tyxzti_xuan">
+        <view class="tianzige">
+          <view class="chacha"></view>
+          <view class="word">我</view>
+        </view>
+        <view class="tianzige">
+          <view class="chacha"></view>
+          <view class="word">是</view>
+        </view>
+        <view class="tianzige">
+          <view class="chacha"></view>
+          <view class="word">又</view>
+        </view>
+        <view class="tianzige">
+          <view class="chacha"></view>
+          <view class="word">又</view>
         </view>
       </view>
     </view>
