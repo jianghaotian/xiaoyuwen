@@ -1,1 +1,65 @@
 /* pages/tyxz/tyxzti.wxss */
+.tyxzti_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+}
+.tyxzti_in{
+  width: 80%;
+  height: 900rpx;
+  margin-top: 50rpx;
+  background-color: #10572B;
+  border: 10px solid #DF7B3F;
+  border-radius: 7rpx;
+  justify-content:center;
+}
+.tyxzti_num{
+  width: 30%;
+  height: 10%;
+  margin: 0 auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: #fff;
+  font-size: 25rpx;
+}
+.tyxzti_pinyinbox{
+  width: 100%;
+  height: 15%;
+  float: right;
+}
+.tyxzti_pinyin{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: right;
+  color: #fff;
+  font-size: 25rpx;
+}
+.tyxzti_sixiansange{
+  position: absolute;
+  top:-5rpx;
+  width: 100%;
+  height: 100%;
+  text-overflow:ellipsis;
+  word-wrap:break-word;
+}
+.tyxzti_sixiansange text{
+  font-weight: bolder;
+}
+.tyxzti_text{
+  position: absolute;
+  top:30rpx;
+  left: 80rpx;
+  font-size: 55rpx;
+}
+.tyxzti_laba{
+  width:25%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

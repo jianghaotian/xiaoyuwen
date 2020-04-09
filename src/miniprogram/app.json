@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/tyxz/tyxzti",
     "pages/index/index",
     
     "pages/shengmu/shengmu",
@@ -7,7 +8,6 @@
     "pages/yunmu/yunmu",
     "pages/zimu/zimu",
     "pages/tyxz/tyxz",
-    "pages/tyxz/tyxzti",
 
     "pages/login/login"
   ],

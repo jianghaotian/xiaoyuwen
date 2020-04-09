@@ -1,2 +1,25 @@
 <!--pages/tyxz/tyxzti.wxml-->
-<text>pages/tyxz/tyxzti.wxml</text>
+<view class="tyxzti_box">
+  <view class="tyxzti_in">
+    <view class="tyxzti_num">
+      <text>第1/10题</text>
+    </view>
+    <view class="tyxzti_pinyinbox">
+      <view class="tyxzti_laba">
+        <text>laba</text>
+      </view>
+      <view class="tyxzti_pinyin">
+        <view class="tyxzti_sixiansange">
+          <text>____________________________</text>
+          <text>____________________________</text>
+          <text>____________________________</text>
+          <text>____________________________</text>
+        </view>
+        <view class="tyxzti_text">
+          <text>shǎng</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
