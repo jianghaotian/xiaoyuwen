@@ -31,8 +31,8 @@
 }
 .zimu_block {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   /* 每个表格的宽高 */
   width: 150rpx;
   height: 150rpx;
@@ -43,7 +43,6 @@
   box-shadow: 0rpx 6rpx 6rpx 6rpx rgba(0, 0, 0, .1);
 }
 .zimu_block text {
-  line-height: 10rpx;
+  line-height: 0rpx;
   font-size: 66rpx;
-
 }
