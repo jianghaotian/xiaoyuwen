@@ -1,10 +1,11 @@
-// pages/index/index.js
+// pages/shengmu/shengmu.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id: ''
 
   },
 
@@ -12,7 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options.id);
+    this.setData({id: options.id});
+    console.log(this.data.id);
   },
 
   /**
@@ -62,16 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  // 路由跳转
-  bindFunc: function (e) {
-    let {id, to} = e.currentTarget.dataset;
-    console.log(id, to);
-    wx.navigateTo({
-      url: `../${to}/${to}?id=${id}`
-    });
-
   }
-
 })

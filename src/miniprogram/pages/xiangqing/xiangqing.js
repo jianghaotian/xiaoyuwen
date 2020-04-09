@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/xiangqing/xiangqing.js
 Page({
 
   /**
@@ -62,16 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  // 路由跳转
-  bindFunc: function (e) {
-    let {id, to} = e.currentTarget.dataset;
-    console.log(id, to);
-    wx.navigateTo({
-      url: `../${to}/${to}?id=${id}`
-    });
-
   }
-
 })

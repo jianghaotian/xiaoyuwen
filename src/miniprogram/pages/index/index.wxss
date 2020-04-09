@@ -1,1 +1,73 @@
-/* pages/index/index.wxss */
+.column {
+  display: flex;
+  flex-direction: column;
+  /* 调整体宽度 */
+  width: 660rpx;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* 水平间距 */
+  margin-top: 60rpx;
+}
+.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+  box-shadow: 10rpx 10rpx 20rpx 6rpx rgba(0, 0, 0, .2);
+  color: #fff;
+  font-size: 46rpx;
+  /* 调每一个小块宽高 */
+  width: 300rpx;
+  height: 200rpx;
+  background-color: red;
+}
+/* 听音选字黑板 */
+.blackboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  /* 每一小块宽高 - 2 * 20rpx */
+  width: 260rpx;
+  height: 160rpx;
+  background-color: #10572B;
+  /* TODO：四线格 */
+}
+/* 收藏夹 */
+.collection {
+  align-self: center;
+}
+.collection .block {
+  /* 收藏夹宽高 */
+  height: 160rpx;
+  width: 660rpx;
+}
+
+/* 每个小块样式 */
+.shengmu {
+  background-color: #8289FF;
+}
+.yunmu {
+  background-color: #779AB8;
+}
+.zhengtiyin {
+  background-color: #DF7B3F;
+}
+.shengdiao {
+  background-color: #E65711;
+}
+.zimubiao {
+  background-color: #F5B1A8;
+}
+.tingyinxuanzi {
+  background-color: #DF7B3F;
+}
+.shoucangjia {
+  background-color: #F9CD76;
+}
