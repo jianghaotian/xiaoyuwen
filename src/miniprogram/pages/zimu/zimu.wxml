@@ -1,5 +1,5 @@
 <view class="zimu">
-  <view wx:for="{{list}}" class="zimu_block">
+  <view wx:for="{{list}}" wx:key="index" class="zimu_block">
     <text>
       {{item}}
     </text>
