@@ -1,2 +1,7 @@
-<!--pages/zimu/zimu.wxml-->
-<text>pages/zimu/zimu.wxml</text>
+<view class="zimu">
+  <view wx:for="{{list}}" class="zimu_block">
+    <text>
+      {{item}}
+    </text>
+  </view>
+</view>
