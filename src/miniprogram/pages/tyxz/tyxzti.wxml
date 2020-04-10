@@ -1,3 +1,5 @@
+<import src="../../template/laba.wxml"/>
+
 <!--pages/tyxz/tyxzti.wxml-->
 <view class="tyxzti_box">
   <view class="tyxzti_in">
@@ -6,7 +8,8 @@
     </view>
     <view class="tyxzti_pinyinbox">
       <view class="tyxzti_laba">
-        <text>laba</text>
+        <!-- <text>laba</text> -->
+        <template is="laba"></template>
       </view>
       <view class="tyxzti_pinyin">
         <view class="tyxzti_sixiansange">

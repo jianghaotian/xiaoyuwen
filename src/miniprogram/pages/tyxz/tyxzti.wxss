@@ -1,3 +1,5 @@
+@import "../../template/laba.wxss";
+
 /* pages/tyxz/tyxzti.wxss */
 .tyxzti_box{
   width: 100%;
