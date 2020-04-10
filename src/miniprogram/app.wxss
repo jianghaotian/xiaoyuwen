@@ -1,4 +1,8 @@
-
+.overflow_x {
+  width: 750rpx;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 .container {
   height: 100%;
   display: flex;
@@ -6,14 +10,23 @@
 } 
 /* top bar */
 .topbar {
+  position: fixed;
+  top: 0;
   height: 70rpx;
   width: 100%;
   padding-left: 40rpx;
-  margin-bottom: 20rpx;
   padding-bottom: 10rpx;
   line-height: 70rpx;
   font-size: 40rpx;
   background-color: #F4E7D7;
+  z-index: 99;
+}
+.placeholder {
+  height: 80rpx;
+  width: 750rpx;
+  margin-bottom: 20rpx;
+  z-index: -99;
+  opacity: 0;
 }
 .topbar .small {
   margin-left: 26rpx;
@@ -23,9 +36,7 @@
 .zimu {
   display: flex;
   flex-wrap: wrap;
-  /* 整体表格的间距 */
-  /* margin: 0 auto; */
-  /* width: 720rpx; */
+  margin-bottom: 10rpx;
   transform: translateX(3%);
   box-sizing: border-box;
 }

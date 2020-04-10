@@ -1,11 +1,14 @@
-<view class="topbar">
-  <text>{{title}}</text>
-  <text class="small">{{count}}个</text>
-</view>
-<view class="zimu">
-  <view wx:for="{{list}}" wx:key="index" bindtap="detailPage" data-id="{{item}}" class="zimu_block">
-    <text>
-      {{item}}
-    </text>
+<view class="overflow_x">
+  <view class="topbar">
+    <text>{{title}}</text>
+    <text class="small">{{count}}个</text>
+  </view>
+  <view class="placeholder"></view>
+  <view class="zimu">
+    <view wx:for="{{list}}" wx:key="index" bindtap="detailPage" data-id="{{item}}" class="zimu_block">
+      <text>
+        {{item}}
+      </text>
+    </view>
   </view>
 </view>
