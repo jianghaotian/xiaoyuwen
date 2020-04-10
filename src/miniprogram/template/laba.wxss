@@ -1,0 +1,44 @@
+.laba {
+  position: relative;
+  width: 100rpx;
+  height: 50rpx;
+  /* margin: 50px auto; */
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.laba_symbol {
+  position: absolute;
+  left: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+  transform: rotate(135deg);
+
+}
+.laba_circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 6rpx solid #45AFF2;
+}
+.laba_first {
+  width: 20rpx;
+  height: 20rpx;
+  top: 38rpx;
+  left: 38rpx;
+  animation: fadeInOut 1s infinite 0.2s;
+}
+.laba_second {
+  width: 60rpx;
+  height: 60rpx;
+  top: 24rpx;
+  left: 24rpx;
+  animation: fadeInOut 1s infinite 0.4s;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+}

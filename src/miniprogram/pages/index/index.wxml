@@ -1,3 +1,5 @@
+<import src="../../template/laba.wxml"/>
+
 <view class="container">
   <view class="column">
     <view class="row">
@@ -33,3 +35,5 @@
     </view>
   </view>
 </view>
+
+<template is="laba"></template>

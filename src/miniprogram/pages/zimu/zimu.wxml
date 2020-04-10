@@ -3,7 +3,7 @@
   <text class="small">23个</text>
 </view>
 <view class="zimu">
-  <view wx:for="{{list}}" wx:key="index" class="zimu_block">
+  <view wx:for="{{list}}" wx:key="index" bindtap="playAudio" data-id="{{item}}" class="zimu_block">
     <text>
       {{item}}
     </text>
