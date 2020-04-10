@@ -1,6 +1,6 @@
 <!-- 喇叭 -->
 <template name="laba">
-  <view class="laba" style="background-image: url('/images/laba.png')">
+  <view class="laba" style="background-image: url('../../images/laba.png')">
     <view class="laba_symbol">
       <view class="laba_circle laba_first"></view>
       <view class="laba_circle laba_second"></view>

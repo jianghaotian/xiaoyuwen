@@ -1,11 +1,20 @@
-<view class="topbar">
-  <text>字母表</text>
-  <text class="small">23个</text>
-</view>
-<view class="zimu">
-  <view wx:for="{{list}}" wx:key="index" bindtap="playAudio" data-id="{{item}}" class="zimu_block">
-    <text>
-      {{item}}
-    </text>
+<import src="../../template/laba.wxml"/>
+
+<view class="overflow_x">
+  <view class="topbar">
+    <text>字母表</text>
+    <text class="small">{{list.length}}个</text>
+  </view>
+  <view class="placeholder"></view>
+  <view class="zimu">
+    <view wx:for="{{list}}" wx:key="index" bindtap="playAudio" data-id="{{item}}" class="zimu_block">
+      <text>
+        {{item}}
+      </text>
+      <view class="zimu_laba">
+        <template is="laba"></template>
+      </view>
+    </view>
   </view>
 </view>
+

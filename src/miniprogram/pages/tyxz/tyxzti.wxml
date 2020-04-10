@@ -1,6 +1,5 @@
 <import src="../../template/laba.wxml"/>
 
-<!--pages/tyxz/tyxzti.wxml-->
 <view class="tyxzti_box">
   <view class="tyxzti_in">
     <view class="tyxzti_num">
