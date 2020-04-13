@@ -5,10 +5,10 @@
     
     "pages/shengmu/shengmu",
     "pages/yunmu/yunmu",
-    "pages/zimu/zimu",
     "pages/xiangqing/xiangqing",
-    
+    "pages/zimu/zimu",
     "pages/tyxz/tyxzti",
+    
 
     "pages/tyxz/tyxz",
     "pages/login/login"

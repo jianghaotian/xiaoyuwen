@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
 }
+.xlaba {
+  width: 60rpx;
+  height: 30rpx;
+}
 .laba_symbol {
   position: absolute;
   left: 50rpx;
@@ -12,6 +16,11 @@
   height: 50rpx;
   overflow: hidden;
   transform: rotate(135deg);
+}
+.xlaba_symbol {
+  left: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
 }
 .laba_circle {
   position: absolute;
@@ -35,6 +44,18 @@
 }
 .laba_second_d {
   animation: fadeInOut 1s infinite 0.4s;
+}
+.xlaba_first {
+  width: 12rpx;
+  height: 12rpx;
+  top: 19rpx;
+  left: 19rpx;
+}
+.xlaba_second {
+  width: 20rpx;
+  height: 20rpx;
+  top: 10rpx;
+  left: 10rpx;
 }
 @keyframes fadeInOut {
   0% {
