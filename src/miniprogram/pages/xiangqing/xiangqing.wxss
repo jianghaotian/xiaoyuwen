@@ -47,7 +47,7 @@
      width:300rpx;
      height: 50rpx;
      margin: 0 auto;
-     margin-top: 250rpx;
+     margin-top: 230rpx;
      clear: both;     
  }
  
@@ -66,16 +66,16 @@
  }
  .xq-x9{
      width:200rpx;
-     height: 50rpx;
  }
  .xq-x10{
      position: absolute;
      right: 100rpx;
-     font-size: 22rpx;
+     bottom: 5rpx;
+     font-size: 60rpx;
  }
  .xq-x11{
-     padding-top: 20rpx;
-     height: 80rpx;
+     height: 90rpx;
+     padding-top: 30rpx;
      text-align: center;
      position: relative;
  }
