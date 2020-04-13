@@ -57,8 +57,8 @@
   line-height: 0rpx;
   font-size: 66rpx;
 }
-/* 按钮点击效果 */
-.bubble{ 
+/* 按钮点击效果 - 暂时废弃*/
+/* .bubble{ 
   position: relative;
   overflow: hidden;
 }
@@ -80,7 +80,7 @@
   transform: scale(0);
   opacity: 1;
   transition: 0s;
-}
+} */
 /* 图标 */
 @font-face {font-family: "iconfont";
   src: url('//at.alicdn.com/t/font_1751343_yptf6q66man.eot?t=1586760858667'); /* IE9 */
