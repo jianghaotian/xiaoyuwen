@@ -1,1 +1,21 @@
-/* pages/tyxz/tyxz.wxss */
+
+.zimu_block {
+  overflow: visible;
+  position: relative;
+  /* 每个表格的宽高 */
+  width: 120rpx;
+  height: 120rpx;
+  /* 每个表格的间距 */
+  margin:80rpx 26rpx 0rpx 30rpx;
+}
+.zimu_block text {
+  font-size: 50rpx;
+}
+.grade{
+  position: absolute;
+  top:-55rpx;
+  left:25rpx;
+  width:100%;
+  height:50rpx; 
+  /* background-color: blueviolet; */
+}
