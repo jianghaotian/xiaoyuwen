@@ -11,9 +11,6 @@
       <text>
         {{item}}
       </text>
-      <view class="zimu_laba">
-        <template is="laba"></template>
-      </view>
     </view>
   </view>
 </view>
