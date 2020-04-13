@@ -1,1 +1,66 @@
 /* pages/xiangqing/xiangqing.wxss */
+ .xq-x1{
+     width: 320rpx;
+     margin-left: 20rpx;
+     margin-top: 15rpx;
+     display: flex;
+     height: 200rpx;
+     font-size: 100rpx;
+     font-weight: bolder;
+     float: left;
+     color: white;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     
+ }
+ .xq-x2{
+     width: 100rpx;
+     margin-right: 90rpx;
+     margin-top: 20rpx;
+     height: 200rpx;
+     float: right;
+    text-align: center;
+ }
+ .xq-x3{
+     width: 100rpx;
+     height: 60rpx;
+    font-size:50rpx;
+    text-align: center;
+    color:#617ca6;
+ }
+ .xq-x4{
+     width: 100rpx;
+     height: 60rpx;
+     text-align: center;
+     font-size: 45rpx;
+     color: white;
+ }
+ .xq-x5{
+    width: 100rpx;
+    height: 60rpx;
+    text-align: center;
+    font-size: 45rpx;
+    color: white;
+ }
+ .xq-x6{
+     width:300rpx;
+     height: 50rpx;
+     margin: 0 auto;
+     margin-top: 250rpx;
+     clear: both;     
+ }
+ 
+ .xq-x7{
+     width: 150rpx;
+     height: 50rpx;
+     float: left;
+     font-size: 40rpx;
+     text-align: center;
+     color: white;
+ }
+
+ .xq-x8{
+     width:470rpx;
+     height: 300rpx;
+ }
