@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    num:1,
+    answer:'我',
+    duigou:""
+  },
+  select: function (e) {
+    let {id} = e.currentTarget.dataset;
   },
 
   /**
