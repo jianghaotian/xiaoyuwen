@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    num:1,
-    answer:'我',
-    duigou:""
-  },
-  select: function (e) {
-    let {id} = e.currentTarget.dataset;
+    num: 1,
+    question: ['我', '是', '又', '又'],
+    answer: '我',
+    duigou: "",
+    labaPlay: 0,
+
   },
 
   /**
@@ -67,5 +67,13 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  select: function (e) {
+    let {id} = e.currentTarget.dataset;
+    console.log(id);
+
+
+  },
+
 })
