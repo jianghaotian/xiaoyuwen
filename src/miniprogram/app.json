@@ -1,11 +1,13 @@
 {
   "pages": [
+
     "pages/index/index",
     
     "pages/shengmu/shengmu",
-    "pages/xiangqing/xiangqing",
     "pages/yunmu/yunmu",
     "pages/zimu/zimu",
+    "pages/xiangqing/xiangqing",
+
     "pages/tyxz/tyxz",
     "pages/tyxz/tyxzti",
     "pages/login/login"
