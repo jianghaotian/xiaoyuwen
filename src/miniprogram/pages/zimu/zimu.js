@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+    playItem: '',
   },
 
   /**
@@ -69,11 +70,17 @@ Page({
     let {id} = e.currentTarget.dataset;
     console.log(id);
 
-    wx.createInnerAudioContext(
-
-    );
-
+    var audio = wx.createInnerAudioContext();  
+    audio.src = `https://xyw.htapi.pub/v2/audios/zimu/${id}.mp3`;
+    audio.autoplay = true;
+    audio.onPlay(() => {
+      this.setData({playItem: id});
+      console.log(id, 'onPlay');
+    });
+    audio.onEnded(() => {
+      this.setData({playItem: ''});
+      console.log(id, 'onEnded');
+    });
   }
-
 
 })

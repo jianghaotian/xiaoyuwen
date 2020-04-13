@@ -1,1 +1,10 @@
 @import "../../template/laba.wxss";
+
+.zimu_block {
+  position: relative;
+}
+.zimu_laba {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

@@ -6,6 +6,5 @@
 .zimu_laba {
   position: absolute;
   right: 0;
-  bottom: 0;
-
+  bottom: 6rpx;
 }
