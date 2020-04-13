@@ -74,7 +74,7 @@
      font-size: 60rpx;
  }
  .xq-x11{
-     height: 90rpx;
+     height: 80rpx;
      padding-top: 30rpx;
      text-align: center;
      position: relative;
