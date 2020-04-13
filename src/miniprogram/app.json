@@ -7,9 +7,10 @@
     "pages/yunmu/yunmu",
     "pages/zimu/zimu",
     "pages/xiangqing/xiangqing",
+    
+    "pages/tyxz/tyxzti",
 
     "pages/tyxz/tyxz",
-    "pages/tyxz/tyxzti",
     "pages/login/login"
   ],
   "window": {
