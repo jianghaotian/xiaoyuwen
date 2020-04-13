@@ -16,11 +16,11 @@
 </view> -->
 <view class="xq-x11">
     <text class="xq-x9">第1/23个</text>
-    <view class="iconfont icon-xingxing xq-x10"></view>
+    <view class="iconfont iconxingxing xq-x10"></view>
 </view>
     
 
-    <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:400rpx;padding:65rpx;margin:0 auto;">
+    <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
         <text class="xq-x1">yuan</text>
         <view class="xq-x2">
             <text class="xq-x3">喇叭</text>
