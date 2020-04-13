@@ -1,3 +1,5 @@
+<import src="../../template/laba.wxml"/>
+
 <view class="overflow_x">
   <view class="topbar">
     <text>{{title}}</text>
@@ -9,6 +11,9 @@
       <text>
         {{item}}
       </text>
+      <view class="zimu_laba">
+        <template is="laba"></template>
+      </view>
     </view>
   </view>
 </view>
