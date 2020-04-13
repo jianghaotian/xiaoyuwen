@@ -6,8 +6,8 @@ Page({
    */
   data: {
     id: '',
-    shengmu:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
-    zhengtiyin:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],
+    shengmu:{data:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],length:23},
+    zhengtiyin:{data:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],length:16},
     yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ']
   },
 
@@ -17,15 +17,15 @@ Page({
   onLoad: function (options) {
     if(options.id == 'zhengtiyin'){
       this.setData({
-        list:this.data.zhengtiyin,
+        list:this.data.zhengtiyin.data,
         title:"整体音",
-        count:16
+        count:this.data.zhengtiyin.length
       })
     }else if(options.id == 'shengmu'){
       this.setData({
-        list:this.data.shengmu,
+        list:this.data.shengmu.data,
         title:"声母",
-        count:23
+        count:this.data.shengmu.length
       })
     }
   },
