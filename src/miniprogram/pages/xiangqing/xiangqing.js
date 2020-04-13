@@ -42,8 +42,28 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
+  onUnload: function (options) {
+    if(options.id == 'zhengtiyin'){
+      this.setData({
+        list:this.data.zhengtiyin,
+        title:"整体音",
+        count:16
+      })
+    }
+    else if(options.id == 'shengmu'){
+      this.setData({
+        list:this.data.shengmu,
+        title:"声母",
+        count:23
+      })
+    }
+    else if(options.id == 'yunmu'){
+      this.setData({
+        list:this.data.yunmu,
+        title:"韵母",
+        count:24
+      })
+    }
   },
 
   /**
@@ -65,5 +85,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  detailPage:function(e){
+    let {id} = e.currentTarget.dataset;
+    console.log(id);
   }
 })
