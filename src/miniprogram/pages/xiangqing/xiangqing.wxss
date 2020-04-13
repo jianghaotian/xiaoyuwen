@@ -16,7 +16,7 @@
  }
  .xq-x2{
      width: 100rpx;
-     margin-right: 90rpx;
+     margin-right: 70rpx;
      margin-top: 20rpx;
      height: 200rpx;
      float: right;
@@ -61,6 +61,21 @@
  }
 
  .xq-x8{
-     width:470rpx;
-     height: 300rpx;
+     width:500rpx;
+     height: 330rpx;
+ }
+ .xq-x9{
+     width:200rpx;
+     height: 50rpx;
+ }
+ .xq-x10{
+     position: absolute;
+     right: 100rpx;
+     font-size: 22rpx;
+ }
+ .xq-x11{
+     padding-top: 20rpx;
+     height: 80rpx;
+     text-align: center;
+     position: relative;
  }
