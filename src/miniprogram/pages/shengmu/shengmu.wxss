@@ -1,1 +1,1 @@
-/* pages/shengmu/shengmu.wxss */
+@import "../../template/laba.wxss";
