@@ -3,11 +3,10 @@
 <view class="tyxzti_box">
   <view class="tyxzti_in">
     <view class="tyxzti_num">
-      <text>第1/10题</text>
+      <text>第{{num}}/10题</text>
     </view>
     <view class="tyxzti_pinyinbox">
       <view class="tyxzti_laba">
-        <!-- <text>laba</text> -->
         <template is="laba"></template>
       </view>
       <view class="tyxzti_pinyin">
@@ -22,7 +21,7 @@
         </view>
       </view>
       <view class="tyxzti_xuan">
-        <view class="tianzige">
+        <view class="tianzige" bindtap='select' data-id="{{item}}">
           <view class="chacha"></view>
           <view class="word">我</view>
         </view>
