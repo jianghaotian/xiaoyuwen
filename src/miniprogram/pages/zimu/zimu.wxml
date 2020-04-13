@@ -12,7 +12,7 @@
         {{item}}
       </text>
       <view class="zimu_laba">
-        <template is="laba"></template>
+        <template is="laba" data="{{item, playItem}}"></template>
       </view>
     </view>
   </view>

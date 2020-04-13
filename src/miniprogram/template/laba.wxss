@@ -23,14 +23,18 @@
   height: 20rpx;
   top: 38rpx;
   left: 38rpx;
-  /* animation: fadeInOut 1s infinite 0.2s; */
+}
+.laba_first_d {
+  animation: fadeInOut 1s infinite 0.2s;
 }
 .laba_second {
   width: 60rpx;
   height: 60rpx;
   top: 24rpx;
   left: 24rpx;
-  /* animation: fadeInOut 1s infinite 0.4s; */
+}
+.laba_second_d {
+  animation: fadeInOut 1s infinite 0.4s;
 }
 @keyframes fadeInOut {
   0% {
