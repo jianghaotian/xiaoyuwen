@@ -21,6 +21,8 @@
         <view wx:for="{{question}}" wx:key="index" class="tianzige" bindtap='select' data-id="{{item}}">
           <view class="chacha"></view>
           <view class="word">{{item}}</view>
+          <view class="iconfont iconduigou zhengque"></view>
+          <view class="iconfont iconcuowu cuowu"></view>
         </view>
       </view>
     </view>
