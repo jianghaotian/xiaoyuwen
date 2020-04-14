@@ -1,6 +1,6 @@
 <!--pages/yunmu/yunmu.wxml-->
 <view class="overflow_x">
-  <view class="tabbar">
+  <view class="tabbar" id="tabbar">
     <view wx:for="{{tabColor}}" wx:key="index" class="tablist">
       <view data-hash="c{{item.num}}" id="{{item.num}}" style="background-color:{{item.tabcolor}}" bindtap="change" class="ymbutton">{{item.tabname}}</view>
     </view>

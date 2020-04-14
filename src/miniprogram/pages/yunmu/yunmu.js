@@ -1,74 +1,82 @@
 // pages/yunmu/yunmu.js
+const regeneratorRuntime = require('../../libs/regenerator-runtime/runtime-module');
+
 Page({
   /**
    * 页面的初始数据
    */
-  data:{
-    tabColor:[
-      {tabname:'单韵母',tabcolor:'#F4E7D7',num:'0',letter:'c0'},
-      {tabname:'复韵母',tabcolor:'#F4E7D7',num:'1',letter:'c1'},
-      {tabname:'前鼻韵母',tabcolor:'#F4E7D7',num:'2',letter:'c2'},
-      {tabname:'后鼻韵母',tabcolor:'#F4E7D7',num:'3',letter:'c3'}
+  data: {
+    tabColor: [
+      {tabname: '单韵母', tabcolor: '#F4E7D7', num: '0', letter: 'c0'},
+      {tabname: '复韵母', tabcolor: '#F4E7D7', num: '1', letter: 'c1'},
+      {tabname: '前鼻韵母', tabcolor: '#F4E7D7', num: '2', letter: 'c2'},
+      {tabname: '后鼻韵母', tabcolor: '#F4E7D7', num: '3', letter: 'c3'}
     ],
-    dan:['a','o','e','i','u','ü'],
-    fu:['ai','ei','ui','ao','ou','iu','ie','üe','er'],
-    qianbi:['an','en','in','un','ün'],
-    houbi:['ang','eng','ing',],
-    toView:'c0',
-    viewHeight:0,
+    dan: ['a', 'o', 'e', 'i', 'u', 'ü'],
+    fu: ['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er'],
+    qianbi: ['an', 'en', 'in', 'un', 'ün'],
+    houbi: ['ang', 'eng', 'ing',],
+    toView: 'c0',
+    viewHeight: 0,
   },
-  change:function(e){
-    var that=this;
-    for(var j=0;j<this.data.tabColor.length;j++){
-      var all="tabColor[" + j + "].tabcolor"
+  change: async function (e) {
+    for (let j = 0; j < this.data.tabColor.length; j++) {
+      let all = "tabColor[" + j + "].tabcolor";
       this.setData({
-        [all]:'#F4E7D7',
+        [all]: '#F4E7D7'
       })
     }
-    var id=e.currentTarget.id
-    var num=id.charAt(id.length-1)
-    var target=e.currentTarget.dataset.hash
-    var up = "tabColor[" + num + "].tabcolor";
-    that.setData( {
+    let id = e.currentTarget.id;
+    let num = id.charAt(id.length - 1);
+    let target = e.currentTarget.dataset.hash;
+    let up = "tabColor[" + num + "].tabcolor";
+    this.setData({
       [up]: 'rgb(250, 191, 124)',
-      toView:target
-    } );
-    var a=0,b=0;
-    var query = wx.createSelectorQuery()
-    query.select('#c'+num).boundingClientRect(function (res) {  
-      a=res.top
-    }).exec();
-    wx.createSelectorQuery().selectViewport().scrollOffset(function(res){
-      b=res.scrollTop
-    }).exec()
+      toView: target
+    });
+    let a = await new Promise((resolve, reject) => {
+      wx.createSelectorQuery().select('#c' + num).boundingClientRect(res => {
+        resolve(res.top);
+      }).exec();
+    });
+    let b = await new Promise((resolve, reject) => {
+      wx.createSelectorQuery().selectViewport().scrollOffset(res => {
+        resolve(res.scrollTop);
+      }).exec();
+    });
+    let tabbarH = await new Promise((resolve, reject) => {
+      wx.createSelectorQuery().select('#tabbar').boundingClientRect(res => {
+        resolve(res.height);
+      }).exec();
+    });
+    
     wx.pageScrollTo({
-      scrollTop:200*num,
+      scrollTop: a + b - tabbarH
     })
-    console.log(a,b)
+    console.log(a, b, tabbarH);
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     var that=this
-      wx.getSystemInfo({
-        success: function(res) {
-          let clientHeight = res.windowHeight;
-          let clientWidth = res.windowWidth;
-          let changeHeight = 750 / clientWidth;
-          let height = clientHeight * changeHeight-(clientHeight*70/750);
-          that.setData({
-            viewHeight: height
-          });
-        }
-      });
+    wx.getSystemInfo({
+      success: res => {
+        let clientHeight = res.windowHeight;
+        let clientWidth = res.windowWidth;
+        let changeHeight = 750 / clientWidth;
+        let height = clientHeight * changeHeight - (clientHeight * 70 / 750);
+        this.setData({
+          viewHeight: height
+        });
+      }
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // var query = wx.createSelectorQuery()
+    // let query = wx.createSelectorQuery()
     //   query.select('#c0').boundingClientRect(function (res) {
     //      console.log(res);
     //   }).exec();
