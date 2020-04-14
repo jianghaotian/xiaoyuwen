@@ -1,6 +1,6 @@
 <import src="/template/laba.wxml"/>
 
-<view class="tyxzti_box" wx:if="{{num<10}}">
+<view class="tyxzti_box" wx:if="{{num < 10}}">
   <view class="tyxzti_in">
     <view class="tyxzti_num">
       <text>第{{num + 1}}/{{ti.length}}题</text>
@@ -35,15 +35,15 @@
   <view class="grade">
     <view class="gradeYuan1">
       <view class="gradeYuan">
-        <image style="width:134rpx;height:100rpx" src="/images/num10.png"></image>
+        <image style="width:134rpx;height:100rpx" src="/images/num{{score}}.png"></image>
       </view>
     </view>
   </view>
   <view class="toast">
     <view class="textBox">
       <!-- 根据分数判断60过关 -->
-      <!-- <text>恭喜你过关啦!❀</text> -->
-      <text>很遗憾没有过关哦!◍</text>
+      <text wx:if="{{score >= 6}}">恭喜你过关啦!❀</text>
+      <text wx:else>很遗憾没有过关哦!◍</text>
     </view>
   </view>
 </view>
