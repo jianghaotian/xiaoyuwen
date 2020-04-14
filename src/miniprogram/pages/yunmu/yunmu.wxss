@@ -1,1 +1,49 @@
 /* pages/yunmu/yunmu.wxss */
+page{
+  height:100%
+}
+.tabbar{
+  background-color: #F4E7D7;
+  height:70rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  position:fixed;
+  top:0rpx;
+  z-index: 10;
+}
+.tablist{
+  height:50rpx;
+  margin:0 auto
+}
+.ymbutton{
+  background-color:#F4E7D7;
+  width:125rpx;
+  height:50rpx;
+  font-size: 26rpx;
+  border-radius: 20rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.detail{
+  background-color: white;
+  width:750rpx;
+  position:relative;
+  top:70rpx;
+  flex-direction: column;
+}
+.con{
+  width:750rpx;
+  background-color: white;
+  margin:0 auto;
+  margin-bottom: 50rpx;
+}
+.infor{
+  font-size: 26rpx;
+  color:gray;
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  margin-left: 10rpx;
+}
