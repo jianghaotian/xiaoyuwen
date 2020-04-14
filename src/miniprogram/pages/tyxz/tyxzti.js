@@ -125,7 +125,7 @@ Page({
       let {id} = e.currentTarget.dataset;
       console.log(id);
       this.setData({select: id});
-      // 分数
+      // 结果
       let audio = wx.createInnerAudioContext();
       if (id == this.data.ti[this.data.num].answer) {
         this.setData({score: this.data.score + 1});

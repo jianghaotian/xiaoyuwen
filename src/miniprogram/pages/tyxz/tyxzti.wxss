@@ -1,4 +1,4 @@
-@import "../../template/laba.wxss";
+@import "/template/laba.wxss";
 
 .tyxzti_box{
   width: 100%;
