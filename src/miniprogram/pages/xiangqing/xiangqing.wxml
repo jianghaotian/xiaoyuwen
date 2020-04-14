@@ -3,36 +3,36 @@
   <text>声母</text>
 </view>
 <view class="placeholder"></view>
-<!-- <view class="page-body">
-    <view class="page-section page-section-spacing swiper">
-      <swiper indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{background}}" wx:key="*this">
+<view>
+    <view>
+      <swiper class="xq-x12">
+        <block wx:for="{{list}}" wx:key="{{index}}" data-id="{{item}}">
           <swiper-item>
-            <view class="swiper-item {{item}}"></view>
+            <view class="xq-x11">
+            
+                <text class="xq-x9">第{{index+1}}/{{count}}个</text>
+                
+                <view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
+            </view>
+            <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
+                <text class="xq-x1">{{item}}</text>
+                <view class="xq-x2">
+                    <text class="xq-x3">喇叭</text>
+                    <text class="xq-x4">bo</text>
+                    <text class="xq-x5">卜</text>
+                </view>
+                <view class="xq-x6">
+                    <text class="xq-x7">萝卜</text>
+                    <text class="xq-x7">拔河</text>
+                </view>
+            </view>
+            <view style="background:url('../../images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;" >    
+                <image src="../../images/shengmu.jpg" class="xq-x8"/>
+            </view>
           </swiper-item>
         </block>
-    </swiper>
-</view> -->
-<view class="xq-x11">
-    <text class="xq-x9">第1/23个</text>
-    <view class="iconfont iconxingxing xq-x10"></view>
+      </swiper>
+    </view>
 </view>
     
-
-    <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
-        <text class="xq-x1">yuan</text>
-        <view class="xq-x2">
-            <text class="xq-x3">喇叭</text>
-            <text class="xq-x4">bo</text>
-            <text class="xq-x5">卜</text>
-        </view>
-        <view class="xq-x6">
-            <text class="xq-x7">萝卜</text>
-            <text class="xq-x7">拔河</text>
-        </view>
-    </view>
-    <view style="background:url('../../images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;" >    
-        <image src="../../images/shengmu.jpg" class="xq-x8"/>
-    </view>
 
