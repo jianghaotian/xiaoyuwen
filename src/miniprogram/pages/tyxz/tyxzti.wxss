@@ -111,17 +111,16 @@
   font-size: 60px;
   color: #fff;
 }
-.zhengque{
+.result view {
   position: absolute;
-  bottom:-20rpx;
-  right:-25rpx;
+  bottom: -20rpx;
+  right: -25rpx;
+}
+.zhengque {
   font-size: 120rpx;
   color: rgb(64, 186, 64);
 }
-.cuowu{
-  position: absolute;
-  bottom:-20rpx;
-  right:-25rpx;
+.cuowu {
   font-size: 100rpx;
   color: red;
 }

@@ -3,7 +3,7 @@
 <view class="tyxzti_box">
   <view class="tyxzti_in">
     <view class="tyxzti_num">
-      <text>第{{num}}/10题</text>
+      <text>第{{num + 1}}/{{ti.length}}题</text>
     </view>
     <view class="tyxzti_pinyinbox">
       <view class="tyxzti_laba">
@@ -14,15 +14,17 @@
           <view></view><view></view><view></view><view></view>
         </view>
         <view class="tyxzti_text">
-          <text>dì</text>
+          <text>{{ti[num].pinyin}}</text>
         </view>
       </view>
       <view class="tyxzti_xuan">
-        <view wx:for="{{question}}" wx:key="index" class="tianzige" bindtap='select' data-id="{{item}}">
+        <view wx:for="{{ti[num].question}}" wx:key="index" class="tianzige" bindtap='select' data-id="{{item}}">
           <view class="chacha"></view>
           <view class="word">{{item}}</view>
-          <view class="iconfont iconduigou zhengque"></view>
-          <view class="iconfont iconcuowu cuowu"></view>
+          <view class="result" style="display: {{item == select ? 'block' : 'none'}}">
+            <view class="iconfont iconduigou zhengque" style="display: {{ti[num].answer == item ? 'block' : 'none'}}"></view>
+            <view class="iconfont iconcuowu cuowu" style="display: {{ti[num].answer == item ? 'none' : 'block'}}"></view>
+          </view>
         </view>
       </view>
     </view>
