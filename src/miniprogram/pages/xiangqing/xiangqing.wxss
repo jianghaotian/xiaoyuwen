@@ -79,3 +79,9 @@
      text-align: center;
      position: relative;
  }
+ .xq-x12{
+     height: 1100rpx;
+ }
+ .xq-x13{
+     color: rgba(255, 247, 0, 0.912);
+ }
