@@ -1,12 +1,14 @@
 <!--pages/xiangqing/xiangqing.wxml-->
+<import src="../../template/laba.wxml"/>
+
 <view class="topbar">
   <text>声母</text>
 </view>
 <view class="placeholder"></view>
 <view>
     <view>
-      <swiper class="xq-x12">
-        <block wx:for="{{list}}" wx:key="{{index}}" data-id="{{item}}">
+      <swiper class="xq-x12" current="{{current===0?0:current}}">
+        <block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
           <swiper-item>
             <view class="xq-x11">
             
@@ -15,9 +17,16 @@
                 <view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
             </view>
             <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
-                <text class="xq-x1">{{item}}</text>
+                <view class="xq-x1">
+                  <view class="xq-x15"></view>
+                  <view class="xq-x15"></view>
+                  <view class="xq-x15 xq-x16"></view>
+                  <text class="xq-x14">{{item}}</text>
+                </view>
                 <view class="xq-x2">
-                    <text class="xq-x3">喇叭</text>
+                    <view class="xq-x3">
+                      <template is="dlaba" data="{{labaPlay}}"></template>
+                    </view>
                     <text class="xq-x4">bo</text>
                     <text class="xq-x5">卜</text>
                 </view>
