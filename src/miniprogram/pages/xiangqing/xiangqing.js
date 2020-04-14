@@ -11,7 +11,9 @@ Page({
     // yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ'],
     list:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
     count:23,
-    status:false
+    status:false,
+    current:0,
+    labaPlay:1
   },
 
   /**
@@ -46,6 +48,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function (options) {
+    console.log(options);
     if(options.id == 'zhengtiyin'){
       this.setData({
         list:this.data.zhengtiyin,
