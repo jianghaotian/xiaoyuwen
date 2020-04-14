@@ -1,4 +1,4 @@
-<import src="../../template/laba.wxml"/>
+<import src="/template/laba.wxml"/>
 
 <view class="tyxzti_box">
   <view class="tyxzti_in">
