@@ -5,6 +5,7 @@ page{
 .tabbar{
   background-color: #F4E7D7;
   height:70rpx;
+  padding-bottom: 10rpx;
   width:100%;
   display: flex;
   align-items: center;
@@ -31,7 +32,7 @@ page{
   background-color: white;
   width:750rpx;
   position:relative;
-  top:70rpx;
+  top:80rpx;
   flex-direction: column;
 }
 .con{
