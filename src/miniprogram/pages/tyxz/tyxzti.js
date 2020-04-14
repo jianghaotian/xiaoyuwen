@@ -129,9 +129,9 @@ Page({
       let audio = wx.createInnerAudioContext();
       if (id == this.data.ti[this.data.num].answer) {
         this.setData({score: this.data.score + 1});
-        audio.src = '/audio/zhengque.wav';
+        audio.src = '/audio/zhengque.mp3';
       } else {
-        audio.src = '/audio/cuowu.wav';
+        audio.src = '/audio/cuowu.mp3';
       }
       audio.autoplay = true;
       setTimeout(() => {

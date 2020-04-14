@@ -43,20 +43,16 @@
 }
 .tyxzti_sixiansange{
   position: absolute;
-  top:-3rpx;
   width: 100%;
   height: 100%;
-  text-overflow:ellipsis;
-  word-wrap:break-word;
-  overflow: hidden;
 }
 .tyxzti_sixiansange view{
   width: 100%;
-  height: 22%;
+  height: 20.5%;
   border-bottom:1px solid #fff;
 }
 .tyxzti_text{
-  font-size: 55rpx;
+  font-size: 56rpx;
 }
 .tyxzti_laba{
   width:25%;
@@ -79,6 +75,7 @@
   width: 100px;
   border: 1px solid #fff;
   margin-top:80rpx;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +110,8 @@
 }
 .result view {
   position: absolute;
-  bottom: -20rpx;
-  right: -25rpx;
+  top: 50rpx;
+  left: 50rpx;
 }
 .zhengque {
   font-size: 120rpx;
