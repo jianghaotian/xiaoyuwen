@@ -2,7 +2,7 @@
   <view class="zimu">
     <view wx:for="{{nums}}" wx:key="index" bindtap="problem" data-id="{{item}}" class="zimu_block bubble">
         <view class='grade'>
-          <image style="width:74rpx;height:40rpx" src="../../images/num10.PNG"></image>
+          <image style="width:74rpx;height:40rpx" src="/images/num10.png"></image>
         </view>
         <text>
           {{item}}
