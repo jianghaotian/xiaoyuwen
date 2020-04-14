@@ -1,23 +1,38 @@
 /* pages/xiangqing/xiangqing.wxss */
+@import "../../template/laba.wxss";
+
  .xq-x1{
      width: 320rpx;
      margin-left: 20rpx;
-     margin-top: 15rpx;
+     /* margin-top: 15rpx; */
      display: flex;
-     height: 200rpx;
-     font-size: 100rpx;
-     font-weight: bolder;
+     height: 240rpx;
      float: left;
-     color: white;
      text-align: center;
      justify-content: center;
      align-items: center;
-     
+     flex-direction: column;
+     position: relative;
+ }
+ .xq-x14{
+    font-size: 100rpx;
+    /* font-weight: bold; */
+    color: white;
+    position: absolute;
+    top: 42rpx;
+ }
+ .xq-x15{
+     width: 150px;
+     height: 60rpx;
+     border-top: 1rpx solid white;
+ }
+ .xq-x16{
+     border-bottom: 1rpx solid white;
  }
  .xq-x2{
      width: 100rpx;
      margin-right: 70rpx;
-     margin-top: 20rpx;
+     margin-top: 25rpx;
      height: 200rpx;
      float: right;
     text-align: center;
@@ -25,9 +40,9 @@
  .xq-x3{
      width: 100rpx;
      height: 60rpx;
-    font-size:50rpx;
-    text-align: center;
-    color:#617ca6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
  }
  .xq-x4{
      width: 100rpx;
@@ -47,8 +62,8 @@
      width:300rpx;
      height: 50rpx;
      margin: 0 auto;
-     margin-top: 230rpx;
-     clear: both;     
+     /* margin-top:-10rpx; */
+     /* clear: both;      */
  }
  
  .xq-x7{
@@ -83,5 +98,5 @@
      height: 1100rpx;
  }
  .xq-x13{
-     color: rgba(255, 247, 0, 0.912);
+     color: rgba(245, 197, 6, 0.693);
  }
