@@ -16,7 +16,7 @@
                 
                 <view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
             </view>
-            <view style="background:url('../../images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
+            <view style="background:url('/images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
                 <view class="xq-x1">
                   <view class="xq-x15"></view>
                   <view class="xq-x15"></view>
@@ -35,8 +35,8 @@
                     <text class="xq-x7">拔河</text>
                 </view>
             </view>
-            <view style="background:url('../../images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;" >    
-                <image src="../../images/shengmu.jpg" class="xq-x8"/>
+            <view style="background:url('/images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;" >    
+                <image src="/images/shengmu.jpg" class="xq-x8"/>
             </view>
           </swiper-item>
         </block>
