@@ -6,7 +6,7 @@
     </view>
   </view>
   <!-- scroll-into-view="{{toView}}" -->
-  <scroll-view scroll-into-view="{{toView}}" scoll-y="true" style="height:{{viewHeight}}px;"  scroll-with-animation="true">
+  <scroll-view scroll-into-view="{{toView}}" scoll-y="true" style="height:{{viewHeight}}px;"  scroll-with-animation="true" bindscroll="scrollTo">
     <view class="detail">
       <view id="c0" class="con">
         <view class="infor">单韵母</view>
