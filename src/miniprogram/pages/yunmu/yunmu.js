@@ -70,8 +70,8 @@ Page({
     for(var i=0;i<this.data.tabColor.length;i++){
       (function(i){
         wx.createSelectorQuery().select('#c' + i).boundingClientRect(res => {
-          console.log("c"+i+":"+res.top)
-          console.log("height:"+res.height)
+          // console.log("c"+i+":"+res.top)
+          // console.log("height:"+res.height)
           if(res.top<=60 && res.top>=-res.height/2){
             let up = "tabColor[" + i+ "].tabcolor";
             that.setData({
@@ -85,6 +85,14 @@ Page({
       // wx.createSelectorQuery().selectViewport().scrollOffset(res => {
       //   console.log("scrollHowMuch:"+res.scrollTop);
       // }).exec();
+  },
+  clickOne:function(e){
+    let {id, to} = e.currentTarget.dataset;
+    console.log(id, to);
+    wx.navigateTo({
+      url: `../xiangqing/xiangqing`
+      // url: `../${to}/${to}?id=${id}`
+    });
   },
   /**
    * 生命周期函数--监听页面加载
