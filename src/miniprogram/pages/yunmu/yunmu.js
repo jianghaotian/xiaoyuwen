@@ -17,6 +17,7 @@ Page({
     viewHeight: 500,
     tab: [],
     selectTab: 0,
+    selected: 0,
     scrollTopItem: [],  // 每个item距离顶部距离
     scrollTop: 0,
     scrollInto: 't0'
@@ -45,7 +46,7 @@ Page({
 
     this.setData({
       tab: this.data.yunmu
-    })
+    });
 
 
   },
@@ -62,7 +63,7 @@ Page({
     }
     this.setData({
       scrollTopItem: scrollTopItem
-    })
+    });
 
     // console.log(scrollTopItem);
   },
@@ -112,11 +113,12 @@ Page({
   clickTab: function (e) {
     let {id} = e.currentTarget.dataset;
     this.setData({
-      selectTab: id
+      selectTab: id,
+      selected: 1
     });
     this.setData({
       scrollInto: 't' + id
-    })
+    });
   },
 
   bindScroll: function (e) {
@@ -124,19 +126,25 @@ Page({
     if (this.data.scrollTopItem.length < 2) {
       return false;
     }
+    if (this.data.selected == 1) {
+      this.setData({
+        selected: 0
+      });
+      return true;
+    }
     for (let i = 0; i < this.data.scrollTopItem.length - 1; i++) {
       if (i == 0) {
         if (e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
           this.setData({
             selectTab: i
-          })
+          });
           return true;
         }
       }
       if (e.detail.scrollTop >= this.data.scrollTopItem[i] && e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
         this.setData({
           selectTab: i
-        })
+        });
       }
     }
   },
