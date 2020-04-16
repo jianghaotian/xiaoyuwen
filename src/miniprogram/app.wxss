@@ -36,7 +36,7 @@
 .zimu {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10rpx;
+  margin-bottom: 30rpx;
   transform: translateX(3%);
   box-sizing: border-box;
 }

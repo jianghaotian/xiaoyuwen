@@ -1,50 +1,38 @@
-/* pages/yunmu/yunmu.wxss */
-page{
-  height:100%
+.overflow_x {
+  height: 100%;
 }
-.tabbar{
-  background-color: #F4E7D7;
-  height:70rpx;
-  padding-bottom: 10rpx;
-  width:100%;
+.topbar {
   display: flex;
-  align-items: center;
-  position:fixed;
-  top:0rpx;
-  z-index: 10;
+  justify-content: space-around;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 690rpx;
 }
-.tablist{
-  height:50rpx;
-  margin:0 auto
+.placeholder {
+  margin-bottom: 0;
 }
-.ymbutton{
-  background-color:#F4E7D7;
-  width:125rpx;
-  height:50rpx;
+.tabitem {
+  transform: translateY(-6rpx);
+}
+.tabitem text {
   font-size: 26rpx;
-  border-radius: 20rpx;
-  line-height: 50rpx;
-  text-align: center;
-  margin-left: 15rpx;
-  margin-right: 15rpx;
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
 }
-.detail{
-  background-color: white;
-  width:750rpx;
-  position:relative;
-  top:80rpx;
-  flex-direction: column;
+.tabitem .select {
+  background-color: #FABF7C;
 }
-.con{
-  width:750rpx;
-  background-color: white;
-  margin:0 auto;
-  margin-bottom: 50rpx;
-}
-.infor{
+.zimu .title {
+  width: 100%;
   font-size: 26rpx;
   color:gray;
   margin-top:20rpx;
   margin-bottom:20rpx;
-  margin-left: 10rpx;
 }
+.zimu:first-child {
+  margin-top: 20rpx;
+}
+.zimu:last-child {
+  margin-bottom: 100rpx;
+}
+

@@ -1,0 +1,55 @@
+<!--pages/yunmu/yunmu.wxml-->
+<view class="overflow_x">
+  <view class="tabbar" id="tabbar">
+    <view wx:for="{{tabColor}}" wx:key="index" class="tablist">
+      <view data-hash="c{{item.num}}" id="{{item.num}}" style="background-color:{{item.tabcolor}}" bindtap="change" class="ymbutton">{{item.tabname}}</view>
+    </view>
+  </view>
+  <!-- scroll-into-view="{{toView}}" -->
+  <scroll-view scroll-into-view="{{toView}}" scoll-y="true" style="height:{{viewHeight}}px;"  scroll-with-animation="true" bindscroll="scrollTo">
+    <view class="detail"> 
+      <view wx:for="{{tabColor}}" wx:key="index" wx:for-item="paren">
+        <view id="c{{paren.num}}" class="con">
+          <view class="infor">{{paren.tabname}}</view>
+          <view class="zimu">
+            <view wx:for="{{paren.chil}}" wx:for-item="chil" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{chil}}" data-to="{{chil}}">
+              <text>{{chil}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view id="c0" class="con">
+        <view class="infor">单韵母</view>
+        <view class="zimu">
+          <view wx:for="{{dan}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
+            <text>{{item}}</text>
+          </view>
+        </view>
+      </view>
+      <view id="c1" class="con">
+        <view class="infor">复韵母</view>
+        <view class="zimu">
+          <view wx:for="{{fu}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
+            <text>{{item}}</text>
+          </view>
+        </view>
+      </view>
+      <view id="c2" class="con">
+        <view class="infor">前鼻韵母</view>
+        <view class="zimu">
+          <view wx:for="{{qianbi}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
+            <text>{{item}}</text>
+          </view>
+        </view>
+      </view>
+      <view id="c3" class="con">
+        <view class="infor">后鼻韵母</view>
+        <view class="zimu">
+          <view wx:for="{{houbi}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
+            <text>{{item}}</text>
+          </view>
+        </view>
+      </view> -->
+    </view> 
+  </scroll-view>
+</view>
