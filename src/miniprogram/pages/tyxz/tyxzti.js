@@ -139,6 +139,17 @@ Page({
           selected: 0,
           select: '',
           num: this.data.num + 1
+        }, () => {
+          // 过关
+          if (this.data.num >= 10) {
+            let lastAudio = wx.createInnerAudioContext();
+            if (this.data.score < 6) {
+              lastAudio.src = '/audio/shibai.mp3';
+            } else {
+              lastAudio.src = '/audio/guoguan.mp3';
+            }
+            lastAudio.autoplay = true;
+          }
         });
       }, 1000);
     }

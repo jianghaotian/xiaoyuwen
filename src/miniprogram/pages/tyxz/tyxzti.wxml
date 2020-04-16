@@ -31,7 +31,7 @@
   </view>
 </view>
 
-<view wx:else class="chengjidan" style="background-image:url(https://raw.githubusercontent.com/udacity/cn-wechat-weather/2-4/images/sunny-bg.png);">
+<view wx:else class="chengjidan" style="background-image:url(/images/sunny-bg.png);">
   <view class="grade">
     <view class="gradeYuan1">
       <view class="gradeYuan">
