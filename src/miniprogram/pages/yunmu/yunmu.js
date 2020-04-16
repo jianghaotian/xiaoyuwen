@@ -18,6 +18,7 @@ Page({
     tab: [],
     selectTab: 0,
     selected: 0,
+    lastBottom: '300px',
     scrollTopItem: [],  // 每个item距离顶部距离
     scrollTop: 0,
     scrollInto: 't0'
@@ -57,15 +58,20 @@ Page({
   onReady: async function () {
     let topbarHeight = this.data.topbarHeight.toFixed(0);
     let scrollTopItem = [];
+    let lastBottom = 0;
     for (let i = 0; i < this.data.tab.length; i++) {
       let layout = await getLayout('#t' + i);
       scrollTopItem.push(layout.top - topbarHeight);
+      if (i == this.data.tab.length - 1) {
+        lastBottom = this.data.viewHeight - layout.height;
+      }
     }
     this.setData({
-      scrollTopItem: scrollTopItem
+      scrollTopItem: scrollTopItem,
+      lastBottom: lastBottom + 'px'
     });
 
-    // console.log(scrollTopItem);
+    console.log(scrollTopItem);
   },
 
   /**
@@ -122,29 +128,37 @@ Page({
   },
 
   bindScroll: function (e) {
-    // console.log(e);
+    console.log(e.detail.scrollTop);
     if (this.data.scrollTopItem.length < 2) {
-      return false;
+      return ;
     }
     if (this.data.selected == 1) {
       this.setData({
         selected: 0
       });
-      return true;
+      return ;
     }
-    for (let i = 0; i < this.data.scrollTopItem.length - 1; i++) {
+    for (let i = 0; i < this.data.scrollTopItem.length; i++) {
       if (i == 0) {
         if (e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
           this.setData({
             selectTab: i
           });
-          return true;
+          return ;
         }
       }
-      if (e.detail.scrollTop >= this.data.scrollTopItem[i] && e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
-        this.setData({
-          selectTab: i
-        });
+      if (e.detail.scrollTop >= this.data.scrollTopItem[i]) {
+        if (i == this.data.scrollTopItem.length - 1) {
+          this.setData({
+            selectTab: i
+          });
+          return ;
+        } else if (e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
+          this.setData({
+            selectTab: i
+          });
+          return ;
+        }
       }
     }
   },
