@@ -7,15 +7,11 @@ Page({
    */
   data: {
     tabColor: [
-      {tabname: '单韵母', tabcolor: '#F4E7D7', num: '0', letter: 'c0'},
-      {tabname: '复韵母', tabcolor: '#F4E7D7', num: '1', letter: 'c1'},
-      {tabname: '前鼻韵母', tabcolor: '#F4E7D7', num: '2', letter: 'c2'},
-      {tabname: '后鼻韵母', tabcolor: '#F4E7D7', num: '3', letter: 'c3'}
+      {tabname: '单韵母', tabcolor: '#F4E7D7', num: '0', letter: 'c0',chil: ['a', 'o', 'e', 'i', 'u', 'ü']},
+      {tabname: '复韵母', tabcolor: '#F4E7D7', num: '1', letter: 'c1',chil:['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er']},
+      {tabname: '前鼻韵母', tabcolor: '#F4E7D7', num: '2', letter: 'c2',chil:['an', 'en', 'in', 'un', 'ün']},
+      {tabname: '后鼻韵母', tabcolor: '#F4E7D7', num: '3', letter: 'c3',chil:['ang', 'eng', 'ing','ong']}
     ],
-    dan: ['a', 'o', 'e', 'i', 'u', 'ü'],
-    fu: ['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er'],
-    qianbi: ['an', 'en', 'in', 'un', 'ün'],
-    houbi: ['ang', 'eng', 'ing',],
     toView: 'c0',
     viewHeight: 0,
   },
@@ -109,6 +105,25 @@ Page({
         });
       }
     });
+    if(options.id == 'shengdiao'){
+      this.setData({
+        tabColor: [
+          {tabname: '单韵母', tabcolor: '#F4E7D7', num: '0', letter: 'c0',chil:['ā','á','ǎ','à', 'ō','ò','ǒ','ó', 'ē','é','ě','è', 'ī','í','ǐ','ì','ū','ú','ǔ','ù','ǖ','ǘ','ǚ','ǜ']},
+          {tabname: '复韵母', tabcolor: '#F4E7D7', num: '1', letter: 'c1',chil:['āi','ái','ǎi','ài', 'ēi','éi','ěi','èi', 'uī','uí','uǐ','uì', 'āo','áo','ǎo','ào', 'ōu','òu','ǒu','óu', 'iū','iú','iǔ','iù', 'iē','ié','iě','iè', 'üē','üé','üě','üè', 'ēr','ér','ěr','èr']},
+          {tabname: '鼻韵母', tabcolor: '#F4E7D7', num: '2', letter: 'c2',chil:['ān','án','ǎn','àn', 'ēn','én','ěn','èn', 'īn','ín','ǐn','ìn', 'ūn','ún','ǔn','ùn', 'ǖn','ǘn','ǚn','ǜn','āng','áng','ǎng','àng', 'ēng','éng','ěng','èng', 'īng','íng','ǐng','ìng','ōng','òng','ǒng','óng']},
+          {tabname: '整体音', tabcolor: '#F4E7D7', num: '3', letter: 'c3',chil:['zhī','zhí','zhǐ','zhì','chī','chí','chǐ','chì','shī','shí','shǐ','shì','rī','rí','rǐ','rì','zī','zí','zǐ','zì','cī','cí','cǐ','cì','sī','sí','sǐ','sì','yī','yí','yǐ','yì','wū','wú','wǔ','wù','yū','yú','yǔ','yù','yē','yé','yě','yè','yuē','yué','yuě','yuè','yuān','yuán','yuǎn','yuàn','yīn','yín','yǐn','yìn','yūn','yún','yǔn','yùn','yīng','yíng','yǐng','yìng']}
+        ],
+      })
+    }else if(options.id == 'shoucangjia'){
+      this.setData({
+        tabColor: [
+          {tabname: '单韵母', tabcolor: '#F4E7D7', num: '0', letter: 'c0',chil:['ā','ǜ']},
+          {tabname: '复韵母', tabcolor: '#F4E7D7', num: '1', letter: 'c1',chil:['āi','ěr','èr']},
+          {tabname: '鼻韵母', tabcolor: '#F4E7D7', num: '2', letter: 'c2',chil:['ān','án','ǎn','àn']},
+          {tabname: '整体音', tabcolor: '#F4E7D7', num: '3', letter: 'c3',chil:[]}
+        ],
+      })
+    }
   },
 
   /**
