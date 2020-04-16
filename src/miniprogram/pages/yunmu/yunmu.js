@@ -53,7 +53,46 @@ Page({
     wx.pageScrollTo({
       scrollTop: a + b - tabbarH
     })
-    console.log(a, b, tabbarH);
+    // console.log(a, b, tabbarH);
+  },
+  // scrollTo:function(e){
+  //   let viewTop = e.detail.scrollTop;
+  //   console.log(1)
+  // },
+  onPageScroll:function(){
+    let that=this;
+    for (let j = 0; j < this.data.tabColor.length; j++) {
+      let all = "tabColor[" + j + "].tabcolor";
+      that.setData({
+        [all]: '#F4E7D7'
+      })
+    }
+    for(var i=0;i<this.data.tabColor.length;i++){
+      (function(i){
+        wx.createSelectorQuery().select('#c' + i).boundingClientRect(res => {
+          // console.log("c"+i+":"+res.top)
+          // console.log("height:"+res.height)
+          if(res.top<=60 && res.top>=-res.height/2){
+            let up = "tabColor[" + i+ "].tabcolor";
+            that.setData({
+              [up]: 'rgb(250, 191, 124)',
+            });
+          }
+        }).exec();
+      }(i))
+    }
+    
+      // wx.createSelectorQuery().selectViewport().scrollOffset(res => {
+      //   console.log("scrollHowMuch:"+res.scrollTop);
+      // }).exec();
+  },
+  clickOne:function(e){
+    let {id, to} = e.currentTarget.dataset;
+    console.log(id, to);
+    wx.navigateTo({
+      url: `../xiangqing/xiangqing`
+      // url: `../${to}/${to}?id=${id}`
+    });
   },
   /**
    * 生命周期函数--监听页面加载

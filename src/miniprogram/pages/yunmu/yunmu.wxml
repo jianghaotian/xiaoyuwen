@@ -6,12 +6,12 @@
     </view>
   </view>
   <!-- scroll-into-view="{{toView}}" -->
-  <scroll-view scroll-into-view="{{toView}}" scoll-y="true" style="height:{{viewHeight}}px;"  scroll-with-animation="true">
+  <scroll-view scroll-into-view="{{toView}}" scoll-y="true" style="height:{{viewHeight}}px;"  scroll-with-animation="true" bindscroll="scrollTo">
     <view class="detail">
       <view id="c0" class="con">
         <view class="infor">单韵母</view>
         <view class="zimu">
-          <view wx:for="{{dan}}" wx:key="index" class="zimu_block">
+          <view wx:for="{{dan}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
             <text>{{item}}</text>
           </view>
         </view>
@@ -19,7 +19,7 @@
       <view id="c1" class="con">
         <view class="infor">复韵母</view>
         <view class="zimu">
-          <view wx:for="{{fu}}" wx:key="index" class="zimu_block">
+          <view wx:for="{{fu}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
             <text>{{item}}</text>
           </view>
         </view>
@@ -27,7 +27,7 @@
       <view id="c2" class="con">
         <view class="infor">前鼻韵母</view>
         <view class="zimu">
-          <view wx:for="{{qianbi}}" wx:key="index" class="zimu_block">
+          <view wx:for="{{qianbi}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
             <text>{{item}}</text>
           </view>
         </view>
@@ -35,7 +35,7 @@
       <view id="c3" class="con">
         <view class="infor">后鼻韵母</view>
         <view class="zimu">
-          <view wx:for="{{houbi}}" wx:key="index" class="zimu_block">
+          <view wx:for="{{houbi}}" wx:key="index" class="zimu_block" bindtap="clickOne" data-id="{{item}}" data-to="{{item}}">
             <text>{{item}}</text>
           </view>
         </view>
