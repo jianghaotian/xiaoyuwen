@@ -1,1 +1,38 @@
-/* pages/yunmu/yunmu.wxss */
+.overflow_x {
+  height: 100%;
+}
+.topbar {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 690rpx;
+}
+.placeholder {
+  margin-bottom: 0;
+}
+.tabitem {
+  transform: translateY(-6rpx);
+}
+.tabitem text {
+  font-size: 26rpx;
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+}
+.tabitem .select {
+  background-color: #FABF7C;
+}
+.zimu .title {
+  width: 100%;
+  font-size: 26rpx;
+  color:gray;
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+.zimu:first-child {
+  margin-top: 20rpx;
+}
+.zimu:last-child {
+  margin-bottom: 100rpx;
+}
+
