@@ -33,7 +33,8 @@
 						</view>
 					</view>
 					<view class="img-view" style="background-image:url('/images/ding.png');">
-						<image src="{{'https://xyw.htapi.pub/v2/images/pinyin/' + item.image}}" class="xq-x8" />
+						<image src="{{'https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/images/pinyin/' + item.image}}" class="xq-x8" />
+						<!-- <image src="{{'https://xyw.htapi.pub/v2/images/pinyin/' + item.image}}" class="xq-x8" /> -->
 					</view>
 				</swiper-item>
 			</block>
