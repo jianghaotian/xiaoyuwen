@@ -74,7 +74,7 @@ Page({
     let lastBottom = 0;
     for (let i = 0; i < this.data.tab.length; i++) {
       let layout = await getLayout('#t' + i);
-      scrollTopItem.push(layout.top - topbarHeight);
+      scrollTopItem.push(layout.top - topbarHeight - 20);
       if (i == this.data.tab.length - 1) {
         lastBottom = this.data.viewHeight - layout.height;
       }
