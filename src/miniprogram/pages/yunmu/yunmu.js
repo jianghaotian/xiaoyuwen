@@ -128,7 +128,7 @@ Page({
   },
 
   bindScroll: function (e) {
-    console.log(e.detail.scrollTop);
+    // console.log(e.detail.scrollTop);
     if (this.data.scrollTopItem.length < 2) {
       return ;
     }
