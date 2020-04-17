@@ -6,9 +6,11 @@ Page({
    */
   data: {
     id: '',
-    shengmu:{data:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],length:23},
-    zhengtiyin:{data:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],length:16},
-    yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ']
+    shengmu: ['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
+    zhengtiyin: ['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],
+    type: '',
+    list: [],
+    title: ''
   },
 
   /**
@@ -17,15 +19,15 @@ Page({
   onLoad: function (options) {
     if(options.id == 'zhengtiyin'){
       this.setData({
-        list:this.data.zhengtiyin.data,
-        title:"整体音",
-        count:this.data.zhengtiyin.length
+        list: this.data.zhengtiyin,
+        title: "整体音",
+        type: 'zhengtiyin'
       })
     }else if(options.id == 'shengmu'){
       this.setData({
-        list:this.data.shengmu.data,
-        title:"声母",
-        count:this.data.shengmu.length
+        list: this.data.shengmu,
+        title: "声母",
+        type: 'shengmu'
       })
     }
   },
@@ -78,8 +80,11 @@ Page({
   onShareAppMessage: function () {
 
   },
-  detailPage:function(e){
+  detailPage: function(e){
     let {id} = e.currentTarget.dataset;
-    console.log(id);
+    // console.log(id);
+    wx.navigateTo({
+      url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
+    })
   }
 })
