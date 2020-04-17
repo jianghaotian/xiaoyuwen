@@ -1,5 +1,3 @@
-<import src="../../template/laba.wxml"/>
-
 <view class="container">
   <view class="column">
     <view class="row">

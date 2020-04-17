@@ -68,19 +68,17 @@ Page({
   // 点击播放音频
   playAudio: function (e) {
     let {id} = e.currentTarget.dataset;
-    console.log(id);
-
+    // console.log(id);
     var audio = wx.createInnerAudioContext();  
     audio.src = `https://xyw.htapi.pub/v2/audios/zimu/${id}.mp3`;
     audio.autoplay = true;
     audio.onPlay(() => {
       this.setData({playItem: id});
-      console.log(id, 'onPlay');
+      // console.log(id, 'onPlay');
     });
     audio.onEnded(() => {
       this.setData({playItem: ''});
-      console.log(id, 'onEnded');
+      // console.log(id, 'onEnded');
     });
   }
-
 })
