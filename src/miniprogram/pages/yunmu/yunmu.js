@@ -44,10 +44,18 @@ Page({
     });
 
     // TODO: 获取数据
+    // console.log(options.id);
+    if (options.id == 'yunmu') {
+      this.setData({
+        tab: this.data.yunmu
+      });
+    } else if (options.id == 'shengdiao') {
 
-    this.setData({
-      tab: this.data.yunmu
-    });
+
+    } else if (options.id == 'shoucang') {
+
+
+    }
 
 
   },
