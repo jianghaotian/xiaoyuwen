@@ -21,8 +21,8 @@ Page({
     lastBottom: '300px',
     scrollTopItem: [],  // 每个item距离顶部距离
     scrollTop: 0,
-    scrollInto: 't0'
-    
+    scrollInto: 't0',
+    type: ''
   },
 
   /**
@@ -47,7 +47,8 @@ Page({
     // console.log(options.id);
     if (options.id == 'yunmu') {
       this.setData({
-        tab: this.data.yunmu
+        tab: this.data.yunmu,
+        type: 'yunmu'
       });
     } else if (options.id == 'shengdiao') {
 
@@ -79,7 +80,7 @@ Page({
       lastBottom: lastBottom + 'px'
     });
 
-    console.log(scrollTopItem);
+    // console.log(scrollTopItem);
   },
 
   /**
@@ -173,9 +174,10 @@ Page({
 
   clickOne: function (e) {
     let {id} = e.currentTarget.dataset;
-    console.log(id);
-
-    
+    // console.log(id);
+    wx.navigateTo({
+      url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
+    })
   }
 
 })
