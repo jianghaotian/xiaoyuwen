@@ -115,3 +115,23 @@
 .xq-x13 {
     color: rgba(245, 197, 6, 0.693);
 }
+
+.hb-view {
+    width: 530rpx;
+    height: 380rpx;
+    padding: 65rpx;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center 0;
+}
+
+.img-view {
+    width: 470rpx;
+    height: 300rpx;
+    padding: 90rpx 80rpx 65rpx 30rpx;
+    margin: 20rpx auto 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center 0;
+}
