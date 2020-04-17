@@ -21,7 +21,7 @@
 							<text class="xq-x14">{{item.name}}</text>
 						</view>
 						<view class="xq-x2">
-							<view class="xq-x3">
+							<view class="xq-x3" bindtap="playAudio" data-audio="{{item.audio}}">
 								<template is="dlaba" data="{{labaPlay}}"></template>
 							</view>
 							<text class="xq-x4">{{item.spell}}</text>
@@ -33,7 +33,7 @@
 						</view>
 					</view>
 					<view class="img-view" style="background-image:url('/images/ding.png');">
-						<image src="{{'https://xyw.htapi.pub/v2/images/py/' + item.image}}" class="xq-x8" />
+						<image src="{{'https://xyw.htapi.pub/v2/images/pinyin/' + item.image}}" class="xq-x8" />
 					</view>
 				</swiper-item>
 			</block>
