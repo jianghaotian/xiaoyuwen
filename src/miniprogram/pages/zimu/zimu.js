@@ -70,7 +70,8 @@ Page({
     let {id} = e.currentTarget.dataset;
     // console.log(id);
     let audio = wx.createInnerAudioContext();  
-    audio.src = `https://xyw.htapi.pub/v2/audios/zimu/${id}.mp3`;
+    // audio.src = `https://xyw.htapi.pub/v2/audios/zimu/${id}.mp3`;
+    audio.src = `https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/audios/zimu/${id}.mp3`;
     audio.autoplay = true;
     audio.onPlay(() => {
       this.setData({playItem: id});

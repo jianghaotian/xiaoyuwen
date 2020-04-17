@@ -108,7 +108,8 @@ Page({
     let audioFile = e.currentTarget.dataset.audio;
     // console.log(audio);
     let audio = wx.createInnerAudioContext();  
-    audio.src = `https://xyw.htapi.pub/v2/audios/pinyin/${audioFile}`;
+    // audio.src = `https://xyw.htapi.pub/v2/audios/pinyin/${audioFile}`;
+    audio.src = `https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/audios/pinyin/${audioFile}`;
     audio.autoplay = true;
     audio.onPlay(() => {
       this.setData({labaPlay: 1});
