@@ -1,15 +1,11 @@
 {
   "pages": [
-
     "pages/index/index",
-    
     "pages/shengmu/shengmu",
     "pages/yunmu/yunmu",
     "pages/zimu/zimu",
     "pages/xiangqing/xiangqing",
-
-    "pages/tyxz/tyxz",
-    "pages/login/login"
+    "pages/tyxz/tyxz"
   ],
   "window": {
     "backgroundTextStyle": "light",

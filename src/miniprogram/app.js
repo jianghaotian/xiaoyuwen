@@ -1,39 +1,33 @@
-//app.js
+const regeneratorRuntime = require('./libs/regenerator-runtime/runtime-module');
+const { login } = require('./utils/login');
+
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+  onLaunch: async function () {
+    wx.setStorageSync('token', '');
+    let token = '';
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
+    try {
+      token = await login();
+    } catch(e) {
+      // console.log(e);
+      wx.showToast({
+        title: e + '，将无法使用收藏夹和听音选字功能',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+    // 存储token
+    try {
+      wx.setStorageSync('token', token);
+      // let token1 = wx.getStorageSync('token') || ''
+      // console.log(token1);
+    } catch(e) {
+      console.log(e);
+      wx.showToast({
+        title: '程序错误，将无法使用收藏夹和听音选字功能',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   }
 })

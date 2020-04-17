@@ -1,32 +1,29 @@
 var express = require('express');
 var router = express.Router();
-var request = require('request');
 var {appId, appSecret} = require('../config').wechat;
+var {get} = require('../utils/requests');
+var {getToken, checkToken} = require('../utils/token');
 
 // 登录
-router.get('/login', function(req, res, next) {
+router.get('/login', async function(req, res, next) {
   let { code } = req.query;
   let url = `https://api.weixin.qq.com/sns/jscode2session?appid=${appId}&secret=${appSecret}&js_code=${code}&grant_type=authorization_code`
-
-  request(url, function (error, response, body) {
-    if (error) {
-      console.log(error);
-
-    } else {
-      if (response.statusCode == 200) {
-        console.log(body);
-        // "openid":"oGZ330Ce3Kh5dgedN8yhKidV147Q"
-
-      } else {
-        console.log(response.statusCode);
-
-      }
-    }
-
-  });
-
-  res.json({login: 'haha'});
-
+  let jsonData = {
+    status: 0,
+    data: ''
+  }
+  try {
+    let bodyObj = await get(url);
+    // console.log('bodyObj', bodyObj);
+    let token = getToken(bodyObj);
+    jsonData.data = token;
+    res.json(jsonData);
+  } catch (err) {
+    console.log('err', err);
+    jsonData.status = err;
+    res.json(jsonData);
+  }
 });
 
+// await checkToken(token);
 module.exports = router;
