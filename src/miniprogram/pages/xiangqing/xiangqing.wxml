@@ -28,6 +28,7 @@
                       <template is="dlaba" data="{{labaPlay}}"></template>
                     </view>
                     <text class="xq-x4">bo</text>
+                    
                     <text class="xq-x5">卜</text>
                 </view>
                 <view class="xq-x6">
