@@ -3,7 +3,7 @@
 <view class="overflow_x">
   <view class="topbar">
     <text>{{title}}</text>
-    <text class="small">{{count}}个</text>
+    <text class="small">{{list.length}}个</text>
   </view>
   <view class="placeholder"></view>
   <view class="zimu">
