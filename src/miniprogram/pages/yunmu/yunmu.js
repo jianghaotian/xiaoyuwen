@@ -1,5 +1,5 @@
 const regeneratorRuntime = require('../../libs/regenerator-runtime/runtime-module');
-const {getLayout, scrollTop} = require('../../utils/util');
+const { getLayout, scrollTop } = require('../../utils/util');
 
 Page({
 
@@ -8,16 +8,16 @@ Page({
    */
   data: {
     yunmu: [
-      {list: '单韵母', item: ['a', 'o', 'e', 'i', 'u', 'ü']},
-      {list: '复韵母', item: ['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er']},
-      {list: '前鼻韵母', item: ['an', 'en', 'in', 'un', 'ün']},
-      {list: '后鼻韵母', item: ['ang', 'eng', 'ing','ong']}
+      { list: '单韵母', item: ['a', 'o', 'e', 'i', 'u', 'ü'] },
+      { list: '复韵母', item: ['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er'] },
+      { list: '前鼻韵母', item: ['an', 'en', 'in', 'un', 'ün'] },
+      { list: '后鼻韵母', item: ['ang', 'eng', 'ing', 'ong'] }
     ],
     shengdiao: [
-      {list: '单韵母', item: ['ā','á','ǎ','à', 'ō','ò','ǒ','ó', 'ē','é','ě','è', 'ī','í','ǐ','ì', 'ū','ú','ǔ','ù', 'ǖ','ǘ','ǚ','ǜ']},
-      {list: '复韵母', item: ['āi','ái','ǎi','ài', 'ēi','éi','ěi','èi', 'uī','uí','uǐ','uì', 'āo','áo','ǎo','ào', 'ōu','òu','ǒu','óu', 'iū','iú','iǔ','iù', 'iē','ié','iě','iè', 'üē','üé','üě','üè', 'ēr','ér','ěr','èr']},
-      {list: '鼻韵母', item: ['ān','án','ǎn','àn', 'ēn','én','ěn','èn', 'īn','ín','ǐn','ìn', 'ūn','ún','ǔn','ùn', 'ǖn','ǘn','ǚn','ǜn','āng','áng','ǎng','àng', 'ēng','éng','ěng','èng', 'īng','íng','ǐng','ìng','ōng','òng','ǒng','óng']},
-      {list: '整体音', item: ['zhī','zhí','zhǐ','zhì','chī','chí','chǐ','chì','shī','shí','shǐ','shì','rī','rí','rǐ','rì','zī','zí','zǐ','zì','cī','cí','cǐ','cì','sī','sí','sǐ','sì','yī','yí','yǐ','yì','wū','wú','wǔ','wù','yū','yú','yǔ','yù','yē','yé','yě','yè','yuē','yué','yuě','yuè','yuān','yuán','yuǎn','yuàn','yīn','yín','yǐn','yìn','yūn','yún','yǔn','yùn','yīng','yíng','yǐng','yìng']}
+      { list: '单韵母', item: ['ā', 'á', 'ǎ', 'à', 'ō', 'ò', 'ǒ', 'ó', 'ē', 'é', 'ě', 'è', 'ī', 'í', 'ǐ', 'ì', 'ū', 'ú', 'ǔ', 'ù', 'ǖ', 'ǘ', 'ǚ', 'ǜ'] },
+      { list: '复韵母', item: ['āi', 'ái', 'ǎi', 'ài', 'ēi', 'éi', 'ěi', 'èi', 'uī', 'uí', 'uǐ', 'uì', 'āo', 'áo', 'ǎo', 'ào', 'ōu', 'òu', 'ǒu', 'óu', 'iū', 'iú', 'iǔ', 'iù', 'iē', 'ié', 'iě', 'iè', 'üē', 'üé', 'üě', 'üè', 'ēr', 'ér', 'ěr', 'èr'] },
+      { list: '鼻韵母', item: ['ān', 'án', 'ǎn', 'àn', 'ēn', 'én', 'ěn', 'èn', 'īn', 'ín', 'ǐn', 'ìn', 'ūn', 'ún', 'ǔn', 'ùn', 'ǖn', 'ǘn', 'ǚn', 'ǜn', 'āng', 'áng', 'ǎng', 'àng', 'ēng', 'éng', 'ěng', 'èng', 'īng', 'íng', 'ǐng', 'ìng', 'ōng', 'òng', 'ǒng', 'óng'] },
+      { list: '整体音', item: ['zhī', 'zhí', 'zhǐ', 'zhì', 'chī', 'chí', 'chǐ', 'chì', 'shī', 'shí', 'shǐ', 'shì', 'rī', 'rí', 'rǐ', 'rì', 'zī', 'zí', 'zǐ', 'zì', 'cī', 'cí', 'cǐ', 'cì', 'sī', 'sí', 'sǐ', 'sì', 'yī', 'yí', 'yǐ', 'yì', 'wū', 'wú', 'wǔ', 'wù', 'yū', 'yú', 'yǔ', 'yù', 'yē', 'yé', 'yě', 'yè', 'yuē', 'yué', 'yuě', 'yuè', 'yuān', 'yuán', 'yuǎn', 'yuàn', 'yīn', 'yín', 'yǐn', 'yìn', 'yūn', 'yún', 'yǔn', 'yùn', 'yīng', 'yíng', 'yǐng', 'yìng'] }
     ],
     topbarHeight: 44,
     viewHeight: 500,
@@ -25,7 +25,7 @@ Page({
     selectTab: 0,
     selected: 0,
     lastBottom: '300px',
-    scrollTopItem: [],  // 每个item距离顶部距离
+    scrollTopItem: [],
     scrollTop: 0,
     scrollInto: 't0',
     type: ''
@@ -48,8 +48,6 @@ Page({
         });
       }
     });
-
-    // TODO: 获取数据
     // console.log(options.id);
     if (options.id == 'yunmu') {
       this.setData({
@@ -57,14 +55,14 @@ Page({
         type: 'yunmu'
       });
     } else if (options.id == 'shengdiao') {
-
-
+      this.setData({
+        tab: this.data.shengdiao,
+        type: 'shengdiao'
+      });
     } else if (options.id == 'shoucang') {
 
 
     }
-
-
   },
 
   /**
@@ -85,7 +83,6 @@ Page({
       scrollTopItem: scrollTopItem,
       lastBottom: lastBottom + 'px'
     });
-
     // console.log(scrollTopItem);
   },
 
@@ -132,7 +129,7 @@ Page({
   },
 
   clickTab: function (e) {
-    let {id} = e.currentTarget.dataset;
+    let { id } = e.currentTarget.dataset;
     this.setData({
       selectTab: id,
       selected: 1
@@ -145,13 +142,13 @@ Page({
   bindScroll: function (e) {
     // console.log(e.detail.scrollTop);
     if (this.data.scrollTopItem.length < 2) {
-      return ;
+      return;
     }
     if (this.data.selected == 1) {
       this.setData({
         selected: 0
       });
-      return ;
+      return;
     }
     for (let i = 0; i < this.data.scrollTopItem.length; i++) {
       if (i == 0) {
@@ -159,7 +156,7 @@ Page({
           this.setData({
             selectTab: i
           });
-          return ;
+          return;
         }
       }
       if (e.detail.scrollTop >= this.data.scrollTopItem[i]) {
@@ -167,23 +164,27 @@ Page({
           this.setData({
             selectTab: i
           });
-          return ;
+          return;
         } else if (e.detail.scrollTop < this.data.scrollTopItem[i + 1]) {
           this.setData({
             selectTab: i
           });
-          return ;
+          return;
         }
       }
     }
   },
 
   clickOne: function (e) {
-    let {id} = e.currentTarget.dataset;
+    let { id } = e.currentTarget.dataset;
     // console.log(id);
-    wx.navigateTo({
-      url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
-    })
+    if (this.data.type == 'shengdiao') {
+
+    } else {
+      wx.navigateTo({
+        url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
+      })
+    }
   }
 
 })

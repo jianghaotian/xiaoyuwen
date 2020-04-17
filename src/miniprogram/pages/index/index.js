@@ -71,7 +71,5 @@ Page({
     wx.navigateTo({
       url: `../${to}/${to}?id=${id}`
     });
-
   }
-
 })

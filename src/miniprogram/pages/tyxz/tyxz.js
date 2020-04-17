@@ -1,4 +1,3 @@
-// pages/tyxz/tyxz.js
 Page({
 
   /**
@@ -65,7 +64,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  problem:function(e){
+  problem: function(e){
     let {id} = e.currentTarget.dataset;
     wx.navigateTo({
       url: `./tyxzti?id=${id}`,

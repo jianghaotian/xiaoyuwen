@@ -1,5 +1,4 @@
-<!--pages/xiangqing/xiangqing.wxml-->
-<import src="../../template/laba.wxml" />
+<import src="/template/laba.wxml" />
 
 <view class="topbar">
 	<text>{{show}}</text>

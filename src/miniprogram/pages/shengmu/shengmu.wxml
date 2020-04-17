@@ -1,4 +1,4 @@
-<import src="../../template/laba.wxml"/>
+<import src="/template/laba.wxml"/>
 
 <view class="overflow_x">
   <view class="topbar">

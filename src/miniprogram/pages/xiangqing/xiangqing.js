@@ -6,28 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // id: '',
-    // shengmu:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
-    // zhengtiyin:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],
-    // yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ'],
-    // list: ['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
-    // count: 23,
-    // status: false,
     current: 0,
     labaPlay: 0,
     show: '',
     list: [],
     id: ''
-
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    let {id, type, index} = options;
+    let {id, type} = options;
     let show = '';
     let list = [];
     if (type == 'shengmu') {
@@ -105,14 +95,11 @@ Page({
       }
     }
   },
-  detailPage:function(e){
-    let {id} = e.currentTarget.dataset;
-    // console.log(id);
-  },
-  collect:function(e){
-    this.setData({
-      status:!this.data.status
 
+  // 收藏
+  collect: function(e){
+    this.setData({
+      status: !this.data.status
    })
   }
 })
