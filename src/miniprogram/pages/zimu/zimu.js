@@ -69,7 +69,7 @@ Page({
   playAudio: function (e) {
     let {id} = e.currentTarget.dataset;
     // console.log(id);
-    var audio = wx.createInnerAudioContext();  
+    let audio = wx.createInnerAudioContext();  
     audio.src = `https://xyw.htapi.pub/v2/audios/zimu/${id}.mp3`;
     audio.autoplay = true;
     audio.onPlay(() => {

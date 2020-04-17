@@ -101,5 +101,22 @@ Page({
     this.setData({
       status: !this.data.status
    })
+  },
+
+  // 点击播放音频
+  playAudio: function (e) {
+    let audioFile = e.currentTarget.dataset.audio;
+    // console.log(audio);
+    let audio = wx.createInnerAudioContext();  
+    audio.src = `https://xyw.htapi.pub/v2/audios/pinyin/${audioFile}`;
+    audio.autoplay = true;
+    audio.onPlay(() => {
+      this.setData({labaPlay: 1});
+      // console.log(audioFile, 'onPlay');
+    });
+    audio.onEnded(() => {
+      this.setData({labaPlay: 0});
+      // console.log(audioFile, 'onEnded');
+    });
   }
 })
