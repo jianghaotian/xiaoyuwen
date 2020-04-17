@@ -52,14 +52,14 @@
      height: 60rpx;
      text-align: center;
      font-size: 45rpx;
-     color: black;
+     color: white;
  }
  .xq-x5{
     width: 100rpx;
     height: 60rpx;
     text-align: center;
     font-size: 45rpx;
-    color: black;
+    color: white;
  }
  .xq-x6{
      width:300rpx;
