@@ -129,9 +129,9 @@ Page({
       let audio = wx.createInnerAudioContext();
       if (id == this.data.ti[this.data.num].answer) {
         this.setData({score: this.data.score + 1});
-        audio.src = '/audio/zhengque.wav';
+        audio.src = '/audio/zhengque.mp3';
       } else {
-        audio.src = '/audio/cuowu.wav';
+        audio.src = '/audio/cuowu.mp3';
       }
       audio.autoplay = true;
       setTimeout(() => {
@@ -139,6 +139,17 @@ Page({
           selected: 0,
           select: '',
           num: this.data.num + 1
+        }, () => {
+          // 过关
+          if (this.data.num >= 10) {
+            let lastAudio = wx.createInnerAudioContext();
+            if (this.data.score < 6) {
+              lastAudio.src = '/audio/shibai.mp3';
+            } else {
+              lastAudio.src = '/audio/guoguan.mp3';
+            }
+            lastAudio.autoplay = true;
+          }
         });
       }, 1000);
     }

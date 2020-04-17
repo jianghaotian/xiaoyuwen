@@ -1,2 +1,23 @@
-<!--pages/yunmu/yunmu.wxml-->
-<text>pages/yunmu/yunmu.wxml</text>
+<view class="overflow_x">
+  <view class="topbar">
+    <view wx:for="{{tab}}" wx:key="index" class="tabitem" bindtap="clickTab" data-id="{{index}}">
+      <text class="{{selectTab == index ? 'select' : ''}}">{{item.list}}</text>
+    </view>
+  </view>
+  <view class="placeholder"></view>
+
+  <scroll-view class="scrollview" style="height: {{viewHeight + 'px'}}" scroll-y="true" scroll-with-animation="true"  scroll-into-view="{{scrollInto}}" bindscroll="bindScroll">
+    <view class="zimu" wx:for="{{tab}}" wx:key="index" id="{{'t' + index}}" style="{{index == tab.length - 1 ? 'margin-bottom:' + lastBottom : ''}}">
+      <view class="title">
+        <text>{{item.list}}</text>
+      </view>
+      <view wx:for="{{item.item}}" wx:key="index" bindtap="clickOne" data-id="{{item}}" class="zimu_block">
+        <text>
+          {{item}}
+        </text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
