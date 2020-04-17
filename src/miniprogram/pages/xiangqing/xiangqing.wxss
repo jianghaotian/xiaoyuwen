@@ -3,7 +3,7 @@
 
  .xq-x1{
      width: 320rpx;
-     margin-left: 20rpx;
+     margin-left: 30rpx;
      /* margin-top: 15rpx; */
      display: flex;
      height: 240rpx;
@@ -31,7 +31,7 @@
  }
  .xq-x2{
      width: 100rpx;
-     margin-right: 70rpx;
+     margin-right: 30rpx;
      margin-top: 25rpx;
      height: 200rpx;
      float: right;
