@@ -1,4 +1,5 @@
-// pages/xiangqing/xiangqing.js
+const xiangqingData = require('./data');
+
 Page({
 
   /**
@@ -9,11 +10,16 @@ Page({
     // shengmu:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
     // zhengtiyin:['zhi','chi','shi','ri','zi','ci','si','yi','wu','yu','ye','yue','yuan','yin','yun','ying'],
     // yunmu:['a','o','e','i','u','ü','ai','ei','ui','ao','ou','iu','ie','üe','er','ɑn','en','in','un','ün','ɑnɡ','enɡ','inɡ','onɡ'],
-    list:['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
-    count:23,
-    status:false,
-    current:0,
-    labaPlay:1
+    // list: ['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s','y','w'],
+    // count: 23,
+    // status: false,
+    current: 0,
+    labaPlay: 0,
+    show: '',
+    list: [],
+    id: ''
+
+
   },
 
   /**
@@ -21,6 +27,26 @@ Page({
    */
   onLoad: function (options) {
     
+    let {id, type, index} = options;
+    let show = '';
+    let list = [];
+    if (type == 'shengmu') {
+      show = '声母';
+      list = xiangqingData.shengmu;
+    } else if (type == 'yunmu') {
+      show = '韵母';
+      list = xiangqingData.yunmu;
+    } else if (type == 'zhengtiyin') {
+      show = '整体音';
+      list = xiangqingData.zhengtiyin;
+    }
+    let current = this.findAInArrName(list, id);
+    this.setData({
+      show,
+      list,
+      id,
+      current
+    });
   },
 
   /**
@@ -47,29 +73,8 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function (options) {
-    console.log(options);
-    if(options.id == 'zhengtiyin'){
-      this.setData({
-        list:this.data.zhengtiyin,
-        title:"整体音",
-        count:16
-      })
-    }
-    else if(options.id == 'shengmu'){
-      this.setData({
-        list:this.data.shengmu,
-        title:"声母",
-        count:23
-      })
-    }
-    else if(options.id == 'yunmu'){
-      this.setData({
-        list:this.data.yunmu,
-        title:"韵母",
-        count:24
-      })
-    }
+  onUnload: function () {
+
   },
 
   /**
@@ -92,9 +97,17 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  findAInArrName: function (arr, a) {
+    for (let i = 0; i < arr.length; ++i) {
+      if (arr[i].name == a) {
+        return i;
+      }
+    }
+  },
   detailPage:function(e){
     let {id} = e.currentTarget.dataset;
-    console.log(id);
+    // console.log(id);
   },
   collect:function(e){
     this.setData({

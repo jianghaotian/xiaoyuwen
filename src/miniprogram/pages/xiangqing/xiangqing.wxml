@@ -1,48 +1,43 @@
 <!--pages/xiangqing/xiangqing.wxml-->
-<import src="../../template/laba.wxml"/>
+<import src="../../template/laba.wxml" />
 
 <view class="topbar">
-  <text>声母</text>
+	<text>{{show}}</text>
 </view>
 <view class="placeholder"></view>
 <view>
-    <view>
-      <swiper class="xq-x12" current="{{current===0?0:current}}">
-        <block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
-          <swiper-item>
-            <view class="xq-x11">
-            
-                <text class="xq-x9">第{{index+1}}/{{count}}个</text>
-                
-                <view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
-            </view>
-            <view style="background:url('/images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
-                <view class="xq-x1">
-                  <view class="xq-x15"></view>
-                  <view class="xq-x15"></view>
-                  <view class="xq-x15 xq-x16"></view>
-                  <text class="xq-x14">{{item}}</text>
-                </view>
-                <view class="xq-x2">
-                    <view class="xq-x3">
-                      <template is="dlaba" data="{{labaPlay}}"></template>
-                    </view>
-                    <text class="xq-x4">bo</text>
-                    
-                    <text class="xq-x5">卜</text>
-                </view>
-                <view class="xq-x6">
-                    <text class="xq-x7">萝卜</text>
-                    <text class="xq-x7">拔河</text>
-                </view>
-            </view>
-            <view style="background:url('/images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;" >    
-                <image src="/images/shengmu.jpg" class="xq-x8"/>
-            </view>
-          </swiper-item>
-        </block>
-      </swiper>
-    </view>
+	<view>
+		<swiper class="xq-x12" current="{{current}}">
+			<block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
+				<swiper-item>
+					<view class="xq-x11">
+						<text class="xq-x9">第{{index + 1}}/{{list.length}}个</text>
+						<view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
+					</view>
+					<view style="background:url('/images/board2.png');background-repeat: no-repeat;background-size: 100% 100%;background-position: center 0;width: 530rpx;height:380rpx;padding:65rpx;margin:0 auto;">
+						<view class="xq-x1">
+							<view class="xq-x15"></view>
+							<view class="xq-x15"></view>
+							<view class="xq-x15 xq-x16"></view>
+							<text class="xq-x14">{{item.name}}</text>
+						</view>
+						<view class="xq-x2">
+							<view class="xq-x3">
+								<template is="dlaba" data="{{labaPlay}}"></template>
+							</view>
+							<text class="xq-x4">{{item.spell}}</text>
+							<text class="xq-x5">{{item.word}}</text>
+						</view>
+						<view class="xq-x6">
+							<text class="xq-x7">{{item.example[0]}}</text>
+							<text class="xq-x7">{{item.example[1]}}</text>
+						</view>
+					</view>
+					<view style="background:url('/images/ding.png');background-repeat: no-repeat;background-size:100% 100%;background-position: center 0;width: 470rpx;height:300rpx;padding:90rpx 80rpx  65rpx  30rpx;margin:20rpx auto 0;">
+						<image src="/images/shengmu.jpg" class="xq-x8" />
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
 </view>
-    
-
