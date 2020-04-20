@@ -8,33 +8,13 @@ function runSql(sql, data) {
   return new Promise((resolve, reject) => {
     pool.getConnection(function (err, connection) {
       if (err) {
-        let jsonData = {
-          status: err.errno,
-          message: err.sqlMessage,
-          data: {
-            code: err.code
-          }
-        }
-        reject(jsonData);
+        reject(err);
       } else {
         connection.query(sql, data, function (err, result) {
           if (err) {
-            let jsonData = {
-              status: err.errno,
-              message: err.sqlMessage,
-              data: {
-                sql: err.sql,
-                code: err.code
-              }
-            }
-            reject(jsonData);
+            reject(err);
           } else {
-            let jsonData = {
-              status: 0,
-              message: 'OK',
-              data: result
-            }
-            resolve(jsonData);
+            resolve(result);
           }
           connection.release();
         });

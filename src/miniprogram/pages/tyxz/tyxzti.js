@@ -5,69 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ti: [{
-      pinyin:'hào',
-      question:['啦','噜','皓','天'],
-      answer:'皓',
-    },
-    {
-      pinyin:'yán',
-      question:['嘟','哒','王','炎'],
-      answer:'炎',
-    },
-    {
-      pinyin:'shuāng',
-      question:['滴','哒','毅','双'],
-      answer:'双',
-    },
-    {
-      pinyin:'shí',
-      question:['时','针','心','彤'],
-      answer:'时',
-    },
-    {
-      pinyin:'dòng',
-      question:['转','动','丽','娜'],
-      answer:'动',
-    },
-    {
-      pinyin:'wǒ',
-      question:['可','是','我','不'],
-      answer:'我',
-    },
-    {
-      pinyin:'mén',
-      question:['知','道','你','们'],
-      answer:'们',
-    },
-    {
-      pinyin:'huì',
-      question:['会','什','么','拼'],
-      answer:'会',
-    },
-    {
-      pinyin:'lā',
-      question:['音','啦','那','就'],
-      answer:'啦',
-    },
-    {
-      pinyin:'hǎo',
-      question:['这','样','好','了'],
-      answer:'好',
-    }],
+    ti: [],
     num: 0,
     select: '',
     selected: 0,
     score: 0,
     labaPlay: 0,
-
+    id: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let {id} = options;
+    this.setData({
+      id: id
+    })
+    wx.request({
+      url: 'https://xyw.htapi.pub/v2/tyxz/getti',
+      data: {
+        id: id
+      },
+      success: (res) => {
+        if (res.data.status == 0) {
+          // console.log(res.data.data);  // 返回数据
+          this.setData({ti: res.data.data});
+        } else {
+          wx.showToast({
+            title: '题目获取失败',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      },
+      fail (res) {
+        // console.log('无法连接到服务器 ' + res);
+        wx.showToast({
+          title: '无法连接到服务器',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    });
   },
 
   /**
@@ -149,6 +129,34 @@ Page({
               lastAudio.src = '/audio/guoguan.mp3';
             }
             lastAudio.autoplay = true;
+            // 发送数据
+            let token = wx.getStorageSync('token') || '';
+            wx.request({
+              url: 'https://xyw.htapi.pub/v2/tyxz/submitti',
+              method: 'POST',
+              data: {
+                score: this.data.score,
+                id: this.data.id,
+                token: token
+              },
+              success: (res) => {
+                if (res.data.status != 0) {
+                  wx.showToast({
+                    title: '成绩上传失败',
+                    icon: 'none',
+                    duration: 2000
+                  })
+                }
+              },
+              fail (res) {
+                // console.log('无法连接到服务器 ' + res);
+                wx.showToast({
+                  title: '无法连接到服务器，成绩上传失败',
+                  icon: 'none',
+                  duration: 2000
+                })
+              }
+            });
           }
         });
       }, 1000);

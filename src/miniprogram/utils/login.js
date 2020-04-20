@@ -19,13 +19,13 @@ function login () {
                   reject('登录失败');
                 }
               } else {
-                // console.log('无法连接到服务器', res);
+                // console.log('无法连接到服务器（可能服务器问题）', res);
                 reject('无法连接到服务器');
               }
             },
             fail (res) {
-              // console.log('网络连接失败 ' + res);
-              reject('网络连接失败');
+              // console.log('无法连接到服务器 ' + res);
+              reject('无法连接到服务器');
             }
           });
         } else {
