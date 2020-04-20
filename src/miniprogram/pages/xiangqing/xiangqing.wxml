@@ -13,7 +13,7 @@
 						<text class="xq-x9">第{{index + 1}}/{{list.length}}个</text>
 						<view class="xq-x10 iconfont {{status?'iconxingxing1 xq-x13':'iconxingxing'}} " bindtap="collect"></view>
 					</view>
-					<view class="hb-view" style="background-image:url('/images/board2.png');">
+					<view class="hb-view">
 						<view class="xq-x1">
 							<view class="xq-x15"></view>
 							<view class="xq-x15"></view>
@@ -32,7 +32,7 @@
 							<text class="xq-x7">{{item.example[1]}}</text>
 						</view>
 					</view>
-					<view class="img-view" style="background-image:url('/images/ding.png');">
+					<view class="img-view">
 						<image src="{{'https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/images/pinyin/' + item.image}}" class="xq-x8" />
 						<!-- <image src="{{'https://xyw.htapi.pub/v2/images/pinyin/' + item.image}}" class="xq-x8" /> -->
 					</view>
