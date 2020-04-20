@@ -59,8 +59,11 @@ Page({
         tab: this.data.shengdiao,
         type: 'shengdiao'
       });
-    } else if (options.id == 'shoucang') {
-
+    } else if (options.id == 'shoucangjia') {
+      this.setData({
+        tab: [{ list: '玩命开发中...', item: [] }],
+        type: 'shoucangjia'
+      });
 
     }
   },
