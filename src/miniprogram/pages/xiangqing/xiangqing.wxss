@@ -97,7 +97,7 @@
 .xq-x10 {
     position: absolute;
     right: 100rpx;
-    bottom: 5rpx;
+    bottom: 28rpx;
     font-size: 60rpx;
 }
 
