@@ -20,7 +20,7 @@ router.get('/login', async function(req, res, next) {
     res.json(jsonData);
   } catch (err) {
     console.log('err', err);
-    jsonData.status = err;
+    jsonData.status = -1;
     res.json(jsonData);
   }
 });
