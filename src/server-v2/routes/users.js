@@ -25,5 +25,4 @@ router.get('/login', async function(req, res, next) {
   }
 });
 
-// await checkToken(token);
 module.exports = router;

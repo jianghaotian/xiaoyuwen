@@ -6,7 +6,7 @@
       <text>第{{num + 1}}/{{ti.length}}题</text>
     </view>
     <view class="tyxzti_pinyinbox">
-      <view class="tyxzti_laba">
+      <view class="tyxzti_laba" bindtap="tapLaba" data-zi="{{ti[num].answer}}">
         <template is="dlaba" data="{{labaPlay}}"></template>
       </view>
       <view class="tyxzti_pinyin">
