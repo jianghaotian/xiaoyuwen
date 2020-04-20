@@ -1,19 +1,22 @@
+const regeneratorRuntime = require('../../libs/regenerator-runtime/runtime-module');
+const { login } = require('../../utils/login');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    problems:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+    problems: [],
+    canTap: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({
-      nums:this.data.problems
-    })
+  onLoad: async function (options) {
+
+
   },
 
   /**
@@ -27,6 +30,71 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    let token = wx.getStorageSync('token') || '';
+    if (token == '') {
+      wx.showToast({
+        title: '获取账号信息失败，请重新打开小程序',
+        icon: 'none',
+        duration: 2000
+      })
+    } else {
+      wx.request({
+        url: 'https://xyw.htapi.pub/v2/tyxz/getguan',
+        data: {
+          token: token
+        },
+        success: (res) => {
+          if (res.statusCode == 200) {  // 服务器返回200
+            if (res.data.status == 0) {  // 服务器手动返回0
+              // console.log(res.data.data);  // 通过关卡情况
+              let all = res.data.all || 30;
+              let problems = [];
+              for (let i = 0; i < all; i++) {
+                let scoreOne = '';
+                if (res.data.data[i] != undefined) {
+                  scoreOne = res.data.data[i].score;
+                }
+                problems.push({
+                  num: i + 1,
+                  score: scoreOne
+                })
+              }
+              let scoreLen = res.data.data.length;
+              let canTap = scoreLen;
+              if (res.data.data[scoreLen - 1].score < 6) {
+                canTap = scoreLen - 1;
+              }
+              this.setData({
+                problems, canTap
+              })
+            } else {
+              wx.showToast({
+                title: '身份信息错误，请重新打开小程序',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+          } else {
+            // console.log('无法连接到服务器（可能服务器问题）', res);
+            wx.showToast({
+              title: '无法连接到服务器',
+              icon: 'none',
+              duration: 2000
+            })
+          }
+        },
+        fail (res) {
+          // console.log('无法连接到服务器 ' + res);
+          wx.showToast({
+            title: '无法连接到服务器',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      });
+
+    }
 
   },
 
@@ -66,8 +134,10 @@ Page({
   },
   problem: function(e){
     let {id} = e.currentTarget.dataset;
-    wx.navigateTo({
-      url: `./tyxzti?id=${id}`,
-    })
+    if (id <= this.data.canTap + 1) {
+      wx.navigateTo({
+        url: `./tyxzti?id=${id}`,
+      })
+    }
   }
 })

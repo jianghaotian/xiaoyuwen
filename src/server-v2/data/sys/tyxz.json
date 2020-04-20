@@ -1,0 +1,1046 @@
+{
+  "t1": [
+    {
+      "pinyin": "yī",
+      "question": ["一", "二", "三", "天"],
+      "answer": "一"
+    },
+    {
+      "pinyin": "dì",
+      "question": ["笔", "第", "毫", "里"],
+      "answer": "第"
+    },
+    {
+      "pinyin": "gè",
+      "question": ["个", "人", "伞", "竹"],
+      "answer": "个"
+    },
+    {
+      "pinyin": "shí",
+      "question": ["十", "米", "木", "本"],
+      "answer": "十"
+    },
+    {
+      "pinyin": "tóu",
+      "question": ["大", "头", "斗", "丈"],
+      "answer": "头"
+    },
+    {
+      "pinyin": "hé",
+      "question": ["禾", "千", "秧", "米"],
+      "answer": "禾"
+    },
+    {
+      "pinyin": "hé",
+      "question": ["苗", "笛", "宙", "茵"],
+      "answer": "苗"
+    },
+    {
+      "pinyin": "shàng",
+      "question": ["上", "土", "下", "丁"],
+      "answer": "上"
+    },
+    {
+      "pinyin": "bā",
+      "question": ["八", "人", "入", "分"],
+      "answer": "八"
+    },
+    {
+      "pinyin": "dì",
+      "question": ["地", "拖", "也", "哋"],
+      "answer": "地"
+    }
+  ],
+  "t2": [
+    {
+      "pinyin": "jiè",
+      "question": ["戒", "戈", "伐", "升"],
+      "answer": "戒"
+    },
+    {
+      "pinyin": "chū",
+      "question": ["出", "咄", "绌", "础"],
+      "answer": "出"
+    },
+    {
+      "pinyin": "xiǎo",
+      "question": ["小", "少", "尖", "木"],
+      "answer": "小"
+    },
+    {
+      "pinyin": "huǒ",
+      "question": ["火", "灭", "炎", "烦"],
+      "answer": "火"
+    },
+    {
+      "pinyin": "kè",
+      "question": ["课", "棵", "稞", "果"],
+      "answer": "课"
+    },
+    {
+      "pinyin": "wén",
+      "question": ["文", "义", "艾", "攵"],
+      "answer": "文"
+    },
+    {
+      "pinyin": "zǐ",
+      "question": ["子", "了", "孒", "孓"],
+      "answer": "子"
+    },
+    {
+      "pinyin": "jiǔ",
+      "question": ["九", "丸", "力", "几"],
+      "answer": "九"
+    },
+    {
+      "pinyin": "wú",
+      "question": ["无", "圥", "天", "夫"],
+      "answer": "无"
+    },
+    {
+      "pinyin": "kǒu",
+      "question": ["口", "日", "曰", "回"],
+      "answer": "口"
+    }
+  ],
+  "t3": [
+    {
+      "pinyin": "rì",
+      "question": ["日", "目", "曰", "旦"],
+      "answer": "日"
+    },
+    {
+      "pinyin": "zhōng",
+      "question": ["中", "由", "甲", "田"],
+      "answer": "中"
+    },
+    {
+      "pinyin": "jiān",
+      "question": ["间", "问", "闸", "闫"],
+      "answer": "间"
+    },
+    {
+      "pinyin": "yuè",
+      "question": ["月", "用", "冃", "目"],
+      "answer": "月"
+    },
+    {
+      "pinyin": "yá",
+      "question": ["牙", "我", "你", "齿"],
+      "answer": "牙"
+    },
+    {
+      "pinyin": "bú",
+      "question": ["不", "丕", "木", "还"],
+      "answer": "不"
+    },
+    {
+      "pinyin": "kāi",
+      "question": ["开", "升", "井", "并"],
+      "answer": "开"
+    },
+    {
+      "pinyin": "ěr",
+      "question": ["耳", "身", "朵", "耿"],
+      "answer": "耳"
+    },
+    {
+      "pinyin": "mǐ",
+      "question": ["米", "木", "本", "十"],
+      "answer": "米"
+    },
+    {
+      "pinyin": "kàn",
+      "question": ["看", "瞅", "喵", "盯"],
+      "answer": "看"
+    }
+  ],
+  "t4": [
+    {
+      "pinyin": "jiàn",
+      "question": ["见", "贝", "你", "是"],
+      "answer": "见"
+    },
+    {
+      "pinyin": "bái",
+      "question": ["白", "甶", "自", "百"],
+      "answer": "白"
+    },
+    {
+      "pinyin": "sè",
+      "question": ["色", "邑", "芭", "夿"],
+      "answer": "色"
+    },
+    {
+      "pinyin": "yě",
+      "question": ["野", "埋", "理", "狸"],
+      "answer": "野"
+    },
+    {
+      "pinyin": "diàn",
+      "question": ["电", "龟", "曳", "甲"],
+      "answer": "电"
+    },
+    {
+      "pinyin": "lì",
+      "question": ["力", "刀", "办", "刃"],
+      "answer": "力"
+    },
+    {
+      "pinyin": "zhǎng",
+      "question": ["长", "卡", "夭", "卞"],
+      "answer": "长"
+    },
+    {
+      "pinyin": "gāo",
+      "question": ["高", "亭", "亨", "畗"],
+      "answer": "高"
+    },
+    {
+      "pinyin": "fēi",
+      "question": ["飞", "乙", "虱", "厂"],
+      "answer": "飞"
+    },
+    {
+      "pinyin": "niǎo",
+      "question": ["鸟", "乌", "岛", "鸣"],
+      "answer": "鸟"
+    }
+  ],
+  "t5": [
+    {
+      "pinyin": "mǎ",
+      "question": ["马", "乌", "妈", "吗"],
+      "answer": "马"
+    },
+    {
+      "pinyin": "jiào",
+      "question": ["叫", "纠", "叩", "喊"],
+      "answer": "叫"
+    },
+    {
+      "pinyin": "yún",
+      "question": ["云", "去", "丢", "丟"],
+      "answer": "云"
+    },
+    {
+      "pinyin": "duǒ",
+      "question": ["朵", "发", "跺", "垛"],
+      "answer": "朵"
+    },
+    {
+      "pinyin": "gōng",
+      "question": ["公", "么", "幺", "厶"],
+      "answer": "公"
+    },
+    {
+      "pinyin": "jiāo",
+      "question": ["交", "狡", "校", "效"],
+      "answer": "交"
+    },
+    {
+      "pinyin": "chē",
+      "question": ["车", "库", "厍", "唔"],
+      "answer": "车"
+    },
+    {
+      "pinyin": "niú",
+      "question": ["牛", "午", "生", "眸"],
+      "answer": "牛"
+    },
+    {
+      "pinyin": "yáng",
+      "question": ["羊", "详", "样", "鲜"],
+      "answer": "羊"
+    },
+    {
+      "pinyin": "duō",
+      "question": ["多", "灸", "夕", "名"],
+      "answer": "多"
+    }
+  ],
+  "t6": [
+    {
+      "pinyin": "shǎo",
+      "question": ["少", "小", "尐", "尛"],
+      "answer": "少"
+    },
+    {
+      "pinyin": "máo",
+      "question": ["毛", "乇", "毡", "毯"],
+      "answer": "毛"
+    },
+    {
+      "pinyin": "chǐ",
+      "question": ["尺", "尺", "尽", "尼"],
+      "answer": "尺"
+    },
+    {
+      "pinyin": "qì",
+      "question": ["气", "乞", "氕", "氘"],
+      "answer": "气"
+    },
+    {
+      "pinyin": "shuǐ",
+      "question": ["水", "永", "氷", "泵"],
+      "answer": "水"
+    },
+    {
+      "pinyin": "shǒu",
+      "question": ["手", "毛", "丰", "拿"],
+      "answer": "手"
+    },
+    {
+      "pinyin": "guǎng",
+      "question": ["广", "厂", "病", "鹿"],
+      "answer": "广"
+    },
+    {
+      "pinyin": "qǐ",
+      "question": ["起", "趟", "越", "超"],
+      "answer": "起"
+    },
+    {
+      "pinyin": "zú",
+      "question": ["足", "是", "促", "跛"],
+      "answer": "足"
+    },
+    {
+      "pinyin": "lù",
+      "question": ["路", "洛", "络", "骆"],
+      "answer": "路"
+    }
+  ],
+  "t7": [
+    {
+      "pinyin": "fāng",
+      "question": ["方", "万", "防", "房"],
+      "answer": "方"
+    },
+    {
+      "pinyin": "bàn",
+      "question": ["半", "芈", "版", "班"],
+      "answer": "半"
+    },
+    {
+      "pinyin": "zuò",
+      "question": ["作", "昨", "炸", "诈"],
+      "answer": "作"
+    },
+    {
+      "pinyin": "yè",
+      "question": ["业", "亚", "也", "爷"],
+      "answer": "业"
+    },
+    {
+      "pinyin": "yuán",
+      "question": ["原", "院", "远", "渊"],
+      "answer": "原"
+    },
+    {
+      "pinyin": "shū",
+      "question": ["书", "树", "数", "熟"],
+      "answer": "书"
+    },
+    {
+      "pinyin": "dōng",
+      "question": ["东", "冻", "栋", "懂"],
+      "answer": "东"
+    },
+    {
+      "pinyin": "jiā",
+      "question": ["家", "稼", "嫁", "冢"],
+      "answer": "家"
+    },
+    {
+      "pinyin": "piàn",
+      "question": ["片", "牌", "版", "偏"],
+      "answer": "片"
+    },
+    {
+      "pinyin": "guǒ",
+      "question": ["果", "里", "呆", "杲"],
+      "answer": "果"
+    }
+  ],
+  "t8": [
+    {
+      "pinyin": "huó",
+      "question": ["活", "沽", "㓉", "祸"],
+      "answer": "活"
+    },
+    {
+      "pinyin": "miàn",
+      "question": ["面", "而", "免", "绵"],
+      "answer": "面"
+    },
+    {
+      "pinyin": "chù",
+      "question": ["处", "外", "出", "除"],
+      "answer": "处"
+    },
+    {
+      "pinyin": "jiǎ",
+      "question": ["甲", "由", "加", "申"],
+      "answer": "甲"
+    },
+    {
+      "pinyin": "yú",
+      "question": ["鱼", "鲁", "与", "雨"],
+      "answer": "鱼"
+    },
+    {
+      "pinyin": "jīn",
+      "question": ["今", "令", "吟", "进"],
+      "answer": "今"
+    },
+    {
+      "pinyin": "zhèng",
+      "question": ["正", "止", "企", "整"],
+      "answer": "正"
+    },
+    {
+      "pinyin": "dāng",
+      "question": ["当", "刍", "挡", "档"],
+      "answer": "当"
+    },
+    {
+      "pinyin": "liǎng",
+      "question": ["两", "俩", "辆", "亮"],
+      "answer": "两"
+    },
+    {
+      "pinyin": "nián",
+      "question": ["年", "牛", "午", "念"],
+      "answer": "年"
+    }
+  ],
+  "t9": [
+    {
+      "pinyin": "zuǒ",
+      "question": ["左", "右", "作", "昨"],
+      "answer": "左"
+    },
+    {
+      "pinyin": "wù",
+      "question": ["物", "唔", "无", "五"],
+      "answer": "物"
+    },
+    {
+      "pinyin": "yuán",
+      "question": ["园", "国", "渊", "院"],
+      "answer": "园"
+    },
+    {
+      "pinyin": "dīng",
+      "question": ["丁", "了", "于", "定"],
+      "answer": "丁"
+    },
+    {
+      "pinyin": "bǎi",
+      "question": ["百", "白", "掰", "败"],
+      "answer": "百"
+    },
+    {
+      "pinyin": "shuō",
+      "question": ["说", "悦", "兑", "硕"],
+      "answer": "说"
+    },
+    {
+      "pinyin": "huà",
+      "question": ["话", "花", "舌", "华"],
+      "answer": "话"
+    },
+    {
+      "pinyin": "péng",
+      "question": ["朋", "崩", "蹦", "碰"],
+      "answer": "朋"
+    },
+    {
+      "pinyin": "chūn",
+      "question": ["春", "稻", "纯", "唇"],
+      "answer": "春"
+    },
+    {
+      "pinyin": "hóng",
+      "question": ["红", "工", "绿", "哄"],
+      "answer": "红"
+    }
+  ],
+  "t10": [
+    {
+      "pinyin": "suì",
+      "question": ["岁", "随", "虽", "多"],
+      "answer": "岁"
+    },
+    {
+      "pinyin": "qīn",
+      "question": ["亲", "琴", "秦", "沁"],
+      "answer": "亲"
+    },
+    {
+      "pinyin": "gǔ",
+      "question": ["古", "杏", "舌", "吉"],
+      "answer": "古"
+    },
+    {
+      "pinyin": "dài",
+      "question": ["代", "伐", "歹", "呆"],
+      "answer": "代"
+    },
+    {
+      "pinyin": "yīn",
+      "question": ["音", "引", "银", "印"],
+      "answer": "音"
+    },
+    {
+      "pinyin": "dào",
+      "question": ["到", "至", "岛", "捣"],
+      "answer": "到"
+    },
+    {
+      "pinyin": "máng",
+      "question": ["忙", "虻", "莽", "满"],
+      "answer": "忙"
+    },
+    {
+      "pinyin": "zhēn",
+      "question": ["真", "直", "镇", "嗔"],
+      "answer": "真"
+    },
+    {
+      "pinyin": "dǎ",
+      "question": ["打", "丁", "答", "搭"],
+      "answer": "打"
+    },
+    {
+      "pinyin": "quán",
+      "question": ["全", "圈", "仝", "劝"],
+      "answer": "全"
+    }
+  ],
+
+  "TODO": ["t11 - t20"],
+
+  "t21": [
+    {
+      "pinyin": "chuān",
+      "question": ["穿", "穷", "窜", "传"],
+      "answer": "穿"
+    },
+    {
+      "pinyin": "dǎ",
+      "question": ["拍", "打", "搭", "提"],
+      "answer": "打"
+    },
+    {
+      "pinyin": "yóu",
+      "question": ["放", "激", "游", "浪"],
+      "answer": "游"
+    },
+    {
+      "pinyin": "zhāo",
+      "question": ["招", "扶", "打", "超"],
+      "answer": "招"
+    },
+    {
+      "pinyin": "yáo",
+      "question": ["挠", "翘", "药", "摇"],
+      "answer": "摇"
+    },
+    {
+      "pinyin": "huàng",
+      "question": ["黄", "晁", "旯", "晃"],
+      "answer": "晃"
+    },
+    {
+      "pinyin": "shèng",
+      "question": ["盔", "城", "晨", "盛"],
+      "answer": "盛"
+    },
+    {
+      "pinyin": "huān",
+      "question": ["观", "欢", "欲", "焕"],
+      "answer": "欢"
+    },
+    {
+      "pinyin": "chàng",
+      "question": ["唱", "喝", "喊", "渴"],
+      "answer": "唱"
+    },
+    {
+      "pinyin": "yáng",
+      "question": ["汤", "扬", "搭", "养"],
+      "answer": "扬"
+    }
+  ],
+  "t22": [
+    {
+      "pinyin": "piāo",
+      "question": ["漂", "飘", "栗", "贾"],
+      "answer": "飘"
+    },
+    {
+      "pinyin": "rè",
+      "question": ["熟", "熊", "惹", "热"],
+      "answer": "热"
+    },
+    {
+      "pinyin": "nào",
+      "question": ["闪", "闲", "闹", "闯"],
+      "answer": "闹"
+    },
+    {
+      "pinyin": "gǔ",
+      "question": ["古", "吉", "串", "苦"],
+      "answer": "古"
+    },
+    {
+      "pinyin": "lǎo",
+      "question": ["孝", "考", "老", "夸"],
+      "answer": "老"
+    },
+    {
+      "pinyin": "tóng",
+      "question": ["铁", "钢", "铜", "钩"],
+      "answer": "铜"
+    },
+    {
+      "pinyin": "jìng",
+      "question": ["敬", "数", "故", "放"],
+      "answer": "敬"
+    },
+    {
+      "pinyin": "lǐ",
+      "question": ["礼", "社", "乱", "神"],
+      "answer": "礼"
+    },
+    {
+      "pinyin": "hǎo",
+      "question": ["妈", "奶", "好", "孙"],
+      "answer": "好"
+    },
+    {
+      "pinyin": "qí",
+      "question": ["寄", "哭", "椅", "奇"],
+      "answer": "奇"
+    }
+  ],
+  "t23": [
+    {
+      "pinyin": "cū",
+      "question": ["粗", "蛆", "组", "粮"],
+      "answer": "粗"
+    },
+    {
+      "pinyin": "zhuàng",
+      "question": ["将", "状", "妆", "装"],
+      "answer": "状"
+    },
+    {
+      "pinyin": "jié",
+      "question": ["漂", "洁", "河", "渴"],
+      "answer": "洁"
+    },
+    {
+      "pinyin": "hū",
+      "question": ["忽", "怂", "葱", "匆"],
+      "answer": "忽"
+    },
+    {
+      "pinyin": "为",
+      "question": ["力", "办", "为", "刀"],
+      "answer": "为"
+    },
+    {
+      "pinyin": "liáng",
+      "question": ["量", "重", "童", "星"],
+      "answer": "量"
+    },
+    {
+      "pinyin": "wán",
+      "question": ["玩", "球", "玻", "阮"],
+      "answer": "玩"
+    },
+    {
+      "pinyin": "shuǎ",
+      "question": ["要", "妥", "栗", "耍"],
+      "answer": "耍"
+    },
+    {
+      "pinyin": "shǐ",
+      "question": ["吏", "便", "使", "梗"],
+      "answer": "使"
+    },
+    {
+      "pinyin": "jìn",
+      "question": ["颈", "经", "劲", "勤"],
+      "answer": "劲"
+    }
+  ],
+  "t24": [
+    {
+      "pinyin": "máo",
+      "question": ["托", "毛", "丰", "笔"],
+      "answer": "毛"
+    },
+    {
+      "pinyin": "jiǎ",
+      "question": ["暇", "遐", "价", "假"],
+      "answer": "假"
+    },
+    {
+      "pinyin": "diào",
+      "question": ["钓", "钩", "约", "叼"],
+      "answer": "钓"
+    },
+    {
+      "pinyin": "guān",
+      "question": ["观", "欢", "现", "视"],
+      "answer": "观"
+    },
+    {
+      "pinyin": "bàn",
+      "question": ["辩", "辨", "瓣", "辣"],
+      "answer": "瓣"
+    },
+    {
+      "pinyin": "zán",
+      "question": ["咱", "伯", "珀", "咋"],
+      "answer": "咱"
+    },
+    {
+      "pinyin": "fèn",
+      "question": ["奋", "亩", "夯", "夸"],
+      "answer": "奋"
+    },
+    {
+      "pinyin": "hé",
+      "question": ["吞", "舍", "合", "含"],
+      "answer": "合"
+    },
+    {
+      "pinyin": "yǒu",
+      "question": ["有", "育", "肴", "右"],
+      "answer": "有"
+    },
+    {
+      "pinyin": "qù",
+      "question": ["起", "趟", "越", "趣"],
+      "answer": "趣"
+    }
+  ],
+  "t25": [
+    {
+      "pinyin": "dǐng",
+      "question": ["倾", "硕", "项", "顶"],
+      "answer": "顶"
+    },
+    {
+      "pinyin": "hū",
+      "question": ["乎", "手", "平", "伞"],
+      "answer": "乎"
+    },
+    {
+      "pinyin": "zhōng",
+      "question": ["疼", "咚", "终", "佟"],
+      "answer": "终"
+    },
+    {
+      "pinyin": "yǒng",
+      "question": ["勇", "用", "通", "拥"],
+      "answer": "勇"
+    },
+    {
+      "pinyin": "jué",
+      "question": ["英", "映", "袂", "决"],
+      "answer": "决"
+    },
+    {
+      "pinyin": "jū",
+      "question": ["居", "剧", "尿", "尾"],
+      "answer": "居"
+    },
+    {
+      "pinyin": "jiāo",
+      "question": ["郊", "校", "较", "效"],
+      "answer": "郊"
+    },
+    {
+      "pinyin": "wài",
+      "question": ["补", "外", "处", "歪"],
+      "answer": "外"
+    },
+    {
+      "pinyin": "bù",
+      "question": ["涉", "陡", "步", "徒"],
+      "answer": "步"
+    },
+    {
+      "pinyin": "tū",
+      "question": ["空", "突", "窄", "宝"],
+      "answer": "突"
+    }
+  ],
+  "t26":
+  [
+    {
+      "qusetion": ["寇", "守", "宽", "塞"],
+      "answer": "宽",
+      "pinyin": "kuān"
+    },
+    {
+      "question": ["阔", "闪", "闯", "闭"],
+      "answer": "阔",
+      "pinyin": "kuò"
+    },
+    {
+      "question": ["薄", "簿", "蒲", "膊"],
+      "answer": "薄",
+      "pinyin": "báo"
+    },
+    {
+      "question": ["雪", "霜", "雷", "雹"],
+      "answer": "雾",
+      "pinyin": "wù"
+    },
+    {
+      "question": ["笼", "庞", "宠", "籍"],
+      "answer": "笼",
+      "pinyin": "lóng"
+    },
+    {
+      "question": ["罩", "桌", "卓", "置"],
+      "answer": "罩",
+      "pinyin": "zhào"
+    },
+    {
+      "question": ["沸", "佛", "弗", "拂"],
+      "answer": "沸",
+      "pinyin": "fèi"
+    },
+    {
+      "question": ["腾", "胖", "膀", "胀"],
+      "answer": "腾",
+      "pinyin": "téng"
+    },
+    {
+      "question": ["奔", "卉", "莽", "蠎"],
+      "answer": "奔",
+      "pinyin": "bēn"
+    },
+    {
+      "question": ["农", "浓", "依", "侬"],
+      "answer": "依",
+      "pinyin": "yī"
+    }
+  ],
+  "t27": [
+    {
+      "question": ["旧", "汩", "日", "白"],
+      "answer": "旧",
+      "pinyin": "jiù"
+    },
+    {
+      "question": ["恢", "碳", "炭", "痰"],
+      "answer": "恢",
+      "pinyin": "huī"
+    },
+    {
+      "question": ["复", "夏", "愎", "履"],
+      "answer": "复",
+      "pinyin": "fù"
+    },
+    {
+      "question": ["灿", "烂", "汕", "仙"],
+      "answer": "灿",
+      "pinyin": "càn"
+    },
+    {
+      "question": ["烂", "灿", "栏", "烊"],
+      "answer": "烂",
+      "pinyin": "làn"
+    },
+    {
+      "question": ["竹", "林", "从", "朋"],
+      "answer": "竹",
+      "pinyin": "zhú"
+    },
+    {
+      "question": ["竿", "莘", "笑", "芋"],
+      "answer": "竿",
+      "pinyin": "gān"
+    },
+    {
+      "question": ["规", "观", "现", "视"],
+      "answer": "规",
+      "pinyin": "guī"
+    },
+    {
+      "question": ["律", "津", "建", "肆"],
+      "answer": "律",
+      "pinyin": "lǜ"
+    },
+    {
+      "question": ["缝", "蓬", "峰", "锋"],
+      "answer": "缝",
+      "pinyin": "féng"
+    }
+  ],
+    "t28": [
+    {
+      "question": ["隙", "撩", "瞭", "燎"],
+      "answer": "隙",
+      "pinyin": "xì"
+    },
+    {
+      "question": ["照", "煦", "熊", "热"],
+      "answer": "照",
+      "pinyin": "zhào"
+    },
+    {
+      "question": ["耀", "擢", "翟", "嚁"],
+      "answer": "耀",
+      "pinyin": "yào"
+    },
+    {
+      "question": ["树", "村", "对", "权"],
+      "answer": "树",
+      "pinyin": "shù"
+    },
+    {
+      "question": ["梢", "消", "销", "削"],
+      "answer": "梢",
+      "pinyin": "shāo"
+    },
+    {
+      "question": ["静", "请", "清", "晴"],
+      "answer": "静",
+      "pinyin": "jìng"
+    },
+    {
+      "question": ["叔", "寂", "淑", "椒"],
+      "answer": "寂",
+      "pinyin": "jì"
+    },
+    {
+      "question": ["颤", "檀", "擅", "膻"],
+      "answer": "颤",
+      "pinyin": "chàn"
+    },
+    {
+      "question": ["动", "边", "励", "劫"],
+      "answer": "动",
+      "pinyin": "dòng"
+    },
+    {
+      "question": ["霎", "雪", "霜", "雷"],
+      "answer": "霎",
+      "pinyin": "shà"
+    }
+  ],
+  "t29": [
+    {
+      "question": ["时", "过", "对", "村"],
+      "answer": "时",
+      "pinyin": "shí"
+    },
+    {
+      "question": ["反", "斤", "仅", "后"],
+      "answer": "反",
+      "pinyin": "fǎn"
+    },
+    {
+      "question": ["差", "雀", "着", "省"],
+      "answer": "差",
+      "pinyin": "chà"
+    },
+    {
+      "question": ["花", "化", "草", "华"],
+      "answer": "花",
+      "pinyin": "huā"
+    },
+    {
+      "question": ["卉", "奔", "开", "升"],
+      "answer": "卉",
+      "pinyin": "huì"
+    },
+    {
+      "question": ["涨", "张", "账", "弘"],
+      "answer": "涨",
+      "pinyin": "zhǎng"
+    },
+    {
+      "question": ["潮", "湖", "瀚", "澈"],
+      "answer": "潮",
+      "pinyin": "cháo"
+    },
+    {
+      "question": ["榕", "树", "林", "村"],
+      "answer": "榕",
+      "pinyin": "róng"
+    },
+    {
+      "question": ["树", "村", "林", "榕"],
+      "answer": "树",
+      "pinyin": "shù"
+    },
+    {
+      "question": ["慎", "镇", "填", "真"],
+      "answer": "镇",
+      "pinyin": "zhèn"
+    }
+  ],
+  "t30": [
+    {
+      "question": ["梨", "梁", "槊", "栾"],
+      "answer": "梨",
+      "pinyin": "lí"
+    },
+    {
+      "question": ["均", "韵", "匀", "勺"],
+      "answer": "均",
+      "pinyin": "jūn"
+    },
+    {
+      "question": ["旬", "句", "匀", "勺"],
+      "answer": "匀",
+      "pinyin": "yún"
+    },
+    {
+      "question": ["重", "童", "垂", "懂"],
+      "answer": "重",
+      "pinyin": "zhòng"
+    },
+    {
+      "question": ["叠", "垒", "桑", "宜"],
+      "answer": "叠",
+      "pinyin": "dié"
+    },
+    {
+      "question": ["空", "穷", "窈", "窕"],
+      "answer": "空",
+      "pinyin": "kōng"
+    },
+    {
+      "question": ["叶", "针", "计", "吐"],
+      "answer": "叶",
+      "pinyin": "yè"
+    },
+    {
+      "question": ["柄", "呐", "栖", "纳"],
+      "answer": "柄",
+      "pinyin": "bǐng"
+    },
+    {
+      "question": ["触", "斛", "解", "虫"],
+      "answer": "触",
+      "pinyin": "chù"
+    },
+    {
+      "question": ["角", "用", "解", "甬"],
+      "answer": "角",
+      "pinyin": "jiǎo"
+    }
+  ]
+}

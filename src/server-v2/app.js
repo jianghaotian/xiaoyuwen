@@ -19,6 +19,6 @@ app.use('/v2', express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 app.use('/v2/users', usersRouter);
 app.use('/v2/data', dataRouter);
-app.use('/v2/data', tyxzRouter);
+app.use('/v2/tyxz', tyxzRouter);
 
 module.exports = app;
