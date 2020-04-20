@@ -50,6 +50,7 @@ Page({
               // console.log(res.data.data);  // 通过关卡情况
               let all = res.data.all || 30;
               let problems = [];
+
               for (let i = 0; i < all; i++) {
                 let scoreOne = '';
                 if (res.data.data[i] != undefined) {
@@ -62,8 +63,10 @@ Page({
               }
               let scoreLen = res.data.data.length;
               let canTap = scoreLen;
-              if (res.data.data[scoreLen - 1].score < 6) {
-                canTap = scoreLen - 1;
+              if (scoreLen != 0) {
+                if (res.data.data[scoreLen - 1].score < 6) {
+                  canTap = scoreLen - 1;
+                }
               }
               this.setData({
                 problems, canTap
