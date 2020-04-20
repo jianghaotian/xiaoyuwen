@@ -29,5 +29,6 @@ App({
         duration: 2000
       })
     }
+    wx.setInnerAudioOption({obeyMuteSwitch: false});
   }
 })
