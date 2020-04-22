@@ -29,7 +29,8 @@ Page({
     scrollTop: 0,
     scrollInto: 't0',
     type: '',
-    displaywhat:'none'
+    displaywhat:'none',
+    playItem: ''
   },
 
   /**
@@ -59,7 +60,7 @@ Page({
       this.setData({
         tab: this.data.shengdiao,
         type: 'shengdiao',
-        displaywhat:"block"
+        displaywhat: "block"
       });
     } else if (options.id == 'shoucangjia') {
       this.setData({
@@ -182,7 +183,7 @@ Page({
 
   clickOne: function (e) {
     let { id } = e.currentTarget.dataset;
-    // console.log(id);
+    console.log(id);
     if (this.data.type == 'shengdiao') {
 
     } else {
