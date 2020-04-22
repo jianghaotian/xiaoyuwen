@@ -1,3 +1,5 @@
+<import src="/template/laba.wxml"/>
+
 <view class="overflow_x">
   <view class="topbar">
     <view wx:for="{{tab}}" wx:key="index" class="tabitem" bindtap="clickTab" data-id="{{index}}">
@@ -15,6 +17,9 @@
         <text>
           {{item}}
         </text>
+        <view class="zimu_laba" style="display:{{displaywhat}}">
+          <template is="xlaba" data="{{item, playItem}}"></template>
+        </view>
       </view>
     </view>
   </scroll-view>

@@ -1,3 +1,4 @@
+@import "/template/laba.wxss";
 .overflow_x {
   height: 100%;
 }
@@ -35,3 +36,12 @@
 .zimu:last-child {
   margin-bottom: 100rpx;
 }
+.zimu_block {
+  position: relative;
+}
+.zimu_laba {
+  position: absolute;
+  right: 0;
+  bottom: 6rpx;
+}
+
