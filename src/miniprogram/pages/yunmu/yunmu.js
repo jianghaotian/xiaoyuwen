@@ -28,7 +28,8 @@ Page({
     scrollTopItem: [],
     scrollTop: 0,
     scrollInto: 't0',
-    type: ''
+    type: '',
+    displaywhat:'none'
   },
 
   /**
@@ -57,7 +58,8 @@ Page({
     } else if (options.id == 'shengdiao') {
       this.setData({
         tab: this.data.shengdiao,
-        type: 'shengdiao'
+        type: 'shengdiao',
+        displaywhat:"block"
       });
     } else if (options.id == 'shoucangjia') {
       this.setData({
