@@ -8,9 +8,11 @@ Page({
   data: {
     current: 0,
     labaPlay: 0,
+    type: '',
     show: '',
     list: [],
-    id: ''
+    id: '',
+    status: []
   },
 
   /**
@@ -20,6 +22,7 @@ Page({
     let {id, type} = options;
     let show = '';
     let list = [];
+    let status = [];
     if (type == 'shengmu') {
       show = '声母';
       list = xiangqingData.shengmu;
@@ -31,11 +34,76 @@ Page({
       list = xiangqingData.zhengtiyin;
     }
     let current = this.findAInArrName(list, id);
+    // 获取收藏
+    let token = wx.getStorageSync('token') || '';
+    if (token == '') {
+      wx.showToast({
+        title: '收藏信息获取失败，原因是：获取账号信息失败，请重新打开小程序',
+        icon: 'none',
+        duration: 2000
+      })
+    } else {
+      wx.request({
+        url: 'https://xyw.htapi.pub/v2/collection/get',
+        data: {
+          token: token,
+          type: type
+        },
+        success: (res) => {
+          if (res.statusCode == 200) {  // 服务器返回200
+            if (res.data.status == 0) {  // 服务器手动返回0
+              // console.log(res.data.data);
+              for (let i = 0; i < list.length; i++) {
+                status[i] = false;
+                for (let j = 0; j < res.data.data.length; j++) {
+                  if (res.data.data[j].pinyin == list[i].name) {
+                    status[i] = true;
+                    break;
+                  }
+                }
+              }
+              this.setData({
+                status
+              });
+            } else {
+              wx.showToast({
+                title: '收藏信息获取失败，原因是：身份信息错误，请重新打开小程序',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+          } else {
+            // console.log('无法连接到服务器（可能服务器问题）', res);
+            wx.showToast({
+              title: '收藏信息获取失败，原因是：无法连接到服务器',
+              icon: 'none',
+              duration: 2000
+            })
+          }
+        },
+        fail (res) {
+          // console.log('无法连接到服务器 ' + res);
+          wx.showToast({
+            title: '收藏信息获取失败，原因是：无法连接到服务器',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      });
+    }
+
+
+
+    for (let i = 0; i < list.length; i++) {
+      status.push(0);
+    }
     this.setData({
+      type,
       show,
       list,
       id,
-      current
+      current,
+      status
     });
   },
 
@@ -98,9 +166,78 @@ Page({
 
   // 收藏
   collect: function(e){
+    let {index, name} = e.currentTarget.dataset;
+    let status = this.data.status;
+    let oldStatus = status[index]
+    status[index] = !oldStatus;
     this.setData({
-      status: !this.data.status
-   })
+      status
+    })
+    let token = wx.getStorageSync('token') || '';
+    if (token == '') {
+      wx.showToast({
+        title: '收藏失败，原因是：获取账号信息失败，请重新打开小程序',
+        icon: 'none',
+        duration: 2000
+      })
+      let status = this.data.status;
+      status[index] = oldStatus;
+      this.setData({
+        status
+      })
+    } else {
+      wx.request({
+        url: 'https://xyw.htapi.pub/v2/collection/shoucang',
+        method: 'POST',
+        data: {
+          token: token,
+          type: this.data.type,
+          id: name,
+          be: status[index]
+        },
+        success: (res) => {
+          if (res.statusCode == 200) {  // 服务器返回200
+            if (res.data.status != 0) {
+              wx.showToast({
+                title: '收藏失败，原因是：身份信息错误，请重新打开小程序',
+                icon: 'none',
+                duration: 2000
+              })
+              let status = this.data.status;
+              status[index] = oldStatus;
+              this.setData({
+                status
+              })
+            }
+          } else {
+            // console.log('无法连接到服务器（可能服务器问题）', res);
+            wx.showToast({
+              title: '收藏失败，原因是：无法连接到服务器',
+              icon: 'none',
+              duration: 2000
+            })
+            let status = this.data.status;
+            status[index] = oldStatus;
+            this.setData({
+              status
+            })
+          }
+        },
+        fail (res) {
+          // console.log('无法连接到服务器 ' + res);
+          wx.showToast({
+            title: '收藏失败，原因是：无法连接到服务器',
+            icon: 'none',
+            duration: 2000
+          })
+          let status = this.data.status;
+          status[index] = oldStatus;
+          this.setData({
+            status
+          })
+        }
+      });
+    }
   },
 
   // 点击播放音频

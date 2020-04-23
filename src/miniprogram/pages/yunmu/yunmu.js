@@ -62,47 +62,64 @@ Page({
         displaywhat:"block"
       });
     } else if (options.id == 'shoucangjia') {
-      wx.request({
-        url: 'https://xyw.htapi.pub/v2/collection/get',
-        data: {
-          token: token
-        },
-        success: (res) => {
-          if (res.statusCode == 200) {  // 服务器返回200
-            if (res.data.status == 0) {  // 服务器手动返回0
-              console.log(res.data.data);  // 通过关卡情况
-              
-              
-              // TODO
-              this.setData({
-                tab: [{ list: '玩命开发中...', item: [] }],
-                type: 'shoucangjia'
-              });
+      let tab = [{ list: '声母', item: [] },{ list: '韵母', item: [] },{ list: '整体音', item: [] }];
+      let token = wx.getStorageSync('token') || '';
+      if (token == '') {
+        wx.showToast({
+          title: '获取账号信息失败，请重新打开小程序',
+          icon: 'none',
+          duration: 2000
+        })
+      } else {
+        wx.request({
+          url: 'https://xyw.htapi.pub/v2/collection/get',
+          data: {
+            token: token,
+            type: 'all'
+          },
+          success: (res) => {
+            if (res.statusCode == 200) {  // 服务器返回200
+              if (res.data.status == 0) {  // 服务器手动返回0
+                // console.log(res.data.data);
+                for (let i = 0; i < res.data.data.length; i++) {
+                  if (res.data.data[i].type == 'shengmu') {
+                    tab[0].item.push(res.data.data[i].pinyin);
+                  } else if (res.data.data[i].type == 'shengmu') {
+                    tab[1].item.push(res.data.data[i].pinyin);
+                  } else if (res.data.data[i].type == 'zhengtiyin') {
+                    tab[2].item.push(res.data.data[i].pinyin);
+                  }
+                }
+                this.setData({
+                  tab,
+                  type: 'shoucangjia'
+                });
+              } else {
+                wx.showToast({
+                  title: '身份信息错误，请重新打开小程序',
+                  icon: 'none',
+                  duration: 2000
+                })
+              }
             } else {
+              // console.log('无法连接到服务器（可能服务器问题）', res);
               wx.showToast({
-                title: '身份信息错误，请重新打开小程序',
+                title: '无法连接到服务器',
                 icon: 'none',
                 duration: 2000
               })
             }
-          } else {
-            // console.log('无法连接到服务器（可能服务器问题）', res);
+          },
+          fail (res) {
+            // console.log('无法连接到服务器 ' + res);
             wx.showToast({
               title: '无法连接到服务器',
               icon: 'none',
               duration: 2000
             })
           }
-        },
-        fail (res) {
-          // console.log('无法连接到服务器 ' + res);
-          wx.showToast({
-            title: '无法连接到服务器',
-            icon: 'none',
-            duration: 2000
-          })
-        }
-      });
+        });
+      }
     }
   },
 
