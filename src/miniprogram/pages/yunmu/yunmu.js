@@ -63,11 +63,47 @@ Page({
         displaywhat:"block"
       });
     } else if (options.id == 'shoucangjia') {
-      this.setData({
-        tab: [{ list: '玩命开发中...', item: [] }],
-        type: 'shoucangjia'
+      wx.request({
+        url: 'https://xyw.htapi.pub/v2/collection/get',
+        data: {
+          token: token
+        },
+        success: (res) => {
+          if (res.statusCode == 200) {  // 服务器返回200
+            if (res.data.status == 0) {  // 服务器手动返回0
+              console.log(res.data.data);  // 通过关卡情况
+              
+              
+              // TODO
+              this.setData({
+                tab: [{ list: '玩命开发中...', item: [] }],
+                type: 'shoucangjia'
+              });
+            } else {
+              wx.showToast({
+                title: '身份信息错误，请重新打开小程序',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+          } else {
+            // console.log('无法连接到服务器（可能服务器问题）', res);
+            wx.showToast({
+              title: '无法连接到服务器',
+              icon: 'none',
+              duration: 2000
+            })
+          }
+        },
+        fail (res) {
+          // console.log('无法连接到服务器 ' + res);
+          wx.showToast({
+            title: '无法连接到服务器',
+            icon: 'none',
+            duration: 2000
+          })
+        }
       });
-
     }
   },
 

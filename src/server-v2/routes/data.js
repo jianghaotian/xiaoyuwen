@@ -3,7 +3,7 @@ var router = express.Router();
 
 var { getPinyin } = require('../data/utils/pinyin');
 
-
+// 暂时废弃
 router.get('/pinyin', function(req, res, next) {
   let { id } = req.query;
   let data = null;

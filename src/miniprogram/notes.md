@@ -5,4 +5,4 @@
 - 字母表js的音频
 - 听音选字ti的音频
 
-！音频GitHub的CDN已删除
+！GitHub的CDN已删除
