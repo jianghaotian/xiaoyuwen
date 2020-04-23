@@ -14,7 +14,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/v2', express.static(path.join(__dirname, 'public')));
+
+app.use('/v2/audios', express.static(path.join(__dirname, 'public/audios')));
+app.use('/v2/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use('/v2/users', usersRouter);
 app.use('/v2/data', dataRouter);
