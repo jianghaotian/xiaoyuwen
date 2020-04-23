@@ -29,7 +29,8 @@ Page({
     scrollTop: 0,
     scrollInto: 't0',
     type: '',
-    displaywhat:'none'
+    displaywhat:'none',
+    playItem: ''
   },
 
   /**
@@ -238,6 +239,19 @@ Page({
     let { id, index } = e.currentTarget.dataset;
     let type = '';
     if (this.data.type == 'shengdiao') {
+      // console.log(id);
+      let audio = wx.createInnerAudioContext();  
+      audio.src = `https://xyw.htapi.pub/v2/audios/diao/${id}.mp3`;
+      // audio.src = `https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/audios/zimu/${id}.mp3`;
+      audio.autoplay = true;
+      audio.onPlay(() => {
+        this.setData({playItem: id});
+        // console.log(id, 'onPlay');
+      });
+      audio.onEnded(() => {
+        this.setData({playItem: ''});
+        // console.log(id, 'onEnded');
+      });
     
     } else if (this.data.type == 'shoucangjia') {
       for (let i = 0; i < this.data.tab.length; i++) {
