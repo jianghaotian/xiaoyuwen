@@ -15,7 +15,7 @@
       </view>
       <view wx:for="{{item.item}}" wx:key="index" bindtap="clickOne" data-id="{{item}}" class="zimu_block">
         <text>
-          {{item}}
+          {{item.value}}
         </text>
         <view class="zimu_laba" style="display:{{displaywhat}}">
           <template is="xlaba" data="{{item, playItem}}"></template>
