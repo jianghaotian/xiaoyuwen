@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const runSql = require('../mysql');
 var {getToken, checkToken} = require('../utils/token');
-var { getTi } = require('../data/utils/tyxz');
+var { getTi, getAllNum } = require('../data/utils/tyxz');
 
 
 router.get('/getguan', async function(req, res, next) {
@@ -11,7 +11,7 @@ router.get('/getguan', async function(req, res, next) {
     let {openid, session_key} = await checkToken(token);
     let sqlResult = await runSql('SELECT guan, score FROM tyxz where uid = ? ORDER BY guan asc', [openid]);
     
-    res.json({status: 0, data: sqlResult, all: 20});
+    res.json({status: 0, data: sqlResult, all: getAllNum()});
   } catch(e) {
     console.log(e);
     res.json({status: -1});

@@ -13,7 +13,12 @@ function getTi(id) {
   return ti;
 }
 
-module.exports = { getTi }
+function getAllNum() {
+  return tyxz.all;
+}
+
+module.exports = { getTi, getAllNum }
+
 
 
 // var arr = [1, 2, 3, 4, 5];
