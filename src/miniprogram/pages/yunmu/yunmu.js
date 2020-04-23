@@ -49,6 +49,7 @@ Page({
         });
       }
     });
+    this.setData({id: options.id});
     // console.log(options.id);
     if (options.id == 'yunmu') {
       this.setData({
@@ -61,7 +62,35 @@ Page({
         type: 'shengdiao',
         displaywhat:"block"
       });
-    } else if (options.id == 'shoucangjia') {
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: async function () {
+    let topbarHeight = this.data.topbarHeight.toFixed(0);
+    let scrollTopItem = [];
+    let lastBottom = 0;
+    for (let i = 0; i < this.data.tab.length; i++) {
+      let layout = await getLayout('#t' + i);
+      scrollTopItem.push(layout.top - topbarHeight - 20);
+      if (i == this.data.tab.length - 1) {
+        lastBottom = this.data.viewHeight - layout.height;
+      }
+    }
+    this.setData({
+      scrollTopItem: scrollTopItem,
+      lastBottom: lastBottom + 'px'
+    });
+    // console.log(scrollTopItem);
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (this.data.id == 'shoucangjia') {
       let tab = [{ list: '声母', item: [] },{ list: '韵母', item: [] },{ list: '整体音', item: [] }];
       let token = wx.getStorageSync('token') || '';
       if (token == '') {
@@ -84,7 +113,7 @@ Page({
                 for (let i = 0; i < res.data.data.length; i++) {
                   if (res.data.data[i].type == 'shengmu') {
                     tab[0].item.push(res.data.data[i].pinyin);
-                  } else if (res.data.data[i].type == 'shengmu') {
+                  } else if (res.data.data[i].type == 'yunmu') {
                     tab[1].item.push(res.data.data[i].pinyin);
                   } else if (res.data.data[i].type == 'zhengtiyin') {
                     tab[2].item.push(res.data.data[i].pinyin);
@@ -121,34 +150,6 @@ Page({
         });
       }
     }
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: async function () {
-    let topbarHeight = this.data.topbarHeight.toFixed(0);
-    let scrollTopItem = [];
-    let lastBottom = 0;
-    for (let i = 0; i < this.data.tab.length; i++) {
-      let layout = await getLayout('#t' + i);
-      scrollTopItem.push(layout.top - topbarHeight - 20);
-      if (i == this.data.tab.length - 1) {
-        lastBottom = this.data.viewHeight - layout.height;
-      }
-    }
-    this.setData({
-      scrollTopItem: scrollTopItem,
-      lastBottom: lastBottom + 'px'
-    });
-    // console.log(scrollTopItem);
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
   },
 
   /**
@@ -234,13 +235,29 @@ Page({
   },
 
   clickOne: function (e) {
-    let { id } = e.currentTarget.dataset;
-    // console.log(id);
+    let { id, index } = e.currentTarget.dataset;
+    let type = '';
     if (this.data.type == 'shengdiao') {
-
+    
+    } else if (this.data.type == 'shoucangjia') {
+      for (let i = 0; i < this.data.tab.length; i++) {
+        if (this.data.tab[i].item[index] == id) {
+          if (this.data.tab[i].list == '声母') {
+            type = 'shengmu';
+          } else if (this.data.tab[i].list == '韵母') {
+            type = 'yunmu';
+          } else if (this.data.tab[i].list == '整体音') {
+            type = 'zhengtiyin';
+          }
+          break;
+        }
+      }
+      wx.navigateTo({
+        url: `/pages/xiangqing/xiangqing?type=${type}&id=${id}&sc=1`
+      })
     } else {
       wx.navigateTo({
-        url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
+        url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}&sc=0`
       })
     }
   }

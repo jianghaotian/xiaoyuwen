@@ -13,7 +13,7 @@
       <view class="title">
         <text>{{item.list}}</text>
       </view>
-      <view wx:for="{{item.item}}" wx:key="index" bindtap="clickOne" data-id="{{item}}" class="zimu_block">
+      <view wx:for="{{item.item}}" wx:key="index" bindtap="clickOne" data-id="{{item}}" data-index="{{index}}" class="zimu_block">
         <text>
           {{item}}
         </text>

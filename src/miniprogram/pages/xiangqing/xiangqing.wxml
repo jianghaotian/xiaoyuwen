@@ -10,7 +10,7 @@
 			<block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
 				<swiper-item>
 					<view class="xq-x11">
-						<text class="xq-x9">第{{index + 1}}/{{list.length}}个</text>
+						<text class="xq-x9" wx:if="{{type != 'shoucangjia'}}">第{{index + 1}}/{{list.length}}个</text>
 						<view class="xq-x10 iconfont {{status[index] ? 'iconxingxing1 xq-x13' : 'iconxingxing'}}" data-index="{{index}}" data-name="{{item.name}}" bindtap="collect"></view>
 					</view>
 					<view class="hb-view">

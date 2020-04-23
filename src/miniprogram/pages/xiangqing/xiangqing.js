@@ -19,7 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let {id, type} = options;
+    let {id, type, sc} = options;
     let show = '';
     let list = [];
     let status = [];
@@ -34,68 +34,69 @@ Page({
       list = xiangqingData.zhengtiyin;
     }
     let current = this.findAInArrName(list, id);
-    // 获取收藏
-    let token = wx.getStorageSync('token') || '';
-    if (token == '') {
-      wx.showToast({
-        title: '收藏信息获取失败，原因是：获取账号信息失败，请重新打开小程序',
-        icon: 'none',
-        duration: 2000
-      })
+    if (sc == 1) {
+      type = 'shoucangjia';
+      list = [list[current]];
+      current = 0;
+      status = [1];
     } else {
-      wx.request({
-        url: 'https://xyw.htapi.pub/v2/collection/get',
-        data: {
-          token: token,
-          type: type
-        },
-        success: (res) => {
-          if (res.statusCode == 200) {  // 服务器返回200
-            if (res.data.status == 0) {  // 服务器手动返回0
-              // console.log(res.data.data);
-              for (let i = 0; i < list.length; i++) {
-                status[i] = false;
-                for (let j = 0; j < res.data.data.length; j++) {
-                  if (res.data.data[j].pinyin == list[i].name) {
-                    status[i] = true;
-                    break;
+      // 获取收藏
+      let token = wx.getStorageSync('token') || '';
+      if (token == '') {
+        wx.showToast({
+          title: '收藏信息获取失败，原因是：获取账号信息失败，请重新打开小程序',
+          icon: 'none',
+          duration: 2000
+        })
+      } else {
+        wx.request({
+          url: 'https://xyw.htapi.pub/v2/collection/get',
+          data: {
+            token: token,
+            type: type
+          },
+          success: (res) => {
+            if (res.statusCode == 200) {  // 服务器返回200
+              if (res.data.status == 0) {  // 服务器手动返回0
+                // console.log(res.data.data);
+                for (let i = 0; i < list.length; i++) {
+                  status[i] = false;
+                  for (let j = 0; j < res.data.data.length; j++) {
+                    if (res.data.data[j].pinyin == list[i].name) {
+                      status[i] = true;
+                      break;
+                    }
                   }
                 }
+                this.setData({
+                  status
+                });
+              } else {
+                wx.showToast({
+                  title: '收藏信息获取失败，原因是：身份信息错误，请重新打开小程序',
+                  icon: 'none',
+                  duration: 2000
+                })
               }
-              this.setData({
-                status
-              });
             } else {
+              // console.log('无法连接到服务器（可能服务器问题）', res);
               wx.showToast({
-                title: '收藏信息获取失败，原因是：身份信息错误，请重新打开小程序',
+                title: '收藏信息获取失败，原因是：无法连接到服务器',
                 icon: 'none',
                 duration: 2000
               })
             }
-          } else {
-            // console.log('无法连接到服务器（可能服务器问题）', res);
+          },
+          fail (res) {
+            // console.log('无法连接到服务器 ' + res);
             wx.showToast({
               title: '收藏信息获取失败，原因是：无法连接到服务器',
               icon: 'none',
               duration: 2000
             })
           }
-        },
-        fail (res) {
-          // console.log('无法连接到服务器 ' + res);
-          wx.showToast({
-            title: '收藏信息获取失败，原因是：无法连接到服务器',
-            icon: 'none',
-            duration: 2000
-          })
-        }
-      });
-    }
-
-
-
-    for (let i = 0; i < list.length; i++) {
-      status.push(0);
+        });
+      }
     }
     this.setData({
       type,
@@ -118,7 +119,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

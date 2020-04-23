@@ -13,16 +13,10 @@ router.get('/get', async function(req, res, next) {
 
     if (type == 'all') {
       sqlResult = await runSql('SELECT type, pinyin FROM collection where uid = ?', [openid]);
-
-
     } else {
       sqlResult = await runSql('SELECT pinyin FROM collection where uid = ? and type = ?', [openid, type]);
-
-
     }
-
-
-    console.log(sqlResult);
+    // console.log(sqlResult);
     
     res.json({status: 0, data: sqlResult});
   } catch(e) {
@@ -37,7 +31,7 @@ router.post('/shoucang', async function(req, res, next) {
     let {openid, session_key} = await checkToken(token);
     
     if (be == false) {  // 取消收藏
-      await runSql('DELETE FROM collection WHERE uid = ? and pinyin = ? VALUES (?, ?, ?)', [openid, id]);
+      await runSql('DELETE FROM collection WHERE uid = ? and pinyin = ?', [openid, id]);
     } else {        // 收藏
       await runSql('INSERT INTO collection (uid, pinyin, type) VALUES (?, ?, ?)', [openid, id, type]);
     }
