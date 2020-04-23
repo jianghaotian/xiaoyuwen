@@ -8,10 +8,17 @@ Page({
    */
   data: {
     yunmu: [
+<<<<<<< HEAD
       { list: '单韵母', item: [{value:'a',state:0}, {value:'o',state:0}, {value:'e',state:0}, {value:'i',state:0}, {value:'u',state:0}, {value:'ü',state:0}] },
       { list: '复韵母', item: [{value:'ai',state:0}, {value:'ei',state:0}, {value:'ui',state:0}, {value:'ao',state:0}, {value:'ou',state:0}, {value:'iu',state:0}, {value:'ie',state:0}, {value:'üe',state:0}, {value:'er',state:0}] },
       { list: '前鼻韵母', item: [{value:'an',state:0}, {value:'en',state:0}, {value:'in',state:0}, {value:'un',state:0}, {value:'ün',state:0}] },
       { list: '后鼻韵母', item: [{value:'ang',state:0}, {value:'eng',state:0}, {value:'ing',state:0}, {value:'ong',state:0}] }
+=======
+      { list: '单韵母', item: ['a', 'o', 'e', 'i', 'u', 'ü'] },
+      { list: '复韵母', item: ['ai', 'ei', 'ui', 'ao', 'ou', 'iu', 'ie', 'üe', 'er'] },
+      { list: '前鼻韵母', item: ['an', 'en', 'in', 'un', 'ün'] },
+      { list: '后鼻韵母', item: ['ang', 'eng', 'ing', 'ong'] }
+>>>>>>> 3ba41340081d83b86a9f0a985382f23d8118c935
     ],
     shengdiao: [
       { list: '单韵母', item: ['ā', 'á', 'ǎ', 'à', 'ō', 'ò', 'ǒ', 'ó', 'ē', 'é', 'ě', 'è', 'ī', 'í', 'ǐ', 'ì', 'ū', 'ú', 'ǔ', 'ù', 'ǖ', 'ǘ', 'ǚ', 'ǜ'] },
@@ -29,7 +36,12 @@ Page({
     scrollTop: 0,
     scrollInto: 't0',
     type: '',
+<<<<<<< HEAD
     displaywhat:'none'
+=======
+    displaywhat:'none',
+    playItem: ''
+>>>>>>> 3ba41340081d83b86a9f0a985382f23d8118c935
   },
 
   /**
@@ -59,7 +71,11 @@ Page({
       this.setData({
         tab: this.data.shengdiao,
         type: 'shengdiao',
+<<<<<<< HEAD
         displaywhat:"block"
+=======
+        displaywhat: "block"
+>>>>>>> 3ba41340081d83b86a9f0a985382f23d8118c935
       });
     } else if (options.id == 'shoucangjia') {
       this.setData({
@@ -182,12 +198,20 @@ Page({
 
   clickOne: function (e) {
     let { id } = e.currentTarget.dataset;
+<<<<<<< HEAD
     // console.log(id);
+=======
+    console.log(id);
+>>>>>>> 3ba41340081d83b86a9f0a985382f23d8118c935
     if (this.data.type == 'shengdiao') {
 
     } else {
       wx.navigateTo({
+<<<<<<< HEAD
         url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id.value}&state=${id.state}`
+=======
+        url: `/pages/xiangqing/xiangqing?type=${this.data.type}&id=${id}`
+>>>>>>> 3ba41340081d83b86a9f0a985382f23d8118c935
       })
     }
   }
