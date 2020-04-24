@@ -1,3 +1,6 @@
+.zimu{
+  color:#fff;
+}
 .zimu_block {
   overflow: visible;
   position: relative;
@@ -6,6 +9,7 @@
   height: 120rpx;
   /* 每个表格的间距 */
   margin: 80rpx 26rpx 0rpx 30rpx;
+  border:0;
 }
 .zimu_block text {
   font-size: 50rpx;
@@ -13,7 +17,7 @@
 .grade{
   position: absolute;
   top: -55rpx;
-  left: 25rpx;
+  left: 35rpx;
   width: 100%;
   height: 50rpx; 
   /* background-color: blueviolet; */

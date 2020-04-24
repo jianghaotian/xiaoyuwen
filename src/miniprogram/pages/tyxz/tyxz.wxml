@@ -1,8 +1,8 @@
 <view class="overflow_x">
   <view class="zimu">
-    <view wx:for="{{problems}}" wx:key="index" bindtap="problem" data-id="{{item.num}}" class="zimu_block bubble" style="{{ index > canTap ? 'background-color: #aaa' : ''}}">
+    <view wx:for="{{problems}}" wx:key="index" bindtap="problem" data-id="{{item.num}}" class="zimu_block bubble" style="{{ index > canTap ? 'background-color: #ccc' : 'background-color:#f5b1a8'}}">
         <view class='grade'>
-          <image wx:if="{{item.score != ''}}" style="width:74rpx; height:40rpx" src="{{'/images/num' + item.score + '.png'}}"></image>
+          <image wx:if="{{item.score != ''}}" style="width:50rpx; height:40rpx" src="{{'/images/num' + item.score + '.png'}}"></image>
         </view>
         <text>
           {{item.num}}
