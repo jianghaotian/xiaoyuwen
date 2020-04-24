@@ -13,7 +13,10 @@ Page({
     list: [],
     id: '',
     status: [],
-    viewHeight:0
+    viewHeight:0,
+    height1:0,
+    height2:0,
+    height3:0
   },
 
   /**
@@ -26,9 +29,16 @@ Page({
         let clientWidth = res.windowWidth;
         let changeHeight = 750 / clientWidth;
         let topbarHeight = 100 / changeHeight;
+        let height1 = 80/changeHeight;
+        let height2 = 380/changeHeight;
+        let height3 = 300/changeHeight;
+
         let viewHeight = clientHeight - topbarHeight;
         this.setData({
-          viewHeight: viewHeight
+          viewHeight: viewHeight,
+          height1:height1,
+          height2:height2,
+          height3:height3
         });
       }
     });

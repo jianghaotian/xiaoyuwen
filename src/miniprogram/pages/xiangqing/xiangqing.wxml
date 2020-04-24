@@ -8,11 +8,11 @@
 		<swiper style="height: {{viewHeight + 'px'}}" current="{{current}}">
 			<block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
 				<swiper-item>
-					<view class="xq-x11">
+					<view class="xq-x11" style="height: {{height1 + 'px'}}">
 						<text class="xq-x9" wx:if="{{type != 'shoucangjia'}}">第{{index + 1}}/{{list.length}}个</text>
 						<view class="xq-x10 iconfont {{status[index] ? 'iconxingxing1 xq-x13' : 'iconxingxing'}}" data-index="{{index}}" data-name="{{item.name}}" bindtap="collect"></view>
 					</view>
-					<view class="hb-view">
+					<view class="hb-view" style="height: {{height2 + 'px'}}">
 						<view class="xq-x1">
 							<view class="xq-x15"></view>
 							<view class="xq-x15"></view>
@@ -31,7 +31,7 @@
 							<text class="xq-x7">{{item.example[1]}}</text>
 						</view>
 					</view>
-					<view class="img-view">
+					<view class="img-view" style="height: {{height3 + 'px'}}">
 						<!-- <image src="{{'https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/images/pinyin/' + item.image}}" class="xq-x8" /> -->
 						<image src="{{'https://xyw.htapi.pub/v2/images/pinyin/' + item.image}}" class="xq-x8" />
 					</view>
