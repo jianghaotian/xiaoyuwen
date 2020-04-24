@@ -109,9 +109,7 @@
     position: relative;
 }
 
-.xq-x12 {
-    height: 1100rpx;
-}
+
 
 .xq-x13 {
     color: rgba(245, 197, 6, 0.693);

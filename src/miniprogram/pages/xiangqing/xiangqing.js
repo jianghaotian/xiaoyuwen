@@ -12,13 +12,26 @@ Page({
     show: '',
     list: [],
     id: '',
-    status: []
+    status: [],
+    viewHeight:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.getSystemInfo({
+      success: res => {
+        let clientHeight = res.windowHeight;
+        let clientWidth = res.windowWidth;
+        let changeHeight = 750 / clientWidth;
+        let topbarHeight = 100 / changeHeight;
+        let viewHeight = clientHeight - topbarHeight;
+        this.setData({
+          viewHeight: viewHeight
+        });
+      }
+    });
     let {id, type, sc} = options;
     let show = '';
     let list = [];

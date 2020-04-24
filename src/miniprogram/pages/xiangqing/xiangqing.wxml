@@ -4,9 +4,8 @@
 	<text>{{show}}</text>
 </view>
 <view class="placeholder"></view>
-<view>
-	<view>
-		<swiper class="xq-x12" current="{{current}}">
+
+		<swiper style="height: {{viewHeight + 'px'}}" current="{{current}}">
 			<block wx:for="{{list}}" wx:key="index" data-id="{{item}}">
 				<swiper-item>
 					<view class="xq-x11">
@@ -39,5 +38,4 @@
 				</swiper-item>
 			</block>
 		</swiper>
-	</view>
-</view>
+
