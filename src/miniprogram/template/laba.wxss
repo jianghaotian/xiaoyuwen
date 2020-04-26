@@ -9,6 +9,8 @@
 .xlaba {
   width: 60rpx;
   height: 30rpx;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .laba_symbol {
   position: absolute;
