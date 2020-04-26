@@ -167,7 +167,7 @@ Page({
     let {zi} = e.currentTarget.dataset;
     // console.log(zi);
     let audio = wx.createInnerAudioContext();  
-    audio.src = `https://xyw.htapi.pub/v2/audios/tyxz/${zi}.wav`;
+    audio.src = encodeURI(`https://xyw.htapi.pub/v2/audios/tyxz/${zi}.wav`);
     // audio.src = `https://cdn.jsdelivr.net/gh/lemonoink/xiaoyuwen@cdn/audios/tyxz/${zi}.wav`;
     audio.autoplay = true;
     audio.onPlay(() => {
