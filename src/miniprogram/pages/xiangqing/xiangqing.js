@@ -94,6 +94,17 @@ Page({
                 this.setData({
                   status
                 });
+                setTimeout(() => {
+                  let showed = wx.getStorageSync('showed') || '';
+                  if (showed == '') {
+                    wx.showToast({
+                      title: '左右滑动可以切换页面～',
+                      icon: 'none',
+                      duration: 2000
+                    })
+                    wx.setStorageSync('showed', 1);
+                  }
+                }, 1000);
               } else {
                 wx.showToast({
                   title: '收藏信息获取失败，原因是：身份信息错误，请重新打开小程序',
