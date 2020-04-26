@@ -15,11 +15,12 @@
 }
 
 .xq-x14 {
-    font-size: 100rpx;
+    font-size: 105rpx;
     /* font-weight: bold; */
     color: white;
     position: absolute;
-    top: 42rpx;
+    top: 26rpx;
+    font-family: alifont;
 }
 
 .xq-x15 {

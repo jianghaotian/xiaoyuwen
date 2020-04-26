@@ -1,6 +1,4 @@
-page {
-  font-family: alifont;
-}
+
 .overflow_x {
   width: 750rpx;
   overflow-x: hidden;
