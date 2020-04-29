@@ -18,7 +18,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/v1/sys', express.static(path.join(__dirname, 'public/sys')));
+app.use('/v1/users', express.static(path.join(__dirname, 'public/users')));
 
 // app.use('/', indexRouter);
 app.use('/v1/users', usersRouter);
