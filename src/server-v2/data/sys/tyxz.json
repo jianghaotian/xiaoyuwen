@@ -516,9 +516,9 @@
       "answer": "穿"
     },
     {
-      "pinyin": "dǎ",
+      "pinyin": "tí",
       "question": ["拍", "打", "搭", "提"],
-      "answer": "打"
+      "answer": "提"
     },
     {
       "pinyin": "yóu",
@@ -577,9 +577,9 @@
       "answer": "闹"
     },
     {
-      "pinyin": "gǔ",
+      "pinyin": "kǔ",
       "question": ["古", "吉", "串", "苦"],
-      "answer": "古"
+      "answer": "苦"
     },
     {
       "pinyin": "lǎo",
@@ -781,7 +781,7 @@
       "pinyin": "báo"
     },
     {
-      "question": ["雪", "霜", "雷", "雹"],
+      "question": ["雪", "雾", "雷", "雹"],
       "answer": "雾",
       "pinyin": "wù"
     },
@@ -864,7 +864,7 @@
     {
       "question": ["缝", "蓬", "峰", "锋"],
       "answer": "缝",
-      "pinyin": "féng"
+      "pinyin": "fèng"
     }
   ],
   "t18": [{
@@ -960,8 +960,8 @@
     },
     {
       "question": ["树", "村", "林", "榕"],
-      "answer": "树",
-      "pinyin": "shù"
+      "answer": "村",
+      "pinyin": "cūn"
     },
     {
       "question": ["慎", "镇", "填", "真"],
@@ -1022,8 +1022,8 @@
   ],
   "t21": [{
       "question": ["招", "邵", "绍", "韶"],
-      "answer": "招",
-      "pinyin": "zhāo"
+      "answer": "邵",
+      "pinyin": "shào"
     },
     {
       "question": ["牌", "俾", "脾", "啤"],
@@ -1066,8 +1066,8 @@
     },
     {
       "question": ["趣", "起", "越", "超"],
-      "answer": "趣",
-      "pinyin": "qù"
+      "answer": "越",
+      "pinyin": "yuè"
     }
   ],
   "t22": [{
@@ -1092,8 +1092,8 @@
     },
     {
       "question": ["足", "促", "踢", "跑"],
-      "answer": "足",
-      "pinyin": "zú"
+      "answer": "促",
+      "pinyin": "cù"
     },
     {
       "question": ["理", "埋", "珍", "珠"],
@@ -1219,9 +1219,9 @@
       "pinyin": "duàn"
     },
     {
-      "question": ["忽", "思", "恩", "息"],
-      "answer": "忽",
-      "pinyin": "hū"
+      "question": ["忽", "思", "恩", "洗"],
+      "answer": "洗",
+      "pinyin": "xǐ"
     }
   ],
   "t25": [{
@@ -1241,8 +1241,8 @@
     },
     {
       "question": ["方", "万", "房", "放"],
-      "answer": "方",
-      "pinyin": "fāng"
+      "answer": "万",
+      "pinyin": "wàn"
     },
     {
       "question": ["式", "武", "戈", "工"],
@@ -1368,7 +1368,7 @@
     },
     {
       "pinyin": "hōng",
-      "question": ["烘", "拱", "哄", "洪"],
+      "question": ["烘", "拱", "共", "洪"],
       "answer": "烘"
     },
     {
@@ -1439,9 +1439,9 @@
       "answer": "轰"
     },
     {
-      "pinyin": "lì",
+      "pinyin": "jié",
       "question": ["动", "劫", "励", "边"],
-      "answer": "励"
+      "answer": "劫"
     },
     {
       "pinyin": "chà",
@@ -1470,7 +1470,7 @@
     },
     {
       "pinyin": "méi",
-      "question": ["梅", "霞", "霉", "霸"],
+      "question": ["海", "霞", "霉", "霸"],
       "answer": "霉"
     },
     {
