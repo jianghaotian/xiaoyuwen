@@ -22,7 +22,7 @@ Github：https://github.com/lemonoink/xiaoyuwen/
 
 - 小语文App（网页版）：https://xyw.haotian.pub/
 - 拼音岛小程序：
-  ![微信小程序码](./images/wx.jpg)
+- ![微信小程序码](./images/wx.jpg)
 
 ## App截图
 
