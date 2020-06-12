@@ -17,3 +17,6 @@ body {
     background-color: #D3D3D3;
     transition: background-color .1s ease;
 }
+.icon-xingxing {
+    display: none;
+}

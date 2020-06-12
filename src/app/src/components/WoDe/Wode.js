@@ -92,11 +92,11 @@ export default class Wode extends Component {
                     <span className="wode_tab_text">成绩单</span>
                     <i className={'iconfont icon-youjiantou wode_you'}></i>
                 </div>
-                <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/shoucang')}}>
+                {/* <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/shoucang')}}>
                     <i className={'iconfont icon-shoucangjia wode_i'}></i>
                     <span className="wode_tab_text">收藏夹</span>
                     <i className={'iconfont icon-youjiantou wode_you'}></i>
-                </div>
+                </div> */}
                 <div className="wode_tab a_click" onClick={()=>{this.props.history.push('/wode/fankui')}}>
                     <i className={'iconfont icon-yijianfankui wode_i'}></i>
                     <span className="wode_tab_text">意见反馈</span>

@@ -22,11 +22,11 @@ export default class Guanyu extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="about_tab">
+                {/* <div className="about_tab">
                     <i className={'iconfont icon-gengxin about_i'}></i>
                     <span className="about_tab_text">版本更新</span>
                     <div className="about_red"></div>
-                </div>
+                </div> */}
             </div>
         )
     }
