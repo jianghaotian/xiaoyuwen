@@ -1,14 +1,20 @@
-# 《小语文》 —— HTML5与移动互联网开发
+# HTML5与移动互联网开发 —— 小语文-App 拼音岛-微信小程序
 
-Github：https://github.com/lemonoink/xiaoyuwen
+Github：https://github.com/lemonoink/xiaoyuwen/
 
-开发文档地址：https://lemonoink.github.io/xiaoyuwen/
+文档地址：https://lemonoink.github.io/xiaoyuwen/
 
 ## 项目简介
 
-**小语文App**是一款针对于小学生的语文学习类APP，该APP主要有拼音，成语，诗词类的学习，且不同年级的学习内容不同。还可以进行对应的题目练习。现阶段学习内容以人教版教材内容为主。
+**小语文App**小语文，主要针对于小学语文拼音、成语、诗词的学习，实现了点读等功能，学练结合，练习采用随机出题，答题生成成绩单的形式；
 
-**拼音岛小程序**在小语文App的基础上对拼音这一内容进行细化，依然秉持有学有练的原则，给小学生们提供一个学与练相结合的学习平台，色彩鲜活，使孩子们对拼音的学习更加有兴趣。
+**拼音岛小程序**主要是针对于app的拼音部分实现了详细分类，包括单韵母、复韵母、鼻韵母等，同样具有点读功能，配套的相应拼音练习听音选字。
+
+## 在线访问
+
+- 小语文app(网页版)：https://xyw.haotian.pub/
+- 拼音岛小程序：
+  ![微信小程序码](./images/wx.jpg)
 
 ## App截图
 
