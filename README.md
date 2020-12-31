@@ -1,8 +1,8 @@
 # HTML5与移动互联网开发 —— 小语文-App 拼音岛-微信小程序
 
-Github：https://github.com/lemonoink/xiaoyuwen/
+Github：https://github.com/jianghaotian/xiaoyuwen/
 
-文档地址：https://lemonoink.github.io/xiaoyuwen/
+文档地址：https://jianghaotian.github.io/xiaoyuwen/
 
 ## 项目成员：
 
